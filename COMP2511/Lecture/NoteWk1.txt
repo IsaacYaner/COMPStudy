@@ -1,0 +1,25 @@
+We have a symbol system to describe the use and declare a class or function.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::For declaration:                             ::::
+*Type* *Name* = {new} *Constructor*(*[Arguments]*);
+Can be expressed as:
+----Type: {new} (*[Arguments]*)                  
+For example:
+----Scanner:(*System.in*)
+::::For Usage:                                   ::::
+----Function:(*[Arguments]*)
+For example:
+----next()
+
+
+I/O tools:
+    Scanner:
+    !!!!!!!!!!!!!!!!!!Important!!!!!!!!!!!!!!!!!!!
+        It's a class!
+        How to Use!!!
+                     Scanner *Name* = new Scanner(*Source*);
+        Scanner: (*System.in*)
+                next()
+                close()
+        
+        

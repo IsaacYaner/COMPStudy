@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<br>
+
+<div class="body_style">
+<table id="customers">
+  <col width="130">
+  <col width="80">
+  <col width="130">
+
+  <tr>
+    <th>Item</th>
+    <th>Qty</th>
+    <th>Total</th>
+  </tr>
+
+  {% for i in table['items'] %}
+    <tr>
+      <td>{{ i[0].name }}</td>
+      <td>{{ i[1] }} </td>
+      <td>${{ i[2] }} </td>
+    </tr>
+    {% endfor %}
+    <br>
+</table>
+
+<h1>
+Total: ${{ table['total'] }}<br>
+</h1>
+</div>
+{% endblock %}

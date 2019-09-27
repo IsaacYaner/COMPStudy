@@ -1,0 +1,89 @@
+How to code for different types of association
+abstract class interfaces and polymorphism
+How to model inheritance 
+Design principle
+
+
+Interface:
+    Is like a abstract class or a module that can be added into a class as some variables and methods.
+    use implement other than extend
+
+What is method forwarding???
+
+Change is constant
+
+Rigidity
+Fragility
+Immobility
+viscosiry
+Opacity
+Needless Complexity
+Needless Repetition
+
+Loose coupling  !!
+High Cohesion   !!
+
+Extensible
+Reusable
+Maintainable
+Understandable
+Testable
+
+Design Patters (GOF)
+    Program to an interface.
+
+Design Principle #1
+    Law of Demeter. (Least knowledge)
+        Knows and interact with as few classes as possible.
+        Only uses itself, passed in, local and instantiated classes. 
+        Leads to loose coupling
+        e.g. avoid o.get().get().get()....
+        Rule 1:
+            Method in the object can call any methods in the object.
+        Rule 2:
+            Method in the object can call any methods passed in as parameters.
+        Rule 3:
+            Method in the object can call any methods instantiated with in the object.
+        Rule 5:
+            Method in the object can call any methods can call any direct component of the object.
+
+Design Principle #2
+    LSP (Liskov Substitution Principle)
+        Well designed inheritance.
+        Subtypes must be substitutable for basetypes.
+        ????
+        Composition instead of inheriting
+        ????
+
+Rules for overriding
+    arguments must be the same.
+    access cannot be more restrictive
+    final cannot be overriden
+    Constructors cannot be overriden
+    Return type should be same or sub-type.
+    Return type's meaining may be narrower.
+
+    ???
+    What is a static method.
+    --- That can be overritten, where even the class behaves polymorphism the static method still remains in the class when it is declared.
+        It hides the method in the base class.
+    ???
+
+    ???
+    Aggreation? Obvious differences????
+    Do we need discard???
+    ???
+
+Refactoring
+    changing internal structure to make it easier to understand and cheaper to modify without changing external behavior.   
+        Improves design.
+    When you need to add feature or fix bugs.
+    To Refactor:
+        Duplicate code.
+        Long Method
+        Large class
+        Long parameters
+        Divergent change (one class do different things)
+        Shotgun surgery (Classes are too small) 
+
+Use composition instead of inheritance

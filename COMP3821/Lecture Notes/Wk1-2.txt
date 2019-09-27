@@ -1,0 +1,17 @@
+Find the number of inversions:
+    Inversion is defined as a pair of numbers i and j belonging to the same array a[n] where 1 <= i < j <= n < infinity
+        and a[i] > a[j].
+    Use Divide and Conquer method:
+        First divide a[] into top[] and bot[] where top[]+bot[] is a[]
+        Then note that the sum of numbers of inversions of top[], bot[] and a[i] in top[], a[j] in bot[] equals to total numbers.
+        So we add number of top[] and bot[], and count the number of i in top, j in bot while merging.
+    Details:
+        when n == 1, Pair is 0
+        when n == 2, Pair is gotten from 0+0+merge(top, bot)
+        n of bot[n] is calculated by floor(n/2) and n of top is n-floor(n/2)
+        top[] and bot[] are not new created arrays, they are two intervals from the original a[].
+        merge process is defined in this pattern:
+            when element in top[] is added in to the result arr[], then add the number of invertions by the remaining elements in bot[]
+                as "A smaller item is placed after m(number of remaining elements) items that are bigger than it, so there are m inversed pairs."
+        
+        cont.

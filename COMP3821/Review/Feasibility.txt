@@ -1,0 +1,7 @@
+Polynomial Time:
+    Complexity = O(n^k)
+Decision Problem:
+    Answer Yes/No
+NP Problem
+    For A(x)
+        if We have B(x,y) that for every x and some y, we have B(x,y) true.

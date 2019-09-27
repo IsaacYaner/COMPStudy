@@ -1,0 +1,61 @@
+Life Cycle emphasis on methodology
+    Analysis
+    Design
+    Implementation
+    Test
+    Release
+Elaborate process
+    plan driven, rigid documentation
+    unidirectional, finish before moving
+Iterative
+    SCRUM, XP are Agile 
+
+Incremental || Iterative
+    Break and prioritize
+    feedback
+    change course based on improved understanding
+
+Rational Unified Process
+    Inception 
+        risk, resource, player, architecture
+    Elaboration
+        architecture, problem domain 
+    Construction
+        design, build and test
+    Transition
+        Release
+
+Agile
+    Individual and response
+    Collaboration of customer
+    Working Software
+    Responses to change
+
+Extreme Programming
+    high value, fast
+    change of requirement is natural and inescapable
+    adability and predicatability
+    Principles
+        High quality
+            pair Programming
+            Continuous integration
+            sustainable pace
+            open workplace
+            refactoring
+            TDD
+        Simple design
+            Focus on the current story
+        Continuous feedback
+    Planning
+        Initial Exploration
+        Release plan
+        Iteration plan
+        task Planning
+    Drawback
+        Meeting need manpower
+        hard to schedule
+        small self-organized teams
+    Good
+        requirement change, customer don't know
+        small size
+

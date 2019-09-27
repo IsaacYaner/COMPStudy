@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2>
+<div class="search_style">
+<form action="{{ url_for('create_product') }}" method="post">
+    <input type="hidden" name="category" value="{{ category }}">
+    {{ category }} Name: <input type="text" text="text" name="name" value="" placeholder="name" required><br>
+    Price: <input type="text" text="number" name="price" value="" placeholder="price" required><br>
+    {% if category in clothing %}
+    Size: <input type="text" text="text" name="size" value="" placeholder="size" required><br>
+    Colour: <input type="text" text="text" name="colour" value="" placeholder="colour" required><br>
+    {% elif category in camping %}
+    Dimension: <input type="text" text="text" name="dimension" value="" placeholder="dimension" required><br>
+    Weight: <input type="text" text="text" name="weight" value="" placeholder="weight" required><br>
+    {% endif %}
+    <button>Add</button>
+</form>
+</div>
+</h2>
+{% endblock %}

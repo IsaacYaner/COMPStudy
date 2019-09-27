@@ -1,0 +1,76 @@
+1:
+    Difference between Waterfall and agile
+    Waterfall needs a plan of each process and is rigid, hard to change while agile is changeable
+    Waterfall process is linear, development of next requirement could not be started before finishing the current one.
+    Agile is based on feedback and easy to modify.
+
+    Phase linearly.
+    involve
+    change
+2:
+    Encapsulation is the process of hiding the internal state of an object so that they can only be accessed via object's method.
+        benefit:
+        ensure an object's state remain in a consistent state.
+        increase reusability of a class
+        by hiding the implementation, the change to the calss doesn't have a ripping effect to the application.
+3:
+    Association relationship means a kind of relationship that two class interact with each other but doesn't hold
+        any part mutually.
+    Example: A customer makes an order then he has a association relationship with the store.
+
+    Association relationship means one object shares a "uses" relationship with another object instance, where one object
+        instance uses the functionality of another's.
+    Association can be further refined into composition and aggregation relationships.
+        Composition means the container owns that part, where the part can't exist without the container.
+        Aggregation means the contained part is a part of the container, however the part can exist independently.
+
+4:
+    macro scope where partition subsystem.
+    high level view to be built interms of parts and how related.
+    focus on non-functional.
+    decomposition of functional requirements.
+
+    benefit:
+        partitioning complex to subs tackle complexity by divide-and-conquer.
+        focus on creative parts to avoid implementing functions that already have.
+        flexibility, revelution.
+        predetermine nonfunctional requirements.
+        understanding and communications.
+
+5:
+    pattern of structural organisation, how the system must be decomposed into parts and how related to each other.
+    Components  Computational unit.
+    Connectors  Communicate between components.
+    Constrained How the components can be combined to form a system.
+
+6:
+    Subscribe 
+    P2P
+    Pip and filter
+    Publish-Subscribe
+    Peer-to-Peer
+
+7:
+    improveing existing code 
+    transformation internal structure
+    simpler easier to understand avoid smell
+    without affecting functionality.
+
+8:
+    unstertand flexible adapt to new requirements.
+    Why: continuous involve of customers and deliver value to customer by 
+    quickly respond to changing requirements.
+    This needs developers to change the functionality and code by ease.
+    Refactoring makes sure that the code are clear, easy to understand and fexible.
+    So they can quickly respond to changing requirements.
+
+    principle is high quality to develop fast and cheap. Hence continuous refactoring should be a part of daily routine.
+
+9:
+    Duplication.
+
+10:
+    Pipe and filter
+    flexible
+    easy to reuse 
+    concurrency

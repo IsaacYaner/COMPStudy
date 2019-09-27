@@ -1,0 +1,10 @@
+    if not start_location:
+        raise BookingError("Specify a valid end location")
+    if not end_location:
+        raise BookingError("Specify a valid end location")
+    if not start_date:
+        raise BookingError("Specify a valid start date")
+    if not end_date:
+        raise BookingError("Specify a valid end date")
+    if end_date < start_date:
+        raise BookingError("Specify a valid booking period")

@@ -1,0 +1,977 @@
+Fitter report for part5
+Thu Sep 26 19:26:34 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Ignored Assignments
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. I/O Bank Usage
+ 10. All Package Pins
+ 11. Output Pin Default Load For Reported TCO
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Pad To Core Delay Chain Fanout
+ 15. Non-Global High Fan-Out Signals
+ 16. Fitter Device Options
+ 17. Operating Settings and Conditions
+ 18. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Failed - Thu Sep 26 19:26:34 2019                ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part5                                            ;
+; Top-level Entity Name              ; part5                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C5T144C6                                      ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 6 / 4,608 ( < 1 % )                              ;
+;     Total combinational functions  ; 6 / 4,608 ( < 1 % )                              ;
+;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 17 / 89 ( 19 % )                                 ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                              ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                                     ; Setting                        ; Default Value                  ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                                     ; AUTO                           ;                                ;
+; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
+; Use smart compilation                                                      ; Off                            ; Off                            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
+; Enable compact report table                                                ; Off                            ; Off                            ;
+; Auto Merge PLLs                                                            ; On                             ; On                             ;
+; Ignore PLL Mode When Merging PLLs                                          ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                           ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                                ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                                   ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                                ; Off                            ; Off                            ;
+; Optimize Hold Timing                                                       ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                               ; On                             ; On                             ;
+; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                            ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                                   ; Off                            ; Off                            ;
+; Regenerate full fit report during ECO compiles                             ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                         ; Normal                         ;
+; Limit to One Fitting Attempt                                               ; Off                            ; Off                            ;
+; Final Placement Optimizations                                              ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                              ; 1                              ; 1                              ;
+; PCI I/O                                                                    ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                                      ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                                  ; Off                            ; Off                            ;
+; Auto Global Memory Control Signals                                         ; Off                            ; Off                            ;
+; Auto Packed Registers                                                      ; Auto                           ; Auto                           ;
+; Auto Delay Chains                                                          ; On                             ; On                             ;
+; Auto Delay Chains for High Fanout Input Pins                               ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                               ; Off                            ; Off                            ;
+; Perform Logic to Memory Mapping for Fitting                                ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                                  ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                            ; Off                            ;
+; Fitter Effort                                                              ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                            ; Normal                         ; Normal                         ;
+; Auto Global Clock                                                          ; On                             ; On                             ;
+; Auto Global Register Control Signals                                       ; On                             ; On                             ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                            ; Off                            ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                           ;
++--------------+----------------+--------------+---------------+---------------+----------------+
+; Name         ; Ignored Entity ; Ignored From ; Ignored To    ; Ignored Value ; Ignored Source ;
++--------------+----------------+--------------+---------------+---------------+----------------+
+; Location     ;                ;              ; AUD_ADCDAT    ; PIN_B6        ; QSF Assignment ;
+; Location     ;                ;              ; AUD_ADCLRCK   ; PIN_A6        ; QSF Assignment ;
+; Location     ;                ;              ; AUD_BCLK      ; PIN_A4        ; QSF Assignment ;
+; Location     ;                ;              ; AUD_DACDAT    ; PIN_B5        ; QSF Assignment ;
+; Location     ;                ;              ; AUD_DACLRCK   ; PIN_A5        ; QSF Assignment ;
+; Location     ;                ;              ; AUD_XCK       ; PIN_B4        ; QSF Assignment ;
+; Location     ;                ;              ; CLOCK_24[0]   ; PIN_B12       ; QSF Assignment ;
+; Location     ;                ;              ; CLOCK_24[1]   ; PIN_A12       ; QSF Assignment ;
+; Location     ;                ;              ; CLOCK_27[0]   ; PIN_D12       ; QSF Assignment ;
+; Location     ;                ;              ; CLOCK_27[1]   ; PIN_E12       ; QSF Assignment ;
+; Location     ;                ;              ; CLOCK_50      ; PIN_L1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[0]  ; PIN_W4        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[10] ; PIN_W3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[11] ; PIN_N6        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[1]  ; PIN_W5        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[2]  ; PIN_Y3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[3]  ; PIN_Y4        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[4]  ; PIN_R6        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[5]  ; PIN_R5        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[6]  ; PIN_P6        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[7]  ; PIN_P5        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[8]  ; PIN_P3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_ADDR[9]  ; PIN_N4        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_BA_0     ; PIN_U3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_BA_1     ; PIN_V4        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_CAS_N    ; PIN_T3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_CKE      ; PIN_N3        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_CLK      ; PIN_U4        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_CS_N     ; PIN_T6        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[0]    ; PIN_U1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[10]   ; PIN_P1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[11]   ; PIN_P2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[12]   ; PIN_R1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[13]   ; PIN_R2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[14]   ; PIN_T1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[15]   ; PIN_T2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[1]    ; PIN_U2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[2]    ; PIN_V1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[3]    ; PIN_V2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[4]    ; PIN_W1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[5]    ; PIN_W2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[6]    ; PIN_Y1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[7]    ; PIN_Y2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[8]    ; PIN_N1        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_DQ[9]    ; PIN_N2        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_LDQM     ; PIN_R7        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_RAS_N    ; PIN_T5        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_UDQM     ; PIN_M5        ; QSF Assignment ;
+; Location     ;                ;              ; DRAM_WE_N     ; PIN_R8        ; QSF Assignment ;
+; Location     ;                ;              ; EXT_CLOCK     ; PIN_M21       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[0]    ; PIN_AB20      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[10]   ; PIN_R12       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[11]   ; PIN_T12       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[12]   ; PIN_AB14      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[13]   ; PIN_AA13      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[14]   ; PIN_AB13      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[15]   ; PIN_AA12      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[16]   ; PIN_AB12      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[17]   ; PIN_AA20      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[18]   ; PIN_U14       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[19]   ; PIN_V14       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[1]    ; PIN_AA14      ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[20]   ; PIN_U13       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[21]   ; PIN_R13       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[2]    ; PIN_Y16       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[3]    ; PIN_R15       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[4]    ; PIN_T15       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[5]    ; PIN_U15       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[6]    ; PIN_V15       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[7]    ; PIN_W15       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[8]    ; PIN_R14       ; QSF Assignment ;
+; Location     ;                ;              ; FL_ADDR[9]    ; PIN_Y13       ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[0]      ; PIN_AB16      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[1]      ; PIN_AA16      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[2]      ; PIN_AB17      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[3]      ; PIN_AA17      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[4]      ; PIN_AB18      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[5]      ; PIN_AA18      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[6]      ; PIN_AB19      ; QSF Assignment ;
+; Location     ;                ;              ; FL_DQ[7]      ; PIN_AA19      ; QSF Assignment ;
+; Location     ;                ;              ; FL_OE_N       ; PIN_AA15      ; QSF Assignment ;
+; Location     ;                ;              ; FL_RST_N      ; PIN_W14       ; QSF Assignment ;
+; Location     ;                ;              ; FL_WE_N       ; PIN_Y14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[0]     ; PIN_A13       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[10]    ; PIN_A18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[11]    ; PIN_B18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[12]    ; PIN_A19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[13]    ; PIN_B19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[14]    ; PIN_A20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[15]    ; PIN_B20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[16]    ; PIN_C21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[17]    ; PIN_C22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[18]    ; PIN_D21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[19]    ; PIN_D22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[1]     ; PIN_B13       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[20]    ; PIN_E21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[21]    ; PIN_E22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[22]    ; PIN_F21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[23]    ; PIN_F22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[24]    ; PIN_G21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[25]    ; PIN_G22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[26]    ; PIN_J21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[27]    ; PIN_J22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[28]    ; PIN_K21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[29]    ; PIN_K22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[2]     ; PIN_A14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[30]    ; PIN_J19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[31]    ; PIN_J20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[32]    ; PIN_J18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[33]    ; PIN_K20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[34]    ; PIN_L19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[35]    ; PIN_L18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[3]     ; PIN_B14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[4]     ; PIN_A15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[5]     ; PIN_B15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[6]     ; PIN_A16       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[7]     ; PIN_B16       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[8]     ; PIN_A17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_0[9]     ; PIN_B17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[0]     ; PIN_H12       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[10]    ; PIN_C14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[11]    ; PIN_D14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[12]    ; PIN_D15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[13]    ; PIN_D16       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[14]    ; PIN_C17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[15]    ; PIN_C18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[16]    ; PIN_C19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[17]    ; PIN_C20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[18]    ; PIN_D19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[19]    ; PIN_D20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[1]     ; PIN_H13       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[20]    ; PIN_E20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[21]    ; PIN_F20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[22]    ; PIN_E19       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[23]    ; PIN_E18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[24]    ; PIN_G20       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[25]    ; PIN_G18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[26]    ; PIN_G17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[27]    ; PIN_H17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[28]    ; PIN_J15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[29]    ; PIN_H18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[2]     ; PIN_H14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[30]    ; PIN_N22       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[31]    ; PIN_N21       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[32]    ; PIN_P15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[33]    ; PIN_N15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[34]    ; PIN_P17       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[35]    ; PIN_P18       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[3]     ; PIN_G15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[4]     ; PIN_E14       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[5]     ; PIN_E15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[6]     ; PIN_F15       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[7]     ; PIN_G16       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[8]     ; PIN_F12       ; QSF Assignment ;
+; Location     ;                ;              ; GPIO_1[9]     ; PIN_F13       ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[0]       ; PIN_E1        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[1]       ; PIN_H6        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[2]       ; PIN_H5        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[3]       ; PIN_H4        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[4]       ; PIN_G3        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[5]       ; PIN_D2        ; QSF Assignment ;
+; Location     ;                ;              ; HEX1[6]       ; PIN_D1        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[0]       ; PIN_G5        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[1]       ; PIN_G6        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[2]       ; PIN_C2        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[3]       ; PIN_C1        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[4]       ; PIN_E3        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[5]       ; PIN_E4        ; QSF Assignment ;
+; Location     ;                ;              ; HEX2[6]       ; PIN_D3        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[0]       ; PIN_F4        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[1]       ; PIN_D5        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[2]       ; PIN_D6        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[3]       ; PIN_J4        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[4]       ; PIN_L8        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[5]       ; PIN_F3        ; QSF Assignment ;
+; Location     ;                ;              ; HEX3[6]       ; PIN_D4        ; QSF Assignment ;
+; Location     ;                ;              ; I2C_SCLK      ; PIN_A3        ; QSF Assignment ;
+; Location     ;                ;              ; I2C_SDAT      ; PIN_B3        ; QSF Assignment ;
+; Location     ;                ;              ; KEY[0]        ; PIN_R22       ; QSF Assignment ;
+; Location     ;                ;              ; KEY[1]        ; PIN_R21       ; QSF Assignment ;
+; Location     ;                ;              ; KEY[2]        ; PIN_T22       ; QSF Assignment ;
+; Location     ;                ;              ; KEY[3]        ; PIN_T21       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[0]       ; PIN_U22       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[1]       ; PIN_U21       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[2]       ; PIN_V22       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[3]       ; PIN_V21       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[4]       ; PIN_W22       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[5]       ; PIN_W21       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[6]       ; PIN_Y22       ; QSF Assignment ;
+; Location     ;                ;              ; LEDG[7]       ; PIN_Y21       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[0]       ; PIN_R20       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[1]       ; PIN_R19       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[2]       ; PIN_U19       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[3]       ; PIN_Y19       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[4]       ; PIN_T18       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[5]       ; PIN_V19       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[6]       ; PIN_Y18       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[7]       ; PIN_U18       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[8]       ; PIN_R18       ; QSF Assignment ;
+; Location     ;                ;              ; LEDR[9]       ; PIN_R17       ; QSF Assignment ;
+; Location     ;                ;              ; PS2_CLK       ; PIN_H15       ; QSF Assignment ;
+; Location     ;                ;              ; PS2_DAT       ; PIN_J14       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[0]  ; PIN_AA3       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[10] ; PIN_R11       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[11] ; PIN_T11       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[12] ; PIN_Y10       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[13] ; PIN_U10       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[14] ; PIN_R10       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[15] ; PIN_T7        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[16] ; PIN_Y6        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[17] ; PIN_Y5        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[1]  ; PIN_AB3       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[2]  ; PIN_AA4       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[3]  ; PIN_AB4       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[4]  ; PIN_AA5       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[5]  ; PIN_AB10      ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[6]  ; PIN_AA11      ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[7]  ; PIN_AB11      ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[8]  ; PIN_V11       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_ADDR[9]  ; PIN_W11       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_CE_N     ; PIN_AB5       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[0]    ; PIN_AA6       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[10]   ; PIN_V9        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[11]   ; PIN_U9        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[12]   ; PIN_R9        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[13]   ; PIN_W8        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[14]   ; PIN_V8        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[15]   ; PIN_U8        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[1]    ; PIN_AB6       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[2]    ; PIN_AA7       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[3]    ; PIN_AB7       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[4]    ; PIN_AA8       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[5]    ; PIN_AB8       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[6]    ; PIN_AA9       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[7]    ; PIN_AB9       ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[8]    ; PIN_Y9        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_DQ[9]    ; PIN_W9        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_LB_N     ; PIN_Y7        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_OE_N     ; PIN_T8        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_UB_N     ; PIN_W7        ; QSF Assignment ;
+; Location     ;                ;              ; SRAM_WE_N     ; PIN_AA10      ; QSF Assignment ;
+; Location     ;                ;              ; TCK           ; PIN_C7        ; QSF Assignment ;
+; Location     ;                ;              ; TCS           ; PIN_D8        ; QSF Assignment ;
+; Location     ;                ;              ; TDI           ; PIN_E8        ; QSF Assignment ;
+; Location     ;                ;              ; TDO           ; PIN_D7        ; QSF Assignment ;
+; Location     ;                ;              ; UART_RXD      ; PIN_F14       ; QSF Assignment ;
+; Location     ;                ;              ; UART_TXD      ; PIN_G12       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_B[0]      ; PIN_A9        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_B[1]      ; PIN_D11       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_B[2]      ; PIN_A10       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_B[3]      ; PIN_B10       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_G[0]      ; PIN_B8        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_G[1]      ; PIN_C10       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_G[2]      ; PIN_B9        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_G[3]      ; PIN_A8        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_HS        ; PIN_A11       ; QSF Assignment ;
+; Location     ;                ;              ; VGA_R[0]      ; PIN_D9        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_R[1]      ; PIN_C9        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_R[2]      ; PIN_A7        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_R[3]      ; PIN_B7        ; QSF Assignment ;
+; Location     ;                ;              ; VGA_VS        ; PIN_B11       ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_ADCDAT    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_ADCLRCK   ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_BCLK      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_DACDAT    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_DACLRCK   ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; AUD_XCK       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; CLOCK_24[0]   ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; CLOCK_24[1]   ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; CLOCK_27[1]   ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; CLOCK_50      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; EXT_CLOCK     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[0]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[10]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[11]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[12]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[13]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[14]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[15]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[16]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[17]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[18]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[19]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[1]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[20]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[21]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[22]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[23]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[24]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[25]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[26]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[27]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[28]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[29]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[2]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[30]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[31]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[32]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[33]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[34]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[35]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[3]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[4]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[5]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[6]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[7]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[8]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_0[9]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[0]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[10]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[11]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[12]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[13]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[14]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[15]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[16]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[17]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[18]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[19]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[1]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[20]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[21]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[22]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[23]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[24]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[25]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[26]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[27]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[28]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[29]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[2]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[30]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[31]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[32]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[33]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[34]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[35]    ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[3]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[4]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[5]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[6]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[7]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[8]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; GPIO_1[9]     ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[0]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[1]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[2]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[3]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[4]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[5]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX1[6]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[0]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[1]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[2]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[3]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[4]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[5]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX2[6]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[0]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[1]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[2]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[3]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[4]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[5]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; HEX3[6]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; I2C_SCLK      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; I2C_SDAT      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; KEY[0]        ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; KEY[1]        ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; KEY[2]        ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; KEY[3]        ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[0]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[1]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[2]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[3]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[4]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[5]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[6]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDG[7]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[0]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[1]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[2]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[3]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[4]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[5]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[6]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[7]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[8]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; LEDR[9]       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; PS2_CLK       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; PS2_DAT       ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; TCK           ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; TCS           ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; TDI           ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; TDO           ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; UART_RXD      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; UART_TXD      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_B[0]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_B[1]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_B[2]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_B[3]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_G[0]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_G[1]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_G[2]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_G[3]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_HS        ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_R[0]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_R[1]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_R[2]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_R[3]      ; LVTTL         ; QSF Assignment ;
+; I/O Standard ;                ;              ; VGA_VS        ; LVTTL         ; QSF Assignment ;
++--------------+----------------+--------------+---------------+---------------+----------------+
+
+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 6 / 4,608 ( < 1 % ) ;
+;     -- Combinational with no register       ; 6                   ;
+;     -- Register only                        ; 0                   ;
+;     -- Combinational with a register        ; 0                   ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 3                   ;
+;     -- 3 input functions                    ; 2                   ;
+;     -- <=2 input functions                  ; 1                   ;
+;     -- Register only                        ; 0                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 6                   ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers*                            ; 0 / 4,851 ( 0 % )   ;
+;     -- Dedicated logic registers            ; 0 / 4,608 ( 0 % )   ;
+;     -- I/O registers                        ; 0 / 243 ( 0 % )     ;
+;                                             ;                     ;
+; Total LABs                                  ; Not available       ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 17 / 89 ( 19 % )    ;
+;     -- Clock pins                           ; 0 / 4 ( 0 % )       ;
+;                                             ;                     ;
+; Global signals                              ; 0                   ;
+; M4Ks                                        ; 0 / 26 ( 0 % )      ;
+; Total block memory bits                     ; 0 / 119,808 ( 0 % ) ;
+; Total block memory implementation bits      ; 0 / 119,808 ( 0 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ;
+; PLLs                                        ; 0 / 2 ( 0 % )       ;
+; Global clocks                               ; 0 / 8 ( 0 % )       ;
+; JTAGs                                       ; 0 / 1 ( 0 % )       ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
+; Maximum fan-out                             ; 5                   ;
+; Highest non-global fan-out                  ; 5                   ;
+; Total fan-out                               ; 27                  ;
+; Average fan-out                             ; 1.17                ;
++---------------------------------------------+---------------------+
+*  Register count does not include registers inside RAM blocks or DSP blocks.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                           ;
++-------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name  ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; SW[0] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[1] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[2] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[3] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[4] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[5] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[6] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[7] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[8] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[9] ; Unassigned ; --       ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++-------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                    ;
++---------+------------+----------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name    ; Pin #      ; I/O Bank ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++---------+------------+----------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; HEX0[0] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[1] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[2] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[3] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[4] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[5] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HEX0[6] ; Unassigned ; --       ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++---------+------------+----------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+
+
++----------------------------------------------------------+
+; I/O Bank Usage                                           ;
++----------+----------------+---------------+--------------+
+; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
++----------+----------------+---------------+--------------+
+; 1        ; 0 / 19 ( 0 % ) ; 3.3V          ; --           ;
+; 2        ; 0 / 23 ( 0 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 23 ( 0 % ) ; 3.3V          ; --           ;
+; 4        ; 0 / 24 ( 0 % ) ; 3.3V          ; --           ;
+; Unknown  ; 17             ; --            ;              ;
++----------+----------------+---------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                             ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; 1        ; 0          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 2        ; 1          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 3        ; 2          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 4        ; 3          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 5        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 6        ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 7        ; 10         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 8        ; 11         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 9        ; 12         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 10       ; 13         ; 1        ; #TDO           ; output ;              ;         ; --         ;                 ; --       ; --           ;
+; 11       ; 14         ; 1        ; #TMS           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 12       ; 15         ; 1        ; #TCK           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 13       ; 16         ; 1        ; #TDI           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 14       ; 17         ; 1        ; ^DATA0         ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 15       ; 18         ; 1        ; ^DCLK          ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 16       ; 19         ; 1        ; ^nCE           ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 17       ; 20         ; 1        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 18       ; 21         ; 1        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 19       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 20       ; 22         ; 1        ; ^nCONFIG       ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 21       ; 23         ; 1        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 22       ; 24         ; 1        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 23       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 24       ; 25         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 25       ; 26         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 26       ; 27         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 27       ; 28         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 28       ; 32         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 29       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 30       ; 40         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 31       ; 41         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 32       ; 42         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 33       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 34       ;            ;          ; GND_PLL1       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 35       ;            ;          ; VCCD_PLL1      ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 36       ;            ;          ; GND_PLL1       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 37       ;            ;          ; VCCA_PLL1      ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 38       ;            ;          ; GNDA_PLL1      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 39       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 40       ; 43         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 41       ; 44         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 42       ; 45         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 43       ; 46         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 44       ; 47         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 45       ; 48         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 46       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 47       ; 49         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 48       ; 50         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 49       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 50       ;            ;          ; VCCINT         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 51       ; 52         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; 52       ; 53         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 53       ; 57         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 54       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 55       ; 58         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 56       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 57       ; 59         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 58       ; 60         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 59       ; 63         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 60       ; 64         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 61       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 62       ;            ;          ; VCCINT         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 63       ; 72         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; 64       ; 75         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 65       ; 76         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 66       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 67       ; 79         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 68       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 69       ; 80         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 70       ; 81         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 71       ; 82         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 72       ; 83         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 73       ; 84         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 85         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 75       ; 86         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 76       ; 87         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 77       ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 78       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 79       ; 95         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 80       ; 97         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 81       ; 98         ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 82       ; 99         ; 3        ; ^nSTATUS       ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 83       ; 100        ; 3        ; ^CONF_DONE     ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 84       ; 101        ; 3        ; ^MSEL1         ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 85       ; 102        ; 3        ; ^MSEL0         ;        ;              ;         ; --         ;                 ; --       ; --           ;
+; 86       ; 103        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 87       ; 104        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 88       ; 105        ; 3        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 89       ; 106        ; 3        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 90       ; 107        ; 3        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 91       ; 108        ; 3        ; GND+           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 92       ; 109        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 93       ; 110        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 94       ; 111        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 95       ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 96       ; 112        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 97       ; 113        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 98       ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 99       ; 119        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 100      ; 120        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 101      ; 121        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 102      ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 103      ; 125        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 104      ; 126        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 105      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 106      ;            ;          ; GND_PLL2       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 107      ;            ;          ; VCCD_PLL2      ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 108      ;            ;          ; GND_PLL2       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 109      ;            ;          ; VCCA_PLL2      ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 110      ;            ;          ; GNDA_PLL2      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 111      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 112      ; 127        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 113      ; 128        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 114      ; 129        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 115      ; 130        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 116      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 117      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 118      ; 134        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 119      ; 135        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 120      ; 137        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; 121      ; 138        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 122      ; 139        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 123      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 124      ;            ;          ; VCCINT         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 125      ; 144        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 126      ; 145        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 127      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 128      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 129      ; 148        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 130      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 131      ;            ;          ; VCCINT         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 132      ; 153        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; 133      ; 154        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 134      ; 155        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 135      ; 162        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 136      ; 163        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 137      ; 164        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 138      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 139      ; 165        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 140      ;            ;          ; GND            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 141      ; 166        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 142      ; 167        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 143      ; 168        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 144      ; 169        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-------------------------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                                      ;
++----------------------------------+-------+------------------------------------+
+; I/O Standard                     ; Load  ; Termination Resistance             ;
++----------------------------------+-------+------------------------------------+
+; 3.3-V LVTTL                      ; 0 pF  ; Not Available                      ;
+; 3.3-V LVCMOS                     ; 0 pF  ; Not Available                      ;
+; 2.5 V                            ; 0 pF  ; Not Available                      ;
+; 1.8 V                            ; 0 pF  ; Not Available                      ;
+; 1.5 V                            ; 0 pF  ; Not Available                      ;
+; 3.3-V PCI                        ; 10 pF ; 25 Ohm (Parallel)                  ;
+; 3.3-V PCI-X                      ; 10 pF ; 25 Ohm (Parallel)                  ;
+; SSTL-2 Class I                   ; 0 pF  ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-2 Class II                  ; 0 pF  ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-18 Class I                  ; 0 pF  ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-18 Class II                 ; 0 pF  ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; 1.5-V HSTL Class I               ; 0 pF  ; 50 Ohm (Parallel)                  ;
+; 1.5-V HSTL Class II              ; 0 pF  ; 25 Ohm (Parallel)                  ;
+; 1.8-V HSTL Class I               ; 0 pF  ; 50 Ohm (Parallel)                  ;
+; 1.8-V HSTL Class II              ; 0 pF  ; 25 Ohm (Parallel)                  ;
+; Differential SSTL-2              ; 0 pF  ; (See SSTL-2)                       ;
+; Differential 2.5-V SSTL Class II ; 0 pF  ; (See SSTL-2 Class II)              ;
+; Differential 1.8-V SSTL Class I  ; 0 pF  ; (See 1.8-V SSTL Class I)           ;
+; Differential 1.8-V SSTL Class II ; 0 pF  ; (See 1.8-V SSTL Class II)          ;
+; Differential 1.5-V HSTL Class I  ; 0 pF  ; (See 1.5-V HSTL Class I)           ;
+; Differential 1.5-V HSTL Class II ; 0 pF  ; (See 1.5-V HSTL Class II)          ;
+; Differential 1.8-V HSTL Class I  ; 0 pF  ; (See 1.8-V HSTL Class I)           ;
+; Differential 1.8-V HSTL Class II ; 0 pF  ; (See 1.8-V HSTL Class II)          ;
+; LVDS                             ; 0 pF  ; 100 Ohm (Differential)             ;
+; mini-LVDS                        ; 0 pF  ; 100 Ohm (Differential)             ;
+; RSDS                             ; 0 pF  ; 100 Ohm (Differential)             ;
+; Simple RSDS                      ; 0 pF  ; Not Available                      ;
+; Differential LVPECL              ; 0 pF  ; 100 Ohm (Differential)             ;
++----------------------------------+-------+------------------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                        ;
++----------------------------+-------------+---------------------------+---------------+-------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name     ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+--------------+
+; |part5                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |part5                  ; work         ;
+;    |char_7seg:H0|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |part5|char_7seg:H0     ; work         ;
+;    |mux_2bit_3to1:M0|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |part5|mux_2bit_3to1:M0 ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Delay Chain Summary                                                              ;
++---------+----------+---------------+---------------+-----------------------+-----+
+; Name    ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++---------+----------+---------------+---------------+-----------------------+-----+
+; SW[6]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[7]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; HEX0[6] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; HEX0[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; SW[1]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[9]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[3]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[5]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[8]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[0]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[2]   ; Input    ; 0             ; 0             ; --                    ; --  ;
+; SW[4]   ; Input    ; 0             ; 0             ; --                    ; --  ;
++---------+----------+---------------+---------------+-----------------------+-----+
+
+
++---------------------------------------------------+
+; Pad To Core Delay Chain Fanout                    ;
++---------------------+-------------------+---------+
+; Source Pin / Fanout ; Pad To Core Index ; Setting ;
++---------------------+-------------------+---------+
+; SW[6]               ;                   ;         ;
+; SW[7]               ;                   ;         ;
+; SW[1]               ;                   ;         ;
+; SW[9]               ;                   ;         ;
+; SW[3]               ;                   ;         ;
+; SW[5]               ;                   ;         ;
+; SW[8]               ;                   ;         ;
+; SW[0]               ;                   ;         ;
+; SW[2]               ;                   ;         ;
+; SW[4]               ;                   ;         ;
++---------------------+-------------------+---------+
+
+
++-----------------------------------+
+; Non-Global High Fan-Out Signals   ;
++-------------------------+---------+
+; Name                    ; Fan-Out ;
++-------------------------+---------+
+; SW[9]                   ; 5       ;
+; mux_2bit_3to1:M0|M[1]~6 ; 3       ;
+; SW[0]                   ; 2       ;
+; SW[8]                   ; 2       ;
+; SW[1]                   ; 2       ;
+; char_7seg:H0|Display~1  ; 2       ;
+; mux_2bit_3to1:M0|M[0]~7 ; 2       ;
+; mux_2bit_3to1:M0|M[0]~5 ; 2       ;
+; mux_2bit_3to1:M0|M[1]~4 ; 2       ;
+; SW[4]                   ; 1       ;
+; SW[2]                   ; 1       ;
+; SW[5]                   ; 1       ;
+; SW[3]                   ; 1       ;
+; char_7seg:H0|Display~0  ; 1       ;
++-------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Active Serial            ;
+; Error detection CRC                          ; Off                      ;
+; nCEO                                         ; As output driving ground ;
+; ASDO,nCSO                                    ; Unreserved               ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++------------------------------------+
+; Operating Settings and Conditions  ;
++---------------------------+--------+
+; Setting                   ; Value  ;
++---------------------------+--------+
+; Nominal Core Voltage      ; 1.20 V ;
+; Low Junction Temperature  ; 0 °C   ;
+; High Junction Temperature ; 85 °C  ;
++---------------------------+--------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (119004): Automatically selected device EP2C5T144C6 for design part5
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Error (171016): Can't place node "SW[6]" -- illegal location assignment PIN_U11 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[7]" -- illegal location assignment PIN_M2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "HEX0[6]" -- illegal location assignment PIN_E2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[5]" -- illegal location assignment PIN_F1 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[4]" -- illegal location assignment PIN_F2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[3]" -- illegal location assignment PIN_H1 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[2]" -- illegal location assignment PIN_H2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[1]" -- illegal location assignment PIN_J1 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "HEX0[0]" -- illegal location assignment PIN_J2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 6
+Error (171016): Can't place node "SW[1]" -- illegal location assignment PIN_L21 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[9]" -- illegal location assignment PIN_L2 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[3]" -- illegal location assignment PIN_V12 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[5]" -- illegal location assignment PIN_U12 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[8]" -- illegal location assignment PIN_M1 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[0]" -- illegal location assignment PIN_L22 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[2]" -- illegal location assignment PIN_M22 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Error (171016): Can't place node "SW[4]" -- illegal location assignment PIN_W12 File: F:/STUDY/COMPUTER/COMP3222/WKSpace/Lab1/Part5/part5.vhd Line: 5
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Error (171000): Can't fit design in device
+Error: Quartus II 64-Bit Fitter was unsuccessful. 18 errors, 1 warning
+    Error: Peak virtual memory: 4894 megabytes
+    Error: Processing ended: Thu Sep 26 19:26:34 2019
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+

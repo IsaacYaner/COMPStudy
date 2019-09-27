@@ -1,0 +1,13 @@
+throw and catch(handle)
+    When an exception is thrown, the run-time system would search the call stack to find a handler to catch.
+
+Three kinds of exceptions:
+    Checked exception
+    Error
+    Run-time exception
+
+All exceptions should be a child of Throwable
+
+Inheritance:
+    subclass can't throw more.
+

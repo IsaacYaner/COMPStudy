@@ -1,0 +1,38 @@
+Bitwise:
+    << and >>
+    <<: truncate (no signwise things, both are equal)
+    >>: full up with sign (always 0 for unsigned)
+Makefile:
+    Can:
+        gcc what what directly
+    Contains:
+        Dependencies
+        Actions
+        Rules
+        Explanation:
+            If *Dependency*, then do *Action*.
+    Usage:
+        CC = *compiler* : gcc
+        CFLAGS = *flags* : -Wall -Werror
+
+        *target*: *[source]*
+            *action* : can be left out if CC and flags defined
+Memory:
+    Cost of fetching any byte is same.
+    address of N-byte object must be divisible by N.
+UTF-8:
+    bytes   bits    Byte1       Byte2   Byte3   Byte4   For
+    1       7       0xxxxxxx                            ASCII
+    2       11      110         10                      Latin-script
+    3       16      1110        10      10              Asian languages
+    4       21      11110       10      10      10      symbols, emojis etc...
+    Unicode:
+        U+xxxxx:
+            U+ means it's Unicode
+            xxxxx takes the bits excepts 1s and 0s in the start of the code.
+Float numbers:
+    1:8:23  float   bias: 127
+    1:11:52 double  bias: 
+    Way to convert from binary to Decimal:
+        %1 then *2 repeat.
+Learn gcc!!!!

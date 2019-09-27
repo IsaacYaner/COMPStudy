@@ -1,0 +1,80 @@
+inode:
+    Which stores metadata
+    Each file system volume has a table of inodes in a known location 
+
+    Note: very small files can potentially be stored in an inode (inlining) 
+
+Metadata:
+    physical location
+    file type, file size
+    ownership, access permissions, timestamps (create/access/update) 
+
+    No name of file!!!!
+
+Directory:
+    Access to a file by name requires a directory 
+    where a directory is a list of (name,inode) pairs, which stores all the pairs.
+
+File descriptor:
+    index to a system table
+
+Hard Link:
+    A link directly to certain inode, file only.
+    It means giving a actual multiple identity which are identical.
+Symbolic Link:
+    A file containing any file/directory's path.
+    It is only a kind of subidentity which has a new inode.
+
+Permission:
+    User-Group-Everyone
+
+Sundry:         Miscellaneous:
+    Unix syscall/functions manipulate objects as a stream of bytes
+
+    lseek() ... move to a specified offset within a file 
+        SEEK_SET ... set file position to Offset from start of file 
+        SEEK_CUR ... set file position to Offset from current position 
+        SEEK_END ... set file position to Offset from end of file 
+
+        seeking beyond end of file leaves a gap which reads as 0's 
+        seeking back beyond start of file sets position to start of file 
+
+    mount() ... place a filesystem onto the system file tree 
+
+    fsync() ... force system to write contents of a file into perm storage
+
+        O_RDONLY ... open object for reading 
+        O_WRONLY ... open object for writing 
+        O_APPEND ... append on each write 
+        O_RDWR ... open object for reading and writing 
+        O_CREAT ... create object if doesn't exist 
+        O_TRUNC ... truncate to size 0 
+
+    lstat() Returns the symbolic link itself
+    stat()  follows the link to find a file.
+
+    stdout is accessible via file descriptor 1 
+
+    An aside: 
+        removing an object e.g. via rm 
+        removes the object's entry from a directory 
+        but the inode and data persist until 
+        all processes accessing the object close() their handle 
+        all references to the inode from other directories are removed 
+
+    Serialisation:
+        printing formatted text representation of struct data 
+
+    RAM:
+        Can access anywhere as you wish.
+
+Access to files by name proceeds as ... 
+    open directory and scan for name 
+    if not found, "No such file or directory" 
+    if found as (name,ino), access inode table inodes[ino] 
+    collect file metadata and ... 
+        check file access permissions given current user/group 
+            if don't have required access, "Permission denied"  
+        collect information about file's location and size 
+        update access timestamp 
+    use physical location to access device and manipulate file data 

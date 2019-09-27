@@ -1,0 +1,116 @@
+Revision for COMP 1531
+1-Software Architecture
+
+    Architecture focus on non-functional requirements, decomposition of functional requirements
+    Design focuses on implementing the functional requirements
+
+
+Purposes of decomposition
+    Understanding and communication
+    Predetermine key properties
+        scalability
+        reliability
+        performance
+        usability
+    allow people to work individually to tackle complexity using "divide and conquer"
+    extension
+
+Architectural Style
+    is defined by:
+        Component
+        Connector
+        Constraint
+
+Example styles:
+    Client-Server 
+        n-tiered
+        Representational State transfer (REST)
+    Peer to Peer
+    Pipe-and-Filter
+    Central repository
+    Layered
+
+Client-Server
+    Component:
+        server and Client
+    Connector:
+        request -- response model
+    Example 3-tier:
+        Presentaation
+        Business
+        Data
+        Advantages:
+            Effective use of network and straightforward data distribution
+            distributed role and responsibility
+            easy to add new
+            security scalability performance
+        Dises:
+            Server is down
+            expensive
+            congestion
+
+P2P     Peer to Peer:
+    Each peer can function as server and Client
+        Good
+            Efficiency
+            scalability
+            Robustness
+        Weak:
+            Architectual complexity
+            not always available
+            more demanding of peers 
+        
+Pipes and filters:
+    Component: filter
+    Connector: Pipe
+    Filter be independent
+        Good
+            Easy to Understand
+            flexible
+            ease of maintance
+        Weak:
+            order of filters
+            not interactive
+
+Repository:
+    Components:
+        Central data and accessors
+    Connectors:
+        Read/Write mechanism
+    Good:
+        Efficient to share large data
+        Concurrency
+        security
+        backup
+        need not how data is produced
+    Weak:
+        agree upon a repository data model
+        not distribution
+        connector
+
+Publish-subscribe Event based:
+    Components:
+        publisher and subscriber
+    Describe:
+        publisher do sth to invoke subscriber
+
+SOA service oriented Architecture:
+    i.e. B2B
+    loosely coupled
+
+MVC:
+    application architectural pattern not Software architectural style
+    data access - application logic - user interface
+    
+Architectural Views:
+    projection of a model showing a subset of its details
+
+    Model View
+        Subsystem: package diagrams
+        run-time: sequences activity diagrams
+        Data: class diagram
+    Component and Connector View
+        Box and line
+        component diagram
+    Allocation View
+        deployment diagram

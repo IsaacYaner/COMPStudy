@@ -1,0 +1,16 @@
+What to learn
+software components of modern computer systems 
+how C programs execute (at the machine level) 
+how to write (MIPS) assembly language 
+Unix/Linux system-level programming 
+how operating systems and networks are structured 
+introduction to concurrency, concurrent programming 
+
+Buy a course note?
+
+Ass1: Assembly Language,   weeks 3-6,   9 marks 
+Ass2: C Programming,   weeks 7-10,   11 marks 
+
+Six small online quizzes ... 
+1, 2, 4, 6, 8, 10 
+Each quiz due before Monday 8:59am of the following week 

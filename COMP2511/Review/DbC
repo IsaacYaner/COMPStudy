@@ -1,0 +1,8 @@
+declarativeand	must	not	include	implementation	details. 
+as	far	as	possible:		precise,	formaland	verifiable.
+
+Pre-Condition inheritance:
+    Can inherite a weaker condition so that if we take it as the base class, all the requirements could be met.
+Post-Condition iheritance:
+    Should be stronger.
+Invariants keep inherited.

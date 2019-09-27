@@ -1,0 +1,11 @@
+Pipe:
+    Pipe is like a temp file to contain information to write and read.
+    As we establish a pipe, we read from certain fd will store in the unique space for fd.
+
+execve:
+
+dup2:
+    Use stdi/o to transfer data.
+
+Message Queue:
+    A queue has name in "/STH" format.

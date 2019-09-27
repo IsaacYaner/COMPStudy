@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="19T2-cs2511-ass1/src"/>
+	<classpathentry kind="lib" path="19T2-cs2511-ass1/lib/json.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

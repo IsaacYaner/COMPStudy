@@ -1,0 +1,151 @@
+/*Lance-Williams Algorithm for Agglomerative Clustering
+  Written by 
+  COMP2521 2019 T1
+*/
+#include <stdlib.h>
+#include <stdio.h>
+#include "LanceWilliamsHAC.h"
+#include "Graph.h"
+#define numVertices numVerticies
+
+/* 
+ * Finds Dendrogram using Lance-Williams algorithm (as discussed in the specs) 
+   for the given graph g and the specified method for agglomerative clustering.
+   Method value 1 represents 'Single linkage', and 2 represents 'Complete linkage'.
+   For this assignment, you only need to implement the above two methods. 
+
+   The function returns 'Dendrogram' structure (binary tree) with the required information.
+ * 
+ */
+#define infi 9999999
+
+static int max(int a, int b)
+{
+  if(a > b)
+    return a;
+  return b;
+}
+
+static int want(int a, int b, int method)
+{
+  if(method == 1)
+    return a < b;
+  else return a > b;
+}
+
+static int choose(int a, int b, int method)
+{
+  if(want(a,b,method))
+    return a;
+  return b;
+}
+
+Dendrogram LanceWilliamsHAC(Graph g, int method) {
+  int n = numVertices(g);
+  double dis[n][n];
+
+  printf("HAC\n");
+
+  for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    {
+      dis[i][j] = -infi;
+    }
+
+  Dendrogram dend[n];
+  Dendrogram fin = NULL;
+
+  for(int i = 0; i < n; i++)
+  {
+    dend[i] = malloc(sizeof(DNode));
+    dend[i]->vertex = i;
+    dend[i]->left = NULL;
+    dend[i]->right = NULL;
+  }
+
+  for(int i = 0; i < n; i++)//First store wt in the **dis array
+  {
+    AdjList list = outIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+
+    list = inIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+  }
+
+  for(int i = 0; i < n; i++)//Convert wt to distance
+  {
+    for(int j = 0; j < n; j++)
+    {
+      if(dis[i][j] <= 0)//What if I don't consider the conditionof == 0?
+        dis[i][j] = infi;
+      else
+      {
+        dis[i][j] = 1/dis[i][j];
+      }
+      printf("%lf\t", dis[i][j]);
+    }
+    printf("\n");
+  }
+
+
+  for(int k = 1; k < n; k++)
+  {
+    int one = 0;
+    int two = 0;
+    int mini = 0;
+    if(method == 2)
+      mini = -infi - 1;
+    else mini = infi + 1;
+    int minip = mini;
+
+    for(int i = k - 1; i < n; i++)
+    {
+      for(int j = i+1; j < n; j++)
+      {
+        if(dis[i][j]<mini)
+        {
+          mini = dis[i][j];
+          one = i;
+          two = j;
+        }
+      }
+    }
+
+    Dendrogram temp = malloc(sizeof(DNode));
+    temp->vertex = -1;
+    temp->left = dend[one];
+    temp->right = dend[two];
+    dend[two] = temp;
+    fin = temp;
+    int i = one;
+    int j = two;
+    for(int t = i; t < n; t++)
+    {
+      dis[j][t] = dis[t][j] = choose(dis[i][t], dis[j][t], method);
+    }
+    dis[i][j] = dis[j][i] = minip;
+    
+  }
+  return fin;
+}
+
+
+void freeDendrogram(Dendrogram d) {
+  if(d->vertex != -1)
+  {
+    free(d);
+    return;
+  } 
+  freeDendrogram(d->left);
+  freeDendrogram(d->right);
+  free(d);
+	return;
+}

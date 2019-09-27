@@ -1,0 +1,18 @@
+    Removes casting
+    customise
+    stability
+<>
+    is right after class name
+    before method name
+
+Bounded
+    <T extends B1 & B2 & B3>
+        Only one class can exist and must be the first one.
+
+Generic<Child> is not a subtype of Generic<Base>
+They are in the same level
+
+Wild card can be used in parameters <? extends Something> or <? super Something> or just <?>
+
+A more strict class can inherite a wild card class, but Dont' forget it's not for Generic without wildcard.
+

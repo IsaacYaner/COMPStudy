@@ -1,0 +1,79 @@
+Algorithm Indexes                              
+#   BST                                               
+#       Randomised
+#       Splay
+#       AVL
+!!!!!!!!2-3-4
+!!!!!!!!Red-Black
+#   Graph
+#       Representations
+#           Array-of-edges
+#           Adjacency Matrix
+#           Adjacency List
+#       Weighted Graphs
+#!      Eular Path
+#!      Hamilton Path
+#       Minimum Spanning Trees
+#           Kurskal
+#           Prim
+#           Other
+#       Shortest Path
+#           SSSP
+#           APSP
+#           Edge Relaxation
+#           Dijkstra
+#    Heap
+#   Hashing
+    ADTs
+    Sorting
+        Selection
+        Bubble
+        Insertion
+        ShellSort
+        Sorting Linked Lists
+        Quicksort
+        Mergesort
+        HeapSort
+        Sorting Lower Bound
+        Non comparative
+        Radix
+        Bucket/Pigeonhole
+        External sort
+    String search
+#       KMP
+#       Boyer-Moore
+        Huffman
+    Software Development
+
+End exam requirements:
+    Analyse performance characteristics
+    Implement in C 
+        new, insert, delete, search, traverse
+        efficincy of operations
+    ADO, ADT and GADT
+    sort
+        Selection
+        Insertion
+        Bubble
+        Mergesort
+        Quicksort
+    Linear structures
+        linked-Lists
+        set
+        stack 
+        queue 
+        priority queue
+        heap
+    Trees
+        BST
+        tries
+        Radix
+    BST
+        ALL
+        rotations
+        jions
+        Merge
+    Hash table
+    Graphs
+
+    CATEI

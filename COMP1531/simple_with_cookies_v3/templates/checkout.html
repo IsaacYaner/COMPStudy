@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block body %}
+    <br>
+
+
+
+{% if table['items']|length == 0 %}
+    <div class="search_style">
+    {% if notices | length != 0 %}
+        {% for notice in notices %}
+            <h2>{{ notice }}</h2>
+        {% endfor %}
+    {% endif %}
+    <h1>Currently nothing in your cart</h1>
+    <form action="{{ url_for('shop') }}">
+    <button>Go Shopping</button>
+    </form>
+{% else %}
+
+<div class="body_style">
+{% if notices | length != 0 %}
+    {% for notice in notices %}
+        <h2>{{ notice }}</h2>
+    {% endfor %}
+{% endif %}
+<table id="customers">
+  <col width="130">
+  <col width="80">
+  <col width="130">
+  <col width="80">
+
+  <tr>
+    <th>Item</th>
+    <th>Qty</th>
+    <th>Total</th>
+    <th>Action</th>
+  </tr>
+  {% for i in table['items'] %}
+    <tr>
+      <td>{{ i[0].name }}</td>
+      <td>{{ i[1] }} </td>
+      <td>${{ i[2] }} </td>
+
+    <td><form method="post">
+        <input type="number"  name="qty" required>
+        <input hidden name="id" value="{{ i[0].item_code }}">
+        <input hidden name="action" value="update">
+        <button>Update Qty</button>
+
+    </form>
+    <form method="post">
+        <input hidden name="id" value="{{ i[0].item_code }}">
+        <input hidden name="action" value="remove">
+        <button>Remove</button>
+    </form>
+    </tr>
+    {% endfor %}
+
+
+    <br>
+
+</table>
+
+<h1>
+Total: ${{ table['total'] }}<br>
+
+<form action="{{ url_for('shop') }}">
+    <button>Continue Shopping</button>
+</form>
+<form method="post">
+    <input hidden name="action" value="purchase">
+    <button>Checkout</button>
+</form>
+</h1>
+{% endif %}
+    </div>
+{% endblock %}

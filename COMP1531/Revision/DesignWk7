@@ -1,0 +1,53 @@
+What is abstract class or method?
+Design smell
+    is Poor Design
+    Include
+        Rigidity
+            difficult to change
+        Fragility
+            change cause many breaks
+        Immobility
+            hard to reuse
+        Viscosity
+            hack to change or slow environment
+        Needless complexity
+            unuseful constructs, ahead requirement
+        Needless repetition
+            bugs fixed repeatly
+
+Design principle
+    Characteristed by
+        Coupling
+        Cohesion
+    loose coupling and high Cohesion
+        Extensible
+        Reusable
+        teatable
+        Maintanable
+        Understandable
+    SOLID
+        SRP
+            single responsibility
+                avoid unnecessary couplings
+                change in res may impair ability to meet others
+            Violation
+                Mixing business logic
+                Grouping business rules and persistence control
+            If no symptom to change, don't split too hard
+            Read Reuse Test
+        OCP
+            open closed principle
+                Open for extension, closed for modification
+            reduces rigidity
+            Bad
+                Not Easy
+                Expensive
+        LSP
+            Liskov substitution principle
+        ISP
+            Interface segregation
+        DIP
+            Dependency invertion
+    MVC 
+        Model View Controller
+        Multiple presentation of data

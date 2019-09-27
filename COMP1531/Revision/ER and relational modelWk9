@@ -1,0 +1,59 @@
+Example:
+    If has favorite team, player, it can bee a relationship
+    Captian is a kind of relationship
+Good:
+    high level
+    good expressive power
+
+Relational data model
+    general data frmalism
+    map to file structure
+    Relation -- table
+    tuple -- row
+    attribute -- column
+        belongs to a domain which has name, type and format
+    Relation schema:
+        R(an:Dn, ...)
+    Tuple:
+        DnXDn
+    Instance:
+        Set of Tuple
+    schema --versus-- Instance
+    Degree (arity)
+        number of attributes
+    Constrains:
+        defines
+            values are/not allowed
+            combinations are/not
+        DO
+            domain constraint
+                NULL satisfies all domain constraints
+            key constraint
+                (Uniqueness constraint)
+                one candidate is designated a primary key
+                No primary key can be NULL
+            referential constraint
+                Foreign key -- Primary key in parent table
+                    either all Primary key of others or all NULL
+                Cuz domain must be atomic
+                arrow points to parent's Primary key
+    A relational database schema
+        set of relation schemas && integrity constraints
+
+RDM vs DBMS
+    RDM
+        mathematical construct
+            representation of data structures
+            constraints of relation/tuples
+            algebra for manipulating
+    DBMS
+        implementation
+        SQL as language
+Mapping
+    optimised:
+        merge 1 factor to the N
+        1 - 1 also do that
+        Multi valued store that in a new relation that holds a key to 1
+ORM
+    transfer data
+    shield from writing SQL and focus on app logic

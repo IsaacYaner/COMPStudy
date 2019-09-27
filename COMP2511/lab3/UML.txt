@@ -1,0 +1,10 @@
+Student
+*Enrol*
+Semester
+Course
+	(Pre-requisite)
+	UOC
+Session
+	Lec, tut, lab
+	room, timeslot
+Enrolment

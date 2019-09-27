@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Session Example</title>
+</head>
+<body>
+    <h2> Session Example</h2>
+    <form name="form1", method="POST">
+		Enter the item id: <input type="text" name="id" size=30 value=""><br>
+        Enter the item quantity: <input type="text" name="qty" size=30 value=""><br>
+		<input value="Order" type ="submit" ><br>
+	</form>
+
+	Your Shopping Cart has {{length}} items
+	<table style="border: 1px solid orange;">
+		{% for item in items %}
+		<tr>
+			<td> {{ item.id }}</td>
+			<td> {{ item.qty }}</td>
+		</tr>
+	{% endfor %}
+    </table>
+	
+</body>
+</html>

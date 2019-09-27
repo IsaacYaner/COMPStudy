@@ -1,0 +1,53 @@
+CPU contains:
+    Data Registers
+    Control Registers
+    Arithmetic Logic Unit
+    set of simple instructions
+
+Instructions:
+    1-2 32-bit words:
+        Operator  -  Operand1  - Operand2 - Destination
+        Operator - Destination - Value or Address
+    Common kinds:
+        load
+        loadc
+        store
+        jump
+        jumpif
+        add, sub, mul, div
+        and, or , xor
+        neg
+        shiftl, shiftr
+        syscall
+    Directives: .something:
+        .blobl  could be refered by other.
+        .asciiz it's a string.
+        .word   allocate a word
+        .space  allocate n bytes
+        .align  align next object's address to 2 to the power of n byte.
+        .ascii  it's a set of char
+        .half
+        .byte
+        Regions:
+            Data region : .data
+            Code region : .text
+    Regions:
+        text    0x00400000
+        data    0x10000000
+        stack   0x7fffefff      Grows down!
+        k_text  0x80000000
+        k_data  0x90000000
+        
+        NO HEAP
+    Addressing modes:
+        direct      :Using lables or immediate values.
+        indirect    :Using content in certain register.
+    Instruction formats:
+        6 - 5 - 5 - 5 - 11unused
+        6 - 5 - 21memory or constant
+
+IMPORTANT!!!!!!!!!!!!
+    LH:
+    if 0x00008000
+    result would be 0x10000000  // or 0x10008000?
+

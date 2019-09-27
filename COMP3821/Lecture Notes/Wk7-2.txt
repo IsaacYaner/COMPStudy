@@ -1,0 +1,8 @@
+Dynamic Programming 
+    Given array of activities with start and end times, find the longest duration.
+    Longest increasing subsequence. (nlogn?)
+    Make Change
+    Integer Knapsack Problem   (Duplicate allowed or not allowed)
+        Use a reversed scan to replace the 2D recursion
+    Balanced Partition
+    

@@ -1,0 +1,21 @@
+Liskov’sSubstitution	Principle
+Classes	should	be	(OCP)open	for	extension	and	closed	for	modification
+Avoid	multiple/diverse	responsibilities	for	a	class
+Regardless	of	the	granularity,	smells	in	general	indicate	violation	of	software	design	principles
+
+vCreational	Patterns        Object creation pattern
+    v Abstract	Factory
+    v Factory	Method 
+    v Builder 
+    v Singleto              One class, one instance
+vStructural	Patterns        ease design, relationship
+    v Adapter 
+    v Composite 
+    v Decorato
+vBehavioral	Patterns        communication among objects
+    v Iterator              Iterate an aggregate object without sequentially without exposing representation
+    v Observer              observe another event
+    v State                 partially change type at runtime
+    v Strategy              Select algorithms at runtime
+    v Template              
+    v Visitor

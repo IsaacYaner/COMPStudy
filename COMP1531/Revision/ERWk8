@@ -1,0 +1,49 @@
+Data
+    Facts that can be recorded and have implicit meaning
+    Should be
+        Stored
+        Manipulated
+        Shared
+        and transmitted
+    Types
+        Relational model
+        Document model
+        Object oriented
+        Object Relational
+Data modelling
+    Logical models
+        ER model
+    Physical models
+        relational model
+    Designs
+        What
+        relationships
+        constraint
+ER diagram
+    entity
+    attribute
+    entity Set 
+    two entity with the same attributes are regardes as the same entity
+    To identify an entity
+        Super key
+            distinct over entity set 
+        Candidate key
+        Primary key
+    relationship
+        degree = connects
+        cardinality = M:N
+    ER modelling doesn't consider operations
+    Drawing
+        square -- entity
+        diamond -- relationship
+        oval -- attribute
+        circle -- inheritance
+        disjoing -- d
+        overlapping -- o
+        total or partial
+        Arraw means one 
+        line means many
+        Thick means total participation (all)
+    Weak entity
+        has no key
+        exist only because association with entity

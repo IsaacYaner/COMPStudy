@@ -1,0 +1,20 @@
+Memory Usage
+    Code-data-heap-stack
+    Heap:
+        Malloc, grow up
+    Stack:
+        variables, grow down
+
+virtual memory 
+    dividing process memory space into fixed-size pages 
+    on-demand loading of process pages into physical memory  
+
+    A process holds a list of pages and a map of where the pages exist on the physical memory.
+
+    Page
+        A chunk of memory that is like a page of the book.
+        Have uniform size.
+        Contains start address.
+
+Working set
+    LRU replacement 

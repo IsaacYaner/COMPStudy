@@ -1,0 +1,57 @@
+|part3
+SW[0] => mx31:MX0.w
+SW[0] => LEDR[0].DATAIN
+SW[1] => mx31:MX1.w
+SW[1] => LEDR[1].DATAIN
+SW[2] => mx31:MX0.v
+SW[2] => LEDR[2].DATAIN
+SW[3] => mx31:MX1.v
+SW[3] => LEDR[3].DATAIN
+SW[4] => mx31:MX0.u
+SW[4] => LEDR[4].DATAIN
+SW[5] => mx31:MX1.u
+SW[5] => LEDR[5].DATAIN
+SW[6] => LEDR[6].DATAIN
+SW[7] => LEDR[7].DATAIN
+SW[8] => mx31:MX1.s0
+SW[8] => mx31:MX0.s0
+SW[8] => LEDR[8].DATAIN
+SW[9] => mx31:MX1.s1
+SW[9] => mx31:MX0.s1
+SW[9] => LEDR[9].DATAIN
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= SW[9].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= mx31:MX0.m
+LEDG[1] <= mx31:MX1.m
+
+
+|part3|mx31:MX1
+u => t.IN0
+v => t.IN0
+w => m.IN0
+s0 => t.IN1
+s0 => t.IN1
+s1 => m.IN1
+s1 => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|mx31:MX0
+u => t.IN0
+v => t.IN0
+w => m.IN0
+s0 => t.IN1
+s0 => t.IN1
+s1 => m.IN1
+s1 => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+

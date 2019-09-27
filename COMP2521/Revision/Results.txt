@@ -1,0 +1,154 @@
+Algorithm Indexes
+    BST
+        Rotation
+        Partition
+        Balancing
+        Joining
+        Worst cases determined by  height
+        Examples
+            Splay
+                Insertion:
+                #   Describe:
+                    Inserting new nodes to the grandchilds and rotates the newest
+                    to the current point.
+                    left(left(tree)) = insert(left(left(tree)), item)
+                    tree = Rotate R
+                    return Rotate R
+                    if NULL return new
+                    if == return tree
+                    if left left = new
+                        return Rotate R 
+                    
+                    All in all, insert then rotate to Root 
+                #
+                Splay:
+                #   Describe:
+                    Similar to Insertion
+                #
+                Search:
+                #   Describe:
+                    if NULL return NULL
+                    Splay
+                    if root is return root
+                    else NULL 
+                #
+                Not Good
+            AVL
+                Insertion:
+                #   Describe:
+                    Basic Insertion
+                    then rotate LR if new leaf is on LR
+                    else rotate only R
+                #
+                May not be weight balanced
+            2-3-4
+                Intervals
+                Search:
+                    Similar as normal BST
+                Insertion:
+                # Describe:
+                    Find the leaf that the new node belongs to
+                    become a part of it
+                    if it is full
+                    break the middle to the root of left and right
+                    then promote it to the parent layer
+                    if parent is full
+                    break the parent to a binary tree then insert this
+                    promoted to the appro place
+                #
+            Red-Black
+                Intervals also
+                New node:
+                #
+                    Creat a normal BST node but set it color to RED 
+                #
+                Search:
+                #
+                    Same as normal BST
+                #
+                Insertion:
+                #
+                    If empty return new
+                    If left - right both RED
+                        this = red, left = right = black
+                    If item < this
+                        left = insert left, false(If in right true)
+                        rearrange:
+                        #
+                            if left = leftleft = RED
+                            tree = Rotate R
+                            tree color to Black
+                            Left = right = RED
+
+                            if inRight and left is red
+                            Rotate R 
+
+                        #
+                    
+                    After all, set root to black
+                #
+    Graph
+        DFS
+        BFS
+        Hamilton Path
+        Eular Path
+        Spanning Tree
+            spanning = all vertices, tree = no cycles
+            MST: has the shortest total weight than other ST 
+            Examples
+                Kruskal:
+                    Add N-1 edges in increaasing weight that doesn't form a cycle
+                Prim:
+                    Add N-1 shortest edges from existing ST to nodes outside
+        Shortest Path
+            relaxation:
+                dist[w] = min(dist[w], dist[v] + weight)
+            Dijkstra:
+                Add and relax all targets of minimum in PQ into PQ, and dequeuue the src 
+    Heap
+    Hashing
+        hash(k, N)
+        hashTable
+            N
+            Item *items (or List *lists)
+        Collision:
+            Separate chaining
+            Linear Probing
+                h = hash(k, N)
+                for j from 0 to n-1
+                if a[i] NoItem %% i = (h+j)%N
+                break
+                if key exist 
+                break
+                renew nitems or not
+                a[i] = it
+            Double hasshing
+                j is incremented by h2
+                k%N2 + 1
+                N2 is a prime less than N
+
+
+
+    Text processing
+        Pattern Matching
+            Boyer-Moore
+                i += m - min(j, 1 + L[T[i]])
+                j = m-1
+                i++ or alighn the ith character, then shift the i to point last
+                L[i] is the last occurence, -1 means not exist
+                Large alphabet and natural languages
+            KMP
+                Faliure function:
+                    largest prefix up to this characer that is
+                    the suffix in the no-head string up to this 
+                    #
+                        if == i++ j++, F[j] = J
+                        else if j 0 i++
+                        else if not j 0 j = F[j-1]
+                    #
+                i unchanged
+                j = F[T[j-1]]
+                or simple i++
+                Small alphabet
+        Tries
+            

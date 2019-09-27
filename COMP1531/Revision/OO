@@ -1,0 +1,22 @@
+Abstraction is a technique of organising things innto groups of families with same attributes the are relevant to the problem domain.
+Use case is a part of requirement analysis phase, User to interact with the black box 
+domain modeling transparent, system-to-be.
+Clarification of requirements and to rationale use case.
+unambiguous view of problem domain.
+
+CRC analysis and discover classes
+structure of the system to be by showing classes attributes operations and relationships.
+
+
+Address as an entity is suitable.
+1. Because Water supply power directly to address, if we take address as a property of Person, It would be hard
+    to establish relationship between address and company.
+2. Only one comapny supplies power to each address, but different people could live in the same address, The second
+    graph represents this fact.
+
+Class diagram is a kind of static diagram as it provides a view of components of system-to-be and the relationship 
+attribute, operation and relationship it doesn't change as time past, it only decipts the system.
+
+Composition means one object has the relationship "uses" with another object, namely one object calls functionalities
+    of the other.
+i.e. A cook uses pan to fry.

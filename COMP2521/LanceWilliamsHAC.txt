@@ -1,0 +1,204 @@
+/*Lance-Williams Algorithm for Agglomerative Clustering
+  Written by 
+  COMP2521 2019 T1
+*/
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "LanceWilliamsHAC.h"
+#include "Graph.h"
+#define numVertices numVerticies
+
+/* 
+ * Finds Dendrogram using Lance-Williams algorithm (as discussed in the specs) 
+   for the given graph g and the specified method for agglomerative clustering.
+   Method value 1 represents 'Single linkage', and 2 represents 'Complete linkage'.
+   For this assignment, you only need to implement the above two methods. 
+
+   The function returns 'Dendrogram' structure (binary tree) with the required information.
+ * 
+ */
+
+//Set infinity to a quite large number
+#define infi 9999999
+
+//returns the max value between a and b
+static int max(int a, int b)
+{
+  if(a > b)
+    return a;
+  return b;
+}
+
+//returns a bool value representing whether
+//a is wanted according to the method
+//method == 1 means a is wanted when
+//it is less than b, vice versa
+static double want(double a, double b, int method)
+{
+  if(method == 1)
+    return a < b;
+  else return a > b;
+}
+
+//return the wanted value
+static double choose(double a, double b, int method)
+{
+  if(want(a,b,method))
+    return a;
+  return b;
+}
+
+Dendrogram LanceWilliamsHAC(Graph g, int method) {
+  int n = numVertices(g);
+  double dis[n][n];//distance between ith and jth cluster
+  int vis[2*n];//When vis[n] is set to 1, the ith cluster is merged to the other.
+  int ofs = n;//offset means the number of the current cluster.
+
+  //Set the initial value of vis to 0
+  for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    {
+      dis[i][j] = -infi;
+      vis[i] = 0;
+    }
+
+  
+  Dendrogram dend[n];
+  //fin points to the last and only cluster
+  Dendrogram fin = NULL;
+
+  //Initialise Cluster for each node in graph
+  for(int i = 0; i < n; i++)
+  {
+    dend[i] = malloc(sizeof(DNode));
+    dend[i]->vertex = i;
+    dend[i]->left = NULL;
+    dend[i]->right = NULL;
+  }
+
+  for(int i = 0; i < n; i++)//First store wt in the **dis array
+  {
+    AdjList list = outIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+
+    list = inIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+  }
+
+  for(int i = 0; i < n; i++)//Convert wt to distance
+  {
+    //When dis[i][j] is less than or equalto 0,
+    //there's no edge connecting i and j
+    //Else, calculate distance i and j by 
+    //taking the reciprocal.
+    for(int j = 0; j < n; j++)
+    {
+      if(dis[i][j] <= 0)
+        dis[i][j] = infi;
+      else
+      {
+        dis[i][j] = 1/dis[i][j];
+      }
+    }
+  }
+
+  //Start of the LanceWilliamsHAC main part
+  for(int k = 1; k < n; k++)
+  {
+    //One means the cluster that is going
+    //to be merged, while two is the object
+    //of the merge process
+    //mini is the Largest or Smallest value
+    //according to the method chosen.
+    int one = 0;
+    int two = 0;
+    double mini = 0;
+    if(method == 2)
+      mini = -infi - 1;
+    else mini = infi + 1;
+
+    //minip, abbriviation of mini permanent
+    //stores the largest or smallest possible
+    //value that can not be changed.
+    double minip = mini;
+    
+    //This loop is used for finding the nearset
+    //cluster pair.
+    //vis[n] == 1 means that point is deleted
+    //which is not accessable forever.
+    for(int i = 0; i < n; i++)
+    {
+      if(vis[i])
+        continue;
+      for(int j = 0; j < n; j++)
+      {
+        if(vis[j])
+          continue;
+        if(i == j)
+          continue;
+        
+        //A temporary closest pair of cluster
+        if(dis[i][j]<=mini)
+        {
+          mini = dis[i][j];
+          one = i;
+          two = j;          
+        }
+      }
+    }
+    
+    Dendrogram temp = malloc(sizeof(DNode));
+    temp->vertex = ofs++;
+    temp->left = dend[one];
+    temp->right = dend[two];
+
+    //The new cluster formed would take the place
+    //of the cluster that is merged into.
+    dend[two] = temp;
+    fin = temp;//Record the returned answer
+    int i = one;
+    int j = two;
+    vis[i] = 1;//Mark ith cluster is merged into others
+
+    for(int t = 0; t < n; t++)
+    {
+      if(j==t || i==t)
+        continue;
+      if(vis[t])
+        continue;
+      //choose the new distance between the new cluster
+      //and all the other clusters according to the method.
+      dis[j][t] = dis[t][j] = choose(dis[i][t], dis[j][t], method);
+      //Set ith cluster unconnected
+      dis[i][t] = dis[t][i] = minip;
+    }
+
+  }
+
+  return fin;
+}
+
+void freeDendrogram(Dendrogram d) {
+  //If d is a leaf, free d
+  if(d->vertex != -1)
+  {
+    free(d);
+    return;
+  } 
+  //Otherwise, free all the subtree of
+  //d, then d is a leaf and freeable
+  freeDendrogram(d->left);
+  freeDendrogram(d->right);
+  free(d);
+	return;
+}

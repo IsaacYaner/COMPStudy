@@ -1,0 +1,26 @@
+Big Oh notation:
+    f(n) = O(g(n)) means:
+        There exists an n0 that for all n >= n0, there exists a c such that 0<= f(n) <=c·g(n).
+        Summrise: g is an asymptotic upper bound of f.
+    Omega:
+        lower bound.
+    f = O(Ω(f)) = Ω(O(f))
+        use c = 1/d approch to prove.
+    Theta:
+        Same.
+        the are both O and Ω of each other.
+    
+Master Theroem:
+    For:
+        integer a, b: >= > 1
+        non-decreasing positive f(n)
+        T(n) = a·T(n/b) + f(n)
+    Then:
+        f(n) = O(n^(logba-ε)) -> T(n) = Θ(n^(logba))
+        f(n) = Θ(n^(logba)) -> T(n) = Θ(n^(logba)·log2n)
+        f(n) = Ω(n^(logba+ε)) && a·f(n/b) <= cf(n) -> T(n) = Θ(f(n))
+        #For *some* ε > 0, c < 1 and n0 < n#
+    Else:
+        Not applicable.
+    Prove:
+        T(n) = n^(logba)·T(1) + sigma(0..logbn-1)a^(i)·O((n/b^(i)^(logba-ε))

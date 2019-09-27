@@ -1,0 +1,13 @@
+Vandermonde Matrix
+In linear time:
+                              -1
+    A0      1 x0 x0^2 ... x0^n   PA(x0)
+    A1
+    A2  =   
+    ...
+    An      1 xn xn^2 ... xn^n   PA(x1)
+
+    or commute to left side.
+    
+    What is FFT?
+    

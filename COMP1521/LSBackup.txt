@@ -1,0 +1,155 @@
+// myls.c ... my very own "ls" implementation
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#include <dirent.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <pwd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#ifdef __linux__
+# include <bsd/string.h>
+#endif
+#include <sysexits.h>
+#include <unistd.h>
+
+#define MAXDIRNAME 256
+#define MAXFNAME 256
+#define MAXNAME 24
+
+char *rwxmode (mode_t, char *);
+char *username (uid_t, char *);
+char *groupname (gid_t, char *);
+
+int main (int argc, char *argv[])
+{
+	// string buffers for various names
+	char uname[MAXNAME+1]; 
+	char gname[MAXNAME+1]; 
+	char mode[MAXNAME+1]; 
+
+	// collect the directory name, with "." as default
+	char dirname[MAXDIRNAME] = ".";
+	if (argc >= 2)
+		strlcpy (dirname, argv[1], MAXDIRNAME);
+
+	// check that the name really is a directory
+	struct stat info;
+	if (stat (dirname, &info) < 0)
+		err (EX_OSERR, "%s", dirname);
+
+	if (! S_ISDIR (info.st_mode)) {
+		errno = ENOTDIR;
+		err (EX_DATAERR, "%s", dirname);
+	}
+
+	// open the directory to start reading
+	DIR *df = opendir(dirname);
+	
+	
+
+	// read directory entries
+	struct dirent *entry = readdir(df); 
+	// ... TODO ...
+
+
+	while(entry)
+	{	
+
+		if(entry->d_name[0] == '.')
+		{
+			entry = readdir(df);
+			continue;
+		}
+
+		char pathname[MAXDIRNAME];
+		strcpy(pathname, dirname);
+		strcat(pathname, "/");
+		strcat(pathname, entry->d_name);
+
+		if (lstat (pathname, &info) < 0)
+			err (EX_OSERR, "%s", dirname);
+
+		switch (info.st_mode & S_IFMT)
+		{
+			case S_IFDIR : printf("d"); break;
+			case S_IFREG : printf("-"); break;
+			case S_IFLNK : printf("l"); break;
+			default : printf("?");
+		}
+
+		printf (
+		"%s  %-8.8s %-8.8s %8lld  %s\n",
+		rwxmode (info.st_mode, mode),
+		username (info.st_uid, uname),
+		groupname(info.st_gid, gname),
+		(long long) info.st_size,
+		entry->d_name
+		);
+
+
+		entry = readdir(df);
+
+
+
+	}
+
+	
+	// finish up
+	closedir(df); 
+
+	return EXIT_SUCCESS;
+}
+
+char next(char offset)
+{
+	switch (offset)
+	{
+		case 'w' : offset = 'r'; break;
+		case 'x' : offset = 'w'; break;
+		default : offset = 'x';
+	}
+	return offset;
+}
+
+// convert octal mode to -rwxrwxrwx string
+char *rwxmode (mode_t mode, char *str)
+{
+	// ... TODO ...
+	char p = ' ';
+	for(int i = 8; i >= 0; i--)
+	{
+		char s = mode%2;
+		mode >>= 1;
+		p = next(p);
+		str[i]= s?p:'-';
+	}
+	return str;
+}
+
+// convert user id to user name
+char *username (uid_t uid, char *name)
+{
+	struct passwd *uinfo = getpwuid (uid);
+	if (uinfo != NULL)
+		snprintf (name, MAXNAME, "%s", uinfo->pw_name);
+	else
+		snprintf (name, MAXNAME, "%d?", (int) uid);
+	return name;
+}
+
+// convert group id to group name
+char *groupname (gid_t gid, char *name)
+{
+	struct group *ginfo = getgrgid (gid);
+	if (ginfo != NULL)
+		snprintf (name, MAXNAME, "%s", ginfo->gr_name);
+	else
+		snprintf (name, MAXNAME, "%d?", (int) gid);
+	return name;
+}

@@ -1,0 +1,203 @@
+/*Lance-Williams Algorithm for Agglomerative Clustering
+  Written by 
+  COMP2521 2019 T1
+*/
+#include <stdlib.h>
+#include <stdio.h>
+#include "LanceWilliamsHAC.h"
+#include "Graph.h"
+#define numVertices numVerticies
+
+/* 
+ * Finds Dendrogram using Lance-Williams algorithm (as discussed in the specs) 
+   for the given graph g and the specified method for agglomerative clustering.
+   Method value 1 represents 'Single linkage', and 2 represents 'Complete linkage'.
+   For this assignment, you only need to implement the above two methods. 
+
+   The function returns 'Dendrogram' structure (binary tree) with the required information.
+ * 
+ */
+#define infi 9999999
+
+static int max(int a, int b)
+{
+  if(a > b)
+    return a;
+  return b;
+}
+
+static double want(double a, double b, int method)
+{
+  if(method == 1)
+    return a < b;
+  else return a > b;
+}
+
+static double choose(double a, double b, int method)
+{
+  if(want(a,b,method))
+    return a;
+  return b;
+}
+
+Dendrogram LanceWilliamsHAC(Graph g, int method) {
+  int n = numVertices(g);
+  double dis[n][n];
+  int vis[2*n];
+  int ofs = n;
+  //printf("HAC\n");
+
+  for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    {
+      dis[i][j] = -infi;
+      vis[i] = 0;
+    }
+
+  Dendrogram dend[n];
+  Dendrogram fin = NULL;
+
+  for(int i = 0; i < n; i++)
+  {
+    dend[i] = malloc(sizeof(DNode));
+    dend[i]->vertex = i;
+    dend[i]->left = NULL;
+    dend[i]->right = NULL;
+  }
+
+  for(int i = 0; i < n; i++)//First store wt in the **dis array
+  {
+    AdjList list = outIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+
+    list = inIncident(g, i);
+    while(list)
+    {
+      dis[i][list->w] = max(dis[i][list->w], list->weight);
+      list = list->next;
+    }
+  }
+
+  for(int i = 0; i < n; i++)//Convert wt to distance
+  {
+    for(int j = 0; j < n; j++)
+    {
+      if(dis[i][j] <= 0)//What if I don't consider the conditionof == 0?
+        dis[i][j] = infi;
+      else
+      {
+        dis[i][j] = 1/dis[i][j];
+      }
+      if(dis[i][j] < infi)
+      printf("%.2lf ", dis[i][j]);
+      else printf("XXXX ");
+    }
+    printf("\n");
+  }
+
+  //printf("dis 0 4 is %lf\n", dis[0][4]);
+  for(int k = 1; k < n; k++)
+  {
+    int one = 0;
+    int two = 0;
+    double mini = 0;
+    if(method == 2)
+      mini = -infi - 1;
+    else mini = infi + 1;
+    double minip = mini;
+    //printf("Original mini is %d\n", mini);    
+    for(int i = 0; i < n; i++)
+    {
+      if(vis[i])
+        continue;
+      for(int j = 0; j < n; j++)
+      {
+        if(vis[j])
+          continue;
+        if(i == j)
+          continue;
+        if(dis[i][j]<=mini)
+        {
+          //printf("dis %d %d is %lf, now mini is %lf\n",i, j, dis[i][j], mini);
+          mini = dis[i][j];
+          one = i;
+          two = j;
+          
+        }
+      }
+    }
+    //printf("mini is %lf\n", mini);
+    Dendrogram temp = malloc(sizeof(DNode));
+    temp->vertex = ofs++;
+    temp->left = dend[one];
+    temp->right = dend[two];
+    dend[two] = temp;
+    fin = temp;
+    int i = one;
+    int j = two;
+    vis[i] = 1;
+    //printf("Merge %d into %d set %d \n",i ,j , dend[i]->vertex);
+    for(int t = 0; t < n; t++)
+    {
+      if(j==t || i==t)
+        continue;
+      if(vis[t])
+        continue;
+      dis[j][t] = dis[t][j] = choose(dis[i][t], dis[j][t], method);
+      //printf("Fresh %d %d to %lf\n",j ,t ,dis[j][t]);
+      dis[i][t] = dis[t][i] = minip;
+    }
+
+    printf("\nVis[%d]\n",i);
+    for(i = 0; i < n; i++)
+    {
+      for(j = 0; j < n; j++)
+      {
+        if(vis[i]||vis[j])
+        {
+          printf("-    ");
+          continue;
+        }
+        if(dis[i][j] < infi)
+          printf("%.2lf ", dis[i][j]);
+        else printf("XXXX ");
+      }
+      printf("\n");
+    }
+  }
+  
+  printf("\n%d points merged\n",ofs-n);
+  for(int i = 0; i < n; i++)
+  {
+    for(int j = 0; j < n; j++)
+    {
+      if(vis[i]||vis[j])
+      {
+        printf("     ");
+        continue;
+      }
+      if(dis[i][j] < infi)
+        printf("%.2lf ", dis[i][j]);
+      else printf("XXXX ");
+    }
+    printf("\n");
+  }
+  return fin;
+}
+
+
+void freeDendrogram(Dendrogram d) {
+  if(d->vertex != -1)
+  {
+    free(d);
+    return;
+  } 
+  freeDendrogram(d->left);
+  freeDendrogram(d->right);
+  free(d);
+	return;
+}

@@ -1,0 +1,201 @@
+// ThreadTree.c ... implementation of Tree-of-Mail-Threads ADT
+// Written by John Shepherd, Feb 2019
+
+#include <assert.h>
+#include <err.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sysexits.h>
+
+#include "MMList.h"
+#include "MMTree.h"
+#include "MailMessage.h"
+#include "ThreadTree.h"
+
+// Representation of ThreadTree's
+
+typedef struct ThreadTreeNode *Link;
+
+typedef struct ThreadTreeNode {
+	MailMessage mesg;
+	Link next, replies;
+} ThreadTreeNode;
+
+typedef struct ThreadTreeRep {
+	Link messages;
+} ThreadTreeRep;
+
+// Auxiliary data structures and functions
+
+// Add any new data structures and functions here ...
+
+static Link NewNode(MailMessage mesgs);
+static Link FindFather(Link ptr, MailMessage temp);
+static void doDropThreadTree (Link t);
+static void doShowThreadTree (Link t, int level);
+
+// END auxiliary data structures and functions
+
+// create a new empty ThreadTree
+ThreadTree newThreadTree (void)
+{
+	ThreadTreeRep *new = malloc (sizeof *new);
+	if (new == NULL) err (EX_OSERR, "couldn't allocate ThreadTree");
+	*new = (ThreadTreeRep) { };
+	return new;
+}
+
+void dropThreadTree (ThreadTree tt)
+{
+	assert (tt != NULL);
+	doDropThreadTree (tt->messages);
+}
+
+// free up memory associated with list
+static void doDropThreadTree (Link t)
+{
+	if (t == NULL)
+		return;
+
+	for (Link curr = t, next; curr != NULL; curr = next) {
+		next = curr->next;
+		doDropThreadTree (curr->replies);
+		// don't drop curr->mesg, in case referenced elsehwere
+		free (curr);
+	}
+}
+
+void showThreadTree (ThreadTree tt)
+{
+	assert (tt != NULL);
+	doShowThreadTree (tt->messages, 0);
+}
+
+// display thread tree as hiearchical list
+static void doShowThreadTree (Link t, int level)
+{
+	if (t == NULL)
+		return;
+	for (Link curr = t; curr != NULL; curr = curr->next) {
+		showMailMessage (curr->mesg, level);
+		doShowThreadTree (curr->replies, level + 1);
+	}
+}
+
+// insert mail message into ThreadTree
+// if a reply, insert in appropriate replies list
+// whichever list inserted, must be in timestamp-order 
+Link NewNode(MailMessage mesgs)//To allocate memory for a NewNode with certain information
+{
+    ThreadTreeNode *new = malloc (sizeof *new);
+	if (new == NULL) err (EX_OSERR, "couldn't allocate ThreadTree");
+	*new = (ThreadTreeNode) { };
+	new->mesg = mesgs;
+	return new;
+}
+Link FindFather(Link ptf, MailMessage temp)//To get the address of the email that temp replys to
+{
+    Link ptr = ptf;
+    if(ptr == NULL)
+    return NULL;
+    if(strcmp(MailMessageID(ptr->mesg), MailMessageRepliesTo(temp)) == 0)
+    return ptr;
+    /*while(ptr)
+    {
+        Link ans = FindFather(ptr->next, temp);
+        if(ans)
+        return ans;
+        ptr = ptr->replies;
+    }//If all of the same level nodes examined, there is no answer in this branch, so return NULL*/
+    //A piece of silly code above
+    //But why doesn't it work?
+    if(FindFather(ptr->next, temp))
+    return FindFather(ptr->next, temp);
+    if(FindFather(ptr->replies, temp))
+    return FindFather(ptr->replies, temp);
+    return NULL;
+}
+ThreadTree ThreadTreeBuild (MMList mesgs, MMTree msgids)//Was the first situation solved by sorting mesgs or do I need a additional waiting list?!!!!!
+{
+	// You need to implement this
+    MMList ptr = mesgs;//A PoinTeR to The List
+    ThreadTree tree = newThreadTree();
+    int flag = 1;//To determine whether there is a point waiting to be added
+    int vis[1000];//When a message is processed, set vis into 1
+    memset(vis, 0, sizeof(vis));//vis is defined to be all Zero
+    int now = 0;//Nth message is being processed, apparently, from the 0th point  
+    while(flag)//To avoid the case that the tree is not sorted, use a robust system
+    {//Mechanism is that if there are some outliners, pick them up and insert them again
+        flag = 0;//If here's any out liner, set flag to 1
+        now = 0;//Do it from the 0th again
+        MMListStart(ptr);//Direct the curr pointing to the first node.
+        while(!MMListEnd(ptr))
+        {
+
+            while(vis[now])
+            {
+                MMListNext(ptr);
+                now++;
+            }//To find a point has not been placed in the ThreadThree
+            
+            if(MMListEnd(ptr))
+            break;//If it touches the end. It is reasonable unnessary but with a bug(One node can never been added, I added this line to make sure the program can temporaryly run)
+            
+            vis[now] = 1;//Notice that this point is being processed
+            now++;       //Here's the next one     
+            
+            MailMessage temp = MMListNext(ptr);//The Message waiting to be inserted And move ptr to the next Node in the message List
+            Link poi = NewNode(temp);//POInter to store the address of NewNode
+            //If It's in the top level
+            if(MailMessageRepliesTo(temp) == NULL || !MMTreeFind(msgids, MailMessageRepliesTo(temp)))//If delete the second statement?I think it's the only use of the MMTree.h
+            {
+                if(tree->messages == NULL)//If there isn't any node in this tree
+                {
+                    tree->messages = poi;
+                    continue;   
+                }
+                else//To find the last place in the same level
+                {
+                    Link new = tree->messages;
+                    while(new->next)
+                    {
+                        new = new->next;
+                    }
+                    new->next = poi;
+                    continue;
+                }
+            }
+            else//If the message is not the top-level
+            {
+                Link new = FindFather(tree->messages, temp);//To find the address of the message be replyed to
+                if(!new)
+                //If the message being replyed occurs later than the message that replies to it, but the 
+                //"(e.g., a reply to a message may appear in the inbox before the message itself) "confused me, 
+                //does the before mean temporal before or locational before???
+                //I think it should be positional but I'm not sure so I made this
+                {
+                    free(poi);//The poi is not added, so release it
+                    vis[now-1] = 0;//Not inserted, so set vis to Naught
+                    flag = 1;//To notify that there is at least one point remained to be added
+                    continue;//next
+                }
+                if(new->replies == NULL)//no children
+                {
+                    new->replies = poi;
+                    continue;
+                }
+                else//find the last children
+                {
+                    new = new->replies;
+                    while(new->next)
+                    {
+                        new = new->next;
+                    }
+                    new->next = poi;
+                }
+            }
+        }
+    }
+	return tree; // change this line
+}

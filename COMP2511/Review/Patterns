@@ -1,0 +1,16 @@
+Creational Patterns       
+    Abstract Factory
+    Factory	Method 
+    Builder               
+    Singleto              Q
+vStructural	Patterns      F
+    Adapter               D
+    Composite             Q
+    Decorator             D
+vBehavioral	Patterns      F
+    Iterator              Q
+    Observer              Q
+    State                 Q
+    Strategy              Q
+    Template              D  
+    Visitor     

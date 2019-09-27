@@ -1,0 +1,56 @@
+|part5
+SW[0] => mux_2bit_3to1:M0.W[0]
+SW[1] => mux_2bit_3to1:M0.W[1]
+SW[2] => mux_2bit_3to1:M0.V[0]
+SW[3] => mux_2bit_3to1:M0.V[1]
+SW[4] => mux_2bit_3to1:M0.U[0]
+SW[5] => mux_2bit_3to1:M0.U[1]
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => mux_2bit_3to1:M0.S[0]
+SW[9] => mux_2bit_3to1:M0.S[1]
+HEX0[6] <= char_7seg:H0.Display[6]
+HEX0[5] <= char_7seg:H0.Display[5]
+HEX0[4] <= char_7seg:H0.Display[4]
+HEX0[3] <= char_7seg:H0.Display[3]
+HEX0[2] <= char_7seg:H0.Display[2]
+HEX0[1] <= char_7seg:H0.Display[1]
+HEX0[0] <= char_7seg:H0.Display[0]
+
+
+|part5|mux_2bit_3to1:M0
+S[0] => T.IN0
+S[0] => T.IN0
+S[0] => T.IN0
+S[0] => T.IN0
+S[1] => M.IN0
+S[1] => M.IN0
+S[1] => M.IN1
+S[1] => M.IN1
+U[0] => T.IN1
+U[1] => T.IN1
+V[0] => T.IN1
+V[1] => T.IN1
+W[0] => M.IN1
+W[1] => M.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H0
+C[0] => Display.IN0
+C[0] => Display[1].DATAIN
+C[0] => Display[2].DATAIN
+C[1] => Display[3].DATAIN
+C[1] => Display[4].DATAIN
+C[1] => Display[6].DATAIN
+C[1] => Display.IN1
+Display[6] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+

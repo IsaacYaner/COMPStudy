@@ -1,0 +1,19 @@
+Helper functions:
+
+Cost(i, m)  where i is the slice that is going to be taken, m is the remaining number of slices.
+    return a_i + b_i * m
+
+Update(P(i, j , m))
+    P(i - 1, j, m + 1) = min( P(i - 1, j, m + 1), P(i, j, m) + Cost(i - 1, n - m))
+    P(i, j + 1, m + 1) = min( P(i, j + 1, m + 1), P(i, j ,m) + Cost(j + 1, n - m))
+
+Algorithm:
+
+Set all P to infinitely large.
+
+for i from 0 to n-1
+    P(i, i, 1) = a_i
+    
+for m from 1 to n-1
+    for i from 0 to n
+        Update( P(i, (i+m-1)%n, m+1) )

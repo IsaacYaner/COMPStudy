@@ -1,0 +1,90 @@
+$comment
+	File created using the following command:
+		vcd file part3.msim.vcd -direction
+$end
+$date
+	Wed Sep 25 12:58:14 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module part3_vlg_vec_tst $end
+$var reg 10 ! SW [9:0] $end
+$var wire 1 " REDG [1] $end
+$var wire 1 # REDG [0] $end
+$var wire 1 $ REDR [9] $end
+$var wire 1 % REDR [8] $end
+$var wire 1 & REDR [7] $end
+$var wire 1 ' REDR [6] $end
+$var wire 1 ( REDR [5] $end
+$var wire 1 ) REDR [4] $end
+$var wire 1 * REDR [3] $end
+$var wire 1 + REDR [2] $end
+$var wire 1 , REDR [1] $end
+$var wire 1 - REDR [0] $end
+$var wire 1 . sampler $end
+$scope module i1 $end
+$var wire 1 / gnd $end
+$var wire 1 0 vcc $end
+$var wire 1 1 unknown $end
+$var tri1 1 2 devclrn $end
+$var tri1 1 3 devpor $end
+$var tri1 1 4 devoe $end
+$var wire 1 5 MX0|m~0_combout $end
+$var wire 1 6 MX0|m~1_combout $end
+$var wire 1 7 MX1|m~0_combout $end
+$var wire 1 8 MX1|m~1_combout $end
+$var wire 1 9 SW~combout [9] $end
+$var wire 1 : SW~combout [8] $end
+$var wire 1 ; SW~combout [7] $end
+$var wire 1 < SW~combout [6] $end
+$var wire 1 = SW~combout [5] $end
+$var wire 1 > SW~combout [4] $end
+$var wire 1 ? SW~combout [3] $end
+$var wire 1 @ SW~combout [2] $end
+$var wire 1 A SW~combout [1] $end
+$var wire 1 B SW~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100111001 !
+0#
+1"
+1-
+0,
+0+
+1*
+1)
+1(
+0'
+0&
+1%
+0$
+x.
+0/
+10
+x1
+12
+13
+14
+05
+06
+17
+18
+1B
+0A
+0@
+1?
+1>
+1=
+0<
+0;
+1:
+09
+$end
+#1000000

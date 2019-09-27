@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>
+<div class="search_style">
+<form action="{{ url_for('create_product') }}" method="get">
+    Item Type: <select name="category">
+        {% for i in choices %}
+        <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select><br>
+    <button>Add</button>
+</form>
+</div>
+</h1>
+{% endblock %}

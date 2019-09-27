@@ -1,0 +1,51 @@
+from car import car
+from customer import customer
+from location import Location
+from car_rental_system import CarRentalSystem
+
+#Customer Info
+cu1 = customer("Matt", 1)
+cu2 = customer("Isaac", 2)
+cu3 = customer("Taylor", 3)
+
+#Car Info
+ca1 = car("Small", "Mazda", 'Falcon', 1, 50)
+ca2 = car("Medium", "Mazda", "Falcon", 2, 75)
+ca3 = car("Large", "Mazda","Falcon", 3, 100)
+ca4 = car("Premium", "Mazda", "Falcon", 4, 150)
+
+#Location Info
+lo1 = Location("Sydney", "Canberra")
+lo2 = Location("Brisbane", "Melborne")
+lo3 = Location("From","To")
+
+print("~~~ Print all customers ~~~")
+print(cu1)
+print(cu2)
+print(cu3)
+print()
+print("~~~ Print all cars ~~~")
+print(ca1)
+print(ca2)
+print(ca3)
+print(ca4)
+
+
+print()
+print("~~~ Make first booking ~~~")
+store.make_booking(cu1, ca1, 7, lo1)
+print()
+print()
+
+print("~~~ Make second booking ~~~")
+store.make_booking(cu2, ca2, 1222, lo2)
+print()
+print()
+
+print("~~~ Make third booking ~~~")
+store.make_booking(cu3, ca3, 2333, lo3)
+print()
+print()
+
+store.printall()
+

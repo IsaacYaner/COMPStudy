@@ -1,0 +1,10 @@
+Partition(n):
+    For n theives remaining:
+        1 of them partition the booty in to n equal parts.
+        the remaining n-1 choose on what he think is the most-valued part.
+        this will last the remaining part to the theif who partitions the booty.
+        And make the total value of the other part 
+        Partition(n-1)
+
+Wrong
+    

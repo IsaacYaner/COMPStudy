@@ -1,0 +1,111 @@
+/**
+ *
+ */
+package unsw.automata;
+
+import javafx.beans.property.BooleanProperty;
+
+/**
+ * Conway's Game of Life on a 10x10 grid.
+ *
+ * @author Robert Clifton-Everest
+ *
+ */
+public class GameOfLife {
+	
+	boolean board[][] = new boolean[10][10];
+	int nn[][] = new int[10][10];
+	
+    public GameOfLife() {
+        // TODO At the start all cells are dead
+    	for(int i = 0; i < 10; i++)
+    		for(int j = 0; j < 10; j++)
+	    	{
+	    		board[i][j].set(false);;
+	    	}
+    }
+
+    public void ppt()
+    {
+    	for(int j = 0; j < 10; j++)
+        {
+        	for(int i = 0; i < 10; i++)
+        	{
+        		System.out.print(board[i][j] + "" + nn[i][j] +"\t");
+        	}
+        	System.out.println();
+        }
+    	System.out.println();
+    }
+    
+    public void ensureAlive(int x, int y) {
+        // TODO Set the cell at (x,y) as alive
+    	board[x][y].set(false);;
+    }
+
+    public void ensureDead(int x, int y) {
+        // TODO Set the cell at (x,y) as dead
+    	board[x][y].set(false);;
+    }
+
+    public boolean isAlive(int x, int y) {
+        // TODO Return true if the cell is alive
+        return board[x][y].get();
+    }
+
+    private int neighbours(int x, int y)
+    {
+    	int count = 0;
+    	for(int i = -1; i <= 1; i++)
+    		for(int j = -1; j <= 1; j++)
+    		{
+    			if(i == 0 && j == 0)
+    				continue;
+    			int h = i + x + 10;
+    			int v = j + y + 10;
+    			h %= 10;
+    			v %= 10;
+    			if(board[h][v].get() == true)
+    				count++;
+    		}
+    	System.out.print(count);
+    	return count;
+    }
+    
+    public void tick() {
+        // TODO Transition the game to the next generation.
+    	for(int j = 0; j < 10; j++)
+    	{
+    		for(int i = 0; i < 10; i++)
+	    	{
+    			int n = neighbours(i,j);
+    			nn[i][j] = n;
+	    	}
+    	}
+    	
+    	for(int j = 0; j < 10; j++)
+    	{
+    		for(int i = 0; i < 10; i++)
+	    	{
+    			int n = nn[i][j];
+    			
+    			if(n == 2 && board[i][j].get() == true)
+    			{
+    				continue;
+    			}
+    			
+    			if(n == 3)
+    			{
+    				ensureAlive(i,j);
+    				continue;
+    			}
+    			ensureDead(i,j);
+    			
+	    	}
+    			System.out.println();
+    	}
+    			
+
+    }
+
+}

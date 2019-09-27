@@ -1,0 +1,19 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part3 IS
+	PORT (SW		:	IN		STD_LOGIC_VECTOR(9 DOWNTO 0);
+			LEDR	:	OUT	STD_LOGIC_VECTOR(9 DOWNTO 0);
+			LEDG	:	OUT	STD_LOGIC_VECTOR(1 DOWNTO 0));
+END part3;
+
+ARCHITECTURE Behavior OF part3 IS
+COMPONENT mx31
+	PORT (u, v, w, s0, s1	:	IN	 STD_LOGIC;
+			m						:	OUT STD_LOGIC);
+END COMPONENT;
+BEGIN
+	LEDR<=SW;
+	MX1:	mx31 PORT MAP (SW(5), SW(3), SW(1), SW(8), SW(9), LEDG(1));
+	MX0:	mx31 PORT MAP (SW(4), SW(2), SW(0), SW(8), SW(9), LEDG(0));
+END Behavior;

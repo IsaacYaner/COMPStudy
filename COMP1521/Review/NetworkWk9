@@ -1,0 +1,130 @@
+server creates a socket, then ... 
+    binds to an address (local or network) 
+    listens for connections from clients 
+client creates a socket, then ... 
+    connects to the server using known address 
+
+int socket(int Domain, int Type, int Protocol) 
+    return socket descriptor
+
+int bind(int Sockfd, SockAddr *Addr, socklen_t AddrLen) 
+    associates an open socket with an address 
+        for Unix Domain, address is a pathname in the file system 
+        for Internet Domain, address is IP address + port number 
+
+int listen(int Sockfd, int Backlog) 
+    wait for connections on socket Sockfd 
+    allow at most Backlog connections to be queued up 
+
+int accept(int Sockfd, SockAddr *Addr, socklen_t *AddrLen) 
+    Sockfd has been created, bound and is listening 
+    blocks until a connection request is received 
+    sets up a connection between client/server after connect() 
+    places information about the requestor in Addr 
+    returns a new socket descriptor, or -1 on error 
+    
+int connect(int Sockfd, SockAddr *Addr, socklen_t AddrLen) 
+    connects the socket Sockfd to address Addr 
+    assumes that Addr contains a process listening appropriately 
+
+SockAddr  =  struct sockaddr_in 
+    sin_family ... domain:  AF_UNIX  or  AF_INET 
+    sin_port ... port number: 80, 443, etc. 
+    sin_addr ... structure containing host address 
+    sin_zero[8] ... padding 
+
+Components of the Internet 
+    millions of connected devices 
+    communication links 
+    packet switches 
+
+5 Layers
+    Physical layer: bits on (wires or fibre optics or radio) 
+    Link layer: ethernet, MAC addressing, CSMA etc. 
+    Network layer: routing protocols, IP 
+    Transport layer: process-process data transfer, TCP/UDP 
+    Application layer: DNS, HTTP, email, Skype, torrents, FTP etc. 
+        modularization eases maintenance/updating 
+        e.g. changing implementation of one layer doesn't affect other layers 
+    
+        physical layer ... bits on wires 
+        link layer ... e.g. ethernet, MAC 
+        network layer ... e.g. IP 
+        transport layer ... e.g. TCP/UDP 
+        application layer ... e.g. HTTP, email 
+
+Each application-layer protocol defines 
+    types of messages 
+        different types of requests and responses 
+    message syntax 
+        what fields are in messages; how fields are delineated 
+    message semantics 
+        meaning of information in fields 
+    processing rules 
+        when and how processes respond to messages 
+
+Domain Name System (DNS) 
+    effectively a distributed database of name
+
+Transport Layer:
+    TCP
+    UDP 
+
+Network Layer:
+    IP
+
+Link Layer:
+    flow control
+    error detection
+    error correction
+
+MAC address = Media Access Control address,  stored in NIC 
+
+Parallelism = multiple computations executed simultaneously 
+    e.g. multiple CPUs, one process on each CPU   (MIMD) 
+    e.g. data vector, one processor computes on each element   (SIMD) 
+    e.g. map-reduce: computation spread across multiple hosts 
+
+Concurrency = multiple processes running (pseudo) simultaneously 
+    e.g. single CPU, alternating between processes   (time-slicing)
+
+Effects of poorly-controlled concurrency 
+    nondeterminism ... same code, different runs, different results 
+        e.g. output on shared resource is jumbled 
+        e.g. input from shared resource is unpredictable 
+    deadlock ... a group of processes end up waiting for each other 
+    starvation ... one process keeps missing access to resource 
+
+Concurrency Control
+    Shared Memory   Semaphore
+    Message passing
+
+Semaphore  
+    A special int value
+    When 0, means unusable
+
+    Functions:
+    Syntax:sem_
+
+        init():
+
+        wait():
+            if 0, pause
+            if not 0, --
+        post():
+            ++
+        destroy():
+            destroy
+
+Processes can interact via 
+    signals
+    accessing the same resource
+    pipes
+    message queues
+    sockets
+
+Uncontrolled interaction Nondeterministic
+
+Flock():
+    Shared lock means it cannot be exclusively locked.
+    exclusive lock means only one process can lock.
