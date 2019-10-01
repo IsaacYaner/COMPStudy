@@ -26,6 +26,21 @@ BEGIN
 	H0: char_7seg PORT MAP (M, HEX0);
 END Behavior;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
