@@ -1,0 +1,167 @@
+|part2
+SW[0] => cmptr:IFTEN.V[0]
+SW[0] => CirA:CircA.V[0]
+SW[0] => mux214:MUX0.U[0]
+SW[1] => cmptr:IFTEN.V[1]
+SW[1] => CirA:CircA.V[1]
+SW[1] => mux214:MUX0.U[1]
+SW[2] => cmptr:IFTEN.V[2]
+SW[2] => CirA:CircA.V[2]
+SW[2] => mux214:MUX0.U[2]
+SW[3] => cmptr:IFTEN.V[3]
+SW[3] => mux214:MUX0.U[3]
+HEX0[0] <= numb:H0.N0[0]
+HEX0[1] <= numb:H0.N0[1]
+HEX0[2] <= numb:H0.N0[2]
+HEX0[3] <= numb:H0.N0[3]
+HEX0[4] <= numb:H0.N0[4]
+HEX0[5] <= numb:H0.N0[5]
+HEX0[6] <= numb:H0.N0[6]
+HEX1[0] <= numb:H1.N0[0]
+HEX1[1] <= numb:H1.N0[1]
+HEX1[2] <= numb:H1.N0[2]
+HEX1[3] <= numb:H1.N0[3]
+HEX1[4] <= numb:H1.N0[4]
+HEX1[5] <= numb:H1.N0[5]
+HEX1[6] <= numb:H1.N0[6]
+
+
+|part2|cmptr:IFTEN
+V[0] => ~NO_FANOUT~
+V[1] => Z.IN0
+V[2] => Z.IN1
+V[3] => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|CirA:CircA
+V[0] => M.IN0
+V[0] => M.IN0
+V[1] => M.IN1
+V[1] => M.IN0
+V[1] => M.IN0
+V[2] => M.IN1
+V[2] => M.IN1
+V[2] => M.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[2] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|mux214:MUX0
+U[0] => mux21:B0.U
+U[1] => mux21:B1.U
+U[2] => mux21:B2.U
+U[3] => mux21:B3.U
+V[0] => mux21:B0.V
+V[1] => mux21:B1.V
+V[2] => mux21:B2.V
+V[3] => mux21:B3.V
+S => mux21:B3.S
+S => mux21:B2.S
+S => mux21:B1.S
+S => mux21:B0.S
+W[0] <= mux21:B0.W
+W[1] <= mux21:B1.W
+W[2] <= mux21:B2.W
+W[3] <= mux21:B3.W
+
+
+|part2|mux214:MUX0|mux21:B3
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|mux214:MUX0|mux21:B2
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|mux214:MUX0|mux21:B1
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|mux214:MUX0|mux21:B0
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|numb:H1
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
+|part2|numb:H0
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+

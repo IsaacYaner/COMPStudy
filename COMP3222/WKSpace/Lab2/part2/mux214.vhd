@@ -1,0 +1,23 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY mux214 IS
+	PORT (U,V	: IN	STD_LOGIC_VECTOR(3 DOWNTO 0);
+			S		: IN	STD_LOGIC;
+			W		: OUT	STD_LOGIC_VECTOR(3 DOWNTO 0));
+END mux214;
+
+ARCHITECTURE Behavior OF mux214 IS
+
+COMPONENT mux21 IS
+	PORT (U,V	: IN	STD_LOGIC;
+			S		: IN	STD_LOGIC;
+			W		: OUT	STD_LOGIC);
+END COMPONENT;
+
+BEGIN
+	B3 : mux21 PORT MAP (U(3), V(3), S, W(3));
+	B2 : mux21 PORT MAP (U(2), V(2), S, W(2));
+	B1	: mux21 PORT MAP (U(1), V(1), S, W(1));
+	B0 : mux21 PORT MAP (U(0), V(0), S, W(0));
+END Behavior;

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part1
-Tue Oct 01 13:54:00 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 02 22:14:19 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -38,24 +38,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 01 13:54:00 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part1                                           ;
-; Top-level Entity Name              ; part1                                           ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 7                                               ;
-;     Total combinational functions  ; 7                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 22                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 02 22:14:19 2019            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part1                                            ;
+; Top-level Entity Name              ; part1                                            ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 14                                               ;
+;     Total combinational functions  ; 14                                               ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 22                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -148,7 +148,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -156,17 +156,18 @@ applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; part1.vhd                        ; yes             ; User VHDL File  ; C:/Users/cse/Documents/GitHub/COMPStudy/COMP3222/WKSpace/Lab2/part1/part1.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; part1.vhd                        ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/Part1/part1.vhd             ;         ;
+; output_files/numb.vhd            ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/Part1/output_files/numb.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -174,16 +175,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 7     ;
+; Estimated Total logic elements              ; 14    ;
 ;                                             ;       ;
-; Total combinational functions               ; 7     ;
+; Total combinational functions               ; 14    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 7     ;
+;     -- 4 input functions                    ; 14    ;
 ;     -- 3 input functions                    ; 0     ;
 ;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 7     ;
+;     -- normal mode                          ; 14    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
@@ -194,8 +195,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; SW[1] ;
 ; Maximum fan-out                             ; 7     ;
-; Total fan-out                               ; 35    ;
-; Average fan-out                             ; 1.21  ;
+; Total fan-out                               ; 70    ;
+; Average fan-out                             ; 1.94  ;
 +---------------------------------------------+-------+
 
 
@@ -204,7 +205,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |part1                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |part1              ; work         ;
+; |part1                     ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |part1              ; work         ;
+;    |numb:Calc0|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|numb:Calc0   ; work         ;
+;    |numb:Calc1|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|numb:Calc1   ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,38 +241,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 01 13:53:50 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Oct 02 22:14:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file part1.vhd
     Info (12022): Found design unit 1: part1-Behavior
     Info (12023): Found entity 1: part1
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/numb.vhd
+    Info (12022): Found design unit 1: numb-Behavior
+    Info (12023): Found entity 1: numb
 Info (12127): Elaborating entity "part1" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at part1.vhd(5): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at GND
+Info (12128): Elaborating entity "numb" for hierarchy "numb:Calc0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 488 megabytes
-    Info: Processing ended: Tue Oct 01 13:54:00 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21061): Implemented 14 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Wed Oct 02 22:14:19 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
