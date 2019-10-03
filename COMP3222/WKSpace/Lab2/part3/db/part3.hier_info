@@ -1,0 +1,132 @@
+|part3
+SW[0] => Fadder4:AddFour.b[0]
+SW[0] => LEDR[0].DATAIN
+SW[1] => Fadder4:AddFour.b[1]
+SW[1] => LEDR[1].DATAIN
+SW[2] => Fadder4:AddFour.b[2]
+SW[2] => LEDR[2].DATAIN
+SW[3] => Fadder4:AddFour.b[3]
+SW[3] => LEDR[3].DATAIN
+SW[4] => Fadder4:AddFour.a[0]
+SW[4] => LEDR[4].DATAIN
+SW[5] => Fadder4:AddFour.a[1]
+SW[5] => LEDR[5].DATAIN
+SW[6] => Fadder4:AddFour.a[2]
+SW[6] => LEDR[6].DATAIN
+SW[7] => Fadder4:AddFour.a[3]
+SW[7] => LEDR[7].DATAIN
+SW[8] => Fadder4:AddFour.cin
+SW[8] => LEDR[8].DATAIN
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= Fadder4:AddFour.s[0]
+LEDG[1] <= Fadder4:AddFour.s[1]
+LEDG[2] <= Fadder4:AddFour.s[2]
+LEDG[3] <= Fadder4:AddFour.s[3]
+LEDG[4] <= Fadder4:AddFour.cout
+
+
+|part3|Fadder4:AddFour
+a[0] => Fadder:Add0.a
+a[1] => Fadder:Add1.a
+a[2] => Fadder:Add2.a
+a[3] => Fadder:Add3.a
+b[0] => Fadder:Add0.b
+b[1] => Fadder:Add1.b
+b[2] => Fadder:Add2.b
+b[3] => Fadder:Add3.b
+cin => Fadder:Add0.cin
+s[0] <= Fadder:Add0.s
+s[1] <= Fadder:Add1.s
+s[2] <= Fadder:Add2.s
+s[3] <= Fadder:Add3.s
+cout <= Fadder:Add3.cout
+
+
+|part3|Fadder4:AddFour|Fadder:Add0
+a => s.IN0
+a => comb.IN0
+b => s.IN1
+b => comb.IN1
+b => mux21:Carry.U
+cin => s.IN1
+cin => mux21:Carry.V
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux21:Carry.W
+
+
+|part3|Fadder4:AddFour|Fadder:Add0|mux21:Carry
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|Fadder4:AddFour|Fadder:Add1
+a => s.IN0
+a => comb.IN0
+b => s.IN1
+b => comb.IN1
+b => mux21:Carry.U
+cin => s.IN1
+cin => mux21:Carry.V
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux21:Carry.W
+
+
+|part3|Fadder4:AddFour|Fadder:Add1|mux21:Carry
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|Fadder4:AddFour|Fadder:Add2
+a => s.IN0
+a => comb.IN0
+b => s.IN1
+b => comb.IN1
+b => mux21:Carry.U
+cin => s.IN1
+cin => mux21:Carry.V
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux21:Carry.W
+
+
+|part3|Fadder4:AddFour|Fadder:Add2|mux21:Carry
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|Fadder4:AddFour|Fadder:Add3
+a => s.IN0
+a => comb.IN0
+b => s.IN1
+b => comb.IN1
+b => mux21:Carry.U
+cin => s.IN1
+cin => mux21:Carry.V
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux21:Carry.W
+
+
+|part3|Fadder4:AddFour|Fadder:Add3|mux21:Carry
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
