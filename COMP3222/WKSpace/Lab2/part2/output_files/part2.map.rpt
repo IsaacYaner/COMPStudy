@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part2
-Wed Oct 02 23:14:24 2019
+Thu Oct 03 15:02:38 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -14,8 +14,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "numb:H1"
- 10. Port Connectivity Checks: "mux214:MUX0"
+  9. Port Connectivity Checks: "BCDis:Display|numb:H1"
+ 10. Port Connectivity Checks: "BCDis:Display|mux214:MUX0"
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 02 23:14:24 2019            ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 03 15:02:38 2019            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part2                                            ;
 ; Top-level Entity Name              ; part2                                            ;
@@ -173,6 +173,7 @@ applicable agreement for further details.
 ; cmptr.vhd                        ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/part2/cmptr.vhd             ;         ;
 ; mux21.vhd                        ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/part2/mux21.vhd             ;         ;
 ; mux214.vhd                       ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/part2/mux214.vhd            ;         ;
+; BCDis.vhd                        ; yes             ; User VHDL File  ; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab2/part2/BCDis.vhd             ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 
 
@@ -206,15 +207,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |part2                     ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |part2              ; work         ;
-;    |cmptr:IFTEN|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part2|cmptr:IFTEN  ; work         ;
-;    |numb:H0|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part2|numb:H0      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |part2                     ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |part2                           ; work         ;
+;    |BCDis:Display|         ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part2|BCDis:Display             ; work         ;
+;       |cmptr:IFTEN|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part2|BCDis:Display|cmptr:IFTEN ; work         ;
+;       |numb:H0|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part2|BCDis:Display|numb:H0     ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,22 +235,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "numb:H1"         ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; cin[3..1] ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "BCDis:Display|numb:H1" ;
++-----------+-------+----------+--------------------+
+; Port      ; Type  ; Severity ; Details            ;
++-----------+-------+----------+--------------------+
+; cin[3..1] ; Input ; Info     ; Stuck at GND       ;
++-----------+-------+----------+--------------------+
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "mux214:MUX0" ;
-+------+-------+----------+---------------+
-; Port ; Type  ; Severity ; Details       ;
-+------+-------+----------+---------------+
-; v[3] ; Input ; Info     ; Stuck at GND  ;
-+------+-------+----------+---------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "BCDis:Display|mux214:MUX0" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; v[3] ; Input ; Info     ; Stuck at GND                ;
++------+-------+----------+-----------------------------+
 
 
 +-------------------------------+
@@ -256,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -266,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Oct 02 23:14:23 2019
+    Info: Processing started: Thu Oct 03 15:02:30 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part2 -c part2
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file /study/computer/comp/comp3222/wkspace/lab2/part1/output_files/numb.vhd
@@ -287,12 +289,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux21.v
 Info (12021): Found 2 design units, including 1 entities, in source file mux214.vhd
     Info (12022): Found design unit 1: mux214-Behavior
     Info (12023): Found entity 1: mux214
+Info (12021): Found 2 design units, including 1 entities, in source file bcdis.vhd
+    Info (12022): Found design unit 1: BCDis-Behavior
+    Info (12023): Found entity 1: BCDis
 Info (12127): Elaborating entity "part2" for the top level hierarchy
-Info (12128): Elaborating entity "cmptr" for hierarchy "cmptr:IFTEN"
-Info (12128): Elaborating entity "CirA" for hierarchy "CirA:CircA"
-Info (12128): Elaborating entity "mux214" for hierarchy "mux214:MUX0"
-Info (12128): Elaborating entity "mux21" for hierarchy "mux214:MUX0|mux21:B3"
-Info (12128): Elaborating entity "numb" for hierarchy "numb:H1"
+Info (12128): Elaborating entity "BCDis" for hierarchy "BCDis:Display"
+Info (12128): Elaborating entity "cmptr" for hierarchy "BCDis:Display|cmptr:IFTEN"
+Info (12128): Elaborating entity "CirA" for hierarchy "BCDis:Display|CirA:CircA"
+Info (12128): Elaborating entity "mux214" for hierarchy "BCDis:Display|mux214:MUX0"
+Info (12128): Elaborating entity "mux21" for hierarchy "BCDis:Display|mux214:MUX0|mux21:B3"
+Info (12128): Elaborating entity "numb" for hierarchy "BCDis:Display|numb:H1"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
@@ -304,9 +310,9 @@ Info (21057): Implemented 26 device resources after synthesis - the final resour
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 8 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4631 megabytes
-    Info: Processing ended: Wed Oct 02 23:14:24 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4650 megabytes
+    Info: Processing ended: Thu Oct 03 15:02:38 2019
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:02
 
 

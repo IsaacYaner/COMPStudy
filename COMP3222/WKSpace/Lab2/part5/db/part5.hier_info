@@ -1,0 +1,363 @@
+|part5
+SW[0] => Add0.IN64
+SW[0] => numb:Disp1.Cin[0]
+SW[1] => Add0.IN63
+SW[1] => numb:Disp1.Cin[1]
+SW[2] => Add0.IN62
+SW[2] => numb:Disp1.Cin[2]
+SW[3] => Add0.IN61
+SW[3] => numb:Disp1.Cin[3]
+SW[4] => Add0.IN60
+SW[4] => numb:Disp0.Cin[0]
+SW[5] => Add0.IN59
+SW[5] => numb:Disp0.Cin[1]
+SW[6] => Add0.IN58
+SW[6] => numb:Disp0.Cin[2]
+SW[7] => Add0.IN57
+SW[7] => numb:Disp0.Cin[3]
+SW[8] => Add1.IN64
+HEX3[0] <= numb:Disp0.N0[0]
+HEX3[1] <= numb:Disp0.N0[1]
+HEX3[2] <= numb:Disp0.N0[2]
+HEX3[3] <= numb:Disp0.N0[3]
+HEX3[4] <= numb:Disp0.N0[4]
+HEX3[5] <= numb:Disp0.N0[5]
+HEX3[6] <= numb:Disp0.N0[6]
+HEX2[0] <= numb:Disp1.N0[0]
+HEX2[1] <= numb:Disp1.N0[1]
+HEX2[2] <= numb:Disp1.N0[2]
+HEX2[3] <= numb:Disp1.N0[3]
+HEX2[4] <= numb:Disp1.N0[4]
+HEX2[5] <= numb:Disp1.N0[5]
+HEX2[6] <= numb:Disp1.N0[6]
+HEX1[0] <= FBCD:Disp2.HEX1[0]
+HEX1[1] <= FBCD:Disp2.HEX1[1]
+HEX1[2] <= FBCD:Disp2.HEX1[2]
+HEX1[3] <= FBCD:Disp2.HEX1[3]
+HEX1[4] <= FBCD:Disp2.HEX1[4]
+HEX1[5] <= FBCD:Disp2.HEX1[5]
+HEX1[6] <= FBCD:Disp2.HEX1[6]
+HEX0[0] <= FBCD:Disp2.HEX0[0]
+HEX0[1] <= FBCD:Disp2.HEX0[1]
+HEX0[2] <= FBCD:Disp2.HEX0[2]
+HEX0[3] <= FBCD:Disp2.HEX0[3]
+HEX0[4] <= FBCD:Disp2.HEX0[4]
+HEX0[5] <= FBCD:Disp2.HEX0[5]
+HEX0[6] <= FBCD:Disp2.HEX0[6]
+LEDG[0] <= <GND>
+LEDG[1] <= <GND>
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= FBCD:Disp2.Err
+
+
+|part5|numb:Disp0
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
+|part5|numb:Disp1
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
+|part5|FBCD:Disp2
+SW[0] => cmptr:IFTEN.V[0]
+SW[0] => CirA:CircA.V[0]
+SW[0] => CirC:CircC.V[0]
+SW[0] => mux214:MUX1.U[0]
+SW[1] => cmptr:IFTEN.V[1]
+SW[1] => CirA:CircA.V[1]
+SW[1] => CirC:CircC.V[1]
+SW[1] => mux214:MUX1.U[1]
+SW[2] => Err.IN0
+SW[2] => cmptr:IFTEN.V[2]
+SW[2] => CirA:CircA.V[2]
+SW[2] => CirC:CircC.V[2]
+SW[2] => mux214:MUX1.U[2]
+SW[3] => Err.IN1
+SW[3] => cmptr:IFTEN.V[3]
+SW[3] => CirC:CircC.V[3]
+SW[3] => mux214:MUX1.U[3]
+SW[4] => Err.IN1
+SW[4] => Z1[0].IN1
+SW[4] => mux214:MUX0.S
+HEX0[0] <= numb:H0.N0[0]
+HEX0[1] <= numb:H0.N0[1]
+HEX0[2] <= numb:H0.N0[2]
+HEX0[3] <= numb:H0.N0[3]
+HEX0[4] <= numb:H0.N0[4]
+HEX0[5] <= numb:H0.N0[5]
+HEX0[6] <= numb:H0.N0[6]
+HEX1[0] <= numb:H1.N0[0]
+HEX1[1] <= numb:H1.N0[1]
+HEX1[2] <= numb:H1.N0[2]
+HEX1[3] <= numb:H1.N0[3]
+HEX1[4] <= numb:H1.N0[4]
+HEX1[5] <= numb:H1.N0[5]
+HEX1[6] <= numb:H1.N0[6]
+Err <= Err.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|cmptr:IFTEN
+V[0] => ~NO_FANOUT~
+V[1] => Z.IN0
+V[2] => Z.IN1
+V[3] => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|CirA:CircA
+V[0] => M.IN0
+V[0] => M.IN0
+V[1] => M.IN1
+V[1] => M.IN0
+V[1] => M.IN0
+V[2] => M.IN1
+V[2] => M.IN1
+V[2] => M.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[2] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|CirC:CircC
+V[0] => M[0].DATAIN
+V[1] => M[3].DATAIN
+V[1] => M[1].DATAIN
+V[1] => M[2].DATAIN
+V[2] => ~NO_FANOUT~
+V[3] => ~NO_FANOUT~
+M[0] <= V[0].DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= V[1].DB_MAX_OUTPUT_PORT_TYPE
+M[2] <= V[1].DB_MAX_OUTPUT_PORT_TYPE
+M[3] <= V[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX0
+U[0] => mux21:B0.U
+U[1] => mux21:B1.U
+U[2] => mux21:B2.U
+U[3] => mux21:B3.U
+V[0] => mux21:B0.V
+V[1] => mux21:B1.V
+V[2] => mux21:B2.V
+V[3] => mux21:B3.V
+S => mux21:B3.S
+S => mux21:B2.S
+S => mux21:B1.S
+S => mux21:B0.S
+W[0] <= mux21:B0.W
+W[1] <= mux21:B1.W
+W[2] <= mux21:B2.W
+W[3] <= mux21:B3.W
+
+
+|part5|FBCD:Disp2|mux214:MUX0|mux21:B3
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX0|mux21:B2
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX0|mux21:B1
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX0|mux21:B0
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX1
+U[0] => mux21:B0.U
+U[1] => mux21:B1.U
+U[2] => mux21:B2.U
+U[3] => mux21:B3.U
+V[0] => mux21:B0.V
+V[1] => mux21:B1.V
+V[2] => mux21:B2.V
+V[3] => mux21:B3.V
+S => mux21:B3.S
+S => mux21:B2.S
+S => mux21:B1.S
+S => mux21:B0.S
+W[0] <= mux21:B0.W
+W[1] <= mux21:B1.W
+W[2] <= mux21:B2.W
+W[3] <= mux21:B3.W
+
+
+|part5|FBCD:Disp2|mux214:MUX1|mux21:B3
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX1|mux21:B2
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX1|mux21:B1
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|mux214:MUX1|mux21:B0
+U => W.IN0
+V => W.IN0
+S => W.IN1
+S => W.IN1
+W <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FBCD:Disp2|numb:H1
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
+|part5|FBCD:Disp2|numb:H0
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
