@@ -1,0 +1,148 @@
+$comment
+	File created using the following command:
+		vcd file part4.msim.vcd -direction
+$end
+$date
+	Fri Oct 11 10:17:21 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module part4_vlg_vec_tst $end
+$var reg 1 ! Clk $end
+$var reg 1 " D $end
+$var wire 1 # Qa $end
+$var wire 1 $ Qb $end
+$var wire 1 % Qc $end
+$var wire 1 & sampler $end
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - D~combout $end
+$var wire 1 . Clk~combout $end
+$var wire 1 / Clk~clkctrl_outclk $end
+$var wire 1 0 Dlatcha|Q~combout $end
+$var wire 1 1 Platchb|Q~regout $end
+$var wire 1 2 Nlatchc|Q~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+x#
+0$
+x%
+x&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+0.
+0/
+x0
+01
+x2
+$end
+#10000
+1"
+1-
+0&
+#20000
+1!
+1.
+1/
+1&
+10
+1#
+11
+1$
+#30000
+0"
+0-
+0&
+00
+0#
+#40000
+1"
+1-
+1&
+10
+1#
+#50000
+0"
+0-
+0&
+00
+0#
+#60000
+0!
+0.
+0/
+1&
+02
+0%
+#70000
+1"
+1-
+0&
+#80000
+0"
+0-
+1&
+#90000
+1"
+1-
+0&
+#100000
+0"
+0-
+1&
+#110000
+1!
+1.
+1/
+0&
+01
+0$
+#120000
+1"
+1-
+1&
+10
+1#
+#130000
+0"
+0-
+0&
+00
+0#
+#140000
+1"
+1-
+1&
+10
+1#
+#150000
+0!
+0.
+0/
+0&
+12
+1%
+#160000
+0"
+0-
+1&
+#1000000

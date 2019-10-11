@@ -1,0 +1,13 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ENTITY HEXD IS
+	PORT (cin	: IN	STD_LOGIC_VECTOR(3 DOWNTO 0);
+			cout	: IN	STD_LOGIC_VECTOR(6 DOWNTO 0));
+END HEXD;
+
+ARCHITECTURE Behavior OF HEXD IS
+
+BEGIN
+	cout(0) <= ;
+END Behavior;

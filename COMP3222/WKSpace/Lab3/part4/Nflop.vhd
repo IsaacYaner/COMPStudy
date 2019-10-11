@@ -1,0 +1,24 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all;
+
+ENTITY Nflop IS
+	PORT (Clk, D	: IN	STD_LOGIC;
+			Q			: OUT	STD_LOGIC);
+END Nflop;
+
+ARCHITECTURE Behavior OF Nflop IS
+
+SIGNAL Qm : STD_LOGIC;
+--I was keeping it because it represents an interesting fact of simplifiing circuit.
+BEGIN
+
+	PROCESS(D, Clk, Qm)
+	BEGIN
+		IF Clk = '1' THEN 
+			Qm <= D;
+		ELSIF Clk = '0' THEN
+			Q  <= Qm;
+		END IF;
+	END PROCESS;
+
+END Behavior;

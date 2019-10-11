@@ -1,0 +1,18 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part3 IS
+	PORT (SW		: IN	STD_LOGIC_VECTOR(1 DOWNTO 0);
+			LEDR	: OUT STD_LOGIC_VECTOR(0 DOWNTO 0));
+END part3;
+
+ARCHITECTURE Behavior OF part3 IS
+
+COMPONENT MSDlatch IS
+	PORT (Clk, D: IN	STD_LOGIC;
+			Qs 	: OUT STD_LOGIC);
+END COMPONENT;
+			
+BEGIN
+	DoSTH : MSDlatch PORT MAP (NOT(SW(1)), SW(0), LEDR(0));
+END Behavior;

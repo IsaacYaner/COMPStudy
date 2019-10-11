@@ -1,0 +1,29 @@
+|part3
+SW[0] => MSDlatch:DoSTH.D
+SW[1] => MSDlatch:DoSTH.Clk
+LEDR[0] <= MSDlatch:DoSTH.Qs
+
+
+|part3|MSDlatch:DoSTH
+Clk => latchD:MasterLatch.Clk
+Clk => latchD:SlaveLatch.Clk
+D => latchD:MasterLatch.D
+Qs <= latchD:SlaveLatch.Q
+
+
+|part3|MSDlatch:DoSTH|latchD:MasterLatch
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|MSDlatch:DoSTH|latchD:SlaveLatch
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

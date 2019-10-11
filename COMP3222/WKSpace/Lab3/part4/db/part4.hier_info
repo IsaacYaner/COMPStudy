@@ -1,0 +1,31 @@
+|part4
+Clk => Dflop:Dlatcha.Clk
+Clk => Pflop:Platchb.Clk
+Clk => Nflop:Nlatchc.Clk
+D => Dflop:Dlatcha.D
+D => Pflop:Platchb.D
+D => Nflop:Nlatchc.D
+Qa <= Dflop:Dlatcha.Q
+Qb <= Pflop:Platchb.Q
+Qc <= Nflop:Nlatchc.Q
+
+
+|part4|Dflop:Dlatcha
+Clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|Pflop:Platchb
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|Nflop:Nlatchc
+Clk => Qm.LATCH_ENABLE
+Clk => Q$latch.LATCH_ENABLE
+D => Qm.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
