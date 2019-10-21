@@ -1,0 +1,28 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY MHZ5 IS
+	PORT (CLK	: IN	STD_LOGIC;
+			Cout	: OUT	STD_LOGIC_VECTOR(3 DOWNTO 0));
+END MHZ5;
+
+ARCHITECTURE Behavior OF MHZ5 IS
+
+SIGNAL Q : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL RESV : STD_LOGIC_VECTOR(25 DOWNTO 0);
+
+BEGIN
+	PROCESS(CLK, Q)
+	BEGIN
+		IF Q = 10 THEN
+			Q <= (others => '0');
+		ELSIF CLK'event AND CLK = '1' THEN
+			IF RESV = 0 THEN
+				Q <= Q+1;
+			END IF;
+			RESV <= RESV + 1;
+		END IF;
+	END PROCESS;
+	Cout <= Q;
+END Behavior;

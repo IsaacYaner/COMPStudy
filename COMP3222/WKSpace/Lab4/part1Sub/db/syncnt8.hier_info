@@ -1,0 +1,85 @@
+|syncnt8
+Enable => Ein[1].IN1
+Enable => TFFc:TCount0.T
+Clock => TFFc:TCount0.CLK
+Clock => TFFc:G1:1:TCounti.CLK
+Clock => TFFc:G1:2:TCounti.CLK
+Clock => TFFc:G1:3:TCounti.CLK
+Clock => TFFc:G1:4:TCounti.CLK
+Clock => TFFc:G1:5:TCounti.CLK
+Clock => TFFc:G1:6:TCounti.CLK
+Clock => TFFc:G1:7:TCounti.CLK
+Clear => TFFc:TCount0.Clear
+Clear => TFFc:G1:1:TCounti.Clear
+Clear => TFFc:G1:2:TCounti.Clear
+Clear => TFFc:G1:3:TCounti.Clear
+Clear => TFFc:G1:4:TCounti.Clear
+Clear => TFFc:G1:5:TCounti.Clear
+Clear => TFFc:G1:6:TCounti.Clear
+Clear => TFFc:G1:7:TCounti.Clear
+Cout[0] <= TFFc:TCount0.Q
+Cout[1] <= TFFc:G1:1:TCounti.Q
+Cout[2] <= TFFc:G1:2:TCounti.Q
+Cout[3] <= TFFc:G1:3:TCounti.Q
+Cout[4] <= TFFc:G1:4:TCounti.Q
+Cout[5] <= TFFc:G1:5:TCounti.Q
+Cout[6] <= TFFc:G1:6:TCounti.Q
+Cout[7] <= TFFc:G1:7:TCounti.Q
+
+
+|syncnt8|TFFc:TCount0
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:1:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:2:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:3:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:4:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:5:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:6:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|syncnt8|TFFc:\G1:7:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+

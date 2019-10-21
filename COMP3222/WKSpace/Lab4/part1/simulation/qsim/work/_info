@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\STUDY\COMPUTER\COMP\COMP3222\WKSpace\Lab4\part1\simulation\qsim
+vpart1
+Z1 ImeS4IW05TObU5h3J_6Q3[1
+Z2 Vn8im[_BVY;f4ImPC_JSWW1
+Z3 dF:\STUDY\COMPUTER\COMP\COMP3222\WKSpace\Lab4\part1\simulation\qsim
+Z4 w1571449106
+Z5 8part1.vo
+Z6 Fpart1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|part1.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 =M8QVXAFOKAd]ahF>bGZR0
+!s85 0
+Z11 !s108 1571449108.223000
+Z12 !s107 part1.vo|
+!s101 -O0
+vpart1_vlg_vec_tst
+!i10b 1
+Z13 !s100 <D5nP0_J5CFd^c^DNDR1Z1
+Z14 IZ^WiE5AU;;GXWBSj7=5?>3
+Z15 V]eZ0;Peg[4n`gBOOZXGW?1
+R3
+w1571449105
+Z16 8part1.vt
+Z17 Fpart1.vt
+L0 29
+R7
+r1
+!s85 0
+31
+!s108 1571449108.423000
+!s107 part1.vt|
+Z18 !s90 -work|work|part1.vt|
+!s101 -O0
+R9

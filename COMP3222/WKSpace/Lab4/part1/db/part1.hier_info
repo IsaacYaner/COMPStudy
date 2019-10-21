@@ -1,0 +1,213 @@
+|part1
+KEY[0] => syncnt8:Count.Clock
+SW[0] => syncnt8:Count.Clear
+SW[1] => syncnt8:Count.Enable
+HEX1[0] <= Hnum:DisPh.N0[0]
+HEX1[1] <= Hnum:DisPh.N0[1]
+HEX1[2] <= Hnum:DisPh.N0[2]
+HEX1[3] <= Hnum:DisPh.N0[3]
+HEX1[4] <= Hnum:DisPh.N0[4]
+HEX1[5] <= Hnum:DisPh.N0[5]
+HEX1[6] <= Hnum:DisPh.N0[6]
+HEX0[0] <= Hnum:DisPl.N0[0]
+HEX0[1] <= Hnum:DisPl.N0[1]
+HEX0[2] <= Hnum:DisPl.N0[2]
+HEX0[3] <= Hnum:DisPl.N0[3]
+HEX0[4] <= Hnum:DisPl.N0[4]
+HEX0[5] <= Hnum:DisPl.N0[5]
+HEX0[6] <= Hnum:DisPl.N0[6]
+
+
+|part1|syncnt8:Count
+Enable => Ein[1].IN1
+Enable => TFFc:TCount0.T
+Clock => TFFc:TCount0.CLK
+Clock => TFFc:G1:1:TCounti.CLK
+Clock => TFFc:G1:2:TCounti.CLK
+Clock => TFFc:G1:3:TCounti.CLK
+Clock => TFFc:G1:4:TCounti.CLK
+Clock => TFFc:G1:5:TCounti.CLK
+Clock => TFFc:G1:6:TCounti.CLK
+Clock => TFFc:G1:7:TCounti.CLK
+Clear => TFFc:TCount0.Clear
+Clear => TFFc:G1:1:TCounti.Clear
+Clear => TFFc:G1:2:TCounti.Clear
+Clear => TFFc:G1:3:TCounti.Clear
+Clear => TFFc:G1:4:TCounti.Clear
+Clear => TFFc:G1:5:TCounti.Clear
+Clear => TFFc:G1:6:TCounti.Clear
+Clear => TFFc:G1:7:TCounti.Clear
+Cout[0] <= TFFc:TCount0.Q
+Cout[1] <= TFFc:G1:1:TCounti.Q
+Cout[2] <= TFFc:G1:2:TCounti.Q
+Cout[3] <= TFFc:G1:3:TCounti.Q
+Cout[4] <= TFFc:G1:4:TCounti.Q
+Cout[5] <= TFFc:G1:5:TCounti.Q
+Cout[6] <= TFFc:G1:6:TCounti.Q
+Cout[7] <= TFFc:G1:7:TCounti.Q
+
+
+|part1|syncnt8:Count|TFFc:TCount0
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:1:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:2:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:3:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:4:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:5:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:6:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|syncnt8:Count|TFFc:\G1:7:TCounti
+T => Resv.ENA
+CLK => Resv.CLK
+Clear => Resv.ACLR
+Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|Hnum:DisPl
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+
+|part1|Hnum:DisPh
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+

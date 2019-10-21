@@ -1,0 +1,28 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part1 IS
+	PORT (KEY	: IN	STD_LOGIC_VECTOR(0 DOWNTO 0);
+			SW		: IN	STD_LOGIC_VECTOR(1 DOWNTO 0);
+			HEX1, HEX0	: OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+END part1;
+
+ARCHITECTURE Behavior of part1 IS
+
+COMPONENT syncnt8 IS
+	PORT (Enable, Clock, Clear	: IN	STD_LOGIC;
+			Cout						: OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT Hnum IS
+	PORT (N0					:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+			Cin				:	IN		STD_LOGIC_VECTOR(3 DOWNTO 0));
+END COMPONENT;
+
+SIGNAL Counti : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+BEGIN
+	Count: syncnt8 PORT MAP (SW(1), KEY(0), SW(0), Counti);
+	DisPl: Hnum		PORT MAP (HEX0, Counti(3 DOWNTO 0));
+	DisPh: Hnum		PORT MAP (HEX1, Counti(7 DOWNTO 4));
+END Behavior;

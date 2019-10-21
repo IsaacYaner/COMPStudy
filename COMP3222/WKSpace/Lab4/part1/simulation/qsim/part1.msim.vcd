@@ -1,0 +1,178 @@
+$comment
+	File created using the following command:
+		vcd file part1.msim.vcd -direction
+$end
+$date
+	Sat Oct 19 12:38:30 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module part1_vlg_vec_tst $end
+$var reg 1 ! KEY [0:0] $end
+$var reg 2 " SW [1:0] $end
+$var wire 1 # HEX0 [6] $end
+$var wire 1 $ HEX0 [5] $end
+$var wire 1 % HEX0 [4] $end
+$var wire 1 & HEX0 [3] $end
+$var wire 1 ' HEX0 [2] $end
+$var wire 1 ( HEX0 [1] $end
+$var wire 1 ) HEX0 [0] $end
+$var wire 1 * HEX1 [6] $end
+$var wire 1 + HEX1 [5] $end
+$var wire 1 , HEX1 [4] $end
+$var wire 1 - HEX1 [3] $end
+$var wire 1 . HEX1 [2] $end
+$var wire 1 / HEX1 [1] $end
+$var wire 1 0 HEX1 [0] $end
+$scope module i1 $end
+$var wire 1 1 gnd $end
+$var wire 1 2 vcc $end
+$var wire 1 3 unknown $end
+$var tri1 1 4 devclrn $end
+$var tri1 1 5 devpor $end
+$var tri1 1 6 devoe $end
+$var wire 1 7 Count|G1:7:TCounti|Resv~0_combout $end
+$var wire 1 8 Count|TCount0|Resv~0_combout $end
+$var wire 1 9 SW[0]~clkctrl_outclk $end
+$var wire 1 : Count|TCount0|Resv~regout $end
+$var wire 1 ; Count|G1:1:TCounti|Resv~0_combout $end
+$var wire 1 < Count|G1:1:TCounti|Resv~regout $end
+$var wire 1 = Count|G1:2:TCounti|Resv~0_combout $end
+$var wire 1 > Count|G1:2:TCounti|Resv~regout $end
+$var wire 1 ? Count|G1:4:TCounti|Resv~0_combout $end
+$var wire 1 @ Count|G1:4:TCounti|Resv~regout $end
+$var wire 1 A Count|G1:3:TCounti|Resv~0_combout $end
+$var wire 1 B Count|G1:3:TCounti|Resv~regout $end
+$var wire 1 C Count|G1:6:TCounti|Resv~0_combout $end
+$var wire 1 D Count|G1:6:TCounti|Resv~1_combout $end
+$var wire 1 E Count|G1:6:TCounti|Resv~regout $end
+$var wire 1 F Count|G1:7:TCounti|Resv~1_combout $end
+$var wire 1 G Count|G1:7:TCounti|Resv~regout $end
+$var wire 1 H Count|G1:5:TCounti|Resv~0_combout $end
+$var wire 1 I Count|G1:5:TCounti|Resv~regout $end
+$var wire 1 J DisPh|N0[1]~0_combout $end
+$var wire 1 K DisPh|N0[2]~1_combout $end
+$var wire 1 L DisPh|N0[3]~2_combout $end
+$var wire 1 M DisPh|N0[4]~3_combout $end
+$var wire 1 N DisPh|N0[5]~4_combout $end
+$var wire 1 O DisPh|N0[6]~5_combout $end
+$var wire 1 P DisPl|N0[1]~0_combout $end
+$var wire 1 Q DisPl|N0[2]~1_combout $end
+$var wire 1 R DisPl|N0[3]~2_combout $end
+$var wire 1 S DisPl|N0[4]~3_combout $end
+$var wire 1 T DisPl|N0[5]~4_combout $end
+$var wire 1 U DisPl|N0[6]~5_combout $end
+$var wire 1 V SW~combout [1] $end
+$var wire 1 W SW~combout [0] $end
+$var wire 1 X KEY~combout [0] $end
+$var wire 1 Y DisPh|N0 [6] $end
+$var wire 1 Z DisPh|N0 [5] $end
+$var wire 1 [ DisPh|N0 [4] $end
+$var wire 1 \ DisPh|N0 [3] $end
+$var wire 1 ] DisPh|N0 [2] $end
+$var wire 1 ^ DisPh|N0 [1] $end
+$var wire 1 _ DisPh|N0 [0] $end
+$var wire 1 ` DisPl|N0 [6] $end
+$var wire 1 a DisPl|N0 [5] $end
+$var wire 1 b DisPl|N0 [4] $end
+$var wire 1 c DisPl|N0 [3] $end
+$var wire 1 d DisPl|N0 [2] $end
+$var wire 1 e DisPl|N0 [1] $end
+$var wire 1 f DisPl|N0 [0] $end
+$var wire 1 g Count|Ein [7] $end
+$var wire 1 h Count|Ein [6] $end
+$var wire 1 i Count|Ein [5] $end
+$var wire 1 j Count|Ein [4] $end
+$var wire 1 k Count|Ein [3] $end
+$var wire 1 l Count|Ein [2] $end
+$var wire 1 m Count|Ein [1] $end
+$var wire 1 n Count|Ein [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+bx "
+0)
+0(
+0'
+0&
+0%
+0$
+1#
+00
+0/
+0.
+0-
+0,
+0+
+1*
+01
+12
+x3
+14
+15
+16
+17
+x8
+x9
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+1C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+1O
+0P
+0Q
+0R
+0S
+0T
+1U
+xW
+xV
+xX
+0_
+z^
+z]
+z\
+z[
+zZ
+zY
+0f
+ze
+zd
+zc
+zb
+za
+z`
+zn
+zm
+zl
+0k
+zj
+zi
+zh
+zg
+$end
+#1000000

@@ -1,0 +1,102 @@
+|part4
+CLOCK_50 => MHZ5:Flash.CLK
+HEX0[0] <= Hnum:Displ.N0[0]
+HEX0[1] <= Hnum:Displ.N0[1]
+HEX0[2] <= Hnum:Displ.N0[2]
+HEX0[3] <= Hnum:Displ.N0[3]
+HEX0[4] <= Hnum:Displ.N0[4]
+HEX0[5] <= Hnum:Displ.N0[5]
+HEX0[6] <= Hnum:Displ.N0[6]
+
+
+|part4|MHZ5:Flash
+CLK => RESV[0].CLK
+CLK => RESV[1].CLK
+CLK => RESV[2].CLK
+CLK => RESV[3].CLK
+CLK => RESV[4].CLK
+CLK => RESV[5].CLK
+CLK => RESV[6].CLK
+CLK => RESV[7].CLK
+CLK => RESV[8].CLK
+CLK => RESV[9].CLK
+CLK => RESV[10].CLK
+CLK => RESV[11].CLK
+CLK => RESV[12].CLK
+CLK => RESV[13].CLK
+CLK => RESV[14].CLK
+CLK => RESV[15].CLK
+CLK => RESV[16].CLK
+CLK => RESV[17].CLK
+CLK => RESV[18].CLK
+CLK => RESV[19].CLK
+CLK => RESV[20].CLK
+CLK => RESV[21].CLK
+CLK => RESV[22].CLK
+CLK => RESV[23].CLK
+CLK => RESV[24].CLK
+CLK => RESV[25].CLK
+CLK => Q[0].CLK
+CLK => Q[1].CLK
+CLK => Q[2].CLK
+CLK => Q[3].CLK
+Cout[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Cout[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Cout[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Cout[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|Hnum:Displ
+N0[0] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[1] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[2] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[3] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[4] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[5] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+N0[6] <= N0.DB_MAX_OUTPUT_PORT_TYPE
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[0] => N0.IN0
+Cin[0] => N0.IN1
+Cin[0] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN1
+Cin[1] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN0
+Cin[2] => N0.IN1
+Cin[2] => N0.IN1
+Cin[2] => N0.IN0
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+Cin[3] => N0.IN1
+
+

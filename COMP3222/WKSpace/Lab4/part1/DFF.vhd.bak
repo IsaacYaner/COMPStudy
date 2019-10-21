@@ -1,0 +1,12 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY syncnt8 IS
+	PORT ();
+END syncnt8;
+
+ARCHITECTURE Behavior of syncnt8 IS
+
+BEGIN
+
+END Behavior;
