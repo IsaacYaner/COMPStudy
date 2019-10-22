@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/") File("part1.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/") File("part4.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,6 +1,6 @@
 Assembler report for part2
-Sat Oct 19 18:38:41 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 22 12:54:11 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof
-  6. Assembler Device Options: F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof
+  5. Assembler Device Options: C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof
+  6. Assembler Device Options: C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 19 18:38:41 2019 ;
+; Assembler Status      ; Successful - Tue Oct 22 12:54:11 2019 ;
 ; Revision Name         ; part2                                 ;
 ; Top-level Entity Name ; part2                                 ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Generated Files                                                 ;
-+---------------------------------------------------------------------------+
-; File Name                                                                 ;
-+---------------------------------------------------------------------------+
-; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof ;
-; F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof ;
-+---------------------------------------------------------------------------+
++----------------------------------------------------------------------+
+; Assembler Generated Files                                            ;
++----------------------------------------------------------------------+
+; File Name                                                            ;
++----------------------------------------------------------------------+
+; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof ;
+; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof ;
++----------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Assembler Device Options: F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof ;
-+----------------+------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                            ;
-+----------------+------------------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                                       ;
-; JTAG usercode  ; 0x001B2737                                                                         ;
-; Checksum       ; 0x001B2737                                                                         ;
-+----------------+------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.sof ;
++----------------+-------------------------------------------------------------------------------+
+; Option         ; Setting                                                                       ;
++----------------+-------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                  ;
+; JTAG usercode  ; 0x001B2737                                                                    ;
+; Checksum       ; 0x001B2737                                                                    ;
++----------------+-------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Assembler Device Options: F:/STUDY/COMPUTER/COMP/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof ;
-+--------------------+--------------------------------------------------------------------------------+
-; Option             ; Setting                                                                        ;
-+--------------------+--------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                         ;
-; JTAG usercode      ; 0x00000000                                                                     ;
-; Checksum           ; 0x1DD97144                                                                     ;
-; Compression Ratio  ; 3                                                                              ;
-+--------------------+--------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.pof ;
++--------------------+---------------------------------------------------------------------------+
+; Option             ; Setting                                                                   ;
++--------------------+---------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                    ;
+; JTAG usercode      ; 0x00000000                                                                ;
+; Checksum           ; 0x1DD97144                                                                ;
+; Compression Ratio  ; 3                                                                         ;
++--------------------+---------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -116,15 +116,15 @@ applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Oct 19 18:38:38 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 22 12:54:02 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off part2 -c part2
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4567 megabytes
-    Info: Processing ended: Sat Oct 19 18:38:41 2019
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 419 megabytes
+    Info: Processing ended: Tue Oct 22 12:54:11 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:01
 
 

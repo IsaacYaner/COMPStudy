@@ -10,6 +10,11 @@ HEX0[6] <= Hnum:Displ.N0[6]
 
 
 |part4|MHZ5:Flash
+CLK => Q[0].CLK
+CLK => Q[1].CLK
+CLK => Q[2].CLK
+CLK => Q[3].CLK
+CLK => Enable.CLK
 CLK => RESV[0].CLK
 CLK => RESV[1].CLK
 CLK => RESV[2].CLK
@@ -36,10 +41,6 @@ CLK => RESV[22].CLK
 CLK => RESV[23].CLK
 CLK => RESV[24].CLK
 CLK => RESV[25].CLK
-CLK => Q[0].CLK
-CLK => Q[1].CLK
-CLK => Q[2].CLK
-CLK => Q[3].CLK
 Cout[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
 Cout[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
 Cout[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE

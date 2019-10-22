@@ -6,6 +6,7 @@ ENTITY syncnt8 IS
 			Cout						: OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
 END syncnt8;
 
+
 ARCHITECTURE Behavior of syncnt8 IS
 
 COMPONENT TFFc IS
@@ -16,12 +17,15 @@ END COMPONENT;
 SIGNAL Ein, Qout : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 BEGIN
-	Ein(0) <= Enable;
-	TCount0 : TFFc PORT MAP (Ein(0), Clock, Clear, Qout(0));
-G1:FOR i IN 1 to 7 GENERATE
-		Ein(i) <= Ein(i-1) AND Qout(i-1);
-		TCounti : TFFc PORT MAP (Ein(i), Clock, Clear, Qout(i)); 
+
+	Ein(0) <= Enable;			 												--Initial condition.
+	TCount0 : TFFc PORT MAP (Ein(0), Clock, Clear, Qout(0));		--Specialise the first one
+	
+G1:FOR i IN 1 to 7 GENERATE 												--Generate 7 same FFs.
+		Ein(i) <= Ein(i-1) AND Qout(i-1);								--Compute current Ein
+		TCounti : TFFc PORT MAP (Ein(i), Clock, Clear, Qout(i)); --Genarete flip Flop.
 	END GENERATE;
+	
 	Cout <= Qout;
 END Behavior;
 

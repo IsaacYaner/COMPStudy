@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "10/19/2019 12:39:02"
+// DATE "10/22/2019 12:51:21"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -102,9 +102,9 @@ wire \DisPl|N0[5]~4_combout ;
 wire \DisPl|N0[6]~5_combout ;
 wire [1:0] \SW~combout ;
 wire [0:0] \KEY~combout ;
-wire [6:0] \DisPl|N0 ;
-wire [6:0] \DisPh|N0 ;
 wire [7:0] \Count|Ein ;
+wire [6:0] \DisPh|N0 ;
+wire [6:0] \DisPl|N0 ;
 
 
 // Location: LCCOMB_X2_Y18_N10

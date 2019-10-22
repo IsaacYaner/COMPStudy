@@ -14,13 +14,15 @@ SIGNAL Q : STD_LOGIC_VECTOR(15 DOWNTO 0);
 BEGIN
 	PROCESS(Clear, Cloc, Enable)
 	BEGIN
-		IF Clear = '1' THEN
+		IF Clear = '1' THEN												--Hi voltage asyn reset.
 			Q <= (others => '0');
-		ELSIF Cloc'event AND Cloc = '1' AND Enable = '1' THEN
-			Q <= Q+1;
+		ELSIF Cloc'event AND Cloc = '1' THEN
+		    IF Enable = '1' THEN	--Counter.
+			    Q <= Q+1;
+		    END IF;
 		END IF;
 	END PROCESS;
-	Cout <= Q;
+	Cout <= Q;																--Connect to output.
 END Behavior;
 
 --One LUT and one 16 bit adder--

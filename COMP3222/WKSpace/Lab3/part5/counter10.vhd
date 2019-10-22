@@ -12,6 +12,7 @@ ARCHITECTURE Behavior of counter10 IS
 SIGNAL Q : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
 BEGIN
+
 	PROCESS(Clear, Cloc, Enable)
 	BEGIN
 		IF Clear = '1' OR Q = 9 THEN
