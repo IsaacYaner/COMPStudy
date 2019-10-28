@@ -27,7 +27,7 @@ ARCHITECTURE mixed OF part4 IS
 	SIGNAL Clk, nReset, w, z, shft, TStart, TOut : std_logic;
 	SIGNAL LR, CR, QL, QC : std_logic_vector(3 DOWNTO 0); -- length and code values and shift register contents
 	SIGNAL sel : std_logic_vector(2 DOWNTO 0);
-	TYPE state_t IS (Init); -- add states as required
+	TYPE state_t IS (Init, dot, dash, endFSM); -- add states as required
 	SIGNAL y_Q, Y_D : state_t;
 	
 BEGIN
