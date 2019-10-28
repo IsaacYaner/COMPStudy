@@ -24,16 +24,16 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "syncnt8")
-  (DATE "10/22/2019 12:55:37")
+  (DATE "10/27/2019 22:19:38")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
-  (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
+  (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:6\:TCounti\|Resv\~0)
+    (INSTANCE G1\:6\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT datac (162:162:162) (162:162:162))
@@ -87,7 +87,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE TCount0\|Resv\~0)
+    (INSTANCE TCount0\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT datad (2810:2810:2810) (2810:2810:2810))
@@ -131,7 +131,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE TCount0\|Resv)
+    (INSTANCE TCount0\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -147,7 +147,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:1\:TCounti\|Resv\~0)
+    (INSTANCE G1\:1\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT datab (2811:2811:2811) (2811:2811:2811))
@@ -160,7 +160,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:1\:TCounti\|Resv)
+    (INSTANCE G1\:1\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -176,7 +176,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:2\:TCounti\|Resv\~0)
+    (INSTANCE G1\:2\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2818:2818:2818) (2818:2818:2818))
@@ -191,7 +191,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:2\:TCounti\|Resv)
+    (INSTANCE G1\:2\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -223,7 +223,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:3\:TCounti\|Resv\~0)
+    (INSTANCE G1\:3\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT datad (117:117:117) (117:117:117))
@@ -234,7 +234,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:3\:TCounti\|Resv)
+    (INSTANCE G1\:3\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -250,7 +250,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:4\:TCounti\|Resv\~0)
+    (INSTANCE G1\:4\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (162:162:162) (162:162:162))
@@ -263,7 +263,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:4\:TCounti\|Resv)
+    (INSTANCE G1\:4\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -279,7 +279,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:5\:TCounti\|Resv\~0)
+    (INSTANCE G1\:5\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (241:241:241) (241:241:241))
@@ -294,7 +294,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:5\:TCounti\|Resv)
+    (INSTANCE G1\:5\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -310,7 +310,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:6\:TCounti\|Resv\~1)
+    (INSTANCE G1\:6\:TCounti\|outPut\~1)
     (DELAY
       (ABSOLUTE
         (PORT dataa (116:116:116) (116:116:116))
@@ -325,7 +325,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:6\:TCounti\|Resv)
+    (INSTANCE G1\:6\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))
@@ -341,7 +341,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:7\:TCounti\|Resv\~0)
+    (INSTANCE G1\:7\:TCounti\|outPut\~0)
     (DELAY
       (ABSOLUTE
         (PORT datab (163:163:163) (163:163:163))
@@ -355,7 +355,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE G1\:7\:TCounti\|Resv\~1)
+    (INSTANCE G1\:7\:TCounti\|outPut\~1)
     (DELAY
       (ABSOLUTE
         (PORT dataa (158:158:158) (158:158:158))
@@ -370,7 +370,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE G1\:7\:TCounti\|Resv)
+    (INSTANCE G1\:7\:TCounti\|outPut)
     (DELAY
       (ABSOLUTE
         (PORT clk (1029:1029:1029) (1029:1029:1029))

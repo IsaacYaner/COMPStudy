@@ -1,6 +1,6 @@
 Fitter report for part4
-Tue Oct 22 13:49:41 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Oct 25 15:30:17 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -60,26 +60,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 22 13:49:41 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part4                                           ;
-; Top-level Entity Name              ; part4                                           ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 59 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 59 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 31 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 31                                              ;
-; Total pins                         ; 8 / 315 ( 3 % )                                 ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Fri Oct 25 15:30:17 2019            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part4                                            ;
+; Top-level Entity Name              ; part4                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C20F484C7                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 59 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 59 / 18,752 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 31 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 31                                               ;
+; Total pins                         ; 8 / 315 ( 3 % )                                  ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -137,15 +137,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.00        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  33.3%      ;
+;     Processors 2-8         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -624,7 +624,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.pin.
+The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.pin.
 
 
 +---------------------------------------------------------------------+
@@ -651,7 +651,7 @@ The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/o
 ;     -- Dedicated logic registers            ; 31 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 4 / 1,172 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 5 / 1,172 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 8 / 315 ( 3 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
@@ -702,7 +702,7 @@ The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/o
 ; Total registers                             ; 31                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 31 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 4 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 5 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 8                    ; 0                              ;
@@ -1316,15 +1316,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |part4                     ; 59 (0)      ; 31 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 8    ; 0            ; 28 (0)       ; 0 (0)             ; 31 (0)           ; |part4              ; work         ;
-;    |Hnum:Displ|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |part4|Hnum:Displ   ; work         ;
-;    |MHZ5:Flash|            ; 52 (52)     ; 31 (31)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 31 (31)          ; |part4|MHZ5:Flash   ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                 ; Library Name ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
+; |part4                                    ; 59 (0)      ; 31 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 8    ; 0            ; 28 (0)       ; 0 (0)             ; 31 (0)           ; |part4                                              ; work         ;
+;    |Hnum:Displ|                           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |part4|Hnum:Displ                                   ; work         ;
+;    |MHZ5:Flash|                           ; 52 (0)      ; 31 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (0)       ; 0 (0)             ; 31 (0)           ; |part4|MHZ5:Flash                                   ; work         ;
+;       |counter10:countFor10|              ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |part4|MHZ5:Flash|counter10:countFor10              ; work         ;
+;       |frequencyAdapter:frenquencyFilter| ; 48 (48)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 27 (27)          ; |part4|MHZ5:Flash|frequencyAdapter:frenquencyFilter ; work         ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1353,14 +1355,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                              ;
-+-------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name              ; Location         ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50          ; PIN_L1           ; 31      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; MHZ5:Flash|Enable ; LCFF_X18_Y15_N25 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+-------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                              ;
++-----------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                ; Location       ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                                            ; PIN_L1         ; 31      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Enable ; LCFF_X2_Y19_N9 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1372,127 +1374,127 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+---------------------+-----------+
-; Name                ; Fan-Out   ;
-+---------------------+-----------+
-; MHZ5:Flash|Equal0~8 ; 14        ;
-; MHZ5:Flash|Q[0]     ; 11        ;
-; MHZ5:Flash|Q[1]     ; 10        ;
-; MHZ5:Flash|Q[2]     ; 10        ;
-; MHZ5:Flash|Q[3]     ; 9         ;
-; MHZ5:Flash|Enable   ; 4         ;
-; MHZ5:Flash|RESV[24] ; 2         ;
-; MHZ5:Flash|RESV[25] ; 2         ;
-; MHZ5:Flash|RESV[23] ; 2         ;
-; MHZ5:Flash|RESV[22] ; 2         ;
-; MHZ5:Flash|RESV[21] ; 2         ;
-; MHZ5:Flash|RESV[20] ; 2         ;
-; MHZ5:Flash|RESV[18] ; 2         ;
-; MHZ5:Flash|RESV[16] ; 2         ;
-; MHZ5:Flash|RESV[19] ; 2         ;
-; MHZ5:Flash|RESV[17] ; 2         ;
-; MHZ5:Flash|RESV[15] ; 2         ;
-; MHZ5:Flash|RESV[14] ; 2         ;
-; MHZ5:Flash|RESV[13] ; 2         ;
-; MHZ5:Flash|RESV[12] ; 2         ;
-; MHZ5:Flash|RESV[11] ; 2         ;
-; MHZ5:Flash|RESV[10] ; 2         ;
-; MHZ5:Flash|RESV[9]  ; 2         ;
-; MHZ5:Flash|RESV[8]  ; 2         ;
-; MHZ5:Flash|RESV[6]  ; 2         ;
-; MHZ5:Flash|RESV[5]  ; 2         ;
-; MHZ5:Flash|RESV[4]  ; 2         ;
-; MHZ5:Flash|RESV[7]  ; 2         ;
-; MHZ5:Flash|RESV[3]  ; 2         ;
-; MHZ5:Flash|RESV[2]  ; 2         ;
-; MHZ5:Flash|RESV[1]  ; 2         ;
-; MHZ5:Flash|RESV[0]  ; 2         ;
-; MHZ5:Flash|Q[0]~3   ; 1         ;
-; MHZ5:Flash|RESV~12  ; 1         ;
-; MHZ5:Flash|RESV~11  ; 1         ;
-; MHZ5:Flash|RESV~10  ; 1         ;
-; MHZ5:Flash|RESV~9   ; 1         ;
-; MHZ5:Flash|RESV~8   ; 1         ;
-; MHZ5:Flash|RESV~7   ; 1         ;
-; MHZ5:Flash|RESV~6   ; 1         ;
-; MHZ5:Flash|RESV~5   ; 1         ;
-; MHZ5:Flash|RESV~4   ; 1         ;
-; MHZ5:Flash|RESV~3   ; 1         ;
-; MHZ5:Flash|RESV~2   ; 1         ;
-; MHZ5:Flash|RESV~1   ; 1         ;
-; MHZ5:Flash|RESV~0   ; 1         ;
-; MHZ5:Flash|Equal0~7 ; 1         ;
-; MHZ5:Flash|Equal0~6 ; 1         ;
-; MHZ5:Flash|Equal0~5 ; 1         ;
-; MHZ5:Flash|Equal0~4 ; 1         ;
-; MHZ5:Flash|Equal0~3 ; 1         ;
-; MHZ5:Flash|Equal0~2 ; 1         ;
-; MHZ5:Flash|Equal0~1 ; 1         ;
-; MHZ5:Flash|Equal0~0 ; 1         ;
-; MHZ5:Flash|Q~2      ; 1         ;
-; MHZ5:Flash|Q[2]~1   ; 1         ;
-; MHZ5:Flash|Q~0      ; 1         ;
-; Hnum:Displ|N0[6]~5  ; 1         ;
-; Hnum:Displ|N0[5]~4  ; 1         ;
-; Hnum:Displ|N0[4]~3  ; 1         ;
-; Hnum:Displ|N0[3]~2  ; 1         ;
-; Hnum:Displ|N0[2]~1  ; 1         ;
-; Hnum:Displ|N0[1]~0  ; 1         ;
-; Hnum:Displ|N0[0]    ; 1         ;
-; MHZ5:Flash|Add0~50  ; 1         ;
-; MHZ5:Flash|Add0~49  ; 1         ;
-; MHZ5:Flash|Add0~48  ; 1         ;
-; MHZ5:Flash|Add0~47  ; 1         ;
-; MHZ5:Flash|Add0~46  ; 1         ;
-; MHZ5:Flash|Add0~45  ; 1         ;
-; MHZ5:Flash|Add0~44  ; 1         ;
-; MHZ5:Flash|Add0~43  ; 1         ;
-; MHZ5:Flash|Add0~42  ; 1         ;
-; MHZ5:Flash|Add0~41  ; 1         ;
-; MHZ5:Flash|Add0~40  ; 1         ;
-; MHZ5:Flash|Add0~39  ; 1         ;
-; MHZ5:Flash|Add0~38  ; 1         ;
-; MHZ5:Flash|Add0~37  ; 1         ;
-; MHZ5:Flash|Add0~36  ; 1         ;
-; MHZ5:Flash|Add0~35  ; 1         ;
-; MHZ5:Flash|Add0~34  ; 1         ;
-; MHZ5:Flash|Add0~33  ; 1         ;
-; MHZ5:Flash|Add0~32  ; 1         ;
-; MHZ5:Flash|Add0~31  ; 1         ;
-; MHZ5:Flash|Add0~30  ; 1         ;
-; MHZ5:Flash|Add0~29  ; 1         ;
-; MHZ5:Flash|Add0~28  ; 1         ;
-; MHZ5:Flash|Add0~27  ; 1         ;
-; MHZ5:Flash|Add0~26  ; 1         ;
-; MHZ5:Flash|Add0~25  ; 1         ;
-; MHZ5:Flash|Add0~24  ; 1         ;
-; MHZ5:Flash|Add0~23  ; 1         ;
-; MHZ5:Flash|Add0~22  ; 1         ;
-; MHZ5:Flash|Add0~21  ; 1         ;
-; MHZ5:Flash|Add0~20  ; 1         ;
-; MHZ5:Flash|Add0~19  ; 1         ;
-; MHZ5:Flash|Add0~18  ; 1         ;
-; MHZ5:Flash|Add0~17  ; 1         ;
-; MHZ5:Flash|Add0~16  ; 1         ;
-; MHZ5:Flash|Add0~15  ; 1         ;
-; MHZ5:Flash|Add0~14  ; 1         ;
-; MHZ5:Flash|Add0~13  ; 1         ;
-; MHZ5:Flash|Add0~12  ; 1         ;
-; MHZ5:Flash|Add0~11  ; 1         ;
-; MHZ5:Flash|Add0~10  ; 1         ;
-; MHZ5:Flash|Add0~9   ; 1         ;
-; MHZ5:Flash|Add0~8   ; 1         ;
-; MHZ5:Flash|Add0~7   ; 1         ;
-; MHZ5:Flash|Add0~6   ; 1         ;
-; MHZ5:Flash|Add0~5   ; 1         ;
-; MHZ5:Flash|Add0~4   ; 1         ;
-; MHZ5:Flash|Add0~3   ; 1         ;
-; MHZ5:Flash|Add0~2   ; 1         ;
-; MHZ5:Flash|Add0~1   ; 1         ;
-; MHZ5:Flash|Add0~0   ; 1         ;
-+---------------------+-----------+
++-----------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                 ;
++-------------------------------------------------------+---------+
+; Name                                                  ; Fan-Out ;
++-------------------------------------------------------+---------+
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~8 ; 14      ;
+; MHZ5:Flash|counter10:countFor10|Q[0]                  ; 11      ;
+; MHZ5:Flash|counter10:countFor10|Q[1]                  ; 10      ;
+; MHZ5:Flash|counter10:countFor10|Q[2]                  ; 10      ;
+; MHZ5:Flash|counter10:countFor10|Q[3]                  ; 9       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Enable   ; 4       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[24]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[25]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[23]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[22]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[21]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[20]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[18]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[16]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[19]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[17]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[15]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[14]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[13]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[12]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[11]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[0]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[1]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[2]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[3]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[4]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[5]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[6]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[8]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[9]     ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[10]    ; 2       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q[7]     ; 2       ;
+; MHZ5:Flash|counter10:countFor10|Q[0]~3                ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~12     ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~11     ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~10     ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~9      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~8      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~7      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~6      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~5      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~4      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~3      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~2      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~1      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Q~0      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~7 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~6 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~5 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~4 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~3 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~2 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~1 ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Equal0~0 ; 1       ;
+; MHZ5:Flash|counter10:countFor10|Q~2                   ; 1       ;
+; MHZ5:Flash|counter10:countFor10|Q[2]~1                ; 1       ;
+; MHZ5:Flash|counter10:countFor10|Q~0                   ; 1       ;
+; Hnum:Displ|N0[6]~5                                    ; 1       ;
+; Hnum:Displ|N0[5]~4                                    ; 1       ;
+; Hnum:Displ|N0[4]~3                                    ; 1       ;
+; Hnum:Displ|N0[3]~2                                    ; 1       ;
+; Hnum:Displ|N0[2]~1                                    ; 1       ;
+; Hnum:Displ|N0[1]~0                                    ; 1       ;
+; Hnum:Displ|N0[0]                                      ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~50  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~49  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~48  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~47  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~46  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~45  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~44  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~43  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~42  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~41  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~40  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~39  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~38  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~37  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~36  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~35  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~34  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~33  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~32  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~31  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~30  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~29  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~28  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~27  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~26  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~25  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~24  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~23  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~22  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~21  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~20  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~19  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~18  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~17  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~16  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~15  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~14  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~13  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~12  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~11  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~10  ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~9   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~8   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~7   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~6   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~5   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~4   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~3   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~2   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~1   ; 1       ;
+; MHZ5:Flash|frequencyAdapter:frenquencyFilter|Add0~0   ; 1       ;
++-------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1500,25 +1502,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 43 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 44 / 54,004 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects            ; 14 / 36,000 ( < 1 % ) ;
-; Direct links                ; 20 / 54,004 ( < 1 % ) ;
+; C4 interconnects            ; 8 / 36,000 ( < 1 % )  ;
+; Direct links                ; 27 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 39 / 18,752 ( < 1 % ) ;
-; R24 interconnects           ; 1 / 1,900 ( < 1 % )   ;
-; R4 interconnects            ; 18 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 38 / 18,752 ( < 1 % ) ;
+; R24 interconnects           ; 0 / 1,900 ( 0 % )     ;
+; R4 interconnects            ; 9 / 46,920 ( < 1 % )  ;
 +-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 14.75) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 11.80) ; Number of LABs  (Total = 5) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
+; 3                                           ; 1                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
@@ -1528,34 +1530,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                          ; 0                           ;
 ; 11                                          ; 1                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 3                           ;
+; 16                                          ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.25) ; Number of LABs  (Total = 4) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 5) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 4                           ;
-; 1 Clock enable                     ; 1                           ;
+; 1 Clock                            ; 5                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 22.50) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 18.00) ; Number of LABs  (Total = 5) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
+; 5                                            ; 1                           ;
 ; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
@@ -1571,12 +1572,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
+; 21                                           ; 1                           ;
 ; 22                                           ; 1                           ;
 ; 23                                           ; 0                           ;
 ; 24                                           ; 0                           ;
 ; 25                                           ; 0                           ;
-; 26                                           ; 1                           ;
+; 26                                           ; 0                           ;
 ; 27                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
@@ -1584,20 +1585,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 9.50) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 7.80) ; Number of LABs  (Total = 5) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 3                                               ; 1                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 2                           ;
 ; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
+; 9                                               ; 1                           ;
 ; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
+; 11                                              ; 0                           ;
 ; 12                                              ; 0                           ;
 ; 13                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
@@ -1606,7 +1607,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.25) ; Number of LABs  (Total = 4) ;
+; Number of Distinct Inputs  (Average = 8.20) ; Number of LABs  (Total = 5) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -1615,7 +1616,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                           ; 1                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
+; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 1                           ;
@@ -1626,10 +1627,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 15                                          ; 0                           ;
 ; 16                                          ; 0                           ;
 ; 17                                          ; 0                           ;
-; 18                                          ; 0                           ;
-; 19                                          ; 0                           ;
-; 20                                          ; 0                           ;
-; 21                                          ; 1                           ;
+; 18                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1665,7 +1663,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "part4"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2117,19 +2115,19 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 7 output pins without output pin load capacitance assignment
     Info (306007): Pin "HEX0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2145,17 +2143,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.fit.smsg
+Info (144001): Generated suppressed messages file W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 435 warnings
-    Info: Peak virtual memory: 1057 megabytes
-    Info: Processing ended: Tue Oct 22 13:49:42 2019
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 5542 megabytes
+    Info: Processing ended: Fri Oct 25 15:30:17 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.fit.smsg.
+The suppressed messages can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/output_files/part4.fit.smsg.
 
 

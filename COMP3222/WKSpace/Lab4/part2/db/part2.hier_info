@@ -1,20 +1,42 @@
 |part2
-Enable => Q[0].ENA
-Enable => Q[1].ENA
-Enable => Q[2].ENA
-Enable => Q[3].ENA
-Enable => Q[4].ENA
-Enable => Q[5].ENA
-Enable => Q[6].ENA
-Enable => Q[7].ENA
-Enable => Q[8].ENA
-Enable => Q[9].ENA
-Enable => Q[10].ENA
-Enable => Q[11].ENA
-Enable => Q[12].ENA
-Enable => Q[13].ENA
-Enable => Q[14].ENA
+Enable => counter16bit:countingUp.Enable
+Cloc => counter16bit:countingUp.Cloc
+Clear => counter16bit:countingUp.Clear
+Cout[0] <= counter16bit:countingUp.Cout[0]
+Cout[1] <= counter16bit:countingUp.Cout[1]
+Cout[2] <= counter16bit:countingUp.Cout[2]
+Cout[3] <= counter16bit:countingUp.Cout[3]
+Cout[4] <= counter16bit:countingUp.Cout[4]
+Cout[5] <= counter16bit:countingUp.Cout[5]
+Cout[6] <= counter16bit:countingUp.Cout[6]
+Cout[7] <= counter16bit:countingUp.Cout[7]
+Cout[8] <= counter16bit:countingUp.Cout[8]
+Cout[9] <= counter16bit:countingUp.Cout[9]
+Cout[10] <= counter16bit:countingUp.Cout[10]
+Cout[11] <= counter16bit:countingUp.Cout[11]
+Cout[12] <= counter16bit:countingUp.Cout[12]
+Cout[13] <= counter16bit:countingUp.Cout[13]
+Cout[14] <= counter16bit:countingUp.Cout[14]
+Cout[15] <= counter16bit:countingUp.Cout[15]
+
+
+|part2|counter16bit:countingUp
 Enable => Q[15].ENA
+Enable => Q[14].ENA
+Enable => Q[13].ENA
+Enable => Q[12].ENA
+Enable => Q[11].ENA
+Enable => Q[10].ENA
+Enable => Q[9].ENA
+Enable => Q[8].ENA
+Enable => Q[7].ENA
+Enable => Q[6].ENA
+Enable => Q[5].ENA
+Enable => Q[4].ENA
+Enable => Q[3].ENA
+Enable => Q[2].ENA
+Enable => Q[1].ENA
+Enable => Q[0].ENA
 Cloc => Q[0].CLK
 Cloc => Q[1].CLK
 Cloc => Q[2].CLK

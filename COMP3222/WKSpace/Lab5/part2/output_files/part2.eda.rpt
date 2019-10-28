@@ -1,0 +1,64 @@
+EDA Netlist Writer report for part2
+Mon Oct 28 21:43:30 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; EDA Netlist Writer Summary                                    ;
++---------------------------+-----------------------------------+
+; EDA Netlist Writer Status ; Failed - Mon Oct 28 21:43:30 2019 ;
+; Revision Name             ; part2                             ;
+; Top-level Entity Name     ; part2                             ;
+; Family                    ; Cyclone II                        ;
++---------------------------+-----------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit EDA Netlist Writer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Oct 28 21:43:29 2019
+Info: Command: quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog part2 -c part2 --vector_source=W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part2/Waveform.vwf --testbench_file=./simulation/qsim/part2.vt
+Error (201009): Bus port "LEDR" specified in vector source file has width of 4, which does not match width 10 of top level port of same name
+Error (201009): Bus port "SW" specified in vector source file has width of 2, which does not match width 10 of top level port of same name
+Error (201009): Bus port "LEDR" specified in vector source file has width of 4, which does not match width 10 of top level port of same name
+Error (201009): Bus port "SW" specified in vector source file has width of 2, which does not match width 10 of top level port of same name
+Error (201009): Bus port "SW" specified in vector source file has width of 2, which does not match width 10 of top level port of same name
+Info (201000): Generated Verilog Test Bench File ./simulation/qsim/part2.vt for simulation
+Error: Quartus II 64-Bit EDA Netlist Writer was unsuccessful. 5 errors, 0 warnings
+    Error: Peak virtual memory: 4536 megabytes
+    Error: Processing ended: Mon Oct 28 21:43:30 2019
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:00
+
+

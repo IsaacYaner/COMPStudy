@@ -10,41 +10,62 @@ HEX0[6] <= Hnum:Displ.N0[6]
 
 
 |part4|MHZ5:Flash
-CLK => Q[0].CLK
-CLK => Q[1].CLK
-CLK => Q[2].CLK
-CLK => Q[3].CLK
-CLK => Enable.CLK
-CLK => RESV[0].CLK
-CLK => RESV[1].CLK
-CLK => RESV[2].CLK
-CLK => RESV[3].CLK
-CLK => RESV[4].CLK
-CLK => RESV[5].CLK
-CLK => RESV[6].CLK
-CLK => RESV[7].CLK
-CLK => RESV[8].CLK
-CLK => RESV[9].CLK
-CLK => RESV[10].CLK
-CLK => RESV[11].CLK
-CLK => RESV[12].CLK
-CLK => RESV[13].CLK
-CLK => RESV[14].CLK
-CLK => RESV[15].CLK
-CLK => RESV[16].CLK
-CLK => RESV[17].CLK
-CLK => RESV[18].CLK
-CLK => RESV[19].CLK
-CLK => RESV[20].CLK
-CLK => RESV[21].CLK
-CLK => RESV[22].CLK
-CLK => RESV[23].CLK
-CLK => RESV[24].CLK
-CLK => RESV[25].CLK
+CLK => counter10:countFor10.Cloc
+CLK => frequencyAdapter:frenquencyFilter.Cloc
+Cout[0] <= counter10:countFor10.Cout[0]
+Cout[1] <= counter10:countFor10.Cout[1]
+Cout[2] <= counter10:countFor10.Cout[2]
+Cout[3] <= counter10:countFor10.Cout[3]
+
+
+|part4|MHZ5:Flash|counter10:countFor10
+Enable => Q[0].ENA
+Enable => Q[3].ENA
+Enable => Q[2].ENA
+Enable => Q[1].ENA
+Cloc => Q[0].CLK
+Cloc => Q[1].CLK
+Cloc => Q[2].CLK
+Cloc => Q[3].CLK
+Clear => Q[0].ACLR
+Clear => Q[1].ACLR
+Clear => Q[2].ACLR
+Clear => Q[3].ACLR
 Cout[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
 Cout[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
 Cout[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
 Cout[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|MHZ5:Flash|frequencyAdapter:frenquencyFilter
+Cloc => Enable~reg0.CLK
+Cloc => Q[0].CLK
+Cloc => Q[1].CLK
+Cloc => Q[2].CLK
+Cloc => Q[3].CLK
+Cloc => Q[4].CLK
+Cloc => Q[5].CLK
+Cloc => Q[6].CLK
+Cloc => Q[7].CLK
+Cloc => Q[8].CLK
+Cloc => Q[9].CLK
+Cloc => Q[10].CLK
+Cloc => Q[11].CLK
+Cloc => Q[12].CLK
+Cloc => Q[13].CLK
+Cloc => Q[14].CLK
+Cloc => Q[15].CLK
+Cloc => Q[16].CLK
+Cloc => Q[17].CLK
+Cloc => Q[18].CLK
+Cloc => Q[19].CLK
+Cloc => Q[20].CLK
+Cloc => Q[21].CLK
+Cloc => Q[22].CLK
+Cloc => Q[23].CLK
+Cloc => Q[24].CLK
+Cloc => Q[25].CLK
+Enable <= Enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part4|Hnum:Displ

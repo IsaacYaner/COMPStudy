@@ -10,16 +10,16 @@ ARCHITECTURE Behavior of TFFc IS
 
 --Initial value of TFF?
 
-SIGNAL Resv : STD_LOGIC;
+SIGNAL outPut : STD_LOGIC;
 
 BEGIN
 	PROCESS(CLK, Clear)
 	BEGIN
 		IF Clear = '1' THEN
-			Resv <= '0';
+			outPut <= '0';
 		ELSIF CLK'event AND (CLK = '1') AND (T = '1') THEN
-			Resv <= NOT(Resv);
+			outPut <= NOT(outPut);
 		END IF;
 	END PROCESS;
-	Q <= Resv;
+	Q <= outPut;
 END Behavior;

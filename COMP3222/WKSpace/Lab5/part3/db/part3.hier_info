@@ -1,0 +1,67 @@
+|part3
+SW[0] => FSMReg:recogniseSequence.reset
+SW[1] => FSMReg:recogniseSequence.w
+KEY[0] => FSMReg:recogniseSequence.CLK
+LEDG[0] <= FSMReg:recogniseSequence.z
+LEDR[0] <= FSMReg:recogniseSequence.sequenceStatus[0]
+LEDR[1] <= FSMReg:recogniseSequence.sequenceStatus[1]
+LEDR[2] <= FSMReg:recogniseSequence.sequenceStatus[2]
+LEDR[3] <= FSMReg:recogniseSequence.sequenceStatus[3]
+LEDR[4] <= FSMReg:recogniseSequence.sequenceStatus[4]
+LEDR[5] <= FSMReg:recogniseSequence.sequenceStatus[5]
+LEDR[6] <= FSMReg:recogniseSequence.sequenceStatus[6]
+LEDR[7] <= FSMReg:recogniseSequence.sequenceStatus[7]
+
+
+|part3|FSMReg:recogniseSequence
+CLK => shiftReg4bits:register40sequence.CLK
+CLK => shiftReg4bits:register41sequence.CLK
+w => shiftReg4bits:register41sequence.shiftValue
+w => shiftReg4bits:register40sequence.shiftValue
+reset => shiftReg4bits:register40sequence.reset
+reset => shiftReg4bits:register41sequence.reset
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+sequenceStatus[0] <= shiftReg4bits:register41sequence.status[0]
+sequenceStatus[1] <= shiftReg4bits:register41sequence.status[1]
+sequenceStatus[2] <= shiftReg4bits:register41sequence.status[2]
+sequenceStatus[3] <= shiftReg4bits:register41sequence.status[3]
+sequenceStatus[4] <= shiftReg4bits:register40sequence.status[0]
+sequenceStatus[5] <= shiftReg4bits:register40sequence.status[1]
+sequenceStatus[6] <= shiftReg4bits:register40sequence.status[2]
+sequenceStatus[7] <= shiftReg4bits:register40sequence.status[3]
+
+
+|part3|FSMReg:recogniseSequence|shiftReg4bits:register40sequence
+CLK => data[0].CLK
+CLK => data[1].CLK
+CLK => data[2].CLK
+CLK => data[3].CLK
+shiftValue => data.DATAA
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+isAllOne <= isAllOne.DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+status[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+status[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+status[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|FSMReg:recogniseSequence|shiftReg4bits:register41sequence
+CLK => data[0].CLK
+CLK => data[1].CLK
+CLK => data[2].CLK
+CLK => data[3].CLK
+shiftValue => data.DATAA
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+isAllOne <= isAllOne.DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+status[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+status[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+status[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,37 @@
+|part2
+SW[0] => FSM:toggleFSM.reset
+SW[1] => FSM:toggleFSM.w
+KEY[0] => FSM:toggleFSM.CLK
+LEDG[0] <= FSM:toggleFSM.z
+LEDR[0] <= FSM:toggleFSM.stateOut[0]
+LEDR[1] <= FSM:toggleFSM.stateOut[1]
+LEDR[2] <= FSM:toggleFSM.stateOut[2]
+LEDR[3] <= FSM:toggleFSM.stateOut[3]
+
+
+|part2|FSM:toggleFSM
+w => nextState.F.DATAA
+w => nextState.G.DATAB
+w => nextState.H.DATAB
+w => nextState.I.DATAB
+w => Selector0.IN1
+w => nextState.C.DATAB
+w => nextState.D.DATAB
+w => Selector1.IN1
+CLK => state~1.DATAIN
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+z <= process_2.DB_MAX_OUTPUT_PORT_TYPE
+stateOut[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+stateOut[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+stateOut[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+stateOut[3] <= stateOut[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,597 @@
+$comment
+	File created using the following command:
+		vcd file part1.msim.vcd -direction
+$end
+$date
+	Mon Oct 28 12:08:02 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module part1_vlg_vec_tst $end
+$var reg 1 ! KEY [0:0] $end
+$var reg 2 " SW [1:0] $end
+$var wire 1 # LEDG [0] $end
+$var wire 1 $ LEDR [8] $end
+$var wire 1 % LEDR [7] $end
+$var wire 1 & LEDR [6] $end
+$var wire 1 ' LEDR [5] $end
+$var wire 1 ( LEDR [4] $end
+$var wire 1 ) LEDR [3] $end
+$var wire 1 * LEDR [2] $end
+$var wire 1 + LEDR [1] $end
+$var wire 1 , LEDR [0] $end
+$scope module i1 $end
+$var wire 1 - gnd $end
+$var wire 1 . vcc $end
+$var wire 1 / unknown $end
+$var tri1 1 0 devclrn $end
+$var tri1 1 1 devpor $end
+$var tri1 1 2 devoe $end
+$var wire 1 3 simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout $end
+$var wire 1 4 simulateToBoard|generateNextState:0:RealiseNextState|Q~regout $end
+$var wire 1 5 simulateToBoard|generateNextState:7:RealiseNextState|Q~regout $end
+$var wire 1 6 simulateToBoard|nextState[8]~1_combout $end
+$var wire 1 7 simulateToBoard|generateNextState:8:RealiseNextState|Q~regout $end
+$var wire 1 8 simulateToBoard|nextState~2_combout $end
+$var wire 1 9 simulateToBoard|generateNextState:1:RealiseNextState|Q~regout $end
+$var wire 1 : simulateToBoard|generateNextState:2:RealiseNextState|Q~regout $end
+$var wire 1 ; simulateToBoard|generateNextState:3:RealiseNextState|Q~regout $end
+$var wire 1 < simulateToBoard|nextState[4]~0_combout $end
+$var wire 1 = simulateToBoard|generateNextState:4:RealiseNextState|Q~regout $end
+$var wire 1 > simulateToBoard|z~combout $end
+$var wire 1 ? simulateToBoard|nextState~3_combout $end
+$var wire 1 @ simulateToBoard|generateNextState:5:RealiseNextState|Q~regout $end
+$var wire 1 A simulateToBoard|generateNextState:6:RealiseNextState|Q~regout $end
+$var wire 1 B simulateToBoard|nextState [8] $end
+$var wire 1 C simulateToBoard|nextState [7] $end
+$var wire 1 D simulateToBoard|nextState [6] $end
+$var wire 1 E simulateToBoard|nextState [5] $end
+$var wire 1 F simulateToBoard|nextState [4] $end
+$var wire 1 G simulateToBoard|nextState [3] $end
+$var wire 1 H simulateToBoard|nextState [2] $end
+$var wire 1 I simulateToBoard|nextState [1] $end
+$var wire 1 J simulateToBoard|nextState [0] $end
+$var wire 1 K SW~combout [1] $end
+$var wire 1 L SW~combout [0] $end
+$var wire 1 M KEY~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0-
+1.
+x/
+10
+11
+12
+13
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+zJ
+0I
+0H
+0G
+zF
+0E
+0D
+0C
+zB
+0L
+0K
+0M
+$end
+#10000
+b1 !
+1M
+14
+1?
+18
+1,
+#20000
+b0 !
+0M
+#30000
+b1 "
+b1 !
+1L
+1M
+1I
+03
+#40000
+b0 !
+0M
+#50000
+b11 "
+b1 !
+1K
+1M
+1E
+0I
+19
+04
+08
+1+
+0,
+#60000
+b0 !
+0M
+#70000
+b1 "
+b1 !
+0K
+1M
+0E
+1H
+1@
+09
+18
+0?
+0H
+1'
+0+
+1I
+#80000
+b0 !
+0M
+#90000
+b1 !
+1M
+0@
+19
+08
+1?
+1H
+0'
+1+
+0I
+#100000
+b0 !
+0M
+#110000
+b1 !
+1M
+1:
+09
+1G
+0?
+0H
+1*
+0+
+#120000
+b0 !
+0M
+#130000
+b1 !
+1M
+1;
+0:
+1?
+1<
+0G
+1)
+0*
+#140000
+b0 !
+0M
+#150000
+b11 "
+b1 !
+1K
+1M
+1E
+0<
+1=
+0;
+1>
+1(
+0)
+1#
+#160000
+b0 !
+0M
+#170000
+b1 !
+1M
+1@
+0=
+1D
+18
+0?
+0>
+1'
+0(
+0E
+0#
+#180000
+b0 !
+0M
+#190000
+b1 !
+1M
+1A
+0@
+1C
+0D
+08
+1&
+0'
+#200000
+b0 !
+0M
+#210000
+b1 !
+1M
+0A
+15
+0C
+18
+16
+0&
+1%
+#220000
+b0 !
+0M
+#230000
+b1 !
+1M
+17
+05
+1>
+1$
+0%
+1#
+#240000
+b1 "
+b0 !
+0K
+0M
+1I
+06
+#250000
+b1 !
+1M
+19
+07
+1?
+1H
+0>
+08
+1+
+0$
+0I
+0#
+#260000
+b0 !
+0M
+#270000
+b1 !
+1M
+1:
+09
+1G
+0?
+0H
+1*
+0+
+#280000
+b11 "
+b0 !
+1K
+0M
+1E
+0G
+#290000
+b1 !
+1M
+1@
+0:
+1D
+18
+0E
+1'
+0*
+#300000
+b0 !
+0M
+#310000
+b1 !
+1M
+1A
+0@
+1C
+0D
+08
+1&
+0'
+#320000
+b0 !
+0M
+#330000
+b1 !
+1M
+0A
+15
+0C
+18
+16
+0&
+1%
+#340000
+b0 !
+0M
+#350000
+b1 !
+1M
+17
+05
+1>
+1$
+0%
+1#
+#360000
+b0 !
+0M
+#370000
+b1 !
+1M
+#380000
+b0 !
+0M
+#390000
+b1 !
+1M
+#400000
+b0 !
+0M
+#410000
+b1 !
+1M
+#420000
+b0 !
+0M
+#430000
+b1 "
+b1 !
+0K
+1M
+1I
+06
+#440000
+b0 !
+0M
+#450000
+b1 !
+1M
+19
+07
+1?
+1H
+0>
+08
+1+
+0$
+0I
+0#
+#460000
+b0 !
+0M
+#470000
+b1 !
+1M
+1:
+09
+1G
+0?
+0H
+1*
+0+
+#480000
+b0 !
+0M
+#490000
+b1 !
+1M
+1;
+0:
+1?
+1<
+0G
+1)
+0*
+#500000
+b0 !
+0M
+#510000
+b1 !
+1M
+1=
+0;
+1>
+1(
+0)
+1#
+#520000
+b0 !
+0M
+#530000
+b1 !
+1M
+#540000
+b0 !
+0M
+#550000
+b1 !
+1M
+#560000
+b0 !
+0M
+#570000
+b1 !
+1M
+#580000
+b0 !
+0M
+#590000
+b1 !
+1M
+#600000
+b0 !
+0M
+#610000
+b1 !
+1M
+#620000
+b0 !
+0M
+#630000
+b1 !
+1M
+#640000
+b0 !
+0M
+#650000
+b1 !
+1M
+#660000
+b0 !
+0M
+#670000
+b1 !
+1M
+#680000
+b0 !
+0M
+#690000
+b1 !
+1M
+#700000
+b0 !
+0M
+#710000
+b1 !
+1M
+#720000
+b0 !
+0M
+#730000
+b1 !
+1M
+#740000
+b0 !
+0M
+#750000
+b1 !
+1M
+#760000
+b0 !
+0M
+#770000
+b1 !
+1M
+#780000
+b0 !
+0M
+#790000
+b1 !
+1M
+#800000
+b0 !
+0M
+#810000
+b1 !
+1M
+#820000
+b0 !
+0M
+#830000
+b1 !
+1M
+#840000
+b0 !
+0M
+#850000
+b1 !
+1M
+#860000
+b0 !
+0M
+#870000
+b1 !
+1M
+#880000
+b0 !
+0M
+#890000
+b0 "
+b1 !
+0L
+1M
+0<
+13
+#900000
+b0 !
+0M
+#910000
+b1 !
+1M
+0=
+14
+0>
+18
+0(
+1,
+0#
+#920000
+b0 !
+0M
+#930000
+b1 !
+1M
+#940000
+b0 !
+0M
+#950000
+b1 !
+1M
+#960000
+b0 !
+0M
+#970000
+b1 !
+1M
+#980000
+b0 !
+0M
+#990000
+b1 !
+1M
+#1000000

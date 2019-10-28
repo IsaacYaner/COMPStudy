@@ -1,6 +1,6 @@
 Fitter report for part1
-Tue Oct 22 12:50:53 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Oct 27 22:15:03 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -60,26 +60,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 22 12:50:53 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part1                                           ;
-; Top-level Entity Name              ; part1                                           ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 25 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 25 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 8 / 18,752 ( < 1 % )                            ;
-; Total registers                    ; 8                                               ;
-; Total pins                         ; 17 / 315 ( 5 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Sun Oct 27 22:15:03 2019            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part1                                            ;
+; Top-level Entity Name              ; part1                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C20F484C7                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 25 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 25 / 18,752 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 8 / 18,752 ( < 1 % )                             ;
+; Total registers                    ; 8                                                ;
+; Total pins                         ; 17 / 315 ( 5 % )                                 ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -138,15 +138,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-8         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -607,7 +607,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.pin.
+The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1354,23 +1354,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+---------------+-----------------------+-----+
 
 
-+----------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                             ;
-+----------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
-+----------------------------------------------+-------------------+---------+
-; SW[1]                                        ;                   ;         ;
-; KEY[0]                                       ;                   ;         ;
-;      - syncnt8:Count|TFFc:TCount0|Resv       ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:1:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:2:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:3:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:4:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:5:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:6:TCounti|Resv ; 0                 ; 0       ;
-;      - syncnt8:Count|TFFc:\G1:7:TCounti|Resv ; 0                 ; 0       ;
-; SW[0]                                        ;                   ;         ;
-+----------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                               ;
++------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
++------------------------------------------------+-------------------+---------+
+; SW[1]                                          ;                   ;         ;
+; KEY[0]                                         ;                   ;         ;
+;      - syncnt8:Count|TFFc:TCount0|outPut       ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:1:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:2:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:3:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:4:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:5:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:6:TCounti|outPut ; 0                 ; 0       ;
+;      - syncnt8:Count|TFFc:\G1:7:TCounti|outPut ; 0                 ; 0       ;
+; SW[0]                                          ;                   ;         ;
++------------------------------------------------+-------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -1392,47 +1392,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------+
-; Non-Global High Fan-Out Signals                   ;
-+-----------------------------------------+---------+
-; Name                                    ; Fan-Out ;
-+-----------------------------------------+---------+
-; syncnt8:Count|TFFc:\G1:3:TCounti|Resv   ; 12      ;
-; syncnt8:Count|TFFc:TCount0|Resv         ; 11      ;
-; syncnt8:Count|TFFc:\G1:4:TCounti|Resv   ; 11      ;
-; syncnt8:Count|TFFc:\G1:1:TCounti|Resv   ; 10      ;
-; syncnt8:Count|TFFc:\G1:5:TCounti|Resv   ; 10      ;
-; syncnt8:Count|TFFc:\G1:2:TCounti|Resv   ; 9       ;
-; syncnt8:Count|TFFc:\G1:6:TCounti|Resv   ; 9       ;
-; KEY[0]                                  ; 8       ;
-; syncnt8:Count|TFFc:\G1:7:TCounti|Resv   ; 8       ;
-; syncnt8:Count|Ein[3]                    ; 5       ;
-; SW[1]                                   ; 4       ;
-; syncnt8:Count|TFFc:\G1:1:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:\G1:2:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:\G1:3:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:TCount0|Resv~0       ; 1       ;
-; syncnt8:Count|TFFc:\G1:5:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:\G1:6:TCounti|Resv~1 ; 1       ;
-; syncnt8:Count|TFFc:\G1:6:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:\G1:7:TCounti|Resv~1 ; 1       ;
-; syncnt8:Count|TFFc:\G1:7:TCounti|Resv~0 ; 1       ;
-; syncnt8:Count|TFFc:\G1:4:TCounti|Resv~0 ; 1       ;
-; Hnum:DisPl|N0[6]~5                      ; 1       ;
-; Hnum:DisPl|N0[5]~4                      ; 1       ;
-; Hnum:DisPl|N0[4]~3                      ; 1       ;
-; Hnum:DisPl|N0[3]~2                      ; 1       ;
-; Hnum:DisPl|N0[2]~1                      ; 1       ;
-; Hnum:DisPl|N0[1]~0                      ; 1       ;
-; Hnum:DisPl|N0[0]                        ; 1       ;
-; Hnum:DisPh|N0[6]~5                      ; 1       ;
-; Hnum:DisPh|N0[5]~4                      ; 1       ;
-; Hnum:DisPh|N0[4]~3                      ; 1       ;
-; Hnum:DisPh|N0[3]~2                      ; 1       ;
-; Hnum:DisPh|N0[2]~1                      ; 1       ;
-; Hnum:DisPh|N0[1]~0                      ; 1       ;
-; Hnum:DisPh|N0[0]                        ; 1       ;
-+-----------------------------------------+---------+
++-----------------------------------------------------+
+; Non-Global High Fan-Out Signals                     ;
++-------------------------------------------+---------+
+; Name                                      ; Fan-Out ;
++-------------------------------------------+---------+
+; syncnt8:Count|TFFc:\G1:3:TCounti|outPut   ; 12      ;
+; syncnt8:Count|TFFc:TCount0|outPut         ; 11      ;
+; syncnt8:Count|TFFc:\G1:4:TCounti|outPut   ; 11      ;
+; syncnt8:Count|TFFc:\G1:1:TCounti|outPut   ; 10      ;
+; syncnt8:Count|TFFc:\G1:5:TCounti|outPut   ; 10      ;
+; syncnt8:Count|TFFc:\G1:2:TCounti|outPut   ; 9       ;
+; syncnt8:Count|TFFc:\G1:6:TCounti|outPut   ; 9       ;
+; KEY[0]                                    ; 8       ;
+; syncnt8:Count|TFFc:\G1:7:TCounti|outPut   ; 8       ;
+; syncnt8:Count|Ein[3]                      ; 5       ;
+; SW[1]                                     ; 4       ;
+; syncnt8:Count|TFFc:\G1:1:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:\G1:2:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:\G1:3:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:TCount0|outPut~0       ; 1       ;
+; syncnt8:Count|TFFc:\G1:5:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:\G1:6:TCounti|outPut~1 ; 1       ;
+; syncnt8:Count|TFFc:\G1:6:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:\G1:7:TCounti|outPut~1 ; 1       ;
+; syncnt8:Count|TFFc:\G1:7:TCounti|outPut~0 ; 1       ;
+; syncnt8:Count|TFFc:\G1:4:TCounti|outPut~0 ; 1       ;
+; Hnum:DisPl|N0[6]~5                        ; 1       ;
+; Hnum:DisPl|N0[5]~4                        ; 1       ;
+; Hnum:DisPl|N0[4]~3                        ; 1       ;
+; Hnum:DisPl|N0[3]~2                        ; 1       ;
+; Hnum:DisPl|N0[2]~1                        ; 1       ;
+; Hnum:DisPl|N0[1]~0                        ; 1       ;
+; Hnum:DisPl|N0[0]                          ; 1       ;
+; Hnum:DisPh|N0[6]~5                        ; 1       ;
+; Hnum:DisPh|N0[5]~4                        ; 1       ;
+; Hnum:DisPh|N0[4]~3                        ; 1       ;
+; Hnum:DisPh|N0[3]~2                        ; 1       ;
+; Hnum:DisPh|N0[2]~1                        ; 1       ;
+; Hnum:DisPh|N0[1]~0                        ; 1       ;
+; Hnum:DisPh|N0[0]                          ; 1       ;
++-------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1575,7 +1575,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "part1"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2009,7 +2009,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2044,17 +2044,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.fit.smsg
+Info (144001): Generated suppressed messages file W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 417 warnings
-    Info: Peak virtual memory: 1061 megabytes
-    Info: Processing ended: Tue Oct 22 12:50:53 2019
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 5547 megabytes
+    Info: Processing ended: Sun Oct 27 22:15:04 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.fit.smsg.
+The suppressed messages can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part1/output_files/part1.fit.smsg.
 
 

@@ -28,58 +28,58 @@ Cout[7] <= TFFc:G1:7:TCounti.Q
 
 
 |syncnt8|TFFc:TCount0
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:1:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:2:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:3:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:4:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:5:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:6:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |syncnt8|TFFc:\G1:7:TCounti
-T => Resv.ENA
-CLK => Resv.CLK
-Clear => Resv.ACLR
-Q <= Resv.DB_MAX_OUTPUT_PORT_TYPE
+T => outPut.ENA
+CLK => outPut.CLK
+Clear => outPut.ACLR
+Q <= outPut.DB_MAX_OUTPUT_PORT_TYPE
 
 

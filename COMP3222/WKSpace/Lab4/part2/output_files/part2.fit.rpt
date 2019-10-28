@@ -1,6 +1,6 @@
 Fitter report for part2
-Tue Oct 22 12:54:01 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Oct 27 22:18:10 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -59,26 +59,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 22 12:54:01 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part2                                           ;
-; Top-level Entity Name              ; part2                                           ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 16 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 16 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 16 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 19 / 315 ( 6 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Sun Oct 27 22:18:10 2019            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part2                                            ;
+; Top-level Entity Name              ; part2                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C20F484C7                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 16 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 16 / 18,752 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 16 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 16                                               ;
+; Total pins                         ; 19 / 315 ( 6 % )                                 ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -136,15 +136,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-8         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -186,7 +186,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.pin.
+The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.pin.
 
 
 +---------------------------------------------------------------------+
@@ -889,13 +889,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |part2                     ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |part2              ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name            ; Library Name ;
++------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------+--------------+
+; |part2                       ; 16 (0)      ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; |part2                         ; work         ;
+;    |counter16bit:countingUp| ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |part2|counter16bit:countingUp ; work         ;
++------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -926,31 +927,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; Enable              ;                   ;         ;
-;      - Q[1]         ; 0                 ; 6       ;
-;      - Q[2]         ; 0                 ; 6       ;
-;      - Q[3]         ; 0                 ; 6       ;
-;      - Q[4]         ; 0                 ; 6       ;
-;      - Q[5]         ; 0                 ; 6       ;
-;      - Q[6]         ; 0                 ; 6       ;
-;      - Q[7]         ; 0                 ; 6       ;
-;      - Q[8]         ; 0                 ; 6       ;
-;      - Q[9]         ; 0                 ; 6       ;
-;      - Q[10]        ; 0                 ; 6       ;
-;      - Q[11]        ; 0                 ; 6       ;
-;      - Q[12]        ; 0                 ; 6       ;
-;      - Q[13]        ; 0                 ; 6       ;
-;      - Q[14]        ; 0                 ; 6       ;
-;      - Q[15]        ; 0                 ; 6       ;
-;      - Q[0]~15      ; 0                 ; 6       ;
-; Cloc                ;                   ;         ;
-; Clear               ;                   ;         ;
-+---------------------+-------------------+---------+
++----------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                       ;
++----------------------------------------+-------------------+---------+
+; Source Pin / Fanout                    ; Pad To Core Index ; Setting ;
++----------------------------------------+-------------------+---------+
+; Enable                                 ;                   ;         ;
+;      - counter16bit:countingUp|Q[1]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[2]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[3]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[4]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[5]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[6]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[7]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[8]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[9]    ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[10]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[11]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[12]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[13]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[14]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[15]   ; 0                 ; 6       ;
+;      - counter16bit:countingUp|Q[0]~15 ; 0                 ; 6       ;
+; Cloc                                   ;                   ;         ;
+; Clear                                  ;                   ;         ;
++----------------------------------------+-------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -974,59 +975,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+----------+----------------------+
-; Name     ; Fan-Out              ;
-+----------+----------------------+
-; Enable   ; 16                   ;
-; Q[0]     ; 3                    ;
-; Q[15]    ; 2                    ;
-; Q[14]    ; 2                    ;
-; Q[13]    ; 2                    ;
-; Q[12]    ; 2                    ;
-; Q[11]    ; 2                    ;
-; Q[10]    ; 2                    ;
-; Q[9]     ; 2                    ;
-; Q[8]     ; 2                    ;
-; Q[7]     ; 2                    ;
-; Q[6]     ; 2                    ;
-; Q[5]     ; 2                    ;
-; Q[4]     ; 2                    ;
-; Q[3]     ; 2                    ;
-; Q[2]     ; 2                    ;
-; Q[1]     ; 2                    ;
-; Q[0]~15  ; 1                    ;
-; Q[15]~44 ; 1                    ;
-; Q[14]~43 ; 1                    ;
-; Q[14]~42 ; 1                    ;
-; Q[13]~41 ; 1                    ;
-; Q[13]~40 ; 1                    ;
-; Q[12]~39 ; 1                    ;
-; Q[12]~38 ; 1                    ;
-; Q[11]~37 ; 1                    ;
-; Q[11]~36 ; 1                    ;
-; Q[10]~35 ; 1                    ;
-; Q[10]~34 ; 1                    ;
-; Q[9]~33  ; 1                    ;
-; Q[9]~32  ; 1                    ;
-; Q[8]~31  ; 1                    ;
-; Q[8]~30  ; 1                    ;
-; Q[7]~29  ; 1                    ;
-; Q[7]~28  ; 1                    ;
-; Q[6]~27  ; 1                    ;
-; Q[6]~26  ; 1                    ;
-; Q[5]~25  ; 1                    ;
-; Q[5]~24  ; 1                    ;
-; Q[4]~23  ; 1                    ;
-; Q[4]~22  ; 1                    ;
-; Q[3]~21  ; 1                    ;
-; Q[3]~20  ; 1                    ;
-; Q[2]~19  ; 1                    ;
-; Q[2]~18  ; 1                    ;
-; Q[1]~17  ; 1                    ;
-; Q[1]~16  ; 1                    ;
-+----------+----------------------+
++--------------------------------------------+
+; Non-Global High Fan-Out Signals            ;
++----------------------------------+---------+
+; Name                             ; Fan-Out ;
++----------------------------------+---------+
+; Enable                           ; 16      ;
+; counter16bit:countingUp|Q[0]     ; 3       ;
+; counter16bit:countingUp|Q[15]    ; 2       ;
+; counter16bit:countingUp|Q[14]    ; 2       ;
+; counter16bit:countingUp|Q[13]    ; 2       ;
+; counter16bit:countingUp|Q[12]    ; 2       ;
+; counter16bit:countingUp|Q[11]    ; 2       ;
+; counter16bit:countingUp|Q[10]    ; 2       ;
+; counter16bit:countingUp|Q[9]     ; 2       ;
+; counter16bit:countingUp|Q[8]     ; 2       ;
+; counter16bit:countingUp|Q[7]     ; 2       ;
+; counter16bit:countingUp|Q[6]     ; 2       ;
+; counter16bit:countingUp|Q[5]     ; 2       ;
+; counter16bit:countingUp|Q[4]     ; 2       ;
+; counter16bit:countingUp|Q[3]     ; 2       ;
+; counter16bit:countingUp|Q[2]     ; 2       ;
+; counter16bit:countingUp|Q[1]     ; 2       ;
+; counter16bit:countingUp|Q[0]~15  ; 1       ;
+; counter16bit:countingUp|Q[15]~44 ; 1       ;
+; counter16bit:countingUp|Q[14]~43 ; 1       ;
+; counter16bit:countingUp|Q[14]~42 ; 1       ;
+; counter16bit:countingUp|Q[13]~41 ; 1       ;
+; counter16bit:countingUp|Q[13]~40 ; 1       ;
+; counter16bit:countingUp|Q[12]~39 ; 1       ;
+; counter16bit:countingUp|Q[12]~38 ; 1       ;
+; counter16bit:countingUp|Q[11]~37 ; 1       ;
+; counter16bit:countingUp|Q[11]~36 ; 1       ;
+; counter16bit:countingUp|Q[10]~35 ; 1       ;
+; counter16bit:countingUp|Q[10]~34 ; 1       ;
+; counter16bit:countingUp|Q[9]~33  ; 1       ;
+; counter16bit:countingUp|Q[9]~32  ; 1       ;
+; counter16bit:countingUp|Q[8]~31  ; 1       ;
+; counter16bit:countingUp|Q[8]~30  ; 1       ;
+; counter16bit:countingUp|Q[7]~29  ; 1       ;
+; counter16bit:countingUp|Q[7]~28  ; 1       ;
+; counter16bit:countingUp|Q[6]~27  ; 1       ;
+; counter16bit:countingUp|Q[6]~26  ; 1       ;
+; counter16bit:countingUp|Q[5]~25  ; 1       ;
+; counter16bit:countingUp|Q[5]~24  ; 1       ;
+; counter16bit:countingUp|Q[4]~23  ; 1       ;
+; counter16bit:countingUp|Q[4]~22  ; 1       ;
+; counter16bit:countingUp|Q[3]~21  ; 1       ;
+; counter16bit:countingUp|Q[3]~20  ; 1       ;
+; counter16bit:countingUp|Q[2]~19  ; 1       ;
+; counter16bit:countingUp|Q[2]~18  ; 1       ;
+; counter16bit:countingUp|Q[1]~17  ; 1       ;
+; counter16bit:countingUp|Q[1]~16  ; 1       ;
++----------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1189,7 +1190,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "part2"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1245,19 +1246,19 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  35 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 16 output pins without output pin load capacitance assignment
     Info (306007): Pin "Cout[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1279,19 +1280,19 @@ Warning (306006): Found 16 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.fit.smsg
+Info (144001): Generated suppressed messages file W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1052 megabytes
-    Info: Processing ended: Tue Oct 22 12:54:01 2019
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 5546 megabytes
+    Info: Processing ended: Sun Oct 27 22:18:11 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.fit.smsg.
+The suppressed messages can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part2/output_files/part2.fit.smsg.
 
 

@@ -1,0 +1,109 @@
+|part1
+SW[0] => FSM4Consequence:simulateToBoard.reset
+SW[1] => FSM4Consequence:simulateToBoard.w
+KEY[0] => FSM4Consequence:simulateToBoard.CLK
+LEDG[0] <= FSM4Consequence:simulateToBoard.z
+LEDR[0] <= FSM4Consequence:simulateToBoard.stateOut[0]
+LEDR[1] <= FSM4Consequence:simulateToBoard.stateOut[1]
+LEDR[2] <= FSM4Consequence:simulateToBoard.stateOut[2]
+LEDR[3] <= FSM4Consequence:simulateToBoard.stateOut[3]
+LEDR[4] <= FSM4Consequence:simulateToBoard.stateOut[4]
+LEDR[5] <= FSM4Consequence:simulateToBoard.stateOut[5]
+LEDR[6] <= FSM4Consequence:simulateToBoard.stateOut[6]
+LEDR[7] <= FSM4Consequence:simulateToBoard.stateOut[7]
+LEDR[8] <= FSM4Consequence:simulateToBoard.stateOut[8]
+
+
+|part1|FSM4Consequence:simulateToBoard
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+w => nextState.IN1
+CLK => Dflop:generateNextState:0:RealiseNextState.Clk
+CLK => Dflop:generateNextState:1:RealiseNextState.Clk
+CLK => Dflop:generateNextState:2:RealiseNextState.Clk
+CLK => Dflop:generateNextState:3:RealiseNextState.Clk
+CLK => Dflop:generateNextState:4:RealiseNextState.Clk
+CLK => Dflop:generateNextState:5:RealiseNextState.Clk
+CLK => Dflop:generateNextState:6:RealiseNextState.Clk
+CLK => Dflop:generateNextState:7:RealiseNextState.Clk
+CLK => Dflop:generateNextState:8:RealiseNextState.Clk
+reset => nextState[1].IN1
+reset => nextState[2].IN1
+reset => nextState[3].IN1
+reset => nextState[4].IN1
+reset => nextState[5].IN1
+reset => nextState[6].IN1
+reset => nextState[7].IN1
+reset => nextState[8].IN1
+reset => Dflop:generateNextState:0:RealiseNextState.D
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+stateOut[0] <= Dflop:generateNextState:0:RealiseNextState.Q
+stateOut[1] <= Dflop:generateNextState:1:RealiseNextState.Q
+stateOut[2] <= Dflop:generateNextState:2:RealiseNextState.Q
+stateOut[3] <= Dflop:generateNextState:3:RealiseNextState.Q
+stateOut[4] <= Dflop:generateNextState:4:RealiseNextState.Q
+stateOut[5] <= Dflop:generateNextState:5:RealiseNextState.Q
+stateOut[6] <= Dflop:generateNextState:6:RealiseNextState.Q
+stateOut[7] <= Dflop:generateNextState:7:RealiseNextState.Q
+stateOut[8] <= Dflop:generateNextState:8:RealiseNextState.Q
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,6 @@
+LIBRARY ieee; USE ieee.std_logic_1164.all;
+ENTITY part2 IS PORT ( ... deﬁne input and output ports ...); END part2;
+ARCHITECTURE Behavior OF part2 IS ... declare signals TYPE State_type IS (A, B, C, D, E, F, G, H, I); – Attribute to declare a speciﬁc encoding for the states attribute syn_encoding : string; attribute syn_encoding of State_type : type is "0000 0001 0010 0011 0100 0101 0110 0111 1000";
+SIGNAL y_Q, Y_D : State_type; -- y_Q is present state, y_D is next state BEGIN ... PROCESS (w, y_Q) -- state table BEGIN case y_Q IS WHEN A IF (w = ’0’) THEN Y_D <= B; ELSE Y_D <= F; END IF; ... other states END CASE; END PROCESS; -- state table
+PROCESS (Clock) -- state ﬂip-ﬂops BEGIN ... END PROCESS;
+... assignments for output z and the LEDs END Behavior;

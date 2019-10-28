@@ -14,15 +14,6 @@
 # Top level modules:
 # 	syncnt8_vlg_vec_tst
 # vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.syncnt8_vlg_vec_tst 
-# //  ModelSim ALTERA 10.1d Nov  2 2012 
-# //
-# //  Copyright 1991-2012 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //
 # Loading work.syncnt8_vlg_vec_tst
 # Loading work.syncnt8
 # Loading cycloneii_ver.cycloneii_lcell_comb
@@ -36,13 +27,7 @@
 # Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading work.syncnt8_vlg_sample_tst
 # Loading work.syncnt8_vlg_check_tst
-# SDF 10.1d Compiler 2012.11 Nov  2 2012
-# 
-# Loading instances from syncnt8_v.sdo
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
-# Loading timing data from syncnt8_v.sdo
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /syncnt8_vlg_vec_tst File: syncnt8.vt
 # Simulation passed !
 # ** Note: $finish    : syncnt8.vt(277)
 #    Time: 1 us  Iteration: 0  Instance: /syncnt8_vlg_vec_tst/tb_out

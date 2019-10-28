@@ -1,0 +1,25 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY shiftReg4bits IS
+	PORT (CLK, shiftValue	: IN	STD_LOGIC;
+			isAllOne				: IN	STD_LOGIC);
+END shiftReg4bits;
+
+ARCHITECTURE Behavior OF shiftReg4bits IS
+
+SIGNAL data : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+BEGIN
+
+	PROCESS(CLK)
+		IF CLK'event AND CLK = '1' THEN
+			data(3) <= data(2);
+			data(2) <= data(1);
+			data(1) <= data(0);
+			data(0) <= shiftValue;
+		END IF;
+	END PROCESS;
+	
+	isAllOne <= data(3) AND data(2) AND data(1) AND data(0);
+END Behavior;

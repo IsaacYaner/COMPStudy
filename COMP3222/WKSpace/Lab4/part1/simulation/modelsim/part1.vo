@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
-// DATE "10/22/2019 12:51:21"
+// DATE "10/27/2019 22:15:08"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -69,25 +69,25 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \Count|G1:7:TCounti|Resv~0_combout ;
-wire \Count|TCount0|Resv~0_combout ;
+wire \Count|G1:7:TCounti|outPut~0_combout ;
+wire \Count|TCount0|outPut~0_combout ;
 wire \SW[0]~clkctrl_outclk ;
-wire \Count|TCount0|Resv~regout ;
-wire \Count|G1:1:TCounti|Resv~0_combout ;
-wire \Count|G1:1:TCounti|Resv~regout ;
-wire \Count|G1:2:TCounti|Resv~0_combout ;
-wire \Count|G1:2:TCounti|Resv~regout ;
-wire \Count|G1:4:TCounti|Resv~0_combout ;
-wire \Count|G1:4:TCounti|Resv~regout ;
-wire \Count|G1:3:TCounti|Resv~0_combout ;
-wire \Count|G1:3:TCounti|Resv~regout ;
-wire \Count|G1:6:TCounti|Resv~0_combout ;
-wire \Count|G1:6:TCounti|Resv~1_combout ;
-wire \Count|G1:6:TCounti|Resv~regout ;
-wire \Count|G1:7:TCounti|Resv~1_combout ;
-wire \Count|G1:7:TCounti|Resv~regout ;
-wire \Count|G1:5:TCounti|Resv~0_combout ;
-wire \Count|G1:5:TCounti|Resv~regout ;
+wire \Count|TCount0|outPut~regout ;
+wire \Count|G1:1:TCounti|outPut~0_combout ;
+wire \Count|G1:1:TCounti|outPut~regout ;
+wire \Count|G1:2:TCounti|outPut~0_combout ;
+wire \Count|G1:2:TCounti|outPut~regout ;
+wire \Count|G1:4:TCounti|outPut~0_combout ;
+wire \Count|G1:4:TCounti|outPut~regout ;
+wire \Count|G1:3:TCounti|outPut~0_combout ;
+wire \Count|G1:3:TCounti|outPut~regout ;
+wire \Count|G1:6:TCounti|outPut~0_combout ;
+wire \Count|G1:6:TCounti|outPut~1_combout ;
+wire \Count|G1:6:TCounti|outPut~regout ;
+wire \Count|G1:7:TCounti|outPut~1_combout ;
+wire \Count|G1:7:TCounti|outPut~regout ;
+wire \Count|G1:5:TCounti|outPut~0_combout ;
+wire \Count|G1:5:TCounti|outPut~regout ;
 wire \DisPh|N0[1]~0_combout ;
 wire \DisPh|N0[2]~1_combout ;
 wire \DisPh|N0[3]~2_combout ;
@@ -100,28 +100,28 @@ wire \DisPl|N0[3]~2_combout ;
 wire \DisPl|N0[4]~3_combout ;
 wire \DisPl|N0[5]~4_combout ;
 wire \DisPl|N0[6]~5_combout ;
+wire [6:0] \DisPh|N0 ;
+wire [7:0] \Count|Ein ;
+wire [6:0] \DisPl|N0 ;
 wire [1:0] \SW~combout ;
 wire [0:0] \KEY~combout ;
-wire [7:0] \Count|Ein ;
-wire [6:0] \DisPh|N0 ;
-wire [6:0] \DisPl|N0 ;
 
 
 // Location: LCCOMB_X2_Y18_N10
-cycloneii_lcell_comb \Count|G1:7:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:7:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:7:TCounti|Resv~0_combout  = ((!\Count|G1:5:TCounti|Resv~regout ) # (!\Count|G1:4:TCounti|Resv~regout )) # (!\Count|G1:3:TCounti|Resv~regout )
+// \Count|G1:7:TCounti|outPut~0_combout  = ((!\Count|G1:5:TCounti|outPut~regout ) # (!\Count|G1:4:TCounti|outPut~regout )) # (!\Count|G1:3:TCounti|outPut~regout )
 
 	.dataa(vcc),
-	.datab(\Count|G1:3:TCounti|Resv~regout ),
-	.datac(\Count|G1:4:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.datab(\Count|G1:3:TCounti|outPut~regout ),
+	.datac(\Count|G1:4:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
-	.combout(\Count|G1:7:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:7:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:7:TCounti|Resv~0 .lut_mask = 16'h3FFF;
-defparam \Count|G1:7:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:7:TCounti|outPut~0 .lut_mask = 16'h3FFF;
+defparam \Count|G1:7:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -197,20 +197,20 @@ defparam \SW[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
 // Location: LCCOMB_X2_Y18_N28
-cycloneii_lcell_comb \Count|TCount0|Resv~0 (
+cycloneii_lcell_comb \Count|TCount0|outPut~0 (
 // Equation(s):
-// \Count|TCount0|Resv~0_combout  = \Count|TCount0|Resv~regout  $ (\SW~combout [1])
+// \Count|TCount0|outPut~0_combout  = \Count|TCount0|outPut~regout  $ (\SW~combout [1])
 
 	.dataa(vcc),
 	.datab(vcc),
-	.datac(\Count|TCount0|Resv~regout ),
+	.datac(\Count|TCount0|outPut~regout ),
 	.datad(\SW~combout [1]),
 	.cin(gnd),
-	.combout(\Count|TCount0|Resv~0_combout ),
+	.combout(\Count|TCount0|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|TCount0|Resv~0 .lut_mask = 16'h0FF0;
-defparam \Count|TCount0|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|TCount0|outPut~0 .lut_mask = 16'h0FF0;
+defparam \Count|TCount0|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -263,9 +263,9 @@ defparam \SW[0]~clkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N29
-cycloneii_lcell_ff \Count|TCount0|Resv (
+cycloneii_lcell_ff \Count|TCount0|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|TCount0|Resv~0_combout ),
+	.datain(\Count|TCount0|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -273,29 +273,29 @@ cycloneii_lcell_ff \Count|TCount0|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|TCount0|Resv~regout ));
+	.regout(\Count|TCount0|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N18
-cycloneii_lcell_comb \Count|G1:1:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:1:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:1:TCounti|Resv~0_combout  = \Count|G1:1:TCounti|Resv~regout  $ (((\SW~combout [1] & \Count|TCount0|Resv~regout )))
+// \Count|G1:1:TCounti|outPut~0_combout  = \Count|G1:1:TCounti|outPut~regout  $ (((\SW~combout [1] & \Count|TCount0|outPut~regout )))
 
 	.dataa(vcc),
 	.datab(\SW~combout [1]),
-	.datac(\Count|G1:1:TCounti|Resv~regout ),
-	.datad(\Count|TCount0|Resv~regout ),
+	.datac(\Count|G1:1:TCounti|outPut~regout ),
+	.datad(\Count|TCount0|outPut~regout ),
 	.cin(gnd),
-	.combout(\Count|G1:1:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:1:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:1:TCounti|Resv~0 .lut_mask = 16'h3CF0;
-defparam \Count|G1:1:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:1:TCounti|outPut~0 .lut_mask = 16'h3CF0;
+defparam \Count|G1:1:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N19
-cycloneii_lcell_ff \Count|G1:1:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:1:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:1:TCounti|Resv~0_combout ),
+	.datain(\Count|G1:1:TCounti|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -303,29 +303,29 @@ cycloneii_lcell_ff \Count|G1:1:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:1:TCounti|Resv~regout ));
+	.regout(\Count|G1:1:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N16
-cycloneii_lcell_comb \Count|G1:2:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:2:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:2:TCounti|Resv~0_combout  = \Count|G1:2:TCounti|Resv~regout  $ (((\Count|TCount0|Resv~regout  & (\SW~combout [1] & \Count|G1:1:TCounti|Resv~regout ))))
+// \Count|G1:2:TCounti|outPut~0_combout  = \Count|G1:2:TCounti|outPut~regout  $ (((\Count|TCount0|outPut~regout  & (\SW~combout [1] & \Count|G1:1:TCounti|outPut~regout ))))
 
-	.dataa(\Count|TCount0|Resv~regout ),
+	.dataa(\Count|TCount0|outPut~regout ),
 	.datab(\SW~combout [1]),
-	.datac(\Count|G1:2:TCounti|Resv~regout ),
-	.datad(\Count|G1:1:TCounti|Resv~regout ),
+	.datac(\Count|G1:2:TCounti|outPut~regout ),
+	.datad(\Count|G1:1:TCounti|outPut~regout ),
 	.cin(gnd),
-	.combout(\Count|G1:2:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:2:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:2:TCounti|Resv~0 .lut_mask = 16'h78F0;
-defparam \Count|G1:2:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:2:TCounti|outPut~0 .lut_mask = 16'h78F0;
+defparam \Count|G1:2:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N17
-cycloneii_lcell_ff \Count|G1:2:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:2:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:2:TCounti|Resv~0_combout ),
+	.datain(\Count|G1:2:TCounti|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -333,17 +333,17 @@ cycloneii_lcell_ff \Count|G1:2:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:2:TCounti|Resv~regout ));
+	.regout(\Count|G1:2:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N12
 cycloneii_lcell_comb \Count|Ein[3] (
 // Equation(s):
-// \Count|Ein [3] = (\SW~combout [1] & (\Count|TCount0|Resv~regout  & (\Count|G1:2:TCounti|Resv~regout  & \Count|G1:1:TCounti|Resv~regout )))
+// \Count|Ein [3] = (\SW~combout [1] & (\Count|TCount0|outPut~regout  & (\Count|G1:2:TCounti|outPut~regout  & \Count|G1:1:TCounti|outPut~regout )))
 
 	.dataa(\SW~combout [1]),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:2:TCounti|Resv~regout ),
-	.datad(\Count|G1:1:TCounti|Resv~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:2:TCounti|outPut~regout ),
+	.datad(\Count|G1:1:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\Count|Ein [3]),
 	.cout());
@@ -353,26 +353,26 @@ defparam \Count|Ein[3] .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X2_Y18_N8
-cycloneii_lcell_comb \Count|G1:4:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:4:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:4:TCounti|Resv~0_combout  = \Count|G1:4:TCounti|Resv~regout  $ (((\Count|G1:3:TCounti|Resv~regout  & \Count|Ein [3])))
+// \Count|G1:4:TCounti|outPut~0_combout  = \Count|G1:4:TCounti|outPut~regout  $ (((\Count|G1:3:TCounti|outPut~regout  & \Count|Ein [3])))
 
-	.dataa(\Count|G1:3:TCounti|Resv~regout ),
+	.dataa(\Count|G1:3:TCounti|outPut~regout ),
 	.datab(vcc),
-	.datac(\Count|G1:4:TCounti|Resv~regout ),
+	.datac(\Count|G1:4:TCounti|outPut~regout ),
 	.datad(\Count|Ein [3]),
 	.cin(gnd),
-	.combout(\Count|G1:4:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:4:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:4:TCounti|Resv~0 .lut_mask = 16'h5AF0;
-defparam \Count|G1:4:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:4:TCounti|outPut~0 .lut_mask = 16'h5AF0;
+defparam \Count|G1:4:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N9
-cycloneii_lcell_ff \Count|G1:4:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:4:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:4:TCounti|Resv~0_combout ),
+	.datain(\Count|G1:4:TCounti|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -380,29 +380,29 @@ cycloneii_lcell_ff \Count|G1:4:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:4:TCounti|Resv~regout ));
+	.regout(\Count|G1:4:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N14
-cycloneii_lcell_comb \Count|G1:3:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:3:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:3:TCounti|Resv~0_combout  = \Count|G1:3:TCounti|Resv~regout  $ (\Count|Ein [3])
+// \Count|G1:3:TCounti|outPut~0_combout  = \Count|G1:3:TCounti|outPut~regout  $ (\Count|Ein [3])
 
 	.dataa(vcc),
 	.datab(vcc),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
 	.datad(\Count|Ein [3]),
 	.cin(gnd),
-	.combout(\Count|G1:3:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:3:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:3:TCounti|Resv~0 .lut_mask = 16'h0FF0;
-defparam \Count|G1:3:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:3:TCounti|outPut~0 .lut_mask = 16'h0FF0;
+defparam \Count|G1:3:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N15
-cycloneii_lcell_ff \Count|G1:3:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:3:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:3:TCounti|Resv~0_combout ),
+	.datain(\Count|G1:3:TCounti|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -410,46 +410,46 @@ cycloneii_lcell_ff \Count|G1:3:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:3:TCounti|Resv~regout ));
+	.regout(\Count|G1:3:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N4
-cycloneii_lcell_comb \Count|G1:6:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:6:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:6:TCounti|Resv~0_combout  = (!\Count|G1:3:TCounti|Resv~regout ) # (!\Count|G1:4:TCounti|Resv~regout )
+// \Count|G1:6:TCounti|outPut~0_combout  = (!\Count|G1:3:TCounti|outPut~regout ) # (!\Count|G1:4:TCounti|outPut~regout )
 
 	.dataa(vcc),
 	.datab(vcc),
-	.datac(\Count|G1:4:TCounti|Resv~regout ),
-	.datad(\Count|G1:3:TCounti|Resv~regout ),
+	.datac(\Count|G1:4:TCounti|outPut~regout ),
+	.datad(\Count|G1:3:TCounti|outPut~regout ),
 	.cin(gnd),
-	.combout(\Count|G1:6:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:6:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:6:TCounti|Resv~0 .lut_mask = 16'h0FFF;
-defparam \Count|G1:6:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:6:TCounti|outPut~0 .lut_mask = 16'h0FFF;
+defparam \Count|G1:6:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X2_Y18_N24
-cycloneii_lcell_comb \Count|G1:6:TCounti|Resv~1 (
+cycloneii_lcell_comb \Count|G1:6:TCounti|outPut~1 (
 // Equation(s):
-// \Count|G1:6:TCounti|Resv~1_combout  = \Count|G1:6:TCounti|Resv~regout  $ (((\Count|G1:5:TCounti|Resv~regout  & (!\Count|G1:6:TCounti|Resv~0_combout  & \Count|Ein [3]))))
+// \Count|G1:6:TCounti|outPut~1_combout  = \Count|G1:6:TCounti|outPut~regout  $ (((\Count|G1:5:TCounti|outPut~regout  & (!\Count|G1:6:TCounti|outPut~0_combout  & \Count|Ein [3]))))
 
-	.dataa(\Count|G1:5:TCounti|Resv~regout ),
-	.datab(\Count|G1:6:TCounti|Resv~0_combout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
+	.dataa(\Count|G1:5:TCounti|outPut~regout ),
+	.datab(\Count|G1:6:TCounti|outPut~0_combout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
 	.datad(\Count|Ein [3]),
 	.cin(gnd),
-	.combout(\Count|G1:6:TCounti|Resv~1_combout ),
+	.combout(\Count|G1:6:TCounti|outPut~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:6:TCounti|Resv~1 .lut_mask = 16'hD2F0;
-defparam \Count|G1:6:TCounti|Resv~1 .sum_lutc_input = "datac";
+defparam \Count|G1:6:TCounti|outPut~1 .lut_mask = 16'hD2F0;
+defparam \Count|G1:6:TCounti|outPut~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N25
-cycloneii_lcell_ff \Count|G1:6:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:6:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:6:TCounti|Resv~1_combout ),
+	.datain(\Count|G1:6:TCounti|outPut~1_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -457,29 +457,29 @@ cycloneii_lcell_ff \Count|G1:6:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:6:TCounti|Resv~regout ));
+	.regout(\Count|G1:6:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N30
-cycloneii_lcell_comb \Count|G1:7:TCounti|Resv~1 (
+cycloneii_lcell_comb \Count|G1:7:TCounti|outPut~1 (
 // Equation(s):
-// \Count|G1:7:TCounti|Resv~1_combout  = \Count|G1:7:TCounti|Resv~regout  $ (((!\Count|G1:7:TCounti|Resv~0_combout  & (\Count|G1:6:TCounti|Resv~regout  & \Count|Ein [3]))))
+// \Count|G1:7:TCounti|outPut~1_combout  = \Count|G1:7:TCounti|outPut~regout  $ (((!\Count|G1:7:TCounti|outPut~0_combout  & (\Count|G1:6:TCounti|outPut~regout  & \Count|Ein [3]))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~0_combout ),
-	.datab(\Count|G1:6:TCounti|Resv~regout ),
-	.datac(\Count|G1:7:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~0_combout ),
+	.datab(\Count|G1:6:TCounti|outPut~regout ),
+	.datac(\Count|G1:7:TCounti|outPut~regout ),
 	.datad(\Count|Ein [3]),
 	.cin(gnd),
-	.combout(\Count|G1:7:TCounti|Resv~1_combout ),
+	.combout(\Count|G1:7:TCounti|outPut~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:7:TCounti|Resv~1 .lut_mask = 16'hB4F0;
-defparam \Count|G1:7:TCounti|Resv~1 .sum_lutc_input = "datac";
+defparam \Count|G1:7:TCounti|outPut~1 .lut_mask = 16'hB4F0;
+defparam \Count|G1:7:TCounti|outPut~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N31
-cycloneii_lcell_ff \Count|G1:7:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:7:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:7:TCounti|Resv~1_combout ),
+	.datain(\Count|G1:7:TCounti|outPut~1_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -487,29 +487,29 @@ cycloneii_lcell_ff \Count|G1:7:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:7:TCounti|Resv~regout ));
+	.regout(\Count|G1:7:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X2_Y18_N2
-cycloneii_lcell_comb \Count|G1:5:TCounti|Resv~0 (
+cycloneii_lcell_comb \Count|G1:5:TCounti|outPut~0 (
 // Equation(s):
-// \Count|G1:5:TCounti|Resv~0_combout  = \Count|G1:5:TCounti|Resv~regout  $ (((\Count|G1:3:TCounti|Resv~regout  & (\Count|G1:4:TCounti|Resv~regout  & \Count|Ein [3]))))
+// \Count|G1:5:TCounti|outPut~0_combout  = \Count|G1:5:TCounti|outPut~regout  $ (((\Count|G1:3:TCounti|outPut~regout  & (\Count|G1:4:TCounti|outPut~regout  & \Count|Ein [3]))))
 
-	.dataa(\Count|G1:3:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:3:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:5:TCounti|outPut~regout ),
 	.datad(\Count|Ein [3]),
 	.cin(gnd),
-	.combout(\Count|G1:5:TCounti|Resv~0_combout ),
+	.combout(\Count|G1:5:TCounti|outPut~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Count|G1:5:TCounti|Resv~0 .lut_mask = 16'h78F0;
-defparam \Count|G1:5:TCounti|Resv~0 .sum_lutc_input = "datac";
+defparam \Count|G1:5:TCounti|outPut~0 .lut_mask = 16'h78F0;
+defparam \Count|G1:5:TCounti|outPut~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCFF_X2_Y18_N3
-cycloneii_lcell_ff \Count|G1:5:TCounti|Resv (
+cycloneii_lcell_ff \Count|G1:5:TCounti|outPut (
 	.clk(\KEY~combout [0]),
-	.datain(\Count|G1:5:TCounti|Resv~0_combout ),
+	.datain(\Count|G1:5:TCounti|outPut~0_combout ),
 	.sdata(gnd),
 	.aclr(\SW[0]~clkctrl_outclk ),
 	.sclr(gnd),
@@ -517,18 +517,18 @@ cycloneii_lcell_ff \Count|G1:5:TCounti|Resv (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\Count|G1:5:TCounti|Resv~regout ));
+	.regout(\Count|G1:5:TCounti|outPut~regout ));
 
 // Location: LCCOMB_X1_Y21_N8
 cycloneii_lcell_comb \DisPh|N0[0] (
 // Equation(s):
-// \DisPh|N0 [0] = (\Count|G1:7:TCounti|Resv~regout  & (\Count|G1:4:TCounti|Resv~regout  & (\Count|G1:6:TCounti|Resv~regout  $ (\Count|G1:5:TCounti|Resv~regout )))) # (!\Count|G1:7:TCounti|Resv~regout  & (!\Count|G1:5:TCounti|Resv~regout  & 
-// (\Count|G1:4:TCounti|Resv~regout  $ (\Count|G1:6:TCounti|Resv~regout ))))
+// \DisPh|N0 [0] = (\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:4:TCounti|outPut~regout  & (\Count|G1:6:TCounti|outPut~regout  $ (\Count|G1:5:TCounti|outPut~regout )))) # (!\Count|G1:7:TCounti|outPut~regout  & (!\Count|G1:5:TCounti|outPut~regout  & 
+// (\Count|G1:4:TCounti|outPut~regout  $ (\Count|G1:6:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0 [0]),
 	.cout());
@@ -540,13 +540,13 @@ defparam \DisPh|N0[0] .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N26
 cycloneii_lcell_comb \DisPh|N0[1]~0 (
 // Equation(s):
-// \DisPh|N0[1]~0_combout  = (\Count|G1:7:TCounti|Resv~regout  & ((\Count|G1:4:TCounti|Resv~regout  & ((\Count|G1:5:TCounti|Resv~regout ))) # (!\Count|G1:4:TCounti|Resv~regout  & (\Count|G1:6:TCounti|Resv~regout )))) # (!\Count|G1:7:TCounti|Resv~regout  & 
-// (\Count|G1:6:TCounti|Resv~regout  & (\Count|G1:4:TCounti|Resv~regout  $ (\Count|G1:5:TCounti|Resv~regout ))))
+// \DisPh|N0[1]~0_combout  = (\Count|G1:7:TCounti|outPut~regout  & ((\Count|G1:4:TCounti|outPut~regout  & ((\Count|G1:5:TCounti|outPut~regout ))) # (!\Count|G1:4:TCounti|outPut~regout  & (\Count|G1:6:TCounti|outPut~regout )))) # 
+// (!\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:6:TCounti|outPut~regout  & (\Count|G1:4:TCounti|outPut~regout  $ (\Count|G1:5:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[1]~0_combout ),
 	.cout());
@@ -558,13 +558,13 @@ defparam \DisPh|N0[1]~0 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N12
 cycloneii_lcell_comb \DisPh|N0[2]~1 (
 // Equation(s):
-// \DisPh|N0[2]~1_combout  = (\Count|G1:7:TCounti|Resv~regout  & (\Count|G1:6:TCounti|Resv~regout  & ((\Count|G1:5:TCounti|Resv~regout ) # (!\Count|G1:4:TCounti|Resv~regout )))) # (!\Count|G1:7:TCounti|Resv~regout  & (!\Count|G1:4:TCounti|Resv~regout  & 
-// (!\Count|G1:6:TCounti|Resv~regout  & \Count|G1:5:TCounti|Resv~regout )))
+// \DisPh|N0[2]~1_combout  = (\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:6:TCounti|outPut~regout  & ((\Count|G1:5:TCounti|outPut~regout ) # (!\Count|G1:4:TCounti|outPut~regout )))) # (!\Count|G1:7:TCounti|outPut~regout  & 
+// (!\Count|G1:4:TCounti|outPut~regout  & (!\Count|G1:6:TCounti|outPut~regout  & \Count|G1:5:TCounti|outPut~regout )))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[2]~1_combout ),
 	.cout());
@@ -576,13 +576,13 @@ defparam \DisPh|N0[2]~1 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N10
 cycloneii_lcell_comb \DisPh|N0[3]~2 (
 // Equation(s):
-// \DisPh|N0[3]~2_combout  = (\Count|G1:5:TCounti|Resv~regout  & ((\Count|G1:4:TCounti|Resv~regout  & ((\Count|G1:6:TCounti|Resv~regout ))) # (!\Count|G1:4:TCounti|Resv~regout  & (\Count|G1:7:TCounti|Resv~regout  & !\Count|G1:6:TCounti|Resv~regout )))) # 
-// (!\Count|G1:5:TCounti|Resv~regout  & (!\Count|G1:7:TCounti|Resv~regout  & (\Count|G1:4:TCounti|Resv~regout  $ (\Count|G1:6:TCounti|Resv~regout ))))
+// \DisPh|N0[3]~2_combout  = (\Count|G1:5:TCounti|outPut~regout  & ((\Count|G1:4:TCounti|outPut~regout  & ((\Count|G1:6:TCounti|outPut~regout ))) # (!\Count|G1:4:TCounti|outPut~regout  & (\Count|G1:7:TCounti|outPut~regout  & 
+// !\Count|G1:6:TCounti|outPut~regout )))) # (!\Count|G1:5:TCounti|outPut~regout  & (!\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:4:TCounti|outPut~regout  $ (\Count|G1:6:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[3]~2_combout ),
 	.cout());
@@ -594,13 +594,13 @@ defparam \DisPh|N0[3]~2 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N20
 cycloneii_lcell_comb \DisPh|N0[4]~3 (
 // Equation(s):
-// \DisPh|N0[4]~3_combout  = (\Count|G1:5:TCounti|Resv~regout  & (!\Count|G1:7:TCounti|Resv~regout  & (\Count|G1:4:TCounti|Resv~regout ))) # (!\Count|G1:5:TCounti|Resv~regout  & ((\Count|G1:6:TCounti|Resv~regout  & (!\Count|G1:7:TCounti|Resv~regout )) # 
-// (!\Count|G1:6:TCounti|Resv~regout  & ((\Count|G1:4:TCounti|Resv~regout )))))
+// \DisPh|N0[4]~3_combout  = (\Count|G1:5:TCounti|outPut~regout  & (!\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:4:TCounti|outPut~regout ))) # (!\Count|G1:5:TCounti|outPut~regout  & ((\Count|G1:6:TCounti|outPut~regout  & 
+// (!\Count|G1:7:TCounti|outPut~regout )) # (!\Count|G1:6:TCounti|outPut~regout  & ((\Count|G1:4:TCounti|outPut~regout )))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[4]~3_combout ),
 	.cout());
@@ -612,13 +612,13 @@ defparam \DisPh|N0[4]~3 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N18
 cycloneii_lcell_comb \DisPh|N0[5]~4 (
 // Equation(s):
-// \DisPh|N0[5]~4_combout  = (\Count|G1:4:TCounti|Resv~regout  & (\Count|G1:7:TCounti|Resv~regout  $ (((\Count|G1:5:TCounti|Resv~regout ) # (!\Count|G1:6:TCounti|Resv~regout ))))) # (!\Count|G1:4:TCounti|Resv~regout  & (!\Count|G1:7:TCounti|Resv~regout  & 
-// (!\Count|G1:6:TCounti|Resv~regout  & \Count|G1:5:TCounti|Resv~regout )))
+// \DisPh|N0[5]~4_combout  = (\Count|G1:4:TCounti|outPut~regout  & (\Count|G1:7:TCounti|outPut~regout  $ (((\Count|G1:5:TCounti|outPut~regout ) # (!\Count|G1:6:TCounti|outPut~regout ))))) # (!\Count|G1:4:TCounti|outPut~regout  & 
+// (!\Count|G1:7:TCounti|outPut~regout  & (!\Count|G1:6:TCounti|outPut~regout  & \Count|G1:5:TCounti|outPut~regout )))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[5]~4_combout ),
 	.cout());
@@ -630,13 +630,13 @@ defparam \DisPh|N0[5]~4 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y21_N0
 cycloneii_lcell_comb \DisPh|N0[6]~5 (
 // Equation(s):
-// \DisPh|N0[6]~5_combout  = (\Count|G1:4:TCounti|Resv~regout  & (!\Count|G1:7:TCounti|Resv~regout  & (\Count|G1:6:TCounti|Resv~regout  $ (!\Count|G1:5:TCounti|Resv~regout )))) # (!\Count|G1:4:TCounti|Resv~regout  & (!\Count|G1:5:TCounti|Resv~regout  & 
-// (\Count|G1:7:TCounti|Resv~regout  $ (!\Count|G1:6:TCounti|Resv~regout ))))
+// \DisPh|N0[6]~5_combout  = (\Count|G1:4:TCounti|outPut~regout  & (!\Count|G1:7:TCounti|outPut~regout  & (\Count|G1:6:TCounti|outPut~regout  $ (!\Count|G1:5:TCounti|outPut~regout )))) # (!\Count|G1:4:TCounti|outPut~regout  & 
+// (!\Count|G1:5:TCounti|outPut~regout  & (\Count|G1:7:TCounti|outPut~regout  $ (!\Count|G1:6:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:7:TCounti|Resv~regout ),
-	.datab(\Count|G1:4:TCounti|Resv~regout ),
-	.datac(\Count|G1:6:TCounti|Resv~regout ),
-	.datad(\Count|G1:5:TCounti|Resv~regout ),
+	.dataa(\Count|G1:7:TCounti|outPut~regout ),
+	.datab(\Count|G1:4:TCounti|outPut~regout ),
+	.datac(\Count|G1:6:TCounti|outPut~regout ),
+	.datad(\Count|G1:5:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPh|N0[6]~5_combout ),
 	.cout());
@@ -648,13 +648,13 @@ defparam \DisPh|N0[6]~5 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N20
 cycloneii_lcell_comb \DisPl|N0[0] (
 // Equation(s):
-// \DisPl|N0 [0] = (\Count|G1:3:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout  & (\Count|G1:1:TCounti|Resv~regout  $ (\Count|G1:2:TCounti|Resv~regout )))) # (!\Count|G1:3:TCounti|Resv~regout  & (!\Count|G1:1:TCounti|Resv~regout  & 
-// (\Count|TCount0|Resv~regout  $ (\Count|G1:2:TCounti|Resv~regout ))))
+// \DisPl|N0 [0] = (\Count|G1:3:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout  & (\Count|G1:1:TCounti|outPut~regout  $ (\Count|G1:2:TCounti|outPut~regout )))) # (!\Count|G1:3:TCounti|outPut~regout  & (!\Count|G1:1:TCounti|outPut~regout  & 
+// (\Count|TCount0|outPut~regout  $ (\Count|G1:2:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0 [0]),
 	.cout());
@@ -666,13 +666,13 @@ defparam \DisPl|N0[0] .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N10
 cycloneii_lcell_comb \DisPl|N0[1]~0 (
 // Equation(s):
-// \DisPl|N0[1]~0_combout  = (\Count|G1:1:TCounti|Resv~regout  & ((\Count|TCount0|Resv~regout  & (\Count|G1:3:TCounti|Resv~regout )) # (!\Count|TCount0|Resv~regout  & ((\Count|G1:2:TCounti|Resv~regout ))))) # (!\Count|G1:1:TCounti|Resv~regout  & 
-// (\Count|G1:2:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout  $ (\Count|G1:3:TCounti|Resv~regout ))))
+// \DisPl|N0[1]~0_combout  = (\Count|G1:1:TCounti|outPut~regout  & ((\Count|TCount0|outPut~regout  & (\Count|G1:3:TCounti|outPut~regout )) # (!\Count|TCount0|outPut~regout  & ((\Count|G1:2:TCounti|outPut~regout ))))) # (!\Count|G1:1:TCounti|outPut~regout  & 
+// (\Count|G1:2:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout  $ (\Count|G1:3:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[1]~0_combout ),
 	.cout());
@@ -684,13 +684,13 @@ defparam \DisPl|N0[1]~0 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N4
 cycloneii_lcell_comb \DisPl|N0[2]~1 (
 // Equation(s):
-// \DisPl|N0[2]~1_combout  = (\Count|G1:3:TCounti|Resv~regout  & (\Count|G1:2:TCounti|Resv~regout  & ((\Count|G1:1:TCounti|Resv~regout ) # (!\Count|TCount0|Resv~regout )))) # (!\Count|G1:3:TCounti|Resv~regout  & (\Count|G1:1:TCounti|Resv~regout  & 
-// (!\Count|TCount0|Resv~regout  & !\Count|G1:2:TCounti|Resv~regout )))
+// \DisPl|N0[2]~1_combout  = (\Count|G1:3:TCounti|outPut~regout  & (\Count|G1:2:TCounti|outPut~regout  & ((\Count|G1:1:TCounti|outPut~regout ) # (!\Count|TCount0|outPut~regout )))) # (!\Count|G1:3:TCounti|outPut~regout  & (\Count|G1:1:TCounti|outPut~regout  
+// & (!\Count|TCount0|outPut~regout  & !\Count|G1:2:TCounti|outPut~regout )))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[2]~1_combout ),
 	.cout());
@@ -702,13 +702,13 @@ defparam \DisPl|N0[2]~1 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N6
 cycloneii_lcell_comb \DisPl|N0[3]~2 (
 // Equation(s):
-// \DisPl|N0[3]~2_combout  = (\Count|G1:1:TCounti|Resv~regout  & ((\Count|TCount0|Resv~regout  & ((\Count|G1:2:TCounti|Resv~regout ))) # (!\Count|TCount0|Resv~regout  & (\Count|G1:3:TCounti|Resv~regout  & !\Count|G1:2:TCounti|Resv~regout )))) # 
-// (!\Count|G1:1:TCounti|Resv~regout  & (!\Count|G1:3:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout  $ (\Count|G1:2:TCounti|Resv~regout ))))
+// \DisPl|N0[3]~2_combout  = (\Count|G1:1:TCounti|outPut~regout  & ((\Count|TCount0|outPut~regout  & ((\Count|G1:2:TCounti|outPut~regout ))) # (!\Count|TCount0|outPut~regout  & (\Count|G1:3:TCounti|outPut~regout  & !\Count|G1:2:TCounti|outPut~regout )))) # 
+// (!\Count|G1:1:TCounti|outPut~regout  & (!\Count|G1:3:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout  $ (\Count|G1:2:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[3]~2_combout ),
 	.cout());
@@ -720,13 +720,13 @@ defparam \DisPl|N0[3]~2 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N12
 cycloneii_lcell_comb \DisPl|N0[4]~3 (
 // Equation(s):
-// \DisPl|N0[4]~3_combout  = (\Count|G1:1:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout  & (!\Count|G1:3:TCounti|Resv~regout ))) # (!\Count|G1:1:TCounti|Resv~regout  & ((\Count|G1:2:TCounti|Resv~regout  & ((!\Count|G1:3:TCounti|Resv~regout ))) # 
-// (!\Count|G1:2:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout ))))
+// \DisPl|N0[4]~3_combout  = (\Count|G1:1:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout  & (!\Count|G1:3:TCounti|outPut~regout ))) # (!\Count|G1:1:TCounti|outPut~regout  & ((\Count|G1:2:TCounti|outPut~regout  & ((!\Count|G1:3:TCounti|outPut~regout 
+// ))) # (!\Count|G1:2:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[4]~3_combout ),
 	.cout());
@@ -738,13 +738,13 @@ defparam \DisPl|N0[4]~3 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N22
 cycloneii_lcell_comb \DisPl|N0[5]~4 (
 // Equation(s):
-// \DisPl|N0[5]~4_combout  = (\Count|G1:1:TCounti|Resv~regout  & (!\Count|G1:3:TCounti|Resv~regout  & ((\Count|TCount0|Resv~regout ) # (!\Count|G1:2:TCounti|Resv~regout )))) # (!\Count|G1:1:TCounti|Resv~regout  & (\Count|TCount0|Resv~regout  & 
-// (\Count|G1:3:TCounti|Resv~regout  $ (!\Count|G1:2:TCounti|Resv~regout ))))
+// \DisPl|N0[5]~4_combout  = (\Count|G1:1:TCounti|outPut~regout  & (!\Count|G1:3:TCounti|outPut~regout  & ((\Count|TCount0|outPut~regout ) # (!\Count|G1:2:TCounti|outPut~regout )))) # (!\Count|G1:1:TCounti|outPut~regout  & (\Count|TCount0|outPut~regout  & 
+// (\Count|G1:3:TCounti|outPut~regout  $ (!\Count|G1:2:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[5]~4_combout ),
 	.cout());
@@ -756,13 +756,13 @@ defparam \DisPl|N0[5]~4 .sum_lutc_input = "datac";
 // Location: LCCOMB_X1_Y18_N0
 cycloneii_lcell_comb \DisPl|N0[6]~5 (
 // Equation(s):
-// \DisPl|N0[6]~5_combout  = (\Count|TCount0|Resv~regout  & (!\Count|G1:3:TCounti|Resv~regout  & (\Count|G1:1:TCounti|Resv~regout  $ (!\Count|G1:2:TCounti|Resv~regout )))) # (!\Count|TCount0|Resv~regout  & (!\Count|G1:1:TCounti|Resv~regout  & 
-// (\Count|G1:3:TCounti|Resv~regout  $ (!\Count|G1:2:TCounti|Resv~regout ))))
+// \DisPl|N0[6]~5_combout  = (\Count|TCount0|outPut~regout  & (!\Count|G1:3:TCounti|outPut~regout  & (\Count|G1:1:TCounti|outPut~regout  $ (!\Count|G1:2:TCounti|outPut~regout )))) # (!\Count|TCount0|outPut~regout  & (!\Count|G1:1:TCounti|outPut~regout  & 
+// (\Count|G1:3:TCounti|outPut~regout  $ (!\Count|G1:2:TCounti|outPut~regout ))))
 
-	.dataa(\Count|G1:1:TCounti|Resv~regout ),
-	.datab(\Count|TCount0|Resv~regout ),
-	.datac(\Count|G1:3:TCounti|Resv~regout ),
-	.datad(\Count|G1:2:TCounti|Resv~regout ),
+	.dataa(\Count|G1:1:TCounti|outPut~regout ),
+	.datab(\Count|TCount0|outPut~regout ),
+	.datac(\Count|G1:3:TCounti|outPut~regout ),
+	.datad(\Count|G1:2:TCounti|outPut~regout ),
 	.cin(gnd),
 	.combout(\DisPl|N0[6]~5_combout ),
 	.cout());
