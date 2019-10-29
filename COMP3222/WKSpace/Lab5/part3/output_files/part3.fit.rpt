@@ -1,6 +1,6 @@
 Fitter report for part3
-Mon Oct 28 22:34:23 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 29 13:11:37 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -59,26 +59,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Fitter Summary                                                                        ;
-+------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 28 22:34:23 2019            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part3                                            ;
-; Top-level Entity Name              ; part3                                            ;
-; Family                             ; Cyclone II                                       ;
-; Device                             ; EP2C20F484C7                                     ;
-; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 11 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 11 / 18,752 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 8 / 18,752 ( < 1 % )                             ;
-; Total registers                    ; 8                                                ;
-; Total pins                         ; 12 / 315 ( 4 % )                                 ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Tue Oct 29 13:11:37 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part3                                           ;
+; Top-level Entity Name              ; part3                                           ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C20F484C7                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 11 / 18,752 ( < 1 % )                           ;
+;     Total combinational functions  ; 11 / 18,752 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 8 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 8                                               ;
+; Total pins                         ; 12 / 315 ( 4 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -136,15 +136,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Average used               ; 2.00        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ; < 0.1%      ;
+;     Processors 2-4         ;  33.3%      ;
 +----------------------------+-------------+
 
 
@@ -615,7 +615,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.pin.
+The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1540,7 +1540,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "part3"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1994,7 +1994,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 9 output pins without output pin load capacitance assignment
     Info (306007): Pin "LEDG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2012,17 +2012,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.fit.smsg
+Info (144001): Generated suppressed messages file C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 427 warnings
-    Info: Peak virtual memory: 5535 megabytes
-    Info: Processing ended: Mon Oct 28 22:34:23 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 1061 megabytes
+    Info: Processing ended: Tue Oct 29 13:11:37 2019
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.fit.smsg.
+The suppressed messages can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part3/output_files/part3.fit.smsg.
 
 

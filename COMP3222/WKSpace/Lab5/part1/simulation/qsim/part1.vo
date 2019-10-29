@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "10/28/2019 12:08:01"
+// DATE "10/29/2019 12:47:48"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -38,22 +38,6 @@ input 	[0:0] KEY;
 output 	[0:0] LEDG;
 output 	[8:0] LEDR;
 
-// Design Ports Information
-// LEDG[0]	=>  Location: PIN_U22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[0]	=>  Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[1]	=>  Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[2]	=>  Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[3]	=>  Location: PIN_Y19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[4]	=>  Location: PIN_T18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[5]	=>  Location: PIN_V19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[6]	=>  Location: PIN_Y18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[7]	=>  Location: PIN_U18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// LEDR[8]	=>  Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SW[0]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// SW[1]	=>  Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// KEY[0]	=>  Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-
-
 wire gnd;
 wire vcc;
 wire unknown;
@@ -65,63 +49,26 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ;
-wire \simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ;
-wire \simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ;
-wire \simulateToBoard|nextState[8]~1_combout ;
-wire \simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ;
-wire \simulateToBoard|nextState~2_combout ;
-wire \simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ;
-wire \simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ;
 wire \simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ;
 wire \simulateToBoard|nextState[4]~0_combout ;
 wire \simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ;
+wire \simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ;
+wire \simulateToBoard|nextState[8]~1_combout ;
+wire \simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ;
 wire \simulateToBoard|z~combout ;
+wire \simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ;
+wire \simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ;
+wire \simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ;
+wire \simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ;
 wire \simulateToBoard|nextState~3_combout ;
 wire \simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ;
-wire \simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ;
+wire \simulateToBoard|nextState~2_combout ;
+wire \simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ;
 wire [8:0] \simulateToBoard|nextState ;
 wire [1:0] \SW~combout ;
 wire [0:0] \KEY~combout ;
 
 
-// Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \SW[1]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\SW~combout [1]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(SW[1]));
-// synopsys translate_off
-defparam \SW[1]~I .input_async_reset = "none";
-defparam \SW[1]~I .input_power_up = "low";
-defparam \SW[1]~I .input_register_mode = "none";
-defparam \SW[1]~I .input_sync_reset = "none";
-defparam \SW[1]~I .oe_async_reset = "none";
-defparam \SW[1]~I .oe_power_up = "low";
-defparam \SW[1]~I .oe_register_mode = "none";
-defparam \SW[1]~I .oe_sync_reset = "none";
-defparam \SW[1]~I .operation_mode = "input";
-defparam \SW[1]~I .output_async_reset = "none";
-defparam \SW[1]~I .output_power_up = "low";
-defparam \SW[1]~I .output_register_mode = "none";
-defparam \SW[1]~I .output_sync_reset = "none";
-// synopsys translate_on
-
-// Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \SW[0]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -157,27 +104,60 @@ defparam \SW[0]~I .output_register_mode = "none";
 defparam \SW[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: LCCOMB_X49_Y10_N18
-cycloneii_lcell_comb \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 (
-// Equation(s):
-// \simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout  = !\SW~combout [0]
-
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\SW~combout [0]),
-	.datad(vcc),
-	.cin(gnd),
-	.combout(\simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ),
-	.cout());
+cycloneii_io \SW[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\SW~combout [1]),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SW[1]));
 // synopsys translate_off
-defparam \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 .lut_mask = 16'h0F0F;
-defparam \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 .sum_lutc_input = "datac";
+defparam \SW[1]~I .input_async_reset = "none";
+defparam \SW[1]~I .input_power_up = "low";
+defparam \SW[1]~I .input_register_mode = "none";
+defparam \SW[1]~I .input_sync_reset = "none";
+defparam \SW[1]~I .oe_async_reset = "none";
+defparam \SW[1]~I .oe_power_up = "low";
+defparam \SW[1]~I .oe_register_mode = "none";
+defparam \SW[1]~I .oe_sync_reset = "none";
+defparam \SW[1]~I .operation_mode = "input";
+defparam \SW[1]~I .output_async_reset = "none";
+defparam \SW[1]~I .output_power_up = "low";
+defparam \SW[1]~I .output_register_mode = "none";
+defparam \SW[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y10_N19
-cycloneii_lcell_ff \simulateToBoard|generateNextState:0:RealiseNextState|Q (
+cycloneii_lcell_comb \simulateToBoard|nextState[3] (
+// Equation(s):
+// \simulateToBoard|nextState [3] = (\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout  & (\SW~combout [0] & !\SW~combout [1]))
+
+	.dataa(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ),
+	.datab(\SW~combout [0]),
+	.datac(vcc),
+	.datad(\SW~combout [1]),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState [3]),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState[3] .lut_mask = 16'h0088;
+defparam \simulateToBoard|nextState[3] .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_ff \simulateToBoard|generateNextState:3:RealiseNextState|Q (
 	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ),
+	.datain(\simulateToBoard|nextState [3]),
 	.sdata(gnd),
 	.aclr(gnd),
 	.sclr(gnd),
@@ -185,9 +165,36 @@ cycloneii_lcell_ff \simulateToBoard|generateNextState:0:RealiseNextState|Q (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ));
+	.regout(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ));
 
-// Location: LCCOMB_X49_Y10_N22
+cycloneii_lcell_comb \simulateToBoard|nextState[4]~0 (
+// Equation(s):
+// \simulateToBoard|nextState[4]~0_combout  = (\SW~combout [0] & (!\SW~combout [1] & ((\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ) # (\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ))))
+
+	.dataa(\SW~combout [0]),
+	.datab(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
+	.datac(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ),
+	.datad(\SW~combout [1]),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState[4]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState[4]~0 .lut_mask = 16'h00A8;
+defparam \simulateToBoard|nextState[4]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_ff \simulateToBoard|generateNextState:4:RealiseNextState|Q (
+	.clk(\KEY~combout [0]),
+	.datain(\simulateToBoard|nextState[4]~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ));
+
 cycloneii_lcell_comb \simulateToBoard|nextState[7] (
 // Equation(s):
 // \simulateToBoard|nextState [7] = (\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout  & (\SW~combout [0] & \SW~combout [1]))
@@ -204,7 +211,6 @@ defparam \simulateToBoard|nextState[7] .lut_mask = 16'h8080;
 defparam \simulateToBoard|nextState[7] .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y10_N23
 cycloneii_lcell_ff \simulateToBoard|generateNextState:7:RealiseNextState|Q (
 	.clk(\KEY~combout [0]),
 	.datain(\simulateToBoard|nextState [7]),
@@ -217,7 +223,6 @@ cycloneii_lcell_ff \simulateToBoard|generateNextState:7:RealiseNextState|Q (
 	.devpor(devpor),
 	.regout(\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ));
 
-// Location: LCCOMB_X49_Y10_N14
 cycloneii_lcell_comb \simulateToBoard|nextState[8]~1 (
 // Equation(s):
 // \simulateToBoard|nextState[8]~1_combout  = (\SW~combout [0] & (\SW~combout [1] & ((\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ) # (\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ))))
@@ -234,7 +239,6 @@ defparam \simulateToBoard|nextState[8]~1 .lut_mask = 16'h8880;
 defparam \simulateToBoard|nextState[8]~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y10_N15
 cycloneii_lcell_ff \simulateToBoard|generateNextState:8:RealiseNextState|Q (
 	.clk(\KEY~combout [0]),
 	.datain(\simulateToBoard|nextState[8]~1_combout ),
@@ -247,162 +251,22 @@ cycloneii_lcell_ff \simulateToBoard|generateNextState:8:RealiseNextState|Q (
 	.devpor(devpor),
 	.regout(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ));
 
-// Location: LCCOMB_X49_Y10_N28
-cycloneii_lcell_comb \simulateToBoard|nextState~2 (
-// Equation(s):
-// \simulateToBoard|nextState~2_combout  = (\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ) # 
-// (\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout )))
-
-	.dataa(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ),
-	.datab(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ),
-	.datac(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ),
-	.datad(\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState~2 .lut_mask = 16'hFFFE;
-defparam \simulateToBoard|nextState~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X49_Y10_N12
-cycloneii_lcell_comb \simulateToBoard|nextState[1] (
-// Equation(s):
-// \simulateToBoard|nextState [1] = (\SW~combout [0] & (!\SW~combout [1] & ((\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ) # (\simulateToBoard|nextState~2_combout ))))
-
-	.dataa(\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ),
-	.datab(\SW~combout [0]),
-	.datac(\SW~combout [1]),
-	.datad(\simulateToBoard|nextState~2_combout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState [1]),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState[1] .lut_mask = 16'h0C08;
-defparam \simulateToBoard|nextState[1] .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCFF_X49_Y10_N13
-cycloneii_lcell_ff \simulateToBoard|generateNextState:1:RealiseNextState|Q (
-	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|nextState [1]),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ));
-
-// Location: LCCOMB_X49_Y10_N30
-cycloneii_lcell_comb \simulateToBoard|nextState[2] (
-// Equation(s):
-// \simulateToBoard|nextState [2] = (\SW~combout [0] & (!\SW~combout [1] & \simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ))
-
-	.dataa(vcc),
-	.datab(\SW~combout [0]),
-	.datac(\SW~combout [1]),
-	.datad(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState [2]),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState[2] .lut_mask = 16'h0C00;
-defparam \simulateToBoard|nextState[2] .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCFF_X49_Y10_N31
-cycloneii_lcell_ff \simulateToBoard|generateNextState:2:RealiseNextState|Q (
-	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|nextState [2]),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ));
-
-// Location: LCCOMB_X49_Y10_N16
-cycloneii_lcell_comb \simulateToBoard|nextState[3] (
-// Equation(s):
-// \simulateToBoard|nextState [3] = (\SW~combout [0] & (!\SW~combout [1] & \simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ))
-
-	.dataa(vcc),
-	.datab(\SW~combout [0]),
-	.datac(\SW~combout [1]),
-	.datad(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState [3]),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState[3] .lut_mask = 16'h0C00;
-defparam \simulateToBoard|nextState[3] .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCFF_X49_Y10_N17
-cycloneii_lcell_ff \simulateToBoard|generateNextState:3:RealiseNextState|Q (
-	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|nextState [3]),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ));
-
-// Location: LCCOMB_X49_Y10_N8
-cycloneii_lcell_comb \simulateToBoard|nextState[4]~0 (
-// Equation(s):
-// \simulateToBoard|nextState[4]~0_combout  = (\SW~combout [0] & (!\SW~combout [1] & ((\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ) # (\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ))))
-
-	.dataa(\SW~combout [0]),
-	.datab(\SW~combout [1]),
-	.datac(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
-	.datad(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState[4]~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState[4]~0 .lut_mask = 16'h2220;
-defparam \simulateToBoard|nextState[4]~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCFF_X49_Y10_N9
-cycloneii_lcell_ff \simulateToBoard|generateNextState:4:RealiseNextState|Q (
-	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|nextState[4]~0_combout ),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ));
-
-// Location: LCCOMB_X49_Y10_N20
 cycloneii_lcell_comb \simulateToBoard|z (
 // Equation(s):
 // \simulateToBoard|z~combout  = (\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ) # (\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout )
 
 	.dataa(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
-	.datab(vcc),
+	.datab(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ),
 	.datac(vcc),
-	.datad(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ),
+	.datad(vcc),
 	.cin(gnd),
 	.combout(\simulateToBoard|z~combout ),
 	.cout());
 // synopsys translate_off
-defparam \simulateToBoard|z .lut_mask = 16'hFFAA;
+defparam \simulateToBoard|z .lut_mask = 16'hEEEE;
 defparam \simulateToBoard|z .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \KEY[0]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -438,45 +302,25 @@ defparam \KEY[0]~I .output_register_mode = "none";
 defparam \KEY[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: LCCOMB_X49_Y10_N26
-cycloneii_lcell_comb \simulateToBoard|nextState~3 (
+cycloneii_lcell_comb \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 (
 // Equation(s):
-// \simulateToBoard|nextState~3_combout  = (\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ) # 
-// (\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout )))
+// \simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout  = !\SW~combout [0]
 
-	.dataa(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ),
-	.datab(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ),
-	.datac(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
-	.datad(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ),
+	.dataa(\SW~combout [0]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
 	.cin(gnd),
-	.combout(\simulateToBoard|nextState~3_combout ),
+	.combout(\simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \simulateToBoard|nextState~3 .lut_mask = 16'hFFFE;
-defparam \simulateToBoard|nextState~3 .sum_lutc_input = "datac";
+defparam \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 .lut_mask = 16'h5555;
+defparam \simulateToBoard|generateNextState:0:RealiseNextState|Q~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X49_Y10_N6
-cycloneii_lcell_comb \simulateToBoard|nextState[5] (
-// Equation(s):
-// \simulateToBoard|nextState [5] = (\SW~combout [0] & (\SW~combout [1] & ((\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ) # (\simulateToBoard|nextState~3_combout ))))
-
-	.dataa(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ),
-	.datab(\SW~combout [0]),
-	.datac(\SW~combout [1]),
-	.datad(\simulateToBoard|nextState~3_combout ),
-	.cin(gnd),
-	.combout(\simulateToBoard|nextState [5]),
-	.cout());
-// synopsys translate_off
-defparam \simulateToBoard|nextState[5] .lut_mask = 16'hC080;
-defparam \simulateToBoard|nextState[5] .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCFF_X49_Y10_N7
-cycloneii_lcell_ff \simulateToBoard|generateNextState:5:RealiseNextState|Q (
+cycloneii_lcell_ff \simulateToBoard|generateNextState:0:RealiseNextState|Q (
 	.clk(\KEY~combout [0]),
-	.datain(\simulateToBoard|nextState [5]),
+	.datain(\simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout ),
 	.sdata(gnd),
 	.aclr(gnd),
 	.sclr(gnd),
@@ -484,26 +328,24 @@ cycloneii_lcell_ff \simulateToBoard|generateNextState:5:RealiseNextState|Q (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.regout(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ));
+	.regout(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ));
 
-// Location: LCCOMB_X49_Y10_N24
 cycloneii_lcell_comb \simulateToBoard|nextState[6] (
 // Equation(s):
-// \simulateToBoard|nextState [6] = (\SW~combout [0] & (\SW~combout [1] & \simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ))
+// \simulateToBoard|nextState [6] = (\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout  & (\SW~combout [0] & \SW~combout [1]))
 
-	.dataa(vcc),
+	.dataa(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ),
 	.datab(\SW~combout [0]),
 	.datac(\SW~combout [1]),
-	.datad(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ),
+	.datad(vcc),
 	.cin(gnd),
 	.combout(\simulateToBoard|nextState [6]),
 	.cout());
 // synopsys translate_off
-defparam \simulateToBoard|nextState[6] .lut_mask = 16'hC000;
+defparam \simulateToBoard|nextState[6] .lut_mask = 16'h8080;
 defparam \simulateToBoard|nextState[6] .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y10_N25
 cycloneii_lcell_ff \simulateToBoard|generateNextState:6:RealiseNextState|Q (
 	.clk(\KEY~combout [0]),
 	.datain(\simulateToBoard|nextState [6]),
@@ -516,7 +358,124 @@ cycloneii_lcell_ff \simulateToBoard|generateNextState:6:RealiseNextState|Q (
 	.devpor(devpor),
 	.regout(\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ));
 
-// Location: PIN_U22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_lcell_comb \simulateToBoard|nextState[2] (
+// Equation(s):
+// \simulateToBoard|nextState [2] = (\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout  & (\SW~combout [0] & !\SW~combout [1]))
+
+	.dataa(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ),
+	.datab(\SW~combout [0]),
+	.datac(vcc),
+	.datad(\SW~combout [1]),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState [2]),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState[2] .lut_mask = 16'h0088;
+defparam \simulateToBoard|nextState[2] .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_ff \simulateToBoard|generateNextState:2:RealiseNextState|Q (
+	.clk(\KEY~combout [0]),
+	.datain(\simulateToBoard|nextState [2]),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ));
+
+cycloneii_lcell_comb \simulateToBoard|nextState~3 (
+// Equation(s):
+// \simulateToBoard|nextState~3_combout  = (\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ) # 
+// (\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout )))
+
+	.dataa(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
+	.datab(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ),
+	.datac(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ),
+	.datad(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState~3 .lut_mask = 16'hFFFE;
+defparam \simulateToBoard|nextState~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_comb \simulateToBoard|nextState[5] (
+// Equation(s):
+// \simulateToBoard|nextState [5] = (\SW~combout [0] & (\SW~combout [1] & ((\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ) # (\simulateToBoard|nextState~3_combout ))))
+
+	.dataa(\SW~combout [0]),
+	.datab(\SW~combout [1]),
+	.datac(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ),
+	.datad(\simulateToBoard|nextState~3_combout ),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState [5]),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState[5] .lut_mask = 16'h8880;
+defparam \simulateToBoard|nextState[5] .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_ff \simulateToBoard|generateNextState:5:RealiseNextState|Q (
+	.clk(\KEY~combout [0]),
+	.datain(\simulateToBoard|nextState [5]),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ));
+
+cycloneii_lcell_comb \simulateToBoard|nextState~2 (
+// Equation(s):
+// \simulateToBoard|nextState~2_combout  = (\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ) # ((\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ) # 
+// (\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout )))
+
+	.dataa(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ),
+	.datab(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ),
+	.datac(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ),
+	.datad(\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState~2 .lut_mask = 16'hFFFE;
+defparam \simulateToBoard|nextState~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_comb \simulateToBoard|nextState[1] (
+// Equation(s):
+// \simulateToBoard|nextState [1] = (\SW~combout [0] & (!\SW~combout [1] & ((\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ) # (\simulateToBoard|nextState~2_combout ))))
+
+	.dataa(\SW~combout [0]),
+	.datab(\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ),
+	.datac(\simulateToBoard|nextState~2_combout ),
+	.datad(\SW~combout [1]),
+	.cin(gnd),
+	.combout(\simulateToBoard|nextState [1]),
+	.cout());
+// synopsys translate_off
+defparam \simulateToBoard|nextState[1] .lut_mask = 16'h00A8;
+defparam \simulateToBoard|nextState[1] .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneii_lcell_ff \simulateToBoard|generateNextState:1:RealiseNextState|Q (
+	.clk(\KEY~combout [0]),
+	.datain(\simulateToBoard|nextState [1]),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ));
+
 cycloneii_io \LEDG[0]~I (
 	.datain(\simulateToBoard|z~combout ),
 	.oe(vcc),
@@ -552,7 +511,6 @@ defparam \LEDG[0]~I .output_register_mode = "none";
 defparam \LEDG[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[0]~I (
 	.datain(\simulateToBoard|generateNextState:0:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -588,7 +546,6 @@ defparam \LEDR[0]~I .output_register_mode = "none";
 defparam \LEDR[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[1]~I (
 	.datain(\simulateToBoard|generateNextState:1:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -624,7 +581,6 @@ defparam \LEDR[1]~I .output_register_mode = "none";
 defparam \LEDR[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[2]~I (
 	.datain(\simulateToBoard|generateNextState:2:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -660,7 +616,6 @@ defparam \LEDR[2]~I .output_register_mode = "none";
 defparam \LEDR[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[3]~I (
 	.datain(\simulateToBoard|generateNextState:3:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -696,7 +651,6 @@ defparam \LEDR[3]~I .output_register_mode = "none";
 defparam \LEDR[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_T18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[4]~I (
 	.datain(\simulateToBoard|generateNextState:4:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -732,7 +686,6 @@ defparam \LEDR[4]~I .output_register_mode = "none";
 defparam \LEDR[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_V19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[5]~I (
 	.datain(\simulateToBoard|generateNextState:5:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -768,7 +721,6 @@ defparam \LEDR[5]~I .output_register_mode = "none";
 defparam \LEDR[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[6]~I (
 	.datain(\simulateToBoard|generateNextState:6:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -804,7 +756,6 @@ defparam \LEDR[6]~I .output_register_mode = "none";
 defparam \LEDR[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[7]~I (
 	.datain(\simulateToBoard|generateNextState:7:RealiseNextState|Q~regout ),
 	.oe(vcc),
@@ -840,7 +791,6 @@ defparam \LEDR[7]~I .output_register_mode = "none";
 defparam \LEDR[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDR[8]~I (
 	.datain(\simulateToBoard|generateNextState:8:RealiseNextState|Q~regout ),
 	.oe(vcc),

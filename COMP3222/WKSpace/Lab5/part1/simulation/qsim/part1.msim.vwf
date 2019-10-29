@@ -242,7 +242,7 @@ SIGNAL("part1_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout")
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:3:RealiseNextState|Q~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -252,7 +252,17 @@ SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextStat
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout")
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|nextState[4]~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:4:RealiseNextState|Q~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -292,7 +302,7 @@ SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:8:RealiseNextStat
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout")
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|z~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -302,7 +312,27 @@ SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout")
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -313,46 +343,6 @@ SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextStat
 }
 
 SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:2:RealiseNextState|Q~regout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:3:RealiseNextState|Q~regout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|nextState[4]~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:4:RealiseNextState|Q~regout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|z~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -382,7 +372,17 @@ SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:5:RealiseNextStat
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout")
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -640,8 +640,11 @@ TRANSITION_LIST("part1_vlg_vec_tst|SW[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 860.0;
+		LEVEL 1 FOR 15.264;
+		LEVEL 0 FOR 19.414;
+		LEVEL 1 FOR 330.783;
+		LEVEL 0 FOR 11.559;
+		LEVEL 1 FOR 512.98;
 		LEVEL 0 FOR 110.0;
 	}
 }
@@ -656,8 +659,8 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDG[0]")
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 140.0;
 		LEVEL 1 FOR 400.0;
 		LEVEL 0 FOR 90.0;
 	}
@@ -671,8 +674,8 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDR[8]")
 		LEVEL 0 FOR 230.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 550.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 630.0;
 	}
 }
 
@@ -685,7 +688,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDR[7]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 650.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 550.0;
 	}
 }
 
@@ -698,7 +703,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDR[6]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 670.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 570.0;
 	}
 }
 
@@ -713,7 +720,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDR[5]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 690.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 590.0;
 	}
 }
 
@@ -780,9 +789,11 @@ TRANSITION_LIST("part1_vlg_vec_tst|LEDR[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 860.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 520.0;
 		LEVEL 1 FOR 90.0;
 	}
 }
@@ -841,122 +852,6 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 860.0;
-		LEVEL 1 FOR 110.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 860.0;
-		LEVEL 1 FOR 90.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:7:RealiseNextState|Q~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 210.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 650.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[8]~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 210.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 570.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:8:RealiseNextState|Q~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 230.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 550.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 460.0;
-		LEVEL 1 FOR 90.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 530.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:2:RealiseNextState|Q~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 510.0;
-	}
-}
-
 TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:3:RealiseNextState|Q~regout")
 {
 	NODE
@@ -996,6 +891,47 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:4:Realis
 	}
 }
 
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:7:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 210.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 550.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[8]~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 210.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 35.461;
+		LEVEL 0 FOR 634.539;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:8:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 630.0;
+	}
+}
+
 TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|z~combout")
 {
 	NODE
@@ -1006,10 +942,68 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|z~combout")
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 140.0;
 		LEVEL 1 FOR 400.0;
 		LEVEL 0 FOR 90.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 15.264;
+		LEVEL 1 FOR 19.414;
+		LEVEL 0 FOR 330.783;
+		LEVEL 1 FOR 11.559;
+		LEVEL 0 FOR 512.98;
+		LEVEL 1 FOR 110.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 520.0;
+		LEVEL 1 FOR 90.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 190.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 570.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:2:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 510.0;
 	}
 }
 
@@ -1018,15 +1012,17 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState~3_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 180.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 510.0;
@@ -1044,20 +1040,50 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:5:Realis
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 690.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 590.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 190.0;
+		LEVEL 0 FOR 30.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 100.0;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 670.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 460.0;
+		LEVEL 1 FOR 90.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 530.0;
 	}
 }
 
@@ -1079,7 +1105,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[7]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 670.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 570.0;
 	}
 }
 
@@ -1092,7 +1120,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[6]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 690.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 590.0;
 	}
 }
 
@@ -1107,7 +1137,9 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[5]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 110.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 710.0;
+		LEVEL 0 FOR 87.02;
+		LEVEL 1 FOR 12.98;
+		LEVEL 0 FOR 610.0;
 	}
 }
 
@@ -1155,8 +1187,8 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|simulateToBoard|nextState[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 34.678;
+		LEVEL 1 FOR 15.322;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 150.0;
@@ -1196,8 +1228,11 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|SW~combout[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 860.0;
+		LEVEL 1 FOR 15.264;
+		LEVEL 0 FOR 19.414;
+		LEVEL 1 FOR 330.783;
+		LEVEL 0 FOR 11.559;
+		LEVEL 1 FOR 512.98;
 		LEVEL 0 FOR 110.0;
 	}
 }
@@ -1506,7 +1541,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:3:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -1515,7 +1550,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState[4]~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
@@ -1524,7 +1559,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:7:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:4:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
@@ -1533,7 +1568,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState[8]~1_combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:7:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;
@@ -1542,7 +1577,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:8:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState[8]~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;
@@ -1551,7 +1586,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:8:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
@@ -1560,7 +1595,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|z~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
@@ -1569,7 +1604,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:2:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
@@ -1578,7 +1613,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:3:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:0:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
@@ -1587,7 +1622,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState[4]~0_combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 30;
@@ -1596,7 +1631,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:4:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:2:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 31;
@@ -1605,7 +1640,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|z~combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 32;
@@ -1614,7 +1649,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState~3_combout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:5:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 33;
@@ -1623,7 +1658,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:5:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|nextState~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 34;
@@ -1632,7 +1667,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:6:RealiseNextState|Q~regout";
+	CHANNEL = "part1_vlg_vec_tst|i1|simulateToBoard|generateNextState:1:RealiseNextState|Q~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 35;

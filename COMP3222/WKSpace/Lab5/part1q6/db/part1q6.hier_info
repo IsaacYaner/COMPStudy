@@ -55,64 +55,64 @@ stateOut[8] <= Dflop:generateNextState:8:RealiseNextState.Q
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState
 Clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-reset => Q~reg0.ACLR
+D => Q.DATAB
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

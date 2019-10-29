@@ -16,7 +16,8 @@ ARCHITECTURE mixed OF part4 IS
 		PORT ( R : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0) ;
 				 L, E, w : IN STD_LOGIC ;
 				 Clock : IN STD_LOGIC ;
-	 			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0) ) ;
+	 			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+				 reset : IN STD_LOGIC ) ;
 	END COMPONENT;
 	
 	COMPONENT half_sec_timer IS
@@ -29,6 +30,7 @@ ARCHITECTURE mixed OF part4 IS
 	SIGNAL sel : std_logic_vector(2 DOWNTO 0);
 	TYPE state_t IS (Passive, dot, dash1, dash2, dash3); -- add states as required
 	SIGNAL y_Q, Y_D : state_t;
+	SIGNAL reset : STD_LOGIC;
 	
 BEGIN
 	Clk <= CLOCK_50;
@@ -61,8 +63,8 @@ BEGIN
 				"1111" WHEN "111",
 				"0000" WHEN OTHERS;
 	
-	LenReg: shiftrne PORT MAP (LR, w, shft, '0', TOut, QL);
-	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', TOut, QC);
+	LenReg: shiftrne PORT MAP (LR, w, shft, '0', TOut, QL, reset);
+	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', TOut, QC, reset);
 	Timer: half_sec_timer PORT MAP (Clk, TStart, TOut);
 	
 	FSM_transitions: PROCESS (y_Q, w, QL(0), QC(0), TOut)
@@ -94,9 +96,14 @@ BEGIN
 							
 				END CASE;
 			END IF;
+				IF reset = '1' THEN
+					Y_D <= Passive;
+				END IF;
 		END PROCESS;
 		
 		--startClock <= startDot OR startDash1 OR startDash2 OR startDash3 OR startDark;
+		
+		reset <= NOT(nReset);
 		
 		FSM_state: PROCESS (Clk, nReset)
 			BEGIN
@@ -111,6 +118,8 @@ BEGIN
 			BEGIN
 				shft <= '0'; TStart <= '0'; z <= '0';
 				IF TOut = '1'  THEN TStart <= '1';
+				END IF;
+				IF reset = '1' THEN z <= '0'; shft <= '0';
 				END IF;
 				CASE y_Q IS
 					WHEN Passive =>
@@ -133,7 +142,8 @@ ENTITY shiftrne IS
 	PORT ( R : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0) ;
 			 L, E, w : IN STD_LOGIC ;
 			 Clock : IN STD_LOGIC ;
-			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0) ) ;
+			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			 reset : IN STD_LOGIC) ;
 END shiftrne ;
 
 ARCHITECTURE Behavior OF shiftrne IS
@@ -141,7 +151,9 @@ BEGIN
 	PROCESS
 	BEGIN
 		WAIT UNTIL (Clock'EVENT AND Clock = '1');
-		IF (E = '1') THEN -- if enabled
+		IF reset = '1' THEN
+			Q <= (others => '0');
+		ELSIF (E = '1') THEN -- if enabled
 			IF (L = '1') THEN -- depending upon the load signal
 				Q <= R; -- either load a new word in parallel
 			ELSE 

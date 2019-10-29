@@ -1,5 +1,8 @@
 |part4
+KEY[0] => shiftrne:LenReg.reset
+KEY[0] => shiftrne:CodeReg.reset
 KEY[0] => y_Q~3.DATAIN
+KEY[0] => Y_D~7.DATAIN
 KEY[1] => shiftrne:LenReg.L
 KEY[1] => shiftrne:CodeReg.L
 KEY[2] => ~NO_FANOUT~
@@ -52,10 +55,10 @@ L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
-E => Q[0]~reg0.ENA
-E => Q[1]~reg0.ENA
-E => Q[2]~reg0.ENA
-E => Q[3]~reg0.ENA
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
 w => Q.DATAA
 Clock => Q[0]~reg0.CLK
 Clock => Q[1]~reg0.CLK
@@ -65,6 +68,10 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
 
 
 |part4|shiftrne:CodeReg
@@ -76,10 +83,10 @@ L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
 L => Q.OUTPUTSELECT
-E => Q[0]~reg0.ENA
-E => Q[1]~reg0.ENA
-E => Q[2]~reg0.ENA
-E => Q[3]~reg0.ENA
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
+E => Q.OUTPUTSELECT
 w => Q.DATAA
 Clock => Q[0]~reg0.CLK
 Clock => Q[1]~reg0.CLK
@@ -89,6 +96,10 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
 
 
 |part4|half_sec_timer:Timer

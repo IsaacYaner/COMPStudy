@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dW:\UNSWSTUDY\COMPStudy\COMP3222\WKSpace\Lab5\part1\simulation\qsim
 vpart1
-Z1 !s100 7C]df`cO7Dl7BQGY_6VY=0
-Z2 I1>3m@1cF]NAmM_NhQ]MWR2
+Z1 !s100 Fm]cQ6=GlVD><C`Ro?bHQ1
+Z2 IN5No2L]I?kT=iYSEoaQgc1
 Z3 Vke<CS;N2lKNj1]FBEJL_z3
-Z4 dW:\UNSWSTUDY\COMPStudy\COMP3222\WKSpace\Lab5\part1\simulation\qsim
-Z5 w1572224882
+Z4 dC:\GITT\COMPStudy\COMP3222\WKSpace\Lab5\part1\simulation\qsim
+Z5 w1572313668
 Z6 8part1.vo
 Z7 Fpart1.vo
 L0 31
@@ -19,25 +19,25 @@ Z9 !s90 -work|work|part1.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1572224882.528000
+Z11 !s108 1572313668.681000
 Z12 !s107 part1.vo|
 !s101 -O0
 vpart1_vlg_vec_tst
 !i10b 1
-Z13 !s100 ``Mg8hHP5`2SBhCczN]=Z1
-Z14 IO6laG;>bJ_X]J5RDZek_E0
-Z15 V]eZ0;Peg[4n`gBOOZXGW?1
+!s100 9?jbiGi8T6C>6>ondCfVo2
+I5FHL:d7Vb3YalbKHoWbH?2
+Z13 V]eZ0;Peg[4n`gBOOZXGW?1
 R4
-w1572224881
-Z16 8part1.vt
-Z17 Fpart1.vt
+w1572313659
+Z14 8part1.vt
+Z15 Fpart1.vt
 L0 29
 R8
 r1
 !s85 0
 31
-!s108 1572224882.583000
+!s108 1572313668.732000
 !s107 part1.vt|
-Z18 !s90 -work|work|part1.vt|
+Z16 !s90 -work|work|part1.vt|
 !s101 -O0
 R10

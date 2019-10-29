@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part4
-Tue Oct 29 12:19:59 2019
+Tue Oct 29 13:44:02 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -49,13 +49,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 29 12:19:59 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 29 13:44:02 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; part4                                           ;
 ; Top-level Entity Name              ; part4                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 54                                              ;
-;     Total combinational functions  ; 47                                              ;
+; Total logic elements               ; 57                                              ;
+;     Total combinational functions  ; 50                                              ;
 ;     Dedicated logic registers      ; 43                                              ;
 ; Total registers                    ; 43                                              ;
 ; Total pins                         ; 26                                              ;
@@ -182,16 +182,16 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 54       ;
+; Estimated Total logic elements              ; 57       ;
 ;                                             ;          ;
-; Total combinational functions               ; 47       ;
+; Total combinational functions               ; 50       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 13       ;
-;     -- 3 input functions                    ; 8        ;
-;     -- <=2 input functions                  ; 26       ;
+;     -- 4 input functions                    ; 17       ;
+;     -- 3 input functions                    ; 6        ;
+;     -- <=2 input functions                  ; 27       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 23       ;
+;     -- normal mode                          ; 26       ;
 ;     -- arithmetic mode                      ; 24       ;
 ;                                             ;          ;
 ; Total registers                             ; 43       ;
@@ -202,8 +202,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 31       ;
-; Total fan-out                               ; 260      ;
-; Average fan-out                             ; 2.24     ;
+; Total fan-out                               ; 277      ;
+; Average fan-out                             ; 2.33     ;
 +---------------------------------------------+----------+
 
 
@@ -212,10 +212,10 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |part4                     ; 47 (3)            ; 43 (10)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |part4                      ; work         ;
+; |part4                     ; 50 (3)            ; 43 (10)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |part4                      ; work         ;
 ;    |half_sec_timer:Timer|  ; 35 (35)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|half_sec_timer:Timer ; work         ;
-;    |shiftrne:CodeReg|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|shiftrne:CodeReg     ; work         ;
-;    |shiftrne:LenReg|       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|shiftrne:LenReg      ; work         ;
+;    |shiftrne:CodeReg|      ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|shiftrne:CodeReg     ; work         ;
+;    |shiftrne:LenReg|       ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|shiftrne:LenReg      ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -264,11 +264,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 43    ;
-; Number of registers using Synchronous Clear  ; 25    ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -279,7 +279,9 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |part4|half_sec_timer:Timer|Q[4] ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |part4|shiftrne:CodeReg|Q[0]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |part4|shiftrne:LenReg|Q[1]      ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |part4|shiftrne:CodeReg|Q[2]     ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; Yes        ; |part4|shiftrne:CodeReg|Q[0]     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |part4|Y_D                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
@@ -339,7 +341,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 29 12:19:49 2019
+    Info: Processing started: Tue Oct 29 13:43:53 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part4 -c part4
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 6 design units, including 3 entities, in source file part4.vhd
@@ -351,7 +353,9 @@ Info (12021): Found 6 design units, including 3 entities, in source file part4.v
     Info (12023): Found entity 3: half_sec_timer
 Info (12127): Elaborating entity "part4" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at part4.vhd(8): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at part4.vhd(113): signal "TOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at part4.vhd(99): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at part4.vhd(120): signal "TOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at part4.vhd(122): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10873): Using initial value X (don't care) for net "LEDR[8]" at part4.vhd(9)
 Info (12128): Elaborating entity "shiftrne" for hierarchy "shiftrne:LenReg"
 Info (12128): Elaborating entity "half_sec_timer" for hierarchy "half_sec_timer:Timer"
@@ -371,14 +375,14 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 54 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info (21061): Implemented 57 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 500 megabytes
-    Info: Processing ended: Tue Oct 29 12:19:59 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Tue Oct 29 13:44:02 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
 
 

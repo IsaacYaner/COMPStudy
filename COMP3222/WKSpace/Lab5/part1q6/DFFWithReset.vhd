@@ -11,10 +11,12 @@ BEGIN
 
 	PROCESS(D, Clk, reset)
 	BEGIN
-		IF reset = '0' THEN
-			Q <= '0';
-		ELSIF Clk'event AND Clk = '1' THEN
-			Q <= D;
+		IF Clk'event AND Clk = '1' THEN
+			IF reset = '0' THEN
+				Q <= '0';
+			ELSE
+				Q <= D;
+			END IF;
 		END IF;
 	END PROCESS;
 
