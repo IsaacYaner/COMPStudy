@@ -27,7 +27,7 @@ ARCHITECTURE mixed OF part4 IS
 	SIGNAL Clk, nReset, w, z, shft, TStart, TOut : std_logic;
 	SIGNAL LR, CR, QL, QC : std_logic_vector(3 DOWNTO 0); -- length and code values and shift register contents
 	SIGNAL sel : std_logic_vector(2 DOWNTO 0);
-	TYPE state_t IS (Init, dot, dash, endFSM); -- add states as required
+	TYPE state_t IS (Passive, dot, dash1, dash2, dash3); -- add states as required
 	SIGNAL y_Q, Y_D : state_t;
 	
 BEGIN
@@ -67,19 +67,41 @@ BEGIN
 	
 	FSM_transitions: PROCESS (y_Q, w, QL(0), QC(0), TOut)
 		BEGIN
-			CASE y_Q IS
-				WHEN Init =>
-					Y_D <= Init;
-				--
-				-- add the next state logic
-				--
-			END CASE;
+			IF TOut'event AND TOut = '1' THEN
+				CASE y_Q IS
+					WHEN Passive =>
+						IF QL(0) = '0' THEN	
+							Y_D <= Passive;
+						ELSE
+							IF QC(0) = '0' THEN
+								Y_D <= dot;
+							ELSE
+								Y_D <= dash1;
+							END IF;
+						END IF;
+					
+					WHEN dot =>
+							Y_D <= Passive;
+					
+					WHEN dash1 =>
+							Y_D <= dash2;
+						
+					WHEN dash2 =>
+							Y_D <= dash3;
+						
+					WHEN dash3 =>
+							Y_D <= Passive;
+							
+				END CASE;
+			END IF;
 		END PROCESS;
+		
+		--startClock <= startDot OR startDash1 OR startDash2 OR startDash3 OR startDark;
 		
 		FSM_state: PROCESS (Clk, nReset)
 			BEGIN
 				IF (nReset = '0') THEN
-					y_Q <= Init;
+					y_Q <= Passive;
 				ELSIF (Clk'event AND Clk = '1') THEN
 					y_Q <= Y_D;
 				END IF;
@@ -88,15 +110,20 @@ BEGIN
 		FSM_outputs: PROCESS (y_Q)
 			BEGIN
 				shft <= '0'; TStart <= '0'; z <= '0';
+				IF TOut <= '1' THEN TStart <= '1';
+				ELSE TStart <= '0';
+				END IF;
 				CASE y_Q IS
-					WHEN Init =>
+					WHEN Passive =>
 						shft <= '1';
-					--
-					-- add output logic
-					--
+						z <= '0';
+					WHEN dot | dash1 | dash2 | dash3 =>
+						shft <= '0';
+						z <= '1';
+					
 				END CASE;
 			END PROCESS;
-
+		
 END mixed;
 
 LIBRARY ieee;
