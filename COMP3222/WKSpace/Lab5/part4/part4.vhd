@@ -61,8 +61,8 @@ BEGIN
 				"1111" WHEN "111",
 				"0000" WHEN OTHERS;
 	
-	LenReg: shiftrne PORT MAP (LR, w, shft, '0', Clk, QL);
-	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', Clk, QC);
+	LenReg: shiftrne PORT MAP (LR, w, shft, '0', TOut, QL);
+	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', TOut, QC);
 	Timer: half_sec_timer PORT MAP (Clk, TStart, TOut);
 	
 	FSM_transitions: PROCESS (y_Q, w, QL(0), QC(0), TOut)
@@ -110,8 +110,7 @@ BEGIN
 		FSM_outputs: PROCESS (y_Q)
 			BEGIN
 				shft <= '0'; TStart <= '0'; z <= '0';
-				IF TOut <= '1' THEN TStart <= '1';
-				ELSE TStart <= '0';
+				IF TOut = '1'  THEN TStart <= '1';
 				END IF;
 				CASE y_Q IS
 					WHEN Passive =>
