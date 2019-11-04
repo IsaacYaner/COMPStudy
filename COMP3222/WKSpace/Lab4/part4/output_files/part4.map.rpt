@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part4
-Fri Oct 25 15:30:14 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 29 13:49:30 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -39,24 +39,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 25 15:30:14 2019            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part4                                            ;
-; Top-level Entity Name              ; part4                                            ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 59                                               ;
-;     Total combinational functions  ; 59                                               ;
-;     Dedicated logic registers      ; 31                                               ;
-; Total registers                    ; 31                                               ;
-; Total pins                         ; 8                                                ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 29 13:49:30 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part4                                           ;
+; Top-level Entity Name              ; part4                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 59                                              ;
+;     Total combinational functions  ; 59                                              ;
+;     Dedicated logic registers      ; 31                                              ;
+; Total registers                    ; 31                                              ;
+; Total pins                         ; 8                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -149,29 +149,29 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; ../../Lab3/part5/Hnum.vhd        ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab3/part5/Hnum.vhd             ;         ;
-; part4.vhd                        ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/part4.vhd            ;         ;
-; MHZ5.vhd                         ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/MHZ5.vhd             ;         ;
-; ../../Lab3/part5/counter10.vhd   ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab3/part5/counter10.vhd        ;         ;
-; frequencyAdapter.vhd             ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab4/part4/frequencyAdapter.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; ../../Lab3/part5/Hnum.vhd        ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab3/part5/Hnum.vhd             ;         ;
+; part4.vhd                        ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/part4.vhd            ;         ;
+; MHZ5.vhd                         ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/MHZ5.vhd             ;         ;
+; ../../Lab3/part5/counter10.vhd   ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab3/part5/counter10.vhd        ;         ;
+; frequencyAdapter.vhd             ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab4/part4/frequencyAdapter.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -256,11 +256,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Oct 25 15:30:13 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 29 13:49:21 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part4 -c part4
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /unswstudy/compstudy/comp3222/wkspace/lab3/part5/hnum.vhd
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /gitt/compstudy/comp3222/wkspace/lab3/part5/hnum.vhd
     Info (12022): Found design unit 1: Hnum-Behavior
     Info (12023): Found entity 1: Hnum
 Info (12021): Found 2 design units, including 1 entities, in source file part4.vhd
@@ -269,7 +269,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file part4.v
 Info (12021): Found 2 design units, including 1 entities, in source file mhz5.vhd
     Info (12022): Found design unit 1: MHZ5-Behavior
     Info (12023): Found entity 1: MHZ5
-Info (12021): Found 2 design units, including 1 entities, in source file /unswstudy/compstudy/comp3222/wkspace/lab3/part5/counter10.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /gitt/compstudy/comp3222/wkspace/lab3/part5/counter10.vhd
     Info (12022): Found design unit 1: counter10-Behavior
     Info (12023): Found entity 1: counter10
 Info (12021): Found 2 design units, including 1 entities, in source file frequencyadapter.vhd
@@ -287,9 +287,9 @@ Info (21057): Implemented 68 device resources after synthesis - the final resour
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 60 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Fri Oct 25 15:30:14 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 491 megabytes
+    Info: Processing ended: Tue Oct 29 13:49:30 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -16,7 +16,8 @@ ARCHITECTURE mixed OF part4 IS
 		PORT ( R : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0) ;
 				 L, E, w : IN STD_LOGIC ;
 				 Clock : IN STD_LOGIC ;
-	 			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0) ) ;
+	 			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+				 reset : IN STD_LOGIC ) ;
 	END COMPONENT;
 	
 	COMPONENT half_sec_timer IS
@@ -27,8 +28,9 @@ ARCHITECTURE mixed OF part4 IS
 	SIGNAL Clk, nReset, w, z, shft, TStart, TOut : std_logic;
 	SIGNAL LR, CR, QL, QC : std_logic_vector(3 DOWNTO 0); -- length and code values and shift register contents
 	SIGNAL sel : std_logic_vector(2 DOWNTO 0);
-	TYPE state_t IS (Init, dot, dash, endFSM); -- add states as required
+	TYPE state_t IS (Passive, dot, dash1, dash2, dash3); -- add states as required
 	SIGNAL y_Q, Y_D : state_t;
+	SIGNAL reset : STD_LOGIC;
 	
 BEGIN
 	Clk <= CLOCK_50;
@@ -61,25 +63,52 @@ BEGIN
 				"1111" WHEN "111",
 				"0000" WHEN OTHERS;
 	
-	LenReg: shiftrne PORT MAP (LR, w, shft, '0', Clk, QL);
-	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', Clk, QC);
+	LenReg: shiftrne PORT MAP (LR, w, shft, '0', TOut, QL, reset);
+	CodeReg: shiftrne PORT MAP (CR, w, shft, '0', TOut, QC, reset);
 	Timer: half_sec_timer PORT MAP (Clk, TStart, TOut);
 	
 	FSM_transitions: PROCESS (y_Q, w, QL(0), QC(0), TOut)
 		BEGIN
-			CASE y_Q IS
-				WHEN Init =>
-					Y_D <= Init;
-				--
-				-- add the next state logic
-				--
-			END CASE;
+			IF TOut'event AND TOut = '1' THEN
+				CASE y_Q IS
+					WHEN Passive =>
+						IF QL(0) = '0' THEN	
+							Y_D <= Passive;
+						ELSE
+							IF QC(0) = '0' THEN
+								Y_D <= dot;
+							ELSE
+								Y_D <= dash1;
+							END IF;
+						END IF;
+					
+					WHEN dot =>
+							Y_D <= Passive;
+					
+					WHEN dash1 =>
+							Y_D <= dash2;
+						
+					WHEN dash2 =>
+							Y_D <= dash3;
+						
+					WHEN dash3 =>
+							Y_D <= Passive;
+							
+				END CASE;
+			END IF;
+				IF reset = '1' THEN
+					Y_D <= Passive;
+				END IF;
 		END PROCESS;
+		
+		--startClock <= startDot OR startDash1 OR startDash2 OR startDash3 OR startDark;
+		
+		reset <= NOT(nReset);
 		
 		FSM_state: PROCESS (Clk, nReset)
 			BEGIN
 				IF (nReset = '0') THEN
-					y_Q <= Init;
+					y_Q <= Passive;
 				ELSIF (Clk'event AND Clk = '1') THEN
 					y_Q <= Y_D;
 				END IF;
@@ -88,15 +117,21 @@ BEGIN
 		FSM_outputs: PROCESS (y_Q)
 			BEGIN
 				shft <= '0'; TStart <= '0'; z <= '0';
+				IF TOut = '1'  THEN TStart <= '1';
+				END IF;
+				IF reset = '1' THEN z <= '0'; shft <= '0';
+				END IF;
 				CASE y_Q IS
-					WHEN Init =>
+					WHEN Passive =>
 						shft <= '1';
-					--
-					-- add output logic
-					--
+						z <= '0';
+					WHEN dot | dash1 | dash2 | dash3 =>
+						shft <= '0';
+						z <= '1';
+					
 				END CASE;
 			END PROCESS;
-
+		
 END mixed;
 
 LIBRARY ieee;
@@ -107,7 +142,8 @@ ENTITY shiftrne IS
 	PORT ( R : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0) ;
 			 L, E, w : IN STD_LOGIC ;
 			 Clock : IN STD_LOGIC ;
-			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0) ) ;
+			 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			 reset : IN STD_LOGIC) ;
 END shiftrne ;
 
 ARCHITECTURE Behavior OF shiftrne IS
@@ -115,7 +151,9 @@ BEGIN
 	PROCESS
 	BEGIN
 		WAIT UNTIL (Clock'EVENT AND Clock = '1');
-		IF (E = '1') THEN -- if enabled
+		IF reset = '1' THEN
+			Q <= (others => '0');
+		ELSIF (E = '1') THEN -- if enabled
 			IF (L = '1') THEN -- depending upon the load signal
 				Q <= R; -- either load a new word in parallel
 			ELSE 

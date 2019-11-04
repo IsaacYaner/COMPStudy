@@ -1,0 +1,16 @@
+
+State Machine - |part4|y_Q
+Name y_Q.dash3 y_Q.dash2 y_Q.dash1 y_Q.dot y_Q.Passive 
+y_Q.Passive 0 0 0 0 0 
+y_Q.dot 0 0 0 1 1 
+y_Q.dash1 0 0 1 0 1 
+y_Q.dash2 0 1 0 0 1 
+y_Q.dash3 1 0 0 0 1 
+
+State Machine - |part4|Y_D
+Name Y_D.dash3 Y_D.dash2 Y_D.dash1 Y_D.dot Y_D.Passive 
+Y_D.Passive 0 0 0 0 0 
+Y_D.dot 0 0 0 1 1 
+Y_D.dash1 0 0 1 0 1 
+Y_D.dash2 0 1 0 0 1 
+Y_D.dash3 1 0 0 0 1 
