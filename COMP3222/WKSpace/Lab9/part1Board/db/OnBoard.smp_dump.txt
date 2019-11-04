@@ -1,0 +1,7 @@
+
+State Machine - |OnBoard|part1:SimpleProcessor|Tstep_Q
+Name Tstep_Q.T3 Tstep_Q.T2 Tstep_Q.T1 Tstep_Q.T0 
+Tstep_Q.T0 0 0 0 0 
+Tstep_Q.T1 0 0 1 1 
+Tstep_Q.T2 0 1 0 1 
+Tstep_Q.T3 1 0 0 1 

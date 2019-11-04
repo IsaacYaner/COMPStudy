@@ -1,0 +1,1189 @@
+TimeQuest Timing Analyzer report for OnBoard
+Mon Nov 04 20:36:21 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[1]'
+ 12. Slow Model Hold: 'KEY[1]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[1]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'KEY[1]'
+ 24. Fast Model Hold: 'KEY[1]'
+ 25. Fast Model Minimum Pulse Width: 'KEY[1]'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; OnBoard                                                            ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C5T144C6                                                        ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[1]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[1] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 158.63 MHz ; 158.63 MHz      ; KEY[1]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[1] ; -5.304 ; -331.436      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[1] ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[1] ; -1.380 ; -113.380             ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[1]'                                                                                                                               ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.304 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.344      ;
+; -5.293 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.333      ;
+; -5.293 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.330      ;
+; -5.221 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.261      ;
+; -5.210 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.250      ;
+; -5.210 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.247      ;
+; -5.206 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.246      ;
+; -5.196 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.233      ;
+; -5.183 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.223      ;
+; -5.176 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.216      ;
+; -5.172 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.212      ;
+; -5.172 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.209      ;
+; -5.165 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.205      ;
+; -5.149 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 6.180      ;
+; -5.130 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.167      ;
+; -5.123 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.163      ;
+; -5.109 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.149      ;
+; -5.087 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.124      ;
+; -5.086 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.123      ;
+; -5.085 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.125      ;
+; -5.063 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.100      ;
+; -5.062 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 6.096      ;
+; -5.024 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.064      ;
+; -5.018 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 6.049      ;
+; -5.013 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.053      ;
+; -5.004 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.041      ;
+; -5.001 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 6.041      ;
+; -4.980 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.017      ;
+; -4.969 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 6.003      ;
+; -4.966 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 6.003      ;
+; -4.959 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.996      ;
+; -4.958 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.992      ;
+; -4.954 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.988      ;
+; -4.942 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.979      ;
+; -4.939 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.976      ;
+; -4.931 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.965      ;
+; -4.898 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.938      ;
+; -4.892 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.923      ;
+; -4.876 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.913      ;
+; -4.859 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.896      ;
+; -4.845 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.882      ;
+; -4.841 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.878      ;
+; -4.837 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.874      ;
+; -4.832 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.869      ;
+; -4.832 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.869      ;
+; -4.828 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.865      ;
+; -4.827 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.867      ;
+; -4.827 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.864      ;
+; -4.825 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.859      ;
+; -4.821 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.858      ;
+; -4.815 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.855      ;
+; -4.809 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.846      ;
+; -4.807 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.844      ;
+; -4.801 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.841      ;
+; -4.800 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.840      ;
+; -4.798 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.829      ;
+; -4.795 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.832      ;
+; -4.789 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.829      ;
+; -4.778 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.818      ;
+; -4.777 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.817      ;
+; -4.767 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.807      ;
+; -4.761 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.792      ;
+; -4.758 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.795      ;
+; -4.754 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.788      ;
+; -4.749 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.786      ;
+; -4.744 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.781      ;
+; -4.735 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.772      ;
+; -4.724 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.761      ;
+; -4.721 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.761      ;
+; -4.720 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.757      ;
+; -4.716 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.756      ;
+; -4.711 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.748      ;
+; -4.697 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.728      ;
+; -4.696 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.736      ;
+; -4.688 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.719      ;
+; -4.685 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.722      ;
+; -4.684 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.724      ;
+; -4.680 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.717      ;
+; -4.675 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.712      ;
+; -4.675 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.715      ;
+; -4.667 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.698      ;
+; -4.657 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.694      ;
+; -4.643 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.680      ;
+; -4.630 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.661      ;
+; -4.623 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.002     ; 5.657      ;
+; -4.623 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.660      ;
+; -4.620 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 5.651      ;
+; -4.612 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.652      ;
+; -4.608 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.645      ;
+; -4.579 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.616      ;
+; -4.575 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.612      ;
+; -4.565 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.605      ;
+; -4.564 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.601      ;
+; -4.556 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.593      ;
+; -4.541 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 5.578      ;
+; -4.539 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.579      ;
+; -4.528 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.568      ;
+; -4.523 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.563      ;
+; -4.521 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.561      ;
+; -4.521 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 5.561      ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[1]'                                                                                                                                   ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; part1:SimpleProcessor|Tstep_Q.T0      ; part1:SimpleProcessor|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.529 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.795      ;
+; 0.535 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_0|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.801      ;
+; 0.536 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_0|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.802      ;
+; 0.540 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_0|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.806      ;
+; 0.660 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_2|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.926      ;
+; 0.667 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_2|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.933      ;
+; 0.668 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_2|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.934      ;
+; 0.712 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_2|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.977      ;
+; 0.720 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_2|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.985      ;
+; 0.729 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.994      ;
+; 0.730 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_2|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.995      ;
+; 0.778 ; part1:SimpleProcessor|regn:reg_2|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.044      ;
+; 0.784 ; part1:SimpleProcessor|regn:reg_2|Q[2] ; part1:SimpleProcessor|BusWires[2]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.784 ; part1:SimpleProcessor|regn:reg_2|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.784 ; part1:SimpleProcessor|regn:reg_2|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.784 ; part1:SimpleProcessor|regn:reg_2|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.788 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[6]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.054      ;
+; 0.791 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[2]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.057      ;
+; 0.791 ; part1:SimpleProcessor|regn:reg_0|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.057      ;
+; 0.792 ; part1:SimpleProcessor|regn:reg_0|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.058      ;
+; 0.799 ; part1:SimpleProcessor|regn:reg_0|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.800 ; part1:SimpleProcessor|regn:regA|Q[8]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.066      ;
+; 0.827 ; part1:SimpleProcessor|regn:reg_0|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.093      ;
+; 0.828 ; part1:SimpleProcessor|regn:regA|Q[7]  ; part1:SimpleProcessor|regn:regG|Q[7]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.094      ;
+; 0.831 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[0]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.851 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_2|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 1.116      ;
+; 0.908 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.174      ;
+; 0.923 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.182      ;
+; 0.927 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_3|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.186      ;
+; 0.943 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.202      ;
+; 0.948 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.207      ;
+; 0.949 ; part1:SimpleProcessor|regn:reg_2|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.216      ;
+; 1.003 ; part1:SimpleProcessor|regn:reg_2|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.270      ;
+; 1.012 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.274      ;
+; 1.013 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_7|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 1.288      ;
+; 1.014 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_0|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.283      ;
+; 1.016 ; part1:SimpleProcessor|regn:reg_2|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.283      ;
+; 1.017 ; part1:SimpleProcessor|regn:reg_2|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.284      ;
+; 1.019 ; part1:SimpleProcessor|regn:regA|Q[1]  ; part1:SimpleProcessor|regn:regG|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.015     ; 1.270      ;
+; 1.031 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.293      ;
+; 1.035 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_1|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.297      ;
+; 1.042 ; part1:SimpleProcessor|regn:regA|Q[4]  ; part1:SimpleProcessor|regn:regG|Q[4]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.070 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.332      ;
+; 1.086 ; part1:SimpleProcessor|regn:regA|Q[5]  ; part1:SimpleProcessor|regn:regG|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.015     ; 1.337      ;
+; 1.123 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_1|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.382      ;
+; 1.124 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_5|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.383      ;
+; 1.134 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.400      ;
+; 1.135 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_5|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.394      ;
+; 1.135 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.394      ;
+; 1.138 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_1|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.397      ;
+; 1.140 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_1|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.399      ;
+; 1.153 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_4|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.010     ; 1.409      ;
+; 1.153 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.010     ; 1.409      ;
+; 1.154 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_4|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.010     ; 1.410      ;
+; 1.155 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.414      ;
+; 1.155 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_1|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.414      ;
+; 1.156 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_0|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.425      ;
+; 1.157 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_3|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.010     ; 1.413      ;
+; 1.165 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.434      ;
+; 1.172 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_0|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.441      ;
+; 1.173 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.439      ;
+; 1.178 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.444      ;
+; 1.187 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_4|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.446      ;
+; 1.189 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.448      ;
+; 1.190 ; part1:SimpleProcessor|regn:reg_1|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.463      ;
+; 1.195 ; part1:SimpleProcessor|regn:reg_1|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.468      ;
+; 1.196 ; part1:SimpleProcessor|regn:reg_1|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.469      ;
+; 1.197 ; part1:SimpleProcessor|regn:reg_1|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.470      ;
+; 1.205 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_3|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.464      ;
+; 1.205 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.467      ;
+; 1.208 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_4|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 1.467      ;
+; 1.214 ; part1:SimpleProcessor|regn:regA|Q[7]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.480      ;
+; 1.217 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.479      ;
+; 1.217 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.230 ; part1:SimpleProcessor|regn:reg_0|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.003     ; 1.493      ;
+; 1.231 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_7|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.008      ; 1.505      ;
+; 1.239 ; part1:SimpleProcessor|regn:reg_0|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.003     ; 1.502      ;
+; 1.240 ; part1:SimpleProcessor|regn:reg_1|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 1.510      ;
+; 1.244 ; part1:SimpleProcessor|regn:reg_1|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 1.514      ;
+; 1.249 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[4]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.515      ;
+; 1.254 ; part1:SimpleProcessor|regn:reg_0|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.003     ; 1.517      ;
+; 1.256 ; part1:SimpleProcessor|regn:reg_1|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 1.526      ;
+; 1.267 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[7]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.533      ;
+; 1.269 ; part1:SimpleProcessor|regn:reg_0|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.003     ; 1.532      ;
+; 1.270 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 1.545      ;
+; 1.276 ; part1:SimpleProcessor|regn:reg_1|Q[2] ; part1:SimpleProcessor|BusWires[2]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 1.546      ;
+; 1.276 ; part1:SimpleProcessor|regn:reg_1|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 1.546      ;
+; 1.277 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_0|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.546      ;
+; 1.280 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:regA|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 1.560      ;
+; 1.288 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[2]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.554      ;
+; 1.300 ; part1:SimpleProcessor|regn:regA|Q[3]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.566      ;
+; 1.302 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:regA|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 1.582      ;
+; 1.320 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.586      ;
+; 1.338 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.604      ;
+; 1.359 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.625      ;
+; 1.362 ; part1:SimpleProcessor|regn:reg_3|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.635      ;
+; 1.386 ; part1:SimpleProcessor|regn:reg_4|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.659      ;
+; 1.390 ; part1:SimpleProcessor|regn:reg_4|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.663      ;
+; 1.391 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[6]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.657      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[1]'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T1      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T1      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T2      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T2      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T3      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T3      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_1|Q[0] ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 7.725 ; 7.725 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 7.143 ; 7.143 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 7.387 ; 7.387 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 7.725 ; 7.725 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 7.255 ; 7.255 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 6.751 ; 6.751 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 7.241 ; 7.241 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 7.301 ; 7.301 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 3.007 ; 3.007 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 3.457 ; 3.457 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.822 ; 0.822 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 0.386  ; 0.386  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -3.942 ; -3.942 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -3.929 ; -3.929 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -4.177 ; -4.177 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -4.626 ; -4.626 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -3.831 ; -3.831 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -3.906 ; -3.906 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -4.943 ; -4.943 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.016 ; -0.016 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.875 ; -0.875 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.386  ; 0.386  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 8.273 ; 8.273 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.679 ; 6.679 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 6.681 ; 6.681 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 6.932 ; 6.932 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 6.738 ; 6.738 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 6.883 ; 6.883 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 6.930 ; 6.930 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 6.715 ; 6.715 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 6.653 ; 6.653 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 7.201 ; 7.201 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 8.273 ; 8.273 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 6.653 ; 6.653 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.679 ; 6.679 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 6.681 ; 6.681 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 6.932 ; 6.932 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 6.738 ; 6.738 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 6.883 ; 6.883 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 6.930 ; 6.930 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 6.715 ; 6.715 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 6.653 ; 6.653 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 7.201 ; 7.201 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 7.390 ; 7.390 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[1] ; -1.761 ; -101.304      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[1] ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[1] ; -1.380 ; -113.380             ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[1]'                                                                                                                               ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.761 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.796      ;
+; -1.761 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.797      ;
+; -1.758 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.793      ;
+; -1.756 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.791      ;
+; -1.753 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.788      ;
+; -1.742 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.778      ;
+; -1.727 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.762      ;
+; -1.718 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.753      ;
+; -1.718 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.754      ;
+; -1.713 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.748      ;
+; -1.712 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.747      ;
+; -1.712 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.748      ;
+; -1.709 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.737      ;
+; -1.708 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.743      ;
+; -1.707 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.742      ;
+; -1.698 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.734      ;
+; -1.684 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.719      ;
+; -1.678 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.714      ;
+; -1.678 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.713      ;
+; -1.675 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.702      ;
+; -1.673 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.709      ;
+; -1.670 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.706      ;
+; -1.668 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.703      ;
+; -1.667 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.703      ;
+; -1.664 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.700      ;
+; -1.657 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.685      ;
+; -1.653 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.688      ;
+; -1.648 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.683      ;
+; -1.639 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.666      ;
+; -1.638 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.674      ;
+; -1.635 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.662      ;
+; -1.634 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.661      ;
+; -1.627 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.663      ;
+; -1.623 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.650      ;
+; -1.621 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.657      ;
+; -1.605 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.633      ;
+; -1.598 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.634      ;
+; -1.596 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.632      ;
+; -1.596 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.631      ;
+; -1.594 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.630      ;
+; -1.593 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.628      ;
+; -1.591 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.627      ;
+; -1.584 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.620      ;
+; -1.576 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.612      ;
+; -1.574 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.609      ;
+; -1.572 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.608      ;
+; -1.571 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.607      ;
+; -1.569 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.605      ;
+; -1.567 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.594      ;
+; -1.562 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.598      ;
+; -1.560 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.595      ;
+; -1.555 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.590      ;
+; -1.553 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.581      ;
+; -1.552 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.587      ;
+; -1.550 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.585      ;
+; -1.548 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.584      ;
+; -1.548 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.584      ;
+; -1.547 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.582      ;
+; -1.544 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.579      ;
+; -1.542 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.578      ;
+; -1.541 ; part1:SimpleProcessor|regn:regIR|Q[7] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.577      ;
+; -1.541 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.568      ;
+; -1.541 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.576      ;
+; -1.539 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.567      ;
+; -1.535 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.570      ;
+; -1.534 ; part1:SimpleProcessor|regn:regIR|Q[0] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.569      ;
+; -1.529 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.565      ;
+; -1.527 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.562      ;
+; -1.522 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.558      ;
+; -1.510 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.545      ;
+; -1.507 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.542      ;
+; -1.505 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.541      ;
+; -1.502 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.538      ;
+; -1.499 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.535      ;
+; -1.498 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.534      ;
+; -1.496 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.524      ;
+; -1.493 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.529      ;
+; -1.492 ; part1:SimpleProcessor|regn:regIR|Q[8] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.528      ;
+; -1.489 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.525      ;
+; -1.489 ; part1:SimpleProcessor|regn:regIR|Q[1] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.517      ;
+; -1.489 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.516      ;
+; -1.487 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.515      ;
+; -1.482 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.518      ;
+; -1.479 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.507      ;
+; -1.479 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.515      ;
+; -1.477 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.513      ;
+; -1.475 ; part1:SimpleProcessor|regn:regIR|Q[2] ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.004     ; 2.503      ;
+; -1.471 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.507      ;
+; -1.458 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.494      ;
+; -1.457 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.492      ;
+; -1.453 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.488      ;
+; -1.452 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.487      ;
+; -1.448 ; part1:SimpleProcessor|Tstep_Q.T1      ; part1:SimpleProcessor|BusWires[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.484      ;
+; -1.438 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.474      ;
+; -1.437 ; part1:SimpleProcessor|regn:regIR|Q[3] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.472      ;
+; -1.435 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.470      ;
+; -1.433 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 2.469      ;
+; -1.433 ; part1:SimpleProcessor|regn:regIR|Q[6] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.468      ;
+; -1.430 ; part1:SimpleProcessor|regn:regIR|Q[4] ; part1:SimpleProcessor|BusWires[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.465      ;
+; -1.429 ; part1:SimpleProcessor|regn:regIR|Q[5] ; part1:SimpleProcessor|BusWires[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 2.464      ;
++--------+---------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[1]'                                                                                                                                   ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; part1:SimpleProcessor|Tstep_Q.T0      ; part1:SimpleProcessor|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.395      ;
+; 0.245 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_0|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_0|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.398      ;
+; 0.248 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_0|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.400      ;
+; 0.320 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_2|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.473      ;
+; 0.324 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_2|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.476      ;
+; 0.326 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_2|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_2|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.479      ;
+; 0.327 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_2|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.479      ;
+; 0.333 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.486      ;
+; 0.334 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_2|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.487      ;
+; 0.356 ; part1:SimpleProcessor|regn:reg_0|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[6]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; part1:SimpleProcessor|regn:reg_0|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[2]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.509      ;
+; 0.360 ; part1:SimpleProcessor|regn:reg_0|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; part1:SimpleProcessor|regn:regA|Q[8]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.367 ; part1:SimpleProcessor|regn:reg_0|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; part1:SimpleProcessor|regn:regA|Q[7]  ; part1:SimpleProcessor|regn:regG|Q[7]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.371 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[0]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.375 ; part1:SimpleProcessor|regn:reg_2|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; part1:SimpleProcessor|regn:reg_2|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; part1:SimpleProcessor|regn:reg_2|Q[2] ; part1:SimpleProcessor|BusWires[2]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; part1:SimpleProcessor|regn:reg_2|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; part1:SimpleProcessor|regn:reg_2|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.531      ;
+; 0.405 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_2|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.558      ;
+; 0.436 ; part1:SimpleProcessor|regn:reg_2|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.587      ;
+; 0.445 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.597      ;
+; 0.446 ; part1:SimpleProcessor|regn:reg_2|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.597      ;
+; 0.453 ; part1:SimpleProcessor|regn:reg_2|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.604      ;
+; 0.455 ; part1:SimpleProcessor|regn:reg_2|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.606      ;
+; 0.459 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.603      ;
+; 0.462 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_7|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.008      ; 0.622      ;
+; 0.463 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_3|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.607      ;
+; 0.469 ; part1:SimpleProcessor|regn:regA|Q[4]  ; part1:SimpleProcessor|regn:regG|Q[4]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.621      ;
+; 0.471 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.615      ;
+; 0.473 ; part1:SimpleProcessor|regn:regA|Q[1]  ; part1:SimpleProcessor|regn:regG|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 0.611      ;
+; 0.474 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.618      ;
+; 0.475 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.621      ;
+; 0.477 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_0|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.628      ;
+; 0.487 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.633      ;
+; 0.491 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_1|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.637      ;
+; 0.495 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.647      ;
+; 0.502 ; part1:SimpleProcessor|regn:regA|Q[5]  ; part1:SimpleProcessor|regn:regG|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 0.640      ;
+; 0.507 ; part1:SimpleProcessor|regn:regA|Q[7]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.659      ;
+; 0.511 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.663      ;
+; 0.518 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.664      ;
+; 0.530 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[4]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.682      ;
+; 0.534 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_1|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.681      ;
+; 0.537 ; part1:SimpleProcessor|BusWires[7]     ; part1:SimpleProcessor|regn:reg_5|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.684      ;
+; 0.542 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_5|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.689      ;
+; 0.546 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.693      ;
+; 0.546 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[2]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_1|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.694      ;
+; 0.549 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[7]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551 ; part1:SimpleProcessor|BusWires[3]     ; part1:SimpleProcessor|regn:reg_1|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.698      ;
+; 0.552 ; part1:SimpleProcessor|regn:reg_1|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.710      ;
+; 0.553 ; part1:SimpleProcessor|regn:reg_0|Q[8] ; part1:SimpleProcessor|BusWires[8]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.706      ;
+; 0.554 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_7|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 0.715      ;
+; 0.555 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_4|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 0.700      ;
+; 0.556 ; part1:SimpleProcessor|regn:reg_1|Q[5] ; part1:SimpleProcessor|BusWires[5]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.713      ;
+; 0.557 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_4|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 0.702      ;
+; 0.557 ; part1:SimpleProcessor|regn:reg_1|Q[7] ; part1:SimpleProcessor|BusWires[7]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.714      ;
+; 0.558 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:reg_3|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 0.703      ;
+; 0.558 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 0.703      ;
+; 0.558 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.710      ;
+; 0.559 ; part1:SimpleProcessor|regn:reg_1|Q[1] ; part1:SimpleProcessor|BusWires[1]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.716      ;
+; 0.559 ; part1:SimpleProcessor|regn:reg_1|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.717      ;
+; 0.560 ; part1:SimpleProcessor|regn:reg_1|Q[3] ; part1:SimpleProcessor|BusWires[3]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.717      ;
+; 0.565 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.717      ;
+; 0.567 ; part1:SimpleProcessor|BusWires[0]     ; part1:SimpleProcessor|regn:reg_0|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.718      ;
+; 0.567 ; part1:SimpleProcessor|regn:reg_1|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.725      ;
+; 0.567 ; part1:SimpleProcessor|regn:reg_0|Q[4] ; part1:SimpleProcessor|BusWires[4]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.720      ;
+; 0.569 ; part1:SimpleProcessor|BusWires[4]     ; part1:SimpleProcessor|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.720      ;
+; 0.569 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.716      ;
+; 0.569 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:reg_1|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.716      ;
+; 0.569 ; part1:SimpleProcessor|regn:reg_0|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.722      ;
+; 0.570 ; part1:SimpleProcessor|regn:reg_1|Q[2] ; part1:SimpleProcessor|BusWires[2]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.728      ;
+; 0.570 ; part1:SimpleProcessor|regn:reg_1|Q[6] ; part1:SimpleProcessor|BusWires[6]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.728      ;
+; 0.571 ; part1:SimpleProcessor|Tstep_Q.T2      ; part1:SimpleProcessor|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.723      ;
+; 0.572 ; part1:SimpleProcessor|regn:reg_0|Q[0] ; part1:SimpleProcessor|BusWires[0]     ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.725      ;
+; 0.576 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_0|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.727      ;
+; 0.581 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.733      ;
+; 0.584 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_4|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.728      ;
+; 0.584 ; part1:SimpleProcessor|regn:regA|Q[6]  ; part1:SimpleProcessor|regn:regG|Q[8]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.736      ;
+; 0.585 ; part1:SimpleProcessor|regn:regA|Q[3]  ; part1:SimpleProcessor|regn:regG|Q[3]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.737      ;
+; 0.586 ; part1:SimpleProcessor|BusWires[5]     ; part1:SimpleProcessor|regn:regA|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 0.752      ;
+; 0.587 ; part1:SimpleProcessor|BusWires[2]     ; part1:SimpleProcessor|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.731      ;
+; 0.592 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.738      ;
+; 0.598 ; part1:SimpleProcessor|BusWires[1]     ; part1:SimpleProcessor|regn:regA|Q[1]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 0.764      ;
+; 0.600 ; part1:SimpleProcessor|regn:regA|Q[2]  ; part1:SimpleProcessor|regn:regG|Q[6]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.752      ;
+; 0.601 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_3|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.745      ;
+; 0.603 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_4|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 0.747      ;
+; 0.604 ; part1:SimpleProcessor|BusWires[6]     ; part1:SimpleProcessor|regn:reg_0|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.755      ;
+; 0.604 ; part1:SimpleProcessor|BusWires[8]     ; part1:SimpleProcessor|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.750      ;
+; 0.609 ; part1:SimpleProcessor|regn:regA|Q[4]  ; part1:SimpleProcessor|regn:regG|Q[5]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.761      ;
+; 0.613 ; part1:SimpleProcessor|Tstep_Q.T3      ; part1:SimpleProcessor|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 0.772      ;
+; 0.613 ; part1:SimpleProcessor|regn:regA|Q[1]  ; part1:SimpleProcessor|regn:regG|Q[2]  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 0.751      ;
+; 0.616 ; part1:SimpleProcessor|regn:regA|Q[0]  ; part1:SimpleProcessor|regn:regG|Q[4]  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.768      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[1]'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|BusWires[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T1      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T1      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T2      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T2      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T3      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|Tstep_Q.T3      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regA|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regG|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:regIR|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_0|Q[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; part1:SimpleProcessor|regn:reg_1|Q[0] ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 3.877 ; 3.877 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 3.546 ; 3.546 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 3.663 ; 3.663 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 3.877 ; 3.877 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 3.603 ; 3.603 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 3.383 ; 3.383 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 3.569 ; 3.569 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 3.618 ; 3.618 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.062 ; 1.062 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 1.274 ; 1.274 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.138 ; 0.138 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 0.436  ; 0.436  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -2.181 ; -2.181 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -2.180 ; -2.180 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -2.312 ; -2.312 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -2.523 ; -2.523 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -2.139 ; -2.139 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -2.148 ; -2.148 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -2.621 ; -2.621 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 0.223  ; 0.223  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.185 ; -0.185 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.436  ; 0.436  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 4.478 ; 4.478 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.720 ; 3.720 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.722 ; 3.722 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.864 ; 3.864 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.692 ; 3.692 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.824 ; 3.824 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.845 ; 3.845 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.738 ; 3.738 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.707 ; 3.707 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 3.988 ; 3.988 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 4.478 ; 4.478 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 3.692 ; 3.692 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.720 ; 3.720 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.722 ; 3.722 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.864 ; 3.864 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.692 ; 3.692 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.824 ; 3.824 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.845 ; 3.845 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.738 ; 3.738 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.707 ; 3.707 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 3.988 ; 3.988 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 4.030 ; 4.030 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.304   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  KEY[1]          ; -5.304   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -331.436 ; 0.0   ; 0.0      ; 0.0     ; -113.38             ;
+;  KEY[1]          ; -331.436 ; 0.000 ; N/A      ; N/A     ; -113.380            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 7.725 ; 7.725 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 7.143 ; 7.143 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 7.387 ; 7.387 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 7.725 ; 7.725 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 7.255 ; 7.255 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 6.751 ; 6.751 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 7.241 ; 7.241 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 7.301 ; 7.301 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 3.007 ; 3.007 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 3.457 ; 3.457 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.822 ; 0.822 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[1]     ; 0.436  ; 0.436  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -2.181 ; -2.181 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -2.180 ; -2.180 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -2.312 ; -2.312 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -2.523 ; -2.523 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -2.139 ; -2.139 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -2.148 ; -2.148 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -2.621 ; -2.621 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 0.223  ; 0.223  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.185 ; -0.185 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.436  ; 0.436  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 8.273 ; 8.273 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.679 ; 6.679 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 6.681 ; 6.681 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 6.932 ; 6.932 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 6.738 ; 6.738 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 6.883 ; 6.883 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 6.930 ; 6.930 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 6.715 ; 6.715 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 6.653 ; 6.653 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 7.201 ; 7.201 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 8.273 ; 8.273 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[1]     ; 3.692 ; 3.692 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.720 ; 3.720 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.722 ; 3.722 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.864 ; 3.864 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.692 ; 3.692 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.824 ; 3.824 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.845 ; 3.845 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.738 ; 3.738 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.707 ; 3.707 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 3.988 ; 3.988 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 4.030 ; 4.030 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[1]     ; KEY[1]   ; 3541     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[1]     ; KEY[1]   ; 3541     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 24    ; 24   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 13    ; 13   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Nov 04 20:36:20 2019
+Info: Command: quartus_sta OnBoard -c OnBoard
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'OnBoard.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[1] KEY[1]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.304
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.304      -331.436 KEY[1] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 KEY[1] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -113.380 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.761
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.761      -101.304 KEY[1] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 KEY[1] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -113.380 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4597 megabytes
+    Info: Processing ended: Mon Nov 04 20:36:21 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

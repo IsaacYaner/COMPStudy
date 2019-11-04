@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part1
-Mon Nov 04 17:43:15 2019
+Mon Nov 04 21:41:36 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -27,10 +27,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  19. Parameter Settings for User Entity Instance: regn:regA
  20. Parameter Settings for User Entity Instance: regn:regIR
  21. Parameter Settings for User Entity Instance: regn:regG
- 22. Port Connectivity Checks: "dec3to8:decY"
- 23. Port Connectivity Checks: "dec3to8:decX"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 22. Port Connectivity Checks: "dec3to8:decX"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +55,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 04 17:43:15 2019            ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 04 21:41:36 2019            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part1                                            ;
 ; Top-level Entity Name              ; part1                                            ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 209                                              ;
-;     Total combinational functions  ; 118                                              ;
-;     Dedicated logic registers      ; 112                                              ;
-; Total registers                    ; 112                                              ;
+; Total logic elements               ; 194                                              ;
+;     Total combinational functions  ; 112                                              ;
+;     Dedicated logic registers      ; 103                                              ;
+; Total registers                    ; 103                                              ;
 ; Total pins                         ; 22                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
@@ -189,49 +188,51 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 209   ;
+; Estimated Total logic elements              ; 194   ;
 ;                                             ;       ;
-; Total combinational functions               ; 118   ;
+; Total combinational functions               ; 112   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 87    ;
-;     -- 3 input functions                    ; 26    ;
-;     -- <=2 input functions                  ; 5     ;
+;     -- 4 input functions                    ; 93    ;
+;     -- 3 input functions                    ; 16    ;
+;     -- <=2 input functions                  ; 3     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 109   ;
+;     -- normal mode                          ; 103   ;
 ;     -- arithmetic mode                      ; 9     ;
 ;                                             ;       ;
-; Total registers                             ; 112   ;
-;     -- Dedicated logic registers            ; 112   ;
+; Total registers                             ; 103   ;
+;     -- Dedicated logic registers            ; 103   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 22    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; Clock ;
-; Maximum fan-out                             ; 112   ;
-; Total fan-out                               ; 782   ;
-; Average fan-out                             ; 3.10  ;
+; Maximum fan-out                             ; 103   ;
+; Total fan-out                               ; 745   ;
+; Average fan-out                             ; 3.14  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |part1                     ; 118 (108)         ; 112 (13)     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |part1              ; work         ;
-;    |regn:regA|             ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regA    ; work         ;
-;    |regn:regG|             ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regG    ; work         ;
-;    |regn:regIR|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regIR   ; work         ;
-;    |regn:reg_0|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_0   ; work         ;
-;    |regn:reg_1|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_1   ; work         ;
-;    |regn:reg_2|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_2   ; work         ;
-;    |regn:reg_3|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_3   ; work         ;
-;    |regn:reg_4|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_4   ; work         ;
-;    |regn:reg_5|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_5   ; work         ;
-;    |regn:reg_6|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_6   ; work         ;
-;    |regn:reg_7|            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_7   ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; |part1                               ; 112 (85)          ; 103 (4)      ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |part1                                 ; work         ;
+;    |addsubUnit:AdderSubstracterUnit| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|addsubUnit:AdderSubstracterUnit ; work         ;
+;    |dec3to8:decX|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|dec3to8:decX                    ; work         ;
+;    |regn:regA|                       ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regA                       ; work         ;
+;    |regn:regG|                       ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regG                       ; work         ;
+;    |regn:regIR|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:regIR                      ; work         ;
+;    |regn:reg_0|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_0                      ; work         ;
+;    |regn:reg_1|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_1                      ; work         ;
+;    |regn:reg_2|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_2                      ; work         ;
+;    |regn:reg_3|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_3                      ; work         ;
+;    |regn:reg_4|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_4                      ; work         ;
+;    |regn:reg_5|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_5                      ; work         ;
+;    |regn:reg_6|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_6                      ; work         ;
+;    |regn:reg_7|                      ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|regn:reg_7                      ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -253,12 +254,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 112   ;
+; Total registers                              ; 103   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 108   ;
+; Number of registers using Clock Enable       ; 99    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -268,8 +269,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 11:1               ; 9 bits    ; 63 LEs        ; 54 LEs               ; 9 LEs                  ; Yes        ; |part1|BusWires[3]~reg0    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |part1|Mux8                ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |part1|Mux9                ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 63 LEs               ; 27 LEs                 ; No         ; |part1|Mux36               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -384,15 +385,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------+
-; Port Connectivity Checks: "dec3to8:decY" ;
-+------+-------+----------+----------------+
-; Port ; Type  ; Severity ; Details        ;
-+------+-------+----------+----------------+
-; en   ; Input ; Info     ; Stuck at VCC   ;
-+------+-------+----------+----------------+
-
-
-+------------------------------------------+
 ; Port Connectivity Checks: "dec3to8:decX" ;
 +------+-------+----------+----------------+
 ; Port ; Type  ; Severity ; Details        ;
@@ -416,7 +408,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 04 17:43:13 2019
+    Info: Processing started: Mon Nov 04 21:41:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 8 design units, including 4 entities, in source file part1.vhd
@@ -431,16 +423,17 @@ Info (12021): Found 8 design units, including 4 entities, in source file part1.v
 Info (12127): Elaborating entity "part1" for the top level hierarchy
 Info (12128): Elaborating entity "dec3to8" for hierarchy "dec3to8:decX"
 Info (12128): Elaborating entity "regn" for hierarchy "regn:reg_0"
+Info (12128): Elaborating entity "addsubUnit" for hierarchy "addsubUnit:AdderSubstracterUnit"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 225 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 209 logic cells
+    Info (21061): Implemented 203 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4661 megabytes
-    Info: Processing ended: Mon Nov 04 17:43:15 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Mon Nov 04 21:41:36 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

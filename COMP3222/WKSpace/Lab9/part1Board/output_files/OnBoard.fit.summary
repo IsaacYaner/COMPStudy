@@ -1,0 +1,16 @@
+Fitter Status : Failed - Mon Nov 04 21:50:22 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : OnBoard
+Top-level Entity Name : OnBoard
+Family : Cyclone II
+Device : EP2C5T144C6
+Timing Models : Final
+Total logic elements : 193 / 4,608 ( 4 % )
+    Total combinational functions : 111 / 4,608 ( 2 % )
+    Dedicated logic registers : 103 / 4,608 ( 2 % )
+Total registers : 103
+Total pins : 22 / 89 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
