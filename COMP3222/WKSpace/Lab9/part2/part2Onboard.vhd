@@ -1,0 +1,20 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ENTITY part2Onboard IS 
+	PORT (SW		: IN	STD_LOGIC_VECTOR(9 DOWNTO 0);
+			KEY	: IN	STD_LOGIC_VECTOR(2 DOWNTO 0);
+			LEDR	: OUT	STD_LOGIC_VECTOR(9 DOWNTO 0));
+END part2Onboard;
+
+ARCHITECTURE Behavior OF part2Onboard IS
+
+COMPONENT part2 IS 
+	PORT (MClock, PClock, Resetn, Run	: IN	STD_LOGIC;
+			BUSWires								: OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+			Done									: OUT STD_LOGIC);
+END COMPONENT;
+
+BEGIN
+	Processor : part2 PORT MAP (KEY(1), KEY(2), KEY(0), SW(9), LEDR(8 DOWNTO 0), LEDR(9));
+END Behavior;
