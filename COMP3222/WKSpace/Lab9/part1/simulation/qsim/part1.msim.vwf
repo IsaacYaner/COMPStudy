@@ -1692,7 +1692,7 @@ SIGNAL("part1_vlg_vec_tst|i1|DIN~combout[0]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[8]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1702,7 +1702,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[8]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[7]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1712,7 +1712,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[7]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[6]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1722,7 +1722,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[6]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[5]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1732,7 +1732,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[5]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[4]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1742,7 +1742,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[4]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[3]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1752,7 +1752,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[3]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[2]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1762,7 +1762,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[2]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[1]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1772,7 +1772,97 @@ SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[1]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[0]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regA|Q[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1872,7 +1962,7 @@ SIGNAL("part1_vlg_vec_tst|i1|regG|Q[0]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[8]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1882,7 +1972,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[8]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[7]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1892,7 +1982,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[7]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[6]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1902,7 +1992,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[6]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[5]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1912,7 +2002,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[5]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[4]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1922,7 +2012,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[4]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[3]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1932,7 +2022,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[3]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[2]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1942,7 +2032,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[2]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[1]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1952,7 +2042,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[1]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[0]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2052,7 +2142,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_7|Q[0]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[8]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2062,7 +2152,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[8]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[7]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2072,7 +2162,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[7]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[6]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2082,7 +2172,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[6]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[5]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2092,7 +2182,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[5]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[4]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2102,7 +2192,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[4]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[3]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2112,7 +2202,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[3]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[2]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2122,7 +2212,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[2]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[1]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2132,367 +2222,7 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[1]")
 	PARENT = "";
 }
 
-SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_2|Q[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_0|Q[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("part1_vlg_vec_tst|i1|regA|Q[0]")
+SIGNAL("part1_vlg_vec_tst|i1|reg_5|Q[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2673,6 +2403,276 @@ SIGNAL("part1_vlg_vec_tst|i1|reg_6|Q[1]")
 }
 
 SIGNAL("part1_vlg_vec_tst|i1|reg_6|Q[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_3|Q[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|reg_4|Q[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("part1_vlg_vec_tst|i1|regIR|Q[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -4697,7 +4697,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|DIN~combout[0]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[8]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[8]")
 {
 	NODE
 	{
@@ -4706,85 +4706,162 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[8]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[7]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 110.0;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 730.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[6]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 120.0;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 210.0;
+		LEVEL 1 FOR 790.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 130.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 730.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[5]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 210.0;
+		LEVEL 1 FOR 790.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[4]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 70.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 890.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 110.0;
+		LEVEL 0 FOR 130.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 810.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
@@ -4865,330 +4942,6 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regG|Q[1]")
 }
 
 TRANSITION_LIST("part1_vlg_vec_tst|i1|regG|Q[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_2|Q[0]")
 {
 	NODE
 	{
@@ -5286,7 +5039,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_0|Q[0]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[8]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[8]")
 {
 	NODE
 	{
@@ -5295,7 +5048,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[8]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[7]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[7]")
 {
 	NODE
 	{
@@ -5304,7 +5057,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[7]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[6]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[6]")
 {
 	NODE
 	{
@@ -5313,7 +5066,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[6]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[5]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[5]")
 {
 	NODE
 	{
@@ -5322,7 +5075,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[5]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[4]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[4]")
 {
 	NODE
 	{
@@ -5331,7 +5084,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[4]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[3]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[3]")
 {
 	NODE
 	{
@@ -5340,7 +5093,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[3]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[2]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[2]")
 {
 	NODE
 	{
@@ -5349,7 +5102,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[2]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[1]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[1]")
 {
 	NODE
 	{
@@ -5358,7 +5111,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[1]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[0]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_7|Q[0]")
 {
 	NODE
 	{
@@ -5367,7 +5120,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[0]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[8]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[8]")
 {
 	NODE
 	{
@@ -5376,7 +5129,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[8]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[7]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[7]")
 {
 	NODE
 	{
@@ -5385,7 +5138,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[7]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[6]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[6]")
 {
 	NODE
 	{
@@ -5394,7 +5147,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[6]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[5]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[5]")
 {
 	NODE
 	{
@@ -5403,7 +5156,7 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[5]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[4]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[4]")
 {
 	NODE
 	{
@@ -5412,45 +5165,39 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[4]")
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[3]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 210.0;
-		LEVEL 1 FOR 790.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[2]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 130.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 790.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[1]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 210.0;
-		LEVEL 1 FOR 790.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("part1_vlg_vec_tst|i1|regA|Q[0]")
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_5|Q[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 130.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 790.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -5615,6 +5362,259 @@ TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_6|Q[0]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_3|Q[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|reg_4|Q[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 730.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 730.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 890.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("part1_vlg_vec_tst|i1|regIR|Q[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 810.0;
 	}
 }
 
@@ -7124,7 +7124,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 166;
@@ -7133,7 +7133,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 167;
@@ -7142,7 +7142,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 168;
@@ -7151,7 +7151,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 169;
@@ -7160,7 +7160,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 170;
@@ -7169,7 +7169,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 171;
@@ -7178,7 +7178,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 172;
@@ -7187,7 +7187,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 173;
@@ -7196,7 +7196,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 174;
@@ -7205,7 +7205,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 175;
@@ -7214,7 +7214,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 176;
@@ -7223,7 +7223,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 177;
@@ -7232,7 +7232,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 178;
@@ -7241,7 +7241,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 179;
@@ -7250,7 +7250,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 180;
@@ -7259,7 +7259,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 181;
@@ -7268,7 +7268,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 182;
@@ -7277,7 +7277,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 183;
@@ -7286,7 +7286,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 184;
@@ -7295,7 +7295,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 185;
@@ -7304,7 +7304,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 186;
@@ -7313,7 +7313,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 187;
@@ -7322,7 +7322,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 188;
@@ -7331,7 +7331,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 189;
@@ -7340,7 +7340,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 190;
@@ -7349,7 +7349,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 191;
@@ -7358,7 +7358,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regG|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 192;
@@ -7367,7 +7367,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 193;
@@ -7376,7 +7376,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 194;
@@ -7385,7 +7385,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 195;
@@ -7394,7 +7394,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 196;
@@ -7403,7 +7403,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 197;
@@ -7412,7 +7412,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 198;
@@ -7421,7 +7421,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 199;
@@ -7430,7 +7430,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 200;
@@ -7439,7 +7439,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 201;
@@ -7448,7 +7448,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 202;
@@ -7457,7 +7457,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 203;
@@ -7466,7 +7466,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 204;
@@ -7475,7 +7475,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 205;
@@ -7484,7 +7484,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 206;
@@ -7493,7 +7493,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 207;
@@ -7502,7 +7502,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 208;
@@ -7511,7 +7511,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 209;
@@ -7520,7 +7520,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_7|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 210;
@@ -7529,7 +7529,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 211;
@@ -7538,7 +7538,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 212;
@@ -7547,7 +7547,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 213;
@@ -7556,7 +7556,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 214;
@@ -7565,7 +7565,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 215;
@@ -7574,7 +7574,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 216;
@@ -7583,7 +7583,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 217;
@@ -7592,7 +7592,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 218;
@@ -7601,7 +7601,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_2|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_5|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 219;
@@ -7610,7 +7610,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 220;
@@ -7619,7 +7619,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 221;
@@ -7628,7 +7628,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 222;
@@ -7637,7 +7637,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 223;
@@ -7646,7 +7646,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 224;
@@ -7655,7 +7655,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 225;
@@ -7664,7 +7664,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 226;
@@ -7673,7 +7673,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 227;
@@ -7682,7 +7682,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_0|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 228;
@@ -7691,7 +7691,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 229;
@@ -7700,7 +7700,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 230;
@@ -7709,7 +7709,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 231;
@@ -7718,7 +7718,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 232;
@@ -7727,7 +7727,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 233;
@@ -7736,7 +7736,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 234;
@@ -7745,7 +7745,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 235;
@@ -7754,7 +7754,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 236;
@@ -7763,7 +7763,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 237;
@@ -7772,7 +7772,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 238;
@@ -7781,7 +7781,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 239;
@@ -7790,7 +7790,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 240;
@@ -7799,7 +7799,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 241;
@@ -7808,7 +7808,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 242;
@@ -7817,7 +7817,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 243;
@@ -7826,7 +7826,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 244;
@@ -7835,7 +7835,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 245;
@@ -7844,7 +7844,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|regA|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_3|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 246;
@@ -7853,7 +7853,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 247;
@@ -7862,7 +7862,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 248;
@@ -7871,7 +7871,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 249;
@@ -7880,7 +7880,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 250;
@@ -7889,7 +7889,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 251;
@@ -7898,7 +7898,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 252;
@@ -7907,7 +7907,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 253;
@@ -7916,7 +7916,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 254;
@@ -7925,7 +7925,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_1|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|reg_4|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 255;
@@ -7934,7 +7934,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[8]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 256;
@@ -7943,7 +7943,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[7]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 257;
@@ -7952,7 +7952,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[6]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 258;
@@ -7961,7 +7961,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[5]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 259;
@@ -7970,7 +7970,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[4]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 260;
@@ -7979,7 +7979,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[3]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 261;
@@ -7988,7 +7988,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[2]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 262;
@@ -7997,7 +7997,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[1]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 263;
@@ -8006,7 +8006,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "part1_vlg_vec_tst|i1|reg_6|Q[0]";
+	CHANNEL = "part1_vlg_vec_tst|i1|regIR|Q[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 264;

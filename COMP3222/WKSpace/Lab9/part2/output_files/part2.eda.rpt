@@ -1,6 +1,6 @@
 EDA Netlist Writer report for part2
-Mon Nov 11 12:46:29 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Nov 12 13:04:48 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 11 12:46:29 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Nov 12 13:04:48 2019 ;
 ; Revision Name             ; part2                                 ;
 ; Top-level Entity Name     ; part2                                 ;
 ; Family                    ; Cyclone II                            ;
@@ -65,13 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Simulation Generated Files                                                      ;
-+---------------------------------------------------------------------------------+
-; Generated Files                                                                 ;
-+---------------------------------------------------------------------------------+
-; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/simulation/modelsim/part2.vo ;
-+---------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                              ;
++-----------------------------------------------------------------------------------------+
+; Generated Files                                                                         ;
++-----------------------------------------------------------------------------------------+
+; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/simulation/modelsim/part2.vo ;
++-----------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -79,15 +79,15 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 11 12:46:28 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 12 13:04:40 2019
 Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog part2 -c part2
 Info (119006): Selected device EP2C20F484C7 for design "part2"
-Info (204019): Generated file part2.vo in folder "W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file part2.vo in folder "C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4539 megabytes
-    Info: Processing ended: Mon Nov 11 12:46:29 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Tue Nov 12 13:04:48 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:01
 
 

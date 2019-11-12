@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "11/04/2019 21:55:49"
+// DATE "11/12/2019 12:30:41"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -181,17 +181,17 @@ wire \Mux28~4_combout ;
 wire \Mux28~5_combout ;
 wire \Mux28~6_combout ;
 wire [8:0] \DIN~combout ;
-wire [8:0] \regIR|Q ;
-wire [8:0] \regG|Q ;
-wire [8:0] \reg_5|Q ;
-wire [8:0] \reg_7|Q ;
-wire [8:0] \reg_4|Q ;
 wire [8:0] \reg_2|Q ;
-wire [8:0] \reg_0|Q ;
-wire [8:0] \reg_3|Q ;
 wire [8:0] \regA|Q ;
+wire [8:0] \regG|Q ;
+wire [8:0] \reg_0|Q ;
+wire [8:0] \reg_7|Q ;
+wire [8:0] \reg_5|Q ;
 wire [8:0] \reg_1|Q ;
 wire [8:0] \reg_6|Q ;
+wire [8:0] \reg_3|Q ;
+wire [8:0] \reg_4|Q ;
+wire [8:0] \regIR|Q ;
 
 
 cycloneii_lcell_ff \regG|Q[2] (

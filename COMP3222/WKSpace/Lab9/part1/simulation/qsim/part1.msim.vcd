@@ -3,7 +3,7 @@ $comment
 		vcd file part1.msim.vcd -direction
 $end
 $date
-	Mon Nov 04 21:55:50 2019
+	Tue Nov 12 12:30:42 2019
 $end
 $version
 	ModelSim Version 10.1d
@@ -170,105 +170,105 @@ $var wire 1 \! DIN~combout [3] $end
 $var wire 1 ]! DIN~combout [2] $end
 $var wire 1 ^! DIN~combout [1] $end
 $var wire 1 _! DIN~combout [0] $end
-$var wire 1 `! regIR|Q [8] $end
-$var wire 1 a! regIR|Q [7] $end
-$var wire 1 b! regIR|Q [6] $end
-$var wire 1 c! regIR|Q [5] $end
-$var wire 1 d! regIR|Q [4] $end
-$var wire 1 e! regIR|Q [3] $end
-$var wire 1 f! regIR|Q [2] $end
-$var wire 1 g! regIR|Q [1] $end
-$var wire 1 h! regIR|Q [0] $end
-$var wire 1 i! regG|Q [8] $end
-$var wire 1 j! regG|Q [7] $end
-$var wire 1 k! regG|Q [6] $end
-$var wire 1 l! regG|Q [5] $end
-$var wire 1 m! regG|Q [4] $end
-$var wire 1 n! regG|Q [3] $end
-$var wire 1 o! regG|Q [2] $end
-$var wire 1 p! regG|Q [1] $end
-$var wire 1 q! regG|Q [0] $end
-$var wire 1 r! reg_5|Q [8] $end
-$var wire 1 s! reg_5|Q [7] $end
-$var wire 1 t! reg_5|Q [6] $end
-$var wire 1 u! reg_5|Q [5] $end
-$var wire 1 v! reg_5|Q [4] $end
-$var wire 1 w! reg_5|Q [3] $end
-$var wire 1 x! reg_5|Q [2] $end
-$var wire 1 y! reg_5|Q [1] $end
-$var wire 1 z! reg_5|Q [0] $end
-$var wire 1 {! reg_7|Q [8] $end
-$var wire 1 |! reg_7|Q [7] $end
-$var wire 1 }! reg_7|Q [6] $end
-$var wire 1 ~! reg_7|Q [5] $end
-$var wire 1 !" reg_7|Q [4] $end
-$var wire 1 "" reg_7|Q [3] $end
-$var wire 1 #" reg_7|Q [2] $end
-$var wire 1 $" reg_7|Q [1] $end
-$var wire 1 %" reg_7|Q [0] $end
-$var wire 1 &" reg_4|Q [8] $end
-$var wire 1 '" reg_4|Q [7] $end
-$var wire 1 (" reg_4|Q [6] $end
-$var wire 1 )" reg_4|Q [5] $end
-$var wire 1 *" reg_4|Q [4] $end
-$var wire 1 +" reg_4|Q [3] $end
-$var wire 1 ," reg_4|Q [2] $end
-$var wire 1 -" reg_4|Q [1] $end
-$var wire 1 ." reg_4|Q [0] $end
-$var wire 1 /" reg_2|Q [8] $end
-$var wire 1 0" reg_2|Q [7] $end
-$var wire 1 1" reg_2|Q [6] $end
-$var wire 1 2" reg_2|Q [5] $end
-$var wire 1 3" reg_2|Q [4] $end
-$var wire 1 4" reg_2|Q [3] $end
-$var wire 1 5" reg_2|Q [2] $end
-$var wire 1 6" reg_2|Q [1] $end
-$var wire 1 7" reg_2|Q [0] $end
-$var wire 1 8" reg_0|Q [8] $end
-$var wire 1 9" reg_0|Q [7] $end
-$var wire 1 :" reg_0|Q [6] $end
-$var wire 1 ;" reg_0|Q [5] $end
-$var wire 1 <" reg_0|Q [4] $end
-$var wire 1 =" reg_0|Q [3] $end
-$var wire 1 >" reg_0|Q [2] $end
-$var wire 1 ?" reg_0|Q [1] $end
-$var wire 1 @" reg_0|Q [0] $end
-$var wire 1 A" reg_3|Q [8] $end
-$var wire 1 B" reg_3|Q [7] $end
-$var wire 1 C" reg_3|Q [6] $end
-$var wire 1 D" reg_3|Q [5] $end
-$var wire 1 E" reg_3|Q [4] $end
-$var wire 1 F" reg_3|Q [3] $end
-$var wire 1 G" reg_3|Q [2] $end
-$var wire 1 H" reg_3|Q [1] $end
-$var wire 1 I" reg_3|Q [0] $end
-$var wire 1 J" regA|Q [8] $end
-$var wire 1 K" regA|Q [7] $end
-$var wire 1 L" regA|Q [6] $end
-$var wire 1 M" regA|Q [5] $end
-$var wire 1 N" regA|Q [4] $end
-$var wire 1 O" regA|Q [3] $end
-$var wire 1 P" regA|Q [2] $end
-$var wire 1 Q" regA|Q [1] $end
-$var wire 1 R" regA|Q [0] $end
-$var wire 1 S" reg_1|Q [8] $end
-$var wire 1 T" reg_1|Q [7] $end
-$var wire 1 U" reg_1|Q [6] $end
-$var wire 1 V" reg_1|Q [5] $end
-$var wire 1 W" reg_1|Q [4] $end
-$var wire 1 X" reg_1|Q [3] $end
-$var wire 1 Y" reg_1|Q [2] $end
-$var wire 1 Z" reg_1|Q [1] $end
-$var wire 1 [" reg_1|Q [0] $end
-$var wire 1 \" reg_6|Q [8] $end
-$var wire 1 ]" reg_6|Q [7] $end
-$var wire 1 ^" reg_6|Q [6] $end
-$var wire 1 _" reg_6|Q [5] $end
-$var wire 1 `" reg_6|Q [4] $end
-$var wire 1 a" reg_6|Q [3] $end
-$var wire 1 b" reg_6|Q [2] $end
-$var wire 1 c" reg_6|Q [1] $end
-$var wire 1 d" reg_6|Q [0] $end
+$var wire 1 `! reg_2|Q [8] $end
+$var wire 1 a! reg_2|Q [7] $end
+$var wire 1 b! reg_2|Q [6] $end
+$var wire 1 c! reg_2|Q [5] $end
+$var wire 1 d! reg_2|Q [4] $end
+$var wire 1 e! reg_2|Q [3] $end
+$var wire 1 f! reg_2|Q [2] $end
+$var wire 1 g! reg_2|Q [1] $end
+$var wire 1 h! reg_2|Q [0] $end
+$var wire 1 i! regA|Q [8] $end
+$var wire 1 j! regA|Q [7] $end
+$var wire 1 k! regA|Q [6] $end
+$var wire 1 l! regA|Q [5] $end
+$var wire 1 m! regA|Q [4] $end
+$var wire 1 n! regA|Q [3] $end
+$var wire 1 o! regA|Q [2] $end
+$var wire 1 p! regA|Q [1] $end
+$var wire 1 q! regA|Q [0] $end
+$var wire 1 r! regG|Q [8] $end
+$var wire 1 s! regG|Q [7] $end
+$var wire 1 t! regG|Q [6] $end
+$var wire 1 u! regG|Q [5] $end
+$var wire 1 v! regG|Q [4] $end
+$var wire 1 w! regG|Q [3] $end
+$var wire 1 x! regG|Q [2] $end
+$var wire 1 y! regG|Q [1] $end
+$var wire 1 z! regG|Q [0] $end
+$var wire 1 {! reg_0|Q [8] $end
+$var wire 1 |! reg_0|Q [7] $end
+$var wire 1 }! reg_0|Q [6] $end
+$var wire 1 ~! reg_0|Q [5] $end
+$var wire 1 !" reg_0|Q [4] $end
+$var wire 1 "" reg_0|Q [3] $end
+$var wire 1 #" reg_0|Q [2] $end
+$var wire 1 $" reg_0|Q [1] $end
+$var wire 1 %" reg_0|Q [0] $end
+$var wire 1 &" reg_7|Q [8] $end
+$var wire 1 '" reg_7|Q [7] $end
+$var wire 1 (" reg_7|Q [6] $end
+$var wire 1 )" reg_7|Q [5] $end
+$var wire 1 *" reg_7|Q [4] $end
+$var wire 1 +" reg_7|Q [3] $end
+$var wire 1 ," reg_7|Q [2] $end
+$var wire 1 -" reg_7|Q [1] $end
+$var wire 1 ." reg_7|Q [0] $end
+$var wire 1 /" reg_5|Q [8] $end
+$var wire 1 0" reg_5|Q [7] $end
+$var wire 1 1" reg_5|Q [6] $end
+$var wire 1 2" reg_5|Q [5] $end
+$var wire 1 3" reg_5|Q [4] $end
+$var wire 1 4" reg_5|Q [3] $end
+$var wire 1 5" reg_5|Q [2] $end
+$var wire 1 6" reg_5|Q [1] $end
+$var wire 1 7" reg_5|Q [0] $end
+$var wire 1 8" reg_1|Q [8] $end
+$var wire 1 9" reg_1|Q [7] $end
+$var wire 1 :" reg_1|Q [6] $end
+$var wire 1 ;" reg_1|Q [5] $end
+$var wire 1 <" reg_1|Q [4] $end
+$var wire 1 =" reg_1|Q [3] $end
+$var wire 1 >" reg_1|Q [2] $end
+$var wire 1 ?" reg_1|Q [1] $end
+$var wire 1 @" reg_1|Q [0] $end
+$var wire 1 A" reg_6|Q [8] $end
+$var wire 1 B" reg_6|Q [7] $end
+$var wire 1 C" reg_6|Q [6] $end
+$var wire 1 D" reg_6|Q [5] $end
+$var wire 1 E" reg_6|Q [4] $end
+$var wire 1 F" reg_6|Q [3] $end
+$var wire 1 G" reg_6|Q [2] $end
+$var wire 1 H" reg_6|Q [1] $end
+$var wire 1 I" reg_6|Q [0] $end
+$var wire 1 J" reg_3|Q [8] $end
+$var wire 1 K" reg_3|Q [7] $end
+$var wire 1 L" reg_3|Q [6] $end
+$var wire 1 M" reg_3|Q [5] $end
+$var wire 1 N" reg_3|Q [4] $end
+$var wire 1 O" reg_3|Q [3] $end
+$var wire 1 P" reg_3|Q [2] $end
+$var wire 1 Q" reg_3|Q [1] $end
+$var wire 1 R" reg_3|Q [0] $end
+$var wire 1 S" reg_4|Q [8] $end
+$var wire 1 T" reg_4|Q [7] $end
+$var wire 1 U" reg_4|Q [6] $end
+$var wire 1 V" reg_4|Q [5] $end
+$var wire 1 W" reg_4|Q [4] $end
+$var wire 1 X" reg_4|Q [3] $end
+$var wire 1 Y" reg_4|Q [2] $end
+$var wire 1 Z" reg_4|Q [1] $end
+$var wire 1 [" reg_4|Q [0] $end
+$var wire 1 \" regIR|Q [8] $end
+$var wire 1 ]" regIR|Q [7] $end
+$var wire 1 ^" regIR|Q [6] $end
+$var wire 1 _" regIR|Q [5] $end
+$var wire 1 `" regIR|Q [4] $end
+$var wire 1 a" regIR|Q [3] $end
+$var wire 1 b" regIR|Q [2] $end
+$var wire 1 c" regIR|Q [1] $end
+$var wire 1 d" regIR|Q [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -556,7 +556,7 @@ b1000000 "
 1!
 1U
 0/
-1b!
+1^"
 1_
 1]
 1m
@@ -663,8 +663,8 @@ b101 "
 1!
 1U
 0/
-1>"
-1@"
+1#"
+1%"
 0_
 0]
 0n
@@ -706,8 +706,8 @@ b1000 "
 1!
 1U
 0/
-1e!
-0b!
+1a"
+0^"
 1_
 1]
 1n
@@ -836,8 +836,8 @@ b1000 "
 1!
 1U
 0/
-1Y"
-1["
+1>"
+1@"
 0_
 0]
 1`
@@ -906,11 +906,11 @@ b10000001 "
 1!
 1U
 0/
-1h!
-0e!
+1d"
+0a"
 1_
 1]
-1a!
+1]"
 1h
 1V
 0o
@@ -999,8 +999,8 @@ b10000001 "
 1!
 1U
 0/
-1P"
-1R"
+1o!
+1q!
 0_
 1X
 0+!
@@ -1023,8 +1023,8 @@ b10000001 "
 1!
 1U
 0/
-1n!
-1p!
+1w!
+1y!
 1Y
 0X
 1f
@@ -1132,10 +1132,10 @@ b10000001 "
 1!
 1U
 0/
-1="
-0>"
-1?"
-0@"
+1""
+0#"
+1$"
+0%"
 0]
 0Y
 1-!
@@ -1216,8 +1216,8 @@ b11000000 "
 1!
 1U
 0/
-0h!
-1b!
+0d"
+1^"
 1_
 1]
 1J
@@ -1358,10 +1358,10 @@ b0 "
 1!
 1U
 0/
-0P"
-1O"
-1Q"
-0R"
+0o!
+1n!
+1p!
+0q!
 0_
 1X
 06
@@ -1457,8 +1457,8 @@ b0 "
 1!
 1U
 0/
-0n!
-0p!
+0w!
+0y!
 1Y
 0X
 1f
@@ -1523,8 +1523,8 @@ b0 "
 0W
 1U
 0/
-0="
-0?"
+0""
+0$"
 0Y
 0]
 0-!
@@ -1557,8 +1557,8 @@ b0 "
 1!
 1U
 0/
-0b!
-0a!
+0^"
+0]"
 0J
 0a
 #280000

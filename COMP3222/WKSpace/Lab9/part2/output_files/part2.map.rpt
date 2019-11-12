@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part2
-Mon Nov 11 12:45:38 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Nov 12 13:00:16 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -58,24 +58,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 11 12:45:38 2019            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part2                                            ;
-; Top-level Entity Name              ; part2                                            ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 198                                              ;
-;     Total combinational functions  ; 116                                              ;
-;     Dedicated logic registers      ; 108                                              ;
-; Total registers                    ; 108                                              ;
-; Total pins                         ; 14                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 288                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 13:00:16 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part2                                           ;
+; Top-level Entity Name              ; part2                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 198                                             ;
+;     Total combinational functions  ; 116                                             ;
+;     Dedicated logic registers      ; 108                                             ;
+; Total registers                    ; 108                                             ;
+; Total pins                         ; 14                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 288                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -168,39 +168,39 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------+---------+
-; ../part1/part1.vhd               ; yes             ; User VHDL File                        ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part1/part1.vhd                   ;         ;
-; part2.vhd                        ; yes             ; User VHDL File                        ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/part2.vhd                   ;         ;
-; inis_mem.hex                     ; yes             ; User Hexadecimal (Intel-Format) File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/inis_mem.hex                ;         ;
-; inst_mem.vhd                     ; yes             ; User Wizard-Generated File            ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/inst_mem.vhd                ;         ;
-; clocker.vhd                      ; yes             ; User VHDL File                        ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/clocker.vhd                 ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                          ; a:/coding/languages/vhdl/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_ek81.tdf           ; yes             ; Auto-Generated Megafunction           ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/db/altsyncram_ek81.tdf      ;         ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------+---------+
+; ../part1/part1.vhd               ; yes             ; User VHDL File                        ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part1/part1.vhd              ;         ;
+; part2.vhd                        ; yes             ; User VHDL File                        ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/part2.vhd              ;         ;
+; inis_mem.hex                     ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/inis_mem.hex           ;         ;
+; inst_mem.vhd                     ; yes             ; User Wizard-Generated File            ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/inst_mem.vhd           ;         ;
+; clocker.vhd                      ; yes             ; User VHDL File                        ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/clocker.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                  ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc           ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                     ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                  ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                  ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                   ;         ;
+; altrom.inc                       ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                      ;         ;
+; altram.inc                       ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                      ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                    ;         ;
+; db/altsyncram_ek81.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/db/altsyncram_ek81.tdf ;         ;
++----------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -271,13 +271,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                    ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File                                                 ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |part2|inst_mem:Memory ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab9/part2/inst_mem.vhd ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+------------------------+-------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File                                                         ;
++--------+--------------+---------+--------------+--------------+------------------------+-------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |part2|inst_mem:Memory ; C:/Users/cse/Desktop/COMPStudy/COMP3222/WKSpace/Lab9/part2/inst_mem.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------+-------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -551,11 +551,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 11 12:45:37 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 12 13:00:06 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part2 -c part2
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 8 design units, including 4 entities, in source file /unswstudy/compstudy/comp3222/wkspace/lab9/part1/part1.vhd
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 8 design units, including 4 entities, in source file /users/cse/desktop/compstudy/comp3222/wkspace/lab9/part1/part1.vhd
     Info (12022): Found design unit 1: part1-Behavior
     Info (12022): Found design unit 2: addsubUnit-Behavior
     Info (12022): Found design unit 3: dec3to8-Behavior
@@ -607,9 +607,9 @@ Info (21057): Implemented 230 device resources after synthesis - the final resou
     Info (21061): Implemented 207 logic cells
     Info (21064): Implemented 9 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4660 megabytes
-    Info: Processing ended: Mon Nov 11 12:45:38 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Tue Nov 12 13:00:16 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "11/11/2019 12:46:29"
+// DATE "11/12/2019 13:04:48"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -188,19 +188,19 @@ wire \Processor|Mux28~3_combout ;
 wire \Processor|Mux28~4_combout ;
 wire \Processor|Mux28~5_combout ;
 wire \Processor|Mux28~6_combout ;
-wire [4:0] \Counter0|count ;
-wire [8:0] \Processor|regA|Q ;
-wire [8:0] \Processor|reg_1|Q ;
-wire [8:0] \Processor|regG|Q ;
-wire [8:0] \Processor|reg_5|Q ;
 wire [8:0] \Processor|regIR|Q ;
-wire [8:0] \Processor|reg_4|Q ;
-wire [8:0] \Processor|reg_3|Q ;
-wire [8:0] \Processor|reg_2|Q ;
-wire [8:0] \Processor|reg_6|Q ;
-wire [8:0] \Processor|reg_7|Q ;
+wire [8:0] \Processor|regG|Q ;
+wire [4:0] \Counter0|count ;
 wire [8:0] \Memory|altsyncram_component|auto_generated|q_a ;
 wire [8:0] \Processor|reg_0|Q ;
+wire [8:0] \Processor|reg_7|Q ;
+wire [8:0] \Processor|reg_5|Q ;
+wire [8:0] \Processor|reg_2|Q ;
+wire [8:0] \Processor|reg_6|Q ;
+wire [8:0] \Processor|reg_1|Q ;
+wire [8:0] \Processor|reg_3|Q ;
+wire [8:0] \Processor|reg_4|Q ;
+wire [8:0] \Processor|regA|Q ;
 
 wire [0:0] \Memory|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ;
 wire [0:0] \Memory|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus ;
