@@ -1,0 +1,1163 @@
+TimeQuest Timing Analyzer report for part1
+Fri Nov 15 20:04:33 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[1]'
+ 12. Slow Model Hold: 'KEY[1]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[1]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'KEY[1]'
+ 24. Fast Model Hold: 'KEY[1]'
+ 25. Fast Model Minimum Pulse Width: 'KEY[1]'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; part1                                                              ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C20F484C7                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[1]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[1] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 432.15 MHz ; 405.02 MHz      ; KEY[1]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[1] ; -1.314 ; -22.490       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[1] ; 0.445 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[1] ; -1.469 ; -25.909              ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[1]'                                                                                                                         ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.314 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.016      ; 2.368      ;
+; -1.224 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 2.267      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.159 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.021      ; 2.218      ;
+; -1.128 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.166      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.122 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.005     ; 2.155      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.116 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.297      ; 2.451      ;
+; -1.075 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 2.118      ;
+; -1.048 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.086      ;
+; -1.048 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.086      ;
+; -1.028 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 2.071      ;
+; -0.976 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.014      ;
+; -0.968 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.006      ;
+; -0.968 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 2.006      ;
+; -0.937 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.975      ;
+; -0.934 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.281      ; 2.253      ;
+; -0.930 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.973      ;
+; -0.896 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.934      ;
+; -0.888 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.926      ;
+; -0.888 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.926      ;
+; -0.879 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.922      ;
+; -0.866 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.281      ; 2.185      ;
+; -0.857 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.895      ;
+; -0.825 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.868      ;
+; -0.824 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.867      ;
+; -0.817 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.855      ;
+; -0.816 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.854      ;
+; -0.808 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.846      ;
+; -0.808 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.846      ;
+; -0.800 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.843      ;
+; -0.799 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.842      ;
+; -0.777 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.815      ;
+; -0.777 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.815      ;
+; -0.760 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.281     ; 1.517      ;
+; -0.752 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S1  ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.281     ; 1.509      ;
+; -0.738 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.281      ; 2.057      ;
+; -0.737 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.775      ;
+; -0.736 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.774      ;
+; -0.734 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.777      ;
+; -0.728 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.766      ;
+; -0.728 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.766      ;
+; -0.720 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.758      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.718 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.276      ; 2.032      ;
+; -0.697 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.735      ;
+; -0.697 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.735      ;
+; -0.697 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.735      ;
+; -0.684 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.722      ;
+; -0.677 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.720      ;
+; -0.676 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.719      ;
+; -0.657 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.695      ;
+; -0.656 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.694      ;
+; -0.648 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.686      ;
+; -0.648 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.686      ;
+; -0.526 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.569      ;
+; -0.525 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.005      ; 1.568      ;
+; -0.522 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.560      ;
+; -0.446 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.484      ;
+; -0.360 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|Done      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.006      ; 1.404      ;
+; -0.264 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.302      ;
+; -0.264 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.302      ;
+; -0.264 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.302      ;
+; -0.227 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.265      ;
+; -0.225 ; CounterFSM:instCounter|result[7] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.263      ;
+; -0.225 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.263      ;
+; -0.225 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.263      ;
+; -0.224 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.262      ;
+; -0.216 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.254      ;
+; -0.216 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 1.254      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[1]'                                                                                                                         ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.627 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.913      ;
+; 0.629 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.915      ;
+; 0.630 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.916      ;
+; 0.634 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.920      ;
+; 0.710 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 1.272      ;
+; 0.968 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.976 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; CounterFSM:instCounter|result[7] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.979 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.265      ;
+; 1.016 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.302      ;
+; 1.112 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|Done      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 1.404      ;
+; 1.198 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.484      ;
+; 1.235 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.516      ;
+; 1.238 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.519      ;
+; 1.242 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.523      ;
+; 1.274 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.560      ;
+; 1.277 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.568      ;
+; 1.278 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.569      ;
+; 1.400 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.686      ;
+; 1.400 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.686      ;
+; 1.408 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.694      ;
+; 1.409 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.695      ;
+; 1.428 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.719      ;
+; 1.429 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.720      ;
+; 1.436 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.722      ;
+; 1.449 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.735      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.470 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.276      ; 2.032      ;
+; 1.472 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.758      ;
+; 1.480 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.766      ;
+; 1.480 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.766      ;
+; 1.486 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.777      ;
+; 1.488 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.774      ;
+; 1.489 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.775      ;
+; 1.490 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.281      ; 2.057      ;
+; 1.504 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S1  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.281     ; 1.509      ;
+; 1.512 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.281     ; 1.517      ;
+; 1.529 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.815      ;
+; 1.551 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.842      ;
+; 1.552 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.843      ;
+; 1.560 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.846      ;
+; 1.560 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.846      ;
+; 1.568 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.854      ;
+; 1.569 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.855      ;
+; 1.570 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.851      ;
+; 1.576 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.867      ;
+; 1.577 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.868      ;
+; 1.579 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.860      ;
+; 1.582 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.863      ;
+; 1.582 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.863      ;
+; 1.609 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.895      ;
+; 1.618 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.281      ; 2.185      ;
+; 1.631 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.922      ;
+; 1.640 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.926      ;
+; 1.640 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.926      ;
+; 1.648 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.934      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.674 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.257      ;
+; 1.682 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.973      ;
+; 1.686 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.281      ; 2.253      ;
+; 1.689 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.975      ;
+; 1.720 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.006      ;
+; 1.720 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.006      ;
+; 1.728 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.014      ;
+; 1.780 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 2.071      ;
+; 1.800 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.086      ;
+; 1.800 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.086      ;
+; 1.827 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 2.118      ;
+; 1.880 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.166      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.911 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.218      ;
+; 1.976 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 2.267      ;
+; 2.066 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.016      ; 2.368      ;
+; 2.066 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.016      ; 2.368      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[1]'                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|Done      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|Done      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[4] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[4] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[5] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[5] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[6] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[6] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[7] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[7] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S1  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S1  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S2  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S2  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S3  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S3  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|Done|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|Done|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S3|clk         ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; 4.896  ; 4.896  ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; 4.896  ; 4.896  ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 2.010  ; 2.010  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.317 ; -0.317 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.319 ; -0.319 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -0.313 ; -0.313 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.327  ; 0.327  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.272  ; 0.272  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.520  ; 0.520  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.303  ; 0.303  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.546  ; 1.546  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 2.010  ; 2.010  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; -3.669 ; -3.669 ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; -3.669 ; -3.669 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.567  ; 0.567  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.565  ; 0.565  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.567  ; 0.567  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.561  ; 0.561  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -0.079 ; -0.079 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -0.024 ; -0.024 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.272 ; -0.272 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -0.055 ; -0.055 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -1.298 ; -1.298 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.714 ; -0.714 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 7.634 ; 7.634 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.750 ; 6.750 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 7.093 ; 7.093 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 7.457 ; 7.457 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 7.479 ; 7.479 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 7.621 ; 7.621 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 7.519 ; 7.519 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 7.478 ; 7.478 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 7.634 ; 7.634 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 6.750 ; 6.750 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.750 ; 6.750 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 7.093 ; 7.093 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 7.457 ; 7.457 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 7.479 ; 7.479 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 7.621 ; 7.621 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 7.519 ; 7.519 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 7.478 ; 7.478 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 7.634 ; 7.634 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[1] ; 0.029 ; 0.000         ;
++--------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[1] ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[1] ; -1.222 ; -21.222              ;
++--------+--------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[1]'                                                                                                                        ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.029 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 1.025      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.077 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.001     ; 0.954      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.096 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.023      ; 0.959      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.104 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.126      ; 1.054      ;
+; 0.131 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.902      ;
+; 0.177 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.855      ;
+; 0.199 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.834      ;
+; 0.212 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.820      ;
+; 0.212 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.820      ;
+; 0.214 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.819      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.230 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.103      ; 0.905      ;
+; 0.241 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.104      ; 0.895      ;
+; 0.242 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.790      ;
+; 0.247 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.785      ;
+; 0.247 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.785      ;
+; 0.258 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.775      ;
+; 0.259 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.774      ;
+; 0.262 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.771      ;
+; 0.264 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.768      ;
+; 0.271 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.762      ;
+; 0.272 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.761      ;
+; 0.277 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.755      ;
+; 0.282 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.750      ;
+; 0.282 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.751      ;
+; 0.282 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.750      ;
+; 0.295 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.104      ; 0.841      ;
+; 0.298 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.104     ; 0.630      ;
+; 0.299 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.733      ;
+; 0.303 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S1  ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.104     ; 0.625      ;
+; 0.309 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.104      ; 0.827      ;
+; 0.311 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.721      ;
+; 0.312 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.720      ;
+; 0.317 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.715      ;
+; 0.317 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.715      ;
+; 0.325 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.707      ;
+; 0.330 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.703      ;
+; 0.333 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.699      ;
+; 0.334 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.698      ;
+; 0.340 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.693      ;
+; 0.341 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.692      ;
+; 0.346 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.686      ;
+; 0.347 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.685      ;
+; 0.352 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.680      ;
+; 0.352 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.680      ;
+; 0.352 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.680      ;
+; 0.368 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.664      ;
+; 0.368 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.664      ;
+; 0.369 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.663      ;
+; 0.380 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.652      ;
+; 0.381 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.651      ;
+; 0.382 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.650      ;
+; 0.387 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.645      ;
+; 0.387 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.645      ;
+; 0.394 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.639      ;
+; 0.395 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 0.638      ;
+; 0.441 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.591      ;
+; 0.476 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|Done      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.013      ; 0.569      ;
+; 0.508 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.524      ;
+; 0.508 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.524      ;
+; 0.509 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.523      ;
+; 0.513 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.519      ;
+; 0.517 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.515      ;
+; 0.519 ; CounterFSM:instCounter|result[7] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.513      ;
+; 0.519 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.513      ;
+; 0.520 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.512      ;
+; 0.525 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.507      ;
+; 0.525 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.000      ; 0.507      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[1]'                                                                                                                         ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.244 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.396      ;
+; 0.246 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.400      ;
+; 0.266 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.521      ;
+; 0.355 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.507      ;
+; 0.360 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; CounterFSM:instCounter|result[7] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.367 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.371 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.404 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|Done      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.569      ;
+; 0.439 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.591      ;
+; 0.478 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.629      ;
+; 0.481 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.632      ;
+; 0.482 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.633      ;
+; 0.485 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.638      ;
+; 0.486 ; CounterFSM:instCounter|A[3]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.639      ;
+; 0.493 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.645      ;
+; 0.498 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.652      ;
+; 0.511 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; CounterFSM:instCounter|result[6] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.664      ;
+; 0.528 ; CounterFSM:instCounter|state.S3  ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.680      ;
+; 0.533 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.686      ;
+; 0.539 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.692      ;
+; 0.540 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.693      ;
+; 0.546 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; CounterFSM:instCounter|result[5] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.699      ;
+; 0.550 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.703      ;
+; 0.555 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.707      ;
+; 0.563 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.715      ;
+; 0.568 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; CounterFSM:instCounter|result[4] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.721      ;
+; 0.571 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.104      ; 0.827      ;
+; 0.577 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|state.S1  ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.104     ; 0.625      ;
+; 0.581 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[7]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.104     ; 0.630      ;
+; 0.585 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.104      ; 0.841      ;
+; 0.592 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.743      ;
+; 0.598 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.749      ;
+; 0.598 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.751      ;
+; 0.598 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.750      ;
+; 0.598 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.750      ;
+; 0.600 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.751      ;
+; 0.600 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.751      ;
+; 0.603 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.755      ;
+; 0.608 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.761      ;
+; 0.609 ; CounterFSM:instCounter|A[1]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.762      ;
+; 0.616 ; CounterFSM:instCounter|result[3] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.768      ;
+; 0.618 ; CounterFSM:instCounter|A[4]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.771      ;
+; 0.621 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.774      ;
+; 0.622 ; CounterFSM:instCounter|A[2]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.775      ;
+; 0.633 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.785      ;
+; 0.633 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.785      ;
+; 0.638 ; CounterFSM:instCounter|result[2] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.790      ;
+; 0.639 ; CounterFSM:instCounter|A[7]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.104      ; 0.895      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[6]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[5]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[4]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[3]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[2]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[1]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.650 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|A[0]      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.103      ; 0.905      ;
+; 0.666 ; CounterFSM:instCounter|A[5]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.819      ;
+; 0.668 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.820      ;
+; 0.668 ; CounterFSM:instCounter|result[1] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.820      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.670 ; CounterFSM:instCounter|state.S1  ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.126      ; 0.948      ;
+; 0.681 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S3  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.834      ;
+; 0.703 ; CounterFSM:instCounter|result[0] ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.855      ;
+; 0.749 ; CounterFSM:instCounter|A[6]      ; CounterFSM:instCounter|state.S2  ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.902      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.784 ; CounterFSM:instCounter|A[0]      ; CounterFSM:instCounter|result[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.023      ; 0.959      ;
+; 0.851 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.022      ; 1.025      ;
+; 0.851 ; CounterFSM:instCounter|state.S2  ; CounterFSM:instCounter|result[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.022      ; 1.025      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[1]'                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|A[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|Done      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|Done      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|result[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; CounterFSM:instCounter|state.S3  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[4]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[5]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[6]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|A[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|A[7]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|Done|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|Done|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|result[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|result[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; instCounter|state.S3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; instCounter|state.S3|clk         ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; 2.647  ; 2.647  ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; 2.647  ; 2.647  ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.708  ; 0.708  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.250 ; -0.250 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.251 ; -0.251 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -0.244 ; -0.244 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.045  ; 0.045  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.020  ; 0.020  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.180  ; 0.180  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.054  ; 0.054  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 0.547  ; 0.547  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 0.708  ; 0.708  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; -2.068 ; -2.068 ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; -2.068 ; -2.068 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.371  ; 0.371  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.370  ; 0.370  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.371  ; 0.371  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.364  ; 0.364  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.075  ; 0.075  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.100  ; 0.100  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.060 ; -0.060 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.066  ; 0.066  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.427 ; -0.427 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.243 ; -0.243 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 3.659 ; 3.659 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.247 ; 3.247 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.377 ; 3.377 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.532 ; 3.532 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.555 ; 3.555 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.651 ; 3.651 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.574 ; 3.574 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.548 ; 3.548 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.659 ; 3.659 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 3.247 ; 3.247 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.247 ; 3.247 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.377 ; 3.377 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.532 ; 3.532 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.555 ; 3.555 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.651 ; 3.651 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.574 ; 3.574 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.548 ; 3.548 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.659 ; 3.659 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.314  ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+;  KEY[1]          ; -1.314  ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -22.49  ; 0.0   ; 0.0      ; 0.0     ; -25.909             ;
+;  KEY[1]          ; -22.490 ; 0.000 ; N/A      ; N/A     ; -25.909             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; 4.896  ; 4.896  ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; 4.896  ; 4.896  ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 2.010  ; 2.010  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.250 ; -0.250 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.251 ; -0.251 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -0.244 ; -0.244 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.327  ; 0.327  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.272  ; 0.272  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.520  ; 0.520  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.303  ; 0.303  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.546  ; 1.546  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 2.010  ; 2.010  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[1]     ; -2.068 ; -2.068 ; Rise       ; KEY[1]          ;
+;  KEY[0]   ; KEY[1]     ; -2.068 ; -2.068 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.567  ; 0.567  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.565  ; 0.565  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.567  ; 0.567  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.561  ; 0.561  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.075  ; 0.075  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.100  ; 0.100  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.060 ; -0.060 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.066  ; 0.066  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.427 ; -0.427 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.243 ; -0.243 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 6.841 ; 6.841 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 7.634 ; 7.634 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.750 ; 6.750 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 7.093 ; 7.093 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 7.457 ; 7.457 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 7.479 ; 7.479 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 7.621 ; 7.621 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 7.519 ; 7.519 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 7.478 ; 7.478 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 7.634 ; 7.634 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+;  LEDG[0]  ; KEY[1]     ; 3.299 ; 3.299 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 3.247 ; 3.247 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 3.247 ; 3.247 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 3.377 ; 3.377 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 3.532 ; 3.532 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 3.555 ; 3.555 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 3.651 ; 3.651 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 3.574 ; 3.574 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 3.548 ; 3.548 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 3.659 ; 3.659 ; Rise       ; KEY[1]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[1]     ; KEY[1]   ; 121      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[1]     ; KEY[1]   ; 121      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 31    ; 31   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Nov 15 20:04:33 2019
+Info: Command: quartus_sta part1 -c part1
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'part1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[1] KEY[1]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.314
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.314       -22.490 KEY[1] 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 KEY[1] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469       -25.909 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.029
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.029         0.000 KEY[1] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 KEY[1] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -21.222 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4586 megabytes
+    Info: Processing ended: Fri Nov 15 20:04:33 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
