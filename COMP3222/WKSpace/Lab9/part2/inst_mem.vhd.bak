@@ -39,6 +39,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.all;
 
+ENTITY inst_mem IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);

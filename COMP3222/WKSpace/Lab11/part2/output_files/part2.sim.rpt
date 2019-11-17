@@ -1,0 +1,533 @@
+Simulator report for part2
+Sat Nov 16 23:39:34 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 7.0 us       ;
+; Simulation Netlist Size     ; 271 nodes    ;
+; Simulation Coverage         ;      64.21 % ;
+; Total Number of Transitions ; 40104        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                           ;               ;
+; Vector input source                                                                        ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab11/part2/part2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                            ; On            ;
+; Check outputs                                                                              ; Off                                                           ; Off           ;
+; Report simulation coverage                                                                 ; On                                                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                           ; Off           ;
+; Detect glitches                                                                            ; Off                                                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++------------------------------------------------------------------------------------------------------------+
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.21 % ;
+; Total nodes checked                                 ; 271          ;
+; Total output ports checked                          ; 271          ;
+; Total output ports with complete 1/0-value coverage ; 174          ;
+; Total output ports with no 1/0-value coverage       ; 86           ;
+; Total output ports with no 1-value coverage         ; 90           ;
+; Total output ports with no 0-value coverage         ; 93           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                    ; Output Port Name                                                                                       ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |part2|statetable~0                                                                                          ; |part2|statetable~0                                                                                    ; out0             ;
+; |part2|WideOr0                                                                                               ; |part2|WideOr0                                                                                         ; out0             ;
+; |part2|Dref[6]$latch                                                                                         ; |part2|Dref[6]$latch                                                                                   ; out              ;
+; |part2|y.SI                                                                                                  ; |part2|y.SI                                                                                            ; regout           ;
+; |part2|y.S1                                                                                                  ; |part2|y.S1                                                                                            ; regout           ;
+; |part2|y.S2                                                                                                  ; |part2|y.S2                                                                                            ; regout           ;
+; |part2|y.S3                                                                                                  ; |part2|y.S3                                                                                            ; regout           ;
+; |part2|y.S5                                                                                                  ; |part2|y.S5                                                                                            ; regout           ;
+; |part2|Dref[5]$latch                                                                                         ; |part2|Dref[5]$latch                                                                                   ; out              ;
+; |part2|Dref[4]$latch                                                                                         ; |part2|Dref[4]$latch                                                                                   ; out              ;
+; |part2|WideOr7                                                                                               ; |part2|WideOr7                                                                                         ; out0             ;
+; |part2|LD                                                                                                    ; |part2|LD                                                                                              ; out              ;
+; |part2|WideOr8                                                                                               ; |part2|WideOr8                                                                                         ; out0             ;
+; |part2|Dref[3]$latch                                                                                         ; |part2|Dref[3]$latch                                                                                   ; out              ;
+; |part2|Dref[2]$latch                                                                                         ; |part2|Dref[2]$latch                                                                                   ; out              ;
+; |part2|Addr~0                                                                                                ; |part2|Addr~0                                                                                          ; out0             ;
+; |part2|Dref[1]$latch                                                                                         ; |part2|Dref[1]$latch                                                                                   ; out              ;
+; |part2|Dref[0]$latch                                                                                         ; |part2|Dref[0]$latch                                                                                   ; out              ;
+; |part2|WideOr9                                                                                               ; |part2|WideOr9                                                                                         ; out0             ;
+; |part2|Done~0                                                                                                ; |part2|Done~0                                                                                          ; out0             ;
+; |part2|Addr[3]$latch                                                                                         ; |part2|Addr[3]$latch                                                                                   ; out              ;
+; |part2|Dtar[0]$latch                                                                                         ; |part2|Dtar[0]$latch                                                                                   ; out              ;
+; |part2|Dtar[1]$latch                                                                                         ; |part2|Dtar[1]$latch                                                                                   ; out              ;
+; |part2|Dtar[2]$latch                                                                                         ; |part2|Dtar[2]$latch                                                                                   ; out              ;
+; |part2|Dtar[3]$latch                                                                                         ; |part2|Dtar[3]$latch                                                                                   ; out              ;
+; |part2|Dtar[4]$latch                                                                                         ; |part2|Dtar[4]$latch                                                                                   ; out              ;
+; |part2|Dtar[5]$latch                                                                                         ; |part2|Dtar[5]$latch                                                                                   ; out              ;
+; |part2|Found$latch                                                                                           ; |part2|Found$latch                                                                                     ; out              ;
+; |part2|R[0]                                                                                                  ; |part2|R[0]                                                                                            ; out              ;
+; |part2|R[4]                                                                                                  ; |part2|R[4]                                                                                            ; out              ;
+; |part2|L[0]~0                                                                                                ; |part2|L[0]~0                                                                                          ; out0             ;
+; |part2|y_next.SI_568                                                                                         ; |part2|y_next.SI_568                                                                                   ; out              ;
+; |part2|L[4]                                                                                                  ; |part2|L[4]                                                                                            ; out              ;
+; |part2|y_next.S5_538                                                                                         ; |part2|y_next.S5_538                                                                                   ; out              ;
+; |part2|y_next.S3_550                                                                                         ; |part2|y_next.S3_550                                                                                   ; out              ;
+; |part2|y_next.S2_556                                                                                         ; |part2|y_next.S2_556                                                                                   ; out              ;
+; |part2|y_next.S1_562                                                                                         ; |part2|y_next.S1_562                                                                                   ; out              ;
+; |part2|Clock                                                                                                 ; |part2|Clock                                                                                           ; out              ;
+; |part2|s                                                                                                     ; |part2|s                                                                                               ; out              ;
+; |part2|Data[0]                                                                                               ; |part2|Data[0]                                                                                         ; out              ;
+; |part2|Data[1]                                                                                               ; |part2|Data[1]                                                                                         ; out              ;
+; |part2|Data[2]                                                                                               ; |part2|Data[2]                                                                                         ; out              ;
+; |part2|Data[3]                                                                                               ; |part2|Data[3]                                                                                         ; out              ;
+; |part2|Data[4]                                                                                               ; |part2|Data[4]                                                                                         ; out              ;
+; |part2|Data[5]                                                                                               ; |part2|Data[5]                                                                                         ; out              ;
+; |part2|Addr[3]                                                                                               ; |part2|Addr[3]                                                                                         ; pin_out          ;
+; |part2|Dtar[0]                                                                                               ; |part2|Dtar[0]                                                                                         ; pin_out          ;
+; |part2|Dtar[1]                                                                                               ; |part2|Dtar[1]                                                                                         ; pin_out          ;
+; |part2|Dtar[2]                                                                                               ; |part2|Dtar[2]                                                                                         ; pin_out          ;
+; |part2|Dtar[3]                                                                                               ; |part2|Dtar[3]                                                                                         ; pin_out          ;
+; |part2|Dtar[4]                                                                                               ; |part2|Dtar[4]                                                                                         ; pin_out          ;
+; |part2|Dtar[5]                                                                                               ; |part2|Dtar[5]                                                                                         ; pin_out          ;
+; |part2|Dref[0]                                                                                               ; |part2|Dref[0]                                                                                         ; pin_out          ;
+; |part2|Dref[1]                                                                                               ; |part2|Dref[1]                                                                                         ; pin_out          ;
+; |part2|Dref[2]                                                                                               ; |part2|Dref[2]                                                                                         ; pin_out          ;
+; |part2|Dref[3]                                                                                               ; |part2|Dref[3]                                                                                         ; pin_out          ;
+; |part2|Dref[4]                                                                                               ; |part2|Dref[4]                                                                                         ; pin_out          ;
+; |part2|Dref[5]                                                                                               ; |part2|Dref[5]                                                                                         ; pin_out          ;
+; |part2|Dref[6]                                                                                               ; |part2|Dref[6]                                                                                         ; pin_out          ;
+; |part2|Found                                                                                                 ; |part2|Found                                                                                           ; pin_out          ;
+; |part2|Done                                                                                                  ; |part2|Done                                                                                            ; pin_out          ;
+; |part2|y~0                                                                                                   ; |part2|y~0                                                                                             ; out0             ;
+; |part2|y.SI~0                                                                                                ; |part2|y.SI~0                                                                                          ; out0             ;
+; |part2|WideOr4~0                                                                                             ; |part2|WideOr4~0                                                                                       ; out0             ;
+; |part2|y.S1~0                                                                                                ; |part2|y.S1~0                                                                                          ; out0             ;
+; |part2|LR                                                                                                    ; |part2|LR                                                                                              ; out0             ;
+; |part2|y.S2~0                                                                                                ; |part2|y.S2~0                                                                                          ; out0             ;
+; |part2|WideOr0~1                                                                                             ; |part2|WideOr0~1                                                                                       ; out0             ;
+; |part2|y.S3~0                                                                                                ; |part2|y.S3~0                                                                                          ; out0             ;
+; |part2|WideOr0~2                                                                                             ; |part2|WideOr0~2                                                                                       ; out0             ;
+; |part2|y.S5~0                                                                                                ; |part2|y.S5~0                                                                                          ; out0             ;
+; |part2|WideOr1~1                                                                                             ; |part2|WideOr1~1                                                                                       ; out0             ;
+; |part2|y~5                                                                                                   ; |part2|y~5                                                                                             ; out0             ;
+; |part2|regne:LoadData|Q~2                                                                                    ; |part2|regne:LoadData|Q~2                                                                              ; out              ;
+; |part2|regne:LoadData|Q~3                                                                                    ; |part2|regne:LoadData|Q~3                                                                              ; out              ;
+; |part2|regne:LoadData|Q~4                                                                                    ; |part2|regne:LoadData|Q~4                                                                              ; out              ;
+; |part2|regne:LoadData|Q~5                                                                                    ; |part2|regne:LoadData|Q~5                                                                              ; out              ;
+; |part2|regne:LoadData|Q~6                                                                                    ; |part2|regne:LoadData|Q~6                                                                              ; out              ;
+; |part2|regne:LoadData|Q~7                                                                                    ; |part2|regne:LoadData|Q~7                                                                              ; out              ;
+; |part2|regne:LoadData|Q~10                                                                                   ; |part2|regne:LoadData|Q~10                                                                             ; out              ;
+; |part2|regne:LoadData|Q~11                                                                                   ; |part2|regne:LoadData|Q~11                                                                             ; out              ;
+; |part2|regne:LoadData|Q~12                                                                                   ; |part2|regne:LoadData|Q~12                                                                             ; out              ;
+; |part2|regne:LoadData|Q~13                                                                                   ; |part2|regne:LoadData|Q~13                                                                             ; out              ;
+; |part2|regne:LoadData|Q~14                                                                                   ; |part2|regne:LoadData|Q~14                                                                             ; out              ;
+; |part2|regne:LoadData|Q~15                                                                                   ; |part2|regne:LoadData|Q~15                                                                             ; out              ;
+; |part2|regne:LoadData|Q[0]                                                                                   ; |part2|regne:LoadData|Q[0]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[1]                                                                                   ; |part2|regne:LoadData|Q[1]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[2]                                                                                   ; |part2|regne:LoadData|Q[2]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[3]                                                                                   ; |part2|regne:LoadData|Q[3]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[4]                                                                                   ; |part2|regne:LoadData|Q[4]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[5]                                                                                   ; |part2|regne:LoadData|Q[5]                                                                             ; regout           ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a0 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[0] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a1 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[1] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a2 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[2] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a3 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[3] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a4 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[4] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a5 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[5] ; portadataout0    ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a6 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[6] ; portadataout0    ;
+; |part2|Selector0~0                                                                                           ; |part2|Selector0~0                                                                                     ; out0             ;
+; |part2|Selector1~0                                                                                           ; |part2|Selector1~0                                                                                     ; out0             ;
+; |part2|Selector1~2                                                                                           ; |part2|Selector1~2                                                                                     ; out0             ;
+; |part2|Selector1~3                                                                                           ; |part2|Selector1~3                                                                                     ; out0             ;
+; |part2|Selector2~0                                                                                           ; |part2|Selector2~0                                                                                     ; out0             ;
+; |part2|Selector5~1                                                                                           ; |part2|Selector5~1                                                                                     ; out0             ;
+; |part2|Selector5~3                                                                                           ; |part2|Selector5~3                                                                                     ; out0             ;
+; |part2|Selector5~4                                                                                           ; |part2|Selector5~4                                                                                     ; out0             ;
+; |part2|Selector8~0                                                                                           ; |part2|Selector8~0                                                                                     ; out0             ;
+; |part2|Selector9~0                                                                                           ; |part2|Selector9~0                                                                                     ; out0             ;
+; |part2|Selector9~1                                                                                           ; |part2|Selector9~1                                                                                     ; out0             ;
+; |part2|Selector12~0                                                                                          ; |part2|Selector12~0                                                                                    ; out0             ;
+; |part2|Selector13~0                                                                                          ; |part2|Selector13~0                                                                                    ; out0             ;
+; |part2|Selector15~0                                                                                          ; |part2|Selector15~0                                                                                    ; out0             ;
+; |part2|Selector15~1                                                                                          ; |part2|Selector15~1                                                                                    ; out0             ;
+; |part2|Selector18~0                                                                                          ; |part2|Selector18~0                                                                                    ; out0             ;
+; |part2|Selector19~0                                                                                          ; |part2|Selector19~0                                                                                    ; out0             ;
+; |part2|LessThan0~15                                                                                          ; |part2|LessThan0~15                                                                                    ; out0             ;
+; |part2|LessThan1~0                                                                                           ; |part2|LessThan1~0                                                                                     ; out0             ;
+; |part2|LessThan1~1                                                                                           ; |part2|LessThan1~1                                                                                     ; out0             ;
+; |part2|LessThan1~2                                                                                           ; |part2|LessThan1~2                                                                                     ; out0             ;
+; |part2|LessThan1~3                                                                                           ; |part2|LessThan1~3                                                                                     ; out0             ;
+; |part2|LessThan1~4                                                                                           ; |part2|LessThan1~4                                                                                     ; out0             ;
+; |part2|LessThan1~5                                                                                           ; |part2|LessThan1~5                                                                                     ; out0             ;
+; |part2|LessThan1~6                                                                                           ; |part2|LessThan1~6                                                                                     ; out0             ;
+; |part2|LessThan1~7                                                                                           ; |part2|LessThan1~7                                                                                     ; out0             ;
+; |part2|LessThan1~8                                                                                           ; |part2|LessThan1~8                                                                                     ; out0             ;
+; |part2|LessThan1~9                                                                                           ; |part2|LessThan1~9                                                                                     ; out0             ;
+; |part2|LessThan1~10                                                                                          ; |part2|LessThan1~10                                                                                    ; out0             ;
+; |part2|LessThan1~11                                                                                          ; |part2|LessThan1~11                                                                                    ; out0             ;
+; |part2|LessThan1~12                                                                                          ; |part2|LessThan1~12                                                                                    ; out0             ;
+; |part2|LessThan1~13                                                                                          ; |part2|LessThan1~13                                                                                    ; out0             ;
+; |part2|LessThan1~14                                                                                          ; |part2|LessThan1~14                                                                                    ; out0             ;
+; |part2|LessThan1~15                                                                                          ; |part2|LessThan1~15                                                                                    ; out0             ;
+; |part2|LessThan1~16                                                                                          ; |part2|LessThan1~16                                                                                    ; out0             ;
+; |part2|LessThan1~17                                                                                          ; |part2|LessThan1~17                                                                                    ; out0             ;
+; |part2|LessThan1~18                                                                                          ; |part2|LessThan1~18                                                                                    ; out0             ;
+; |part2|LessThan1~19                                                                                          ; |part2|LessThan1~19                                                                                    ; out0             ;
+; |part2|LessThan1~20                                                                                          ; |part2|LessThan1~20                                                                                    ; out0             ;
+; |part2|LessThan1~22                                                                                          ; |part2|LessThan1~22                                                                                    ; out0             ;
+; |part2|LessThan1~23                                                                                          ; |part2|LessThan1~23                                                                                    ; out0             ;
+; |part2|LessThan1~24                                                                                          ; |part2|LessThan1~24                                                                                    ; out0             ;
+; |part2|LessThan1~26                                                                                          ; |part2|LessThan1~26                                                                                    ; out0             ;
+; |part2|LessThan1~28                                                                                          ; |part2|LessThan1~28                                                                                    ; out0             ;
+; |part2|LessThan2~0                                                                                           ; |part2|LessThan2~0                                                                                     ; out0             ;
+; |part2|LessThan2~1                                                                                           ; |part2|LessThan2~1                                                                                     ; out0             ;
+; |part2|LessThan2~2                                                                                           ; |part2|LessThan2~2                                                                                     ; out0             ;
+; |part2|LessThan2~3                                                                                           ; |part2|LessThan2~3                                                                                     ; out0             ;
+; |part2|LessThan2~4                                                                                           ; |part2|LessThan2~4                                                                                     ; out0             ;
+; |part2|LessThan2~5                                                                                           ; |part2|LessThan2~5                                                                                     ; out0             ;
+; |part2|LessThan2~6                                                                                           ; |part2|LessThan2~6                                                                                     ; out0             ;
+; |part2|LessThan2~7                                                                                           ; |part2|LessThan2~7                                                                                     ; out0             ;
+; |part2|LessThan2~8                                                                                           ; |part2|LessThan2~8                                                                                     ; out0             ;
+; |part2|LessThan2~9                                                                                           ; |part2|LessThan2~9                                                                                     ; out0             ;
+; |part2|LessThan2~10                                                                                          ; |part2|LessThan2~10                                                                                    ; out0             ;
+; |part2|LessThan2~11                                                                                          ; |part2|LessThan2~11                                                                                    ; out0             ;
+; |part2|LessThan2~12                                                                                          ; |part2|LessThan2~12                                                                                    ; out0             ;
+; |part2|LessThan2~13                                                                                          ; |part2|LessThan2~13                                                                                    ; out0             ;
+; |part2|LessThan2~14                                                                                          ; |part2|LessThan2~14                                                                                    ; out0             ;
+; |part2|LessThan2~15                                                                                          ; |part2|LessThan2~15                                                                                    ; out0             ;
+; |part2|LessThan2~16                                                                                          ; |part2|LessThan2~16                                                                                    ; out0             ;
+; |part2|LessThan2~17                                                                                          ; |part2|LessThan2~17                                                                                    ; out0             ;
+; |part2|LessThan2~18                                                                                          ; |part2|LessThan2~18                                                                                    ; out0             ;
+; |part2|LessThan2~19                                                                                          ; |part2|LessThan2~19                                                                                    ; out0             ;
+; |part2|LessThan2~20                                                                                          ; |part2|LessThan2~20                                                                                    ; out0             ;
+; |part2|LessThan2~21                                                                                          ; |part2|LessThan2~21                                                                                    ; out0             ;
+; |part2|LessThan2~22                                                                                          ; |part2|LessThan2~22                                                                                    ; out0             ;
+; |part2|LessThan2~23                                                                                          ; |part2|LessThan2~23                                                                                    ; out0             ;
+; |part2|LessThan2~24                                                                                          ; |part2|LessThan2~24                                                                                    ; out0             ;
+; |part2|LessThan2~26                                                                                          ; |part2|LessThan2~26                                                                                    ; out0             ;
+; |part2|LessThan2~28                                                                                          ; |part2|LessThan2~28                                                                                    ; out0             ;
+; |part2|Add0~6                                                                                                ; |part2|Add0~6                                                                                          ; out0             ;
+; |part2|Add0~8                                                                                                ; |part2|Add0~8                                                                                          ; out0             ;
+; |part2|Add1~4                                                                                                ; |part2|Add1~4                                                                                          ; out0             ;
+; |part2|Add1~5                                                                                                ; |part2|Add1~5                                                                                          ; out0             ;
+; |part2|Add2~16                                                                                               ; |part2|Add2~16                                                                                         ; out0             ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                    ; Output Port Name                                                                                       ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |part2|Dref[7]$latch                                                                                         ; |part2|Dref[7]$latch                                                                                   ; out              ;
+; |part2|y.S4                                                                                                  ; |part2|y.S4                                                                                            ; regout           ;
+; |part2|y.S6                                                                                                  ; |part2|y.S6                                                                                            ; regout           ;
+; |part2|Addr[1]$latch                                                                                         ; |part2|Addr[1]$latch                                                                                   ; out              ;
+; |part2|Addr[2]$latch                                                                                         ; |part2|Addr[2]$latch                                                                                   ; out              ;
+; |part2|Dtar[7]$latch                                                                                         ; |part2|Dtar[7]$latch                                                                                   ; out              ;
+; |part2|R[1]                                                                                                  ; |part2|R[1]                                                                                            ; out              ;
+; |part2|R[2]                                                                                                  ; |part2|R[2]                                                                                            ; out              ;
+; |part2|R[3]                                                                                                  ; |part2|R[3]                                                                                            ; out              ;
+; |part2|L[0]                                                                                                  ; |part2|L[0]                                                                                            ; out              ;
+; |part2|L[1]                                                                                                  ; |part2|L[1]                                                                                            ; out              ;
+; |part2|L[2]                                                                                                  ; |part2|L[2]                                                                                            ; out              ;
+; |part2|L[3]                                                                                                  ; |part2|L[3]                                                                                            ; out              ;
+; |part2|Addr[0]$latch                                                                                         ; |part2|Addr[0]$latch                                                                                   ; out              ;
+; |part2|y_next.S4_544                                                                                         ; |part2|y_next.S4_544                                                                                   ; out              ;
+; |part2|Data[7]                                                                                               ; |part2|Data[7]                                                                                         ; out              ;
+; |part2|Addr[0]                                                                                               ; |part2|Addr[0]                                                                                         ; pin_out          ;
+; |part2|Addr[1]                                                                                               ; |part2|Addr[1]                                                                                         ; pin_out          ;
+; |part2|Addr[2]                                                                                               ; |part2|Addr[2]                                                                                         ; pin_out          ;
+; |part2|Addr[4]                                                                                               ; |part2|Addr[4]                                                                                         ; pin_out          ;
+; |part2|Dtar[7]                                                                                               ; |part2|Dtar[7]                                                                                         ; pin_out          ;
+; |part2|Dref[7]                                                                                               ; |part2|Dref[7]                                                                                         ; pin_out          ;
+; |part2|y~1                                                                                                   ; |part2|y~1                                                                                             ; out0             ;
+; |part2|y.S4~0                                                                                                ; |part2|y.S4~0                                                                                          ; out0             ;
+; |part2|WideOr1~0                                                                                             ; |part2|WideOr1~0                                                                                       ; out0             ;
+; |part2|WideOr6~0                                                                                             ; |part2|WideOr6~0                                                                                       ; out0             ;
+; |part2|y~9                                                                                                   ; |part2|y~9                                                                                             ; out0             ;
+; |part2|regne:LoadData|Q~0                                                                                    ; |part2|regne:LoadData|Q~0                                                                              ; out              ;
+; |part2|regne:LoadData|Q~8                                                                                    ; |part2|regne:LoadData|Q~8                                                                              ; out              ;
+; |part2|regne:LoadData|Q[7]                                                                                   ; |part2|regne:LoadData|Q[7]                                                                             ; regout           ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a7 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[7] ; portadataout0    ;
+; |part2|Selector1~1                                                                                           ; |part2|Selector1~1                                                                                     ; out0             ;
+; |part2|Selector4~1                                                                                           ; |part2|Selector4~1                                                                                     ; out0             ;
+; |part2|Selector4~2                                                                                           ; |part2|Selector4~2                                                                                     ; out0             ;
+; |part2|Selector4~3                                                                                           ; |part2|Selector4~3                                                                                     ; out0             ;
+; |part2|Selector4~4                                                                                           ; |part2|Selector4~4                                                                                     ; out0             ;
+; |part2|Selector5~2                                                                                           ; |part2|Selector5~2                                                                                     ; out0             ;
+; |part2|Selector10~0                                                                                          ; |part2|Selector10~0                                                                                    ; out0             ;
+; |part2|Selector11~0                                                                                          ; |part2|Selector11~0                                                                                    ; out0             ;
+; |part2|Selector14~0                                                                                          ; |part2|Selector14~0                                                                                    ; out0             ;
+; |part2|Selector16~0                                                                                          ; |part2|Selector16~0                                                                                    ; out0             ;
+; |part2|Selector17~0                                                                                          ; |part2|Selector17~0                                                                                    ; out0             ;
+; |part2|LessThan0~0                                                                                           ; |part2|LessThan0~0                                                                                     ; out0             ;
+; |part2|LessThan0~1                                                                                           ; |part2|LessThan0~1                                                                                     ; out0             ;
+; |part2|LessThan0~2                                                                                           ; |part2|LessThan0~2                                                                                     ; out0             ;
+; |part2|LessThan0~3                                                                                           ; |part2|LessThan0~3                                                                                     ; out0             ;
+; |part2|LessThan0~4                                                                                           ; |part2|LessThan0~4                                                                                     ; out0             ;
+; |part2|LessThan0~5                                                                                           ; |part2|LessThan0~5                                                                                     ; out0             ;
+; |part2|LessThan0~6                                                                                           ; |part2|LessThan0~6                                                                                     ; out0             ;
+; |part2|LessThan0~7                                                                                           ; |part2|LessThan0~7                                                                                     ; out0             ;
+; |part2|LessThan0~8                                                                                           ; |part2|LessThan0~8                                                                                     ; out0             ;
+; |part2|LessThan0~9                                                                                           ; |part2|LessThan0~9                                                                                     ; out0             ;
+; |part2|LessThan0~10                                                                                          ; |part2|LessThan0~10                                                                                    ; out0             ;
+; |part2|LessThan0~11                                                                                          ; |part2|LessThan0~11                                                                                    ; out0             ;
+; |part2|LessThan0~12                                                                                          ; |part2|LessThan0~12                                                                                    ; out0             ;
+; |part2|LessThan0~13                                                                                          ; |part2|LessThan0~13                                                                                    ; out0             ;
+; |part2|LessThan0~14                                                                                          ; |part2|LessThan0~14                                                                                    ; out0             ;
+; |part2|LessThan0~16                                                                                          ; |part2|LessThan0~16                                                                                    ; out0             ;
+; |part2|LessThan1~21                                                                                          ; |part2|LessThan1~21                                                                                    ; out0             ;
+; |part2|LessThan1~25                                                                                          ; |part2|LessThan1~25                                                                                    ; out0             ;
+; |part2|LessThan1~27                                                                                          ; |part2|LessThan1~27                                                                                    ; out0             ;
+; |part2|LessThan2~25                                                                                          ; |part2|LessThan2~25                                                                                    ; out0             ;
+; |part2|LessThan2~27                                                                                          ; |part2|LessThan2~27                                                                                    ; out0             ;
+; |part2|Add0~0                                                                                                ; |part2|Add0~0                                                                                          ; out0             ;
+; |part2|Add0~1                                                                                                ; |part2|Add0~1                                                                                          ; out0             ;
+; |part2|Add0~2                                                                                                ; |part2|Add0~2                                                                                          ; out0             ;
+; |part2|Add0~3                                                                                                ; |part2|Add0~3                                                                                          ; out0             ;
+; |part2|Add0~4                                                                                                ; |part2|Add0~4                                                                                          ; out0             ;
+; |part2|Add0~5                                                                                                ; |part2|Add0~5                                                                                          ; out0             ;
+; |part2|Add0~7                                                                                                ; |part2|Add0~7                                                                                          ; out0             ;
+; |part2|Add1~0                                                                                                ; |part2|Add1~0                                                                                          ; out0             ;
+; |part2|Add1~1                                                                                                ; |part2|Add1~1                                                                                          ; out0             ;
+; |part2|Add1~2                                                                                                ; |part2|Add1~2                                                                                          ; out0             ;
+; |part2|Add1~3                                                                                                ; |part2|Add1~3                                                                                          ; out0             ;
+; |part2|Add2~0                                                                                                ; |part2|Add2~0                                                                                          ; out0             ;
+; |part2|Add2~1                                                                                                ; |part2|Add2~1                                                                                          ; out0             ;
+; |part2|Add2~2                                                                                                ; |part2|Add2~2                                                                                          ; out0             ;
+; |part2|Add2~3                                                                                                ; |part2|Add2~3                                                                                          ; out0             ;
+; |part2|Add2~4                                                                                                ; |part2|Add2~4                                                                                          ; out0             ;
+; |part2|Add2~5                                                                                                ; |part2|Add2~5                                                                                          ; out0             ;
+; |part2|Add2~6                                                                                                ; |part2|Add2~6                                                                                          ; out0             ;
+; |part2|Add2~7                                                                                                ; |part2|Add2~7                                                                                          ; out0             ;
+; |part2|Add2~8                                                                                                ; |part2|Add2~8                                                                                          ; out0             ;
+; |part2|Add2~9                                                                                                ; |part2|Add2~9                                                                                          ; out0             ;
+; |part2|Add2~10                                                                                               ; |part2|Add2~10                                                                                         ; out0             ;
+; |part2|Add2~11                                                                                               ; |part2|Add2~11                                                                                         ; out0             ;
+; |part2|Add2~12                                                                                               ; |part2|Add2~12                                                                                         ; out0             ;
+; |part2|Add2~13                                                                                               ; |part2|Add2~13                                                                                         ; out0             ;
+; |part2|Add2~14                                                                                               ; |part2|Add2~14                                                                                         ; out0             ;
+; |part2|Add2~15                                                                                               ; |part2|Add2~15                                                                                         ; out0             ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                    ; Output Port Name                                                                                       ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |part2|y.S4                                                                                                  ; |part2|y.S4                                                                                            ; regout           ;
+; |part2|y.S6                                                                                                  ; |part2|y.S6                                                                                            ; regout           ;
+; |part2|Addr[1]$latch                                                                                         ; |part2|Addr[1]$latch                                                                                   ; out              ;
+; |part2|Addr[2]$latch                                                                                         ; |part2|Addr[2]$latch                                                                                   ; out              ;
+; |part2|Dtar[6]$latch                                                                                         ; |part2|Dtar[6]$latch                                                                                   ; out              ;
+; |part2|Dtar[7]$latch                                                                                         ; |part2|Dtar[7]$latch                                                                                   ; out              ;
+; |part2|R[1]                                                                                                  ; |part2|R[1]                                                                                            ; out              ;
+; |part2|R[2]                                                                                                  ; |part2|R[2]                                                                                            ; out              ;
+; |part2|R[3]                                                                                                  ; |part2|R[3]                                                                                            ; out              ;
+; |part2|L[0]                                                                                                  ; |part2|L[0]                                                                                            ; out              ;
+; |part2|L[1]                                                                                                  ; |part2|L[1]                                                                                            ; out              ;
+; |part2|L[2]                                                                                                  ; |part2|L[2]                                                                                            ; out              ;
+; |part2|L[3]                                                                                                  ; |part2|L[3]                                                                                            ; out              ;
+; |part2|Addr[0]$latch                                                                                         ; |part2|Addr[0]$latch                                                                                   ; out              ;
+; |part2|y_next.S4_544                                                                                         ; |part2|y_next.S4_544                                                                                   ; out              ;
+; |part2|Resetn                                                                                                ; |part2|Resetn                                                                                          ; out              ;
+; |part2|Data[6]                                                                                               ; |part2|Data[6]                                                                                         ; out              ;
+; |part2|Data[7]                                                                                               ; |part2|Data[7]                                                                                         ; out              ;
+; |part2|Addr[0]                                                                                               ; |part2|Addr[0]                                                                                         ; pin_out          ;
+; |part2|Addr[1]                                                                                               ; |part2|Addr[1]                                                                                         ; pin_out          ;
+; |part2|Addr[2]                                                                                               ; |part2|Addr[2]                                                                                         ; pin_out          ;
+; |part2|Addr[4]                                                                                               ; |part2|Addr[4]                                                                                         ; pin_out          ;
+; |part2|Dtar[6]                                                                                               ; |part2|Dtar[6]                                                                                         ; pin_out          ;
+; |part2|Dtar[7]                                                                                               ; |part2|Dtar[7]                                                                                         ; pin_out          ;
+; |part2|y.S4~0                                                                                                ; |part2|y.S4~0                                                                                          ; out0             ;
+; |part2|WideOr1~0                                                                                             ; |part2|WideOr1~0                                                                                       ; out0             ;
+; |part2|WideOr6~0                                                                                             ; |part2|WideOr6~0                                                                                       ; out0             ;
+; |part2|regne:LoadData|Q~0                                                                                    ; |part2|regne:LoadData|Q~0                                                                              ; out              ;
+; |part2|regne:LoadData|Q~1                                                                                    ; |part2|regne:LoadData|Q~1                                                                              ; out              ;
+; |part2|regne:LoadData|Q~8                                                                                    ; |part2|regne:LoadData|Q~8                                                                              ; out              ;
+; |part2|regne:LoadData|Q~9                                                                                    ; |part2|regne:LoadData|Q~9                                                                              ; out              ;
+; |part2|regne:LoadData|Q[6]                                                                                   ; |part2|regne:LoadData|Q[6]                                                                             ; regout           ;
+; |part2|regne:LoadData|Q[7]                                                                                   ; |part2|regne:LoadData|Q[7]                                                                             ; regout           ;
+; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a7 ; |part2|memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[7] ; portadataout0    ;
+; |part2|Selector1~1                                                                                           ; |part2|Selector1~1                                                                                     ; out0             ;
+; |part2|Selector4~1                                                                                           ; |part2|Selector4~1                                                                                     ; out0             ;
+; |part2|Selector4~2                                                                                           ; |part2|Selector4~2                                                                                     ; out0             ;
+; |part2|Selector4~3                                                                                           ; |part2|Selector4~3                                                                                     ; out0             ;
+; |part2|Selector4~4                                                                                           ; |part2|Selector4~4                                                                                     ; out0             ;
+; |part2|Selector5~2                                                                                           ; |part2|Selector5~2                                                                                     ; out0             ;
+; |part2|Selector10~0                                                                                          ; |part2|Selector10~0                                                                                    ; out0             ;
+; |part2|Selector11~0                                                                                          ; |part2|Selector11~0                                                                                    ; out0             ;
+; |part2|Selector14~0                                                                                          ; |part2|Selector14~0                                                                                    ; out0             ;
+; |part2|Selector16~0                                                                                          ; |part2|Selector16~0                                                                                    ; out0             ;
+; |part2|Selector17~0                                                                                          ; |part2|Selector17~0                                                                                    ; out0             ;
+; |part2|LessThan0~0                                                                                           ; |part2|LessThan0~0                                                                                     ; out0             ;
+; |part2|LessThan0~1                                                                                           ; |part2|LessThan0~1                                                                                     ; out0             ;
+; |part2|LessThan0~2                                                                                           ; |part2|LessThan0~2                                                                                     ; out0             ;
+; |part2|LessThan0~3                                                                                           ; |part2|LessThan0~3                                                                                     ; out0             ;
+; |part2|LessThan0~4                                                                                           ; |part2|LessThan0~4                                                                                     ; out0             ;
+; |part2|LessThan0~5                                                                                           ; |part2|LessThan0~5                                                                                     ; out0             ;
+; |part2|LessThan0~6                                                                                           ; |part2|LessThan0~6                                                                                     ; out0             ;
+; |part2|LessThan0~7                                                                                           ; |part2|LessThan0~7                                                                                     ; out0             ;
+; |part2|LessThan0~8                                                                                           ; |part2|LessThan0~8                                                                                     ; out0             ;
+; |part2|LessThan0~9                                                                                           ; |part2|LessThan0~9                                                                                     ; out0             ;
+; |part2|LessThan0~10                                                                                          ; |part2|LessThan0~10                                                                                    ; out0             ;
+; |part2|LessThan0~11                                                                                          ; |part2|LessThan0~11                                                                                    ; out0             ;
+; |part2|LessThan0~12                                                                                          ; |part2|LessThan0~12                                                                                    ; out0             ;
+; |part2|LessThan0~13                                                                                          ; |part2|LessThan0~13                                                                                    ; out0             ;
+; |part2|LessThan0~14                                                                                          ; |part2|LessThan0~14                                                                                    ; out0             ;
+; |part2|LessThan0~16                                                                                          ; |part2|LessThan0~16                                                                                    ; out0             ;
+; |part2|LessThan1~21                                                                                          ; |part2|LessThan1~21                                                                                    ; out0             ;
+; |part2|LessThan1~25                                                                                          ; |part2|LessThan1~25                                                                                    ; out0             ;
+; |part2|LessThan1~27                                                                                          ; |part2|LessThan1~27                                                                                    ; out0             ;
+; |part2|LessThan2~25                                                                                          ; |part2|LessThan2~25                                                                                    ; out0             ;
+; |part2|LessThan2~27                                                                                          ; |part2|LessThan2~27                                                                                    ; out0             ;
+; |part2|Add0~0                                                                                                ; |part2|Add0~0                                                                                          ; out0             ;
+; |part2|Add0~1                                                                                                ; |part2|Add0~1                                                                                          ; out0             ;
+; |part2|Add0~2                                                                                                ; |part2|Add0~2                                                                                          ; out0             ;
+; |part2|Add0~3                                                                                                ; |part2|Add0~3                                                                                          ; out0             ;
+; |part2|Add0~4                                                                                                ; |part2|Add0~4                                                                                          ; out0             ;
+; |part2|Add0~5                                                                                                ; |part2|Add0~5                                                                                          ; out0             ;
+; |part2|Add0~7                                                                                                ; |part2|Add0~7                                                                                          ; out0             ;
+; |part2|Add1~0                                                                                                ; |part2|Add1~0                                                                                          ; out0             ;
+; |part2|Add1~1                                                                                                ; |part2|Add1~1                                                                                          ; out0             ;
+; |part2|Add1~2                                                                                                ; |part2|Add1~2                                                                                          ; out0             ;
+; |part2|Add1~3                                                                                                ; |part2|Add1~3                                                                                          ; out0             ;
+; |part2|Add2~0                                                                                                ; |part2|Add2~0                                                                                          ; out0             ;
+; |part2|Add2~1                                                                                                ; |part2|Add2~1                                                                                          ; out0             ;
+; |part2|Add2~2                                                                                                ; |part2|Add2~2                                                                                          ; out0             ;
+; |part2|Add2~3                                                                                                ; |part2|Add2~3                                                                                          ; out0             ;
+; |part2|Add2~4                                                                                                ; |part2|Add2~4                                                                                          ; out0             ;
+; |part2|Add2~5                                                                                                ; |part2|Add2~5                                                                                          ; out0             ;
+; |part2|Add2~6                                                                                                ; |part2|Add2~6                                                                                          ; out0             ;
+; |part2|Add2~7                                                                                                ; |part2|Add2~7                                                                                          ; out0             ;
+; |part2|Add2~8                                                                                                ; |part2|Add2~8                                                                                          ; out0             ;
+; |part2|Add2~9                                                                                                ; |part2|Add2~9                                                                                          ; out0             ;
+; |part2|Add2~10                                                                                               ; |part2|Add2~10                                                                                         ; out0             ;
+; |part2|Add2~11                                                                                               ; |part2|Add2~11                                                                                         ; out0             ;
+; |part2|Add2~12                                                                                               ; |part2|Add2~12                                                                                         ; out0             ;
+; |part2|Add2~13                                                                                               ; |part2|Add2~13                                                                                         ; out0             ;
+; |part2|Add2~14                                                                                               ; |part2|Add2~14                                                                                         ; out0             ;
+; |part2|Add2~15                                                                                               ; |part2|Add2~15                                                                                         ; out0             ;
++--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Nov 16 23:39:34 2019
+Info: Command: quartus_sim --simulation_results_format=VWF part2 -c part2
+Info (324025): Using vector source file "W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab11/part2/part2.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 100.0 ns on register "|part2|regne:LoadData|Q[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 200.0 ns on register "|part2|regne:LoadData|Q[1]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 400.0 ns on register "|part2|regne:LoadData|Q[2]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 800.0 ns on register "|part2|regne:LoadData|Q[3]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.6 us on register "|part2|regne:LoadData|Q[4]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 3.2 us on register "|part2|regne:LoadData|Q[5]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 6.4 us on register "|part2|regne:LoadData|Q[6]"
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      64.21 %
+Info (328052): Number of transitions in simulation is 40104
+Info (324045): Vector file part2.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4456 megabytes
+    Info: Processing ended: Sat Nov 16 23:39:34 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
