@@ -1,5 +1,5 @@
 EDA Netlist Writer report for part2
-Sun Nov 17 14:03:12 2019
+Mon Nov 18 12:25:45 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Nov 17 14:03:12 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 18 12:25:45 2019 ;
 ; Revision Name             ; part2                                 ;
 ; Top-level Entity Name     ; part2                                 ;
 ; Family                    ; Cyclone II                            ;
@@ -80,13 +80,23 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Nov 17 14:03:11 2019
+    Info: Processing started: Mon Nov 18 12:25:44 2019
 Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog part2 -c part2
+Info (119006): Selected device EP2C20F484C7 for design "part2"
+Info (119042): Found following RAM instances in design that are actually implemented as ROM because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a0" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a1" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a2" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a3" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a4" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a5" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a6" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
+    Info (119043): Atom "memory_block:loadReferent|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a7" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Info (204019): Generated file part2.vo in folder "W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab11/part2New/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4536 megabytes
-    Info: Processing ended: Sun Nov 17 14:03:12 2019
+    Info: Peak virtual memory: 4539 megabytes
+    Info: Processing ended: Mon Nov 18 12:25:45 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

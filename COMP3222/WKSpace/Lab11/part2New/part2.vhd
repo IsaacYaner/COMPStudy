@@ -73,8 +73,6 @@ BEGIN
 					y_next <= S2;
 				WHEN S2 =>
 					y_next <= S3;
-				WHEN S6 =>
-					y_next <= S3;
 				WHEN S3 =>
 					IF (ref > tar) OR (ref < tar) THEN
 						IF Finish = '1' THEN
@@ -137,9 +135,6 @@ BEGIN
 				
 				WHEN S2 =>
 					ref <= sth;		
-			
-				WHEN S6 =>
-					null;
 					
 				WHEN S3 =>
 					IF ref > tar THEN
