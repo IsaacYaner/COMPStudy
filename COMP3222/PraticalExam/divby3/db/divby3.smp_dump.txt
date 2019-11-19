@@ -1,0 +1,7 @@
+
+State Machine - |divby3|y
+Name y.S4 y.S3 y.S1 y.SI 
+y.SI 0 0 0 0 
+y.S1 0 0 1 1 
+y.S3 0 1 0 1 
+y.S4 1 0 0 1 
