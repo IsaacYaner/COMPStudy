@@ -1,0 +1,83 @@
+Restore Archived Project report for part2
+Sat Nov 16 22:15:38 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Nov 16 22:15:38 2019 ;
+; Revision Name                   ; part2                                 ;
+; Top-level Entity Name           ; part2                                 ;
+; Family                          ; Cyclone II                            ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'E:/MISC/TempFile/Downloadings/lab11_part2 (1).qar' into the 'W:\\UNSWSTUDY\\COMPStudy\\COMP3222\\WKSpace\\Lab11\\part2New/' directory
+Info: Generated report 'part2.restore.rpt'
+Info (23030): Evaluation of Tcl script a:/coding/languages/vhdl/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4420 megabytes
+    Info: Processing ended: Sat Nov 16 22:15:38 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++-------------------------+
+; Files Restored          ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; assignment_defaults.qdf ;
+; memory_block.cmp        ;
+; memory_block.qip        ;
+; memory_block.vhd        ;
+; my_array.mif            ;
+; output_files/part2.done ;
+; part2.qpf               ;
+; part2.qsf               ;
+; part2.vhd               ;
+; part2.vwf               ;
++-------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

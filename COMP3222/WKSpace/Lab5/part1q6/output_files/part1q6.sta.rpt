@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for part1q6
-Mon Oct 28 12:17:30 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 29 12:55:35 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -68,17 +68,17 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                                       ;
-+--------------------+--------------------------------------------------------------------+
-; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
-; Revision Name      ; part1q6                                                            ;
-; Device Family      ; Cyclone II                                                         ;
-; Device Name        ; EP2C20F484C7                                                       ;
-; Timing Models      ; Final                                                              ;
-; Delay Model        ; Combined                                                           ;
-; Rise/Fall Delays   ; Unavailable                                                        ;
-+--------------------+--------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; part1q6                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -86,15 +86,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -112,7 +113,7 @@ applicable agreement for further details.
 +-----------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +-----------+-----------------+------------+---------------------------------------------------------------+
-; 500.5 MHz ; 405.02 MHz      ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 498.5 MHz ; 405.02 MHz      ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-----------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -122,7 +123,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+---------------+
 ; Clock  ; Slack  ; End Point TNS ;
 +--------+--------+---------------+
-; KEY[0] ; -0.998 ; -2.740        ;
+; KEY[0] ; -1.006 ; -2.686        ;
 +--------+--------+---------------+
 
 
@@ -161,33 +162,33 @@ No paths to report.
 +--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                     ; To Node                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.998 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.036      ;
-; -0.991 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.029      ;
-; -0.852 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.890      ;
-; -0.829 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.867      ;
-; -0.825 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.863      ;
-; -0.710 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.748      ;
-; -0.648 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.686      ;
-; -0.641 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.679      ;
-; -0.638 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.676      ;
-; -0.634 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.672      ;
-; -0.502 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.540      ;
-; -0.501 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.539      ;
-; -0.497 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.535      ;
-; -0.366 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.404      ;
-; -0.362 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.400      ;
-; -0.360 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.398      ;
-; -0.236 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.274      ;
-; -0.235 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.273      ;
-; -0.107 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.145      ;
-; -0.105 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.143      ;
-; -0.057 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.095      ;
-; 0.110  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.928      ;
-; 0.111  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.927      ;
-; 0.115  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.923      ;
+; -1.006 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.044      ;
+; -0.981 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.019      ;
+; -0.857 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.895      ;
+; -0.703 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.741      ;
+; -0.659 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.697      ;
+; -0.648 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.686      ;
+; -0.647 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.685      ;
+; -0.634 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.672      ;
+; -0.625 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.663      ;
+; -0.624 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.662      ;
+; -0.510 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.548      ;
+; -0.501 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.539      ;
+; -0.500 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.538      ;
+; -0.359 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.397      ;
+; -0.358 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.396      ;
+; -0.356 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.394      ;
+; -0.270 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.308      ;
+; -0.269 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.307      ;
+; -0.109 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.147      ;
+; -0.107 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.145      ;
+; -0.105 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.143      ;
+; -0.052 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.090      ;
+; 0.114  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.924      ;
+; 0.121  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.917      ;
 ; 0.307  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.731      ;
-; 0.307  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.731      ;
 ; 0.307  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.731      ;
 +--------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -199,30 +200,30 @@ No paths to report.
 ; 0.445 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.731      ;
-; 0.637 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.923      ;
-; 0.641 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.927      ;
-; 0.642 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.928      ;
-; 0.809 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.095      ;
-; 0.857 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.143      ;
-; 0.859 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.145      ;
-; 0.987 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.273      ;
-; 0.988 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.274      ;
-; 1.112 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.398      ;
-; 1.114 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.400      ;
-; 1.118 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.404      ;
-; 1.249 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.535      ;
-; 1.253 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.539      ;
-; 1.254 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.540      ;
-; 1.386 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.672      ;
-; 1.390 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.676      ;
-; 1.393 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.679      ;
-; 1.400 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.686      ;
-; 1.462 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.748      ;
-; 1.577 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.863      ;
-; 1.581 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.867      ;
-; 1.604 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.890      ;
-; 1.743 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.029      ;
-; 1.750 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.036      ;
+; 0.631 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.917      ;
+; 0.638 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.924      ;
+; 0.804 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.090      ;
+; 0.857 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.143      ;
+; 0.859 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.145      ;
+; 0.861 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.147      ;
+; 1.021 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.307      ;
+; 1.022 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.108 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.394      ;
+; 1.110 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.396      ;
+; 1.111 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.397      ;
+; 1.252 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.538      ;
+; 1.253 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.539      ;
+; 1.262 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.548      ;
+; 1.376 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.662      ;
+; 1.377 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.663      ;
+; 1.386 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.672      ;
+; 1.399 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.685      ;
+; 1.400 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.686      ;
+; 1.411 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.697      ;
+; 1.455 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.741      ;
+; 1.609 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.895      ;
+; 1.733 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.019      ;
+; 1.758 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.044      ;
 +-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -278,8 +279,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; 0.259 ; 0.259 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; 0.259 ; 0.259 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.480 ; 0.480 ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.480 ; 0.480 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.216 ; 0.216 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -288,8 +290,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; 0.191 ; 0.191 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; 0.191 ; 0.191 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.230 ; 0.230 ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.081 ; 0.081 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.230 ; 0.230 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -298,18 +301,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 7.606 ; 7.606 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 7.606 ; 7.606 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 7.068 ; 7.068 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 5.948 ; 5.948 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 6.299 ; 6.299 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 6.655 ; 6.655 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 6.661 ; 6.661 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 7.068 ; 7.068 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 6.886 ; 6.886 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 6.869 ; 6.869 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 6.781 ; 6.781 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 6.499 ; 6.499 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 7.292 ; 7.292 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 7.292 ; 7.292 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.108 ; 7.108 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 5.989 ; 5.989 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 6.569 ; 6.569 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 6.702 ; 6.702 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 6.916 ; 6.916 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.108 ; 7.108 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 6.934 ; 6.934 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 6.671 ; 6.671 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 6.855 ; 6.855 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 6.755 ; 6.755 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -318,18 +321,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 7.036 ; 7.036 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 7.036 ; 7.036 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 5.948 ; 5.948 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 5.948 ; 5.948 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 6.299 ; 6.299 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 6.655 ; 6.655 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 6.661 ; 6.661 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 7.068 ; 7.068 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 6.886 ; 6.886 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 6.869 ; 6.869 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 6.781 ; 6.781 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 6.499 ; 6.499 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 7.131 ; 7.131 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 7.131 ; 7.131 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 5.989 ; 5.989 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 5.989 ; 5.989 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 6.569 ; 6.569 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 6.702 ; 6.702 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 6.916 ; 6.916 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.108 ; 7.108 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 6.934 ; 6.934 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 6.671 ; 6.671 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 6.855 ; 6.855 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 6.755 ; 6.755 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -338,7 +341,7 @@ No paths to report.
 +--------+-------+---------------+
 ; Clock  ; Slack ; End Point TNS ;
 +--------+-------+---------------+
-; KEY[0] ; 0.212 ; 0.000         ;
+; KEY[0] ; 0.208 ; 0.000         ;
 +--------+-------+---------------+
 
 
@@ -377,33 +380,33 @@ No paths to report.
 +-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                                     ; To Node                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.212 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.820      ;
-; 0.217 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.815      ;
-; 0.237 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.795      ;
-; 0.261 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.771      ;
-; 0.299 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.733      ;
-; 0.320 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.712      ;
-; 0.333 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.699      ;
-; 0.338 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.694      ;
-; 0.341 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.691      ;
-; 0.344 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.688      ;
-; 0.396 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.636      ;
-; 0.420 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.612      ;
-; 0.420 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.612      ;
-; 0.439 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.593      ;
-; 0.462 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.570      ;
-; 0.463 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.569      ;
-; 0.511 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.521      ;
-; 0.512 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.520      ;
-; 0.557 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.475      ;
+; 0.208 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.824      ;
+; 0.223 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.809      ;
+; 0.292 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.329 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.703      ;
+; 0.335 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.697      ;
+; 0.336 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.696      ;
+; 0.344 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.688      ;
+; 0.346 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.686      ;
+; 0.349 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.683      ;
+; 0.350 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.682      ;
+; 0.413 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.619      ;
+; 0.415 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.617      ;
+; 0.416 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.616      ;
+; 0.464 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.568      ;
+; 0.465 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.567      ;
+; 0.467 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.565      ;
+; 0.504 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.528      ;
+; 0.506 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.526      ;
+; 0.554 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.478      ;
+; 0.555 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.477      ;
 ; 0.557 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.475      ;
-; 0.559 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.473      ;
-; 0.630 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.402      ;
-; 0.631 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.401      ;
-; 0.633 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.399      ;
+; 0.565 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.467      ;
+; 0.632 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.400      ;
+; 0.635 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.397      ;
 ; 0.665 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.367      ;
-; 0.665 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.367      ;
 ; 0.665 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.367      ;
 +-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -415,30 +418,30 @@ No paths to report.
 ; 0.215 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
-; 0.247 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.399      ;
-; 0.249 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.401      ;
-; 0.250 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.402      ;
-; 0.321 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.473      ;
-; 0.323 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.475      ;
+; 0.245 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.248 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.400      ;
+; 0.315 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.467      ;
 ; 0.323 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.475      ;
-; 0.368 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.520      ;
-; 0.369 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.521      ;
-; 0.417 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.569      ;
-; 0.418 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.570      ;
-; 0.441 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.593      ;
-; 0.460 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.612      ;
-; 0.460 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.612      ;
-; 0.484 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.636      ;
-; 0.536 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.688      ;
-; 0.539 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.691      ;
-; 0.542 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.694      ;
-; 0.547 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.699      ;
-; 0.560 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.712      ;
-; 0.581 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.733      ;
-; 0.619 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.771      ;
-; 0.643 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.795      ;
-; 0.663 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.815      ;
-; 0.668 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.820      ;
+; 0.325 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.477      ;
+; 0.326 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.478      ;
+; 0.374 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.528      ;
+; 0.413 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.565      ;
+; 0.415 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.567      ;
+; 0.416 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.568      ;
+; 0.464 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.616      ;
+; 0.465 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.617      ;
+; 0.467 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.619      ;
+; 0.530 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.683      ;
+; 0.534 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.686      ;
+; 0.536 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.688      ;
+; 0.544 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.697      ;
+; 0.551 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.703      ;
+; 0.588 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.657 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.809      ;
+; 0.672 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.824      ;
 +-------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -494,8 +497,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; -0.015 ; -0.015 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; -0.015 ; -0.015 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.043  ; 0.043  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.043  ; 0.043  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.036 ; -0.036 ; Rise       ; KEY[0]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -504,8 +508,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; 0.214 ; 0.214 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; 0.214 ; 0.214 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.227 ; 0.227 ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.170 ; 0.170 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.227 ; 0.227 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -514,18 +519,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 3.535 ; 3.535 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 3.535 ; 3.535 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 3.434 ; 3.434 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 2.944 ; 2.944 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 3.075 ; 3.075 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 3.232 ; 3.232 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 3.244 ; 3.244 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 3.434 ; 3.434 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 3.311 ; 3.311 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 3.300 ; 3.300 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 3.325 ; 3.325 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 3.131 ; 3.131 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 3.444 ; 3.444 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 3.444 ; 3.444 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.455 ; 3.455 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 2.964 ; 2.964 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.174 ; 3.174 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.256 ; 3.256 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.328 ; 3.328 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 3.455 ; 3.455 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 3.333 ; 3.333 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 3.238 ; 3.238 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 3.366 ; 3.366 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 3.220 ; 3.220 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -534,18 +539,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 3.365 ; 3.365 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 3.365 ; 3.365 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 2.944 ; 2.944 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 2.944 ; 2.944 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 3.075 ; 3.075 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 3.232 ; 3.232 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 3.244 ; 3.244 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 3.434 ; 3.434 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 3.311 ; 3.311 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 3.300 ; 3.300 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 3.325 ; 3.325 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 3.131 ; 3.131 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 3.399 ; 3.399 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 3.399 ; 3.399 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 2.964 ; 2.964 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 2.964 ; 2.964 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.174 ; 3.174 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.256 ; 3.256 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.328 ; 3.328 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 3.455 ; 3.455 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 3.333 ; 3.333 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 3.238 ; 3.238 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 3.366 ; 3.366 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 3.220 ; 3.220 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -554,10 +559,10 @@ No paths to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.998 ; 0.215 ; N/A      ; N/A     ; -1.469              ;
-;  KEY[0]          ; -0.998 ; 0.215 ; N/A      ; N/A     ; -1.469              ;
-; Design-wide TNS  ; -2.74  ; 0.0   ; 0.0      ; 0.0     ; -12.467             ;
-;  KEY[0]          ; -2.740 ; 0.000 ; N/A      ; N/A     ; -12.467             ;
+; Worst-case Slack ; -1.006 ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+;  KEY[0]          ; -1.006 ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -2.686 ; 0.0   ; 0.0      ; 0.0     ; -12.467             ;
+;  KEY[0]          ; -2.686 ; 0.000 ; N/A      ; N/A     ; -12.467             ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -566,8 +571,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; 0.259 ; 0.259 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; 0.259 ; 0.259 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.480 ; 0.480 ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.480 ; 0.480 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.216 ; 0.216 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -576,8 +582,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[0]     ; 0.214 ; 0.214 ; Rise       ; KEY[0]          ;
-;  SW[1]    ; KEY[0]     ; 0.214 ; 0.214 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.230 ; 0.230 ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.170 ; 0.170 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.230 ; 0.230 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -586,18 +593,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 7.606 ; 7.606 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 7.606 ; 7.606 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 7.068 ; 7.068 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 5.948 ; 5.948 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 6.299 ; 6.299 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 6.655 ; 6.655 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 6.661 ; 6.661 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 7.068 ; 7.068 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 6.886 ; 6.886 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 6.869 ; 6.869 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 6.781 ; 6.781 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 6.499 ; 6.499 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 7.292 ; 7.292 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 7.292 ; 7.292 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.108 ; 7.108 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 5.989 ; 5.989 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 6.569 ; 6.569 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 6.702 ; 6.702 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 6.916 ; 6.916 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.108 ; 7.108 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 6.934 ; 6.934 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 6.671 ; 6.671 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 6.855 ; 6.855 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 6.755 ; 6.755 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -606,18 +613,18 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; KEY[0]     ; 3.365 ; 3.365 ; Rise       ; KEY[0]          ;
-;  LEDG[0]  ; KEY[0]     ; 3.365 ; 3.365 ; Rise       ; KEY[0]          ;
-; LEDR[*]   ; KEY[0]     ; 2.944 ; 2.944 ; Rise       ; KEY[0]          ;
-;  LEDR[0]  ; KEY[0]     ; 2.944 ; 2.944 ; Rise       ; KEY[0]          ;
-;  LEDR[1]  ; KEY[0]     ; 3.075 ; 3.075 ; Rise       ; KEY[0]          ;
-;  LEDR[2]  ; KEY[0]     ; 3.232 ; 3.232 ; Rise       ; KEY[0]          ;
-;  LEDR[3]  ; KEY[0]     ; 3.244 ; 3.244 ; Rise       ; KEY[0]          ;
-;  LEDR[4]  ; KEY[0]     ; 3.434 ; 3.434 ; Rise       ; KEY[0]          ;
-;  LEDR[5]  ; KEY[0]     ; 3.311 ; 3.311 ; Rise       ; KEY[0]          ;
-;  LEDR[6]  ; KEY[0]     ; 3.300 ; 3.300 ; Rise       ; KEY[0]          ;
-;  LEDR[7]  ; KEY[0]     ; 3.325 ; 3.325 ; Rise       ; KEY[0]          ;
-;  LEDR[8]  ; KEY[0]     ; 3.131 ; 3.131 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 3.399 ; 3.399 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 3.399 ; 3.399 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 2.964 ; 2.964 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 2.964 ; 2.964 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.174 ; 3.174 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.256 ; 3.256 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.328 ; 3.328 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 3.455 ; 3.455 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 3.333 ; 3.333 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 3.238 ; 3.238 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 3.366 ; 3.366 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 3.220 ; 3.220 ; Rise       ; KEY[0]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -672,11 +679,11 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Oct 28 12:17:30 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 29 12:55:27 2019
 Info: Command: quartus_sta part1q6 -c part1q6
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'part1q6.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -686,10 +693,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.998
+Info (332146): Worst-case setup slack is -1.006
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.998        -2.740 KEY[0] 
+    Info (332119):    -1.006        -2.686 KEY[0] 
 Info (332146): Worst-case hold slack is 0.445
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -702,10 +709,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.469
     Info (332119):    -1.469       -12.467 KEY[0] 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.212
+Info (332146): Worst-case setup slack is 0.208
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.212         0.000 KEY[0] 
+    Info (332119):     0.208         0.000 KEY[0] 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -721,9 +728,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4586 megabytes
-    Info: Processing ended: Mon Oct 28 12:17:30 2019
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 426 megabytes
+    Info: Processing ended: Tue Oct 29 12:55:35 2019
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:01
 
 

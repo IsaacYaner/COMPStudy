@@ -1,0 +1,7 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ENTITY part1 IS
+	PORT (
+			);
+END part1;

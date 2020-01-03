@@ -1,0 +1,1397 @@
+$comment
+	File created using the following command:
+		vcd file OnBoard.msim.vcd -direction
+$end
+$date
+	Mon Nov 04 21:48:26 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module OnBoard_vlg_vec_tst $end
+$var reg 2 ! KEY [1:0] $end
+$var reg 10 " SW [9:0] $end
+$var wire 1 # LEDR [9] $end
+$var wire 1 $ LEDR [8] $end
+$var wire 1 % LEDR [7] $end
+$var wire 1 & LEDR [6] $end
+$var wire 1 ' LEDR [5] $end
+$var wire 1 ( LEDR [4] $end
+$var wire 1 ) LEDR [3] $end
+$var wire 1 * LEDR [2] $end
+$var wire 1 + LEDR [1] $end
+$var wire 1 , LEDR [0] $end
+$var wire 1 - sampler $end
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 SimpleProcessor|regG|Q[1]~13_combout $end
+$var wire 1 5 SimpleProcessor|regG|Q[2]~15_combout $end
+$var wire 1 6 SimpleProcessor|regG|Q[6]~23_combout $end
+$var wire 1 7 SimpleProcessor|Selector14~0_combout $end
+$var wire 1 8 SimpleProcessor|Selector6~2_combout $end
+$var wire 1 9 SimpleProcessor|Add0~2_combout $end
+$var wire 1 : SimpleProcessor|Add0~6_combout $end
+$var wire 1 ; SimpleProcessor|Add0~8_combout $end
+$var wire 1 < SimpleProcessor|Selector0~0_combout $end
+$var wire 1 = SimpleProcessor|reg_6|Q[0]~feeder_combout $end
+$var wire 1 > SimpleProcessor|reg_7|Q[1]~feeder_combout $end
+$var wire 1 ? SimpleProcessor|regA|Q[1]~feeder_combout $end
+$var wire 1 @ SimpleProcessor|reg_6|Q[2]~feeder_combout $end
+$var wire 1 A SimpleProcessor|reg_1|Q[2]~feeder_combout $end
+$var wire 1 B SimpleProcessor|reg_0|Q[3]~feeder_combout $end
+$var wire 1 C SimpleProcessor|reg_7|Q[3]~feeder_combout $end
+$var wire 1 D SimpleProcessor|reg_6|Q[4]~feeder_combout $end
+$var wire 1 E SimpleProcessor|reg_2|Q[5]~feeder_combout $end
+$var wire 1 F SimpleProcessor|regA|Q[5]~feeder_combout $end
+$var wire 1 G SimpleProcessor|reg_1|Q[6]~feeder_combout $end
+$var wire 1 H SimpleProcessor|reg_2|Q[7]~feeder_combout $end
+$var wire 1 I KEY[1]~clkctrl_outclk $end
+$var wire 1 J SimpleProcessor|reg_1|Q[0]~feeder_combout $end
+$var wire 1 K SimpleProcessor|Tstep_D.T1~0_combout $end
+$var wire 1 L KEY[0]~clkctrl_outclk $end
+$var wire 1 M SimpleProcessor|Tstep_Q.T1~regout $end
+$var wire 1 N SimpleProcessor|Tstep_D.T2~0_combout $end
+$var wire 1 O SimpleProcessor|Tstep_Q.T2~regout $end
+$var wire 1 P SimpleProcessor|Tstep_Q.T3~regout $end
+$var wire 1 Q SimpleProcessor|Selector0~1_combout $end
+$var wire 1 R SimpleProcessor|Tstep_Q.T0~regout $end
+$var wire 1 S SimpleProcessor|Selector17~0_combout $end
+$var wire 1 T SimpleProcessor|Selector7~0_combout $end
+$var wire 1 U SimpleProcessor|Ain~0_combout $end
+$var wire 1 V SimpleProcessor|Selector16~1_combout $end
+$var wire 1 W SimpleProcessor|Gin~0_combout $end
+$var wire 1 X SimpleProcessor|Selector15~1_combout $end
+$var wire 1 Y SimpleProcessor|Selector16~0_combout $end
+$var wire 1 Z SimpleProcessor|regIR|Q[2]~feeder_combout $end
+$var wire 1 [ SimpleProcessor|Selector16~2_combout $end
+$var wire 1 \ SimpleProcessor|Selector15~0_combout $end
+$var wire 1 ] SimpleProcessor|Selector15~2_combout $end
+$var wire 1 ^ SimpleProcessor|BusWires[3]~9_combout $end
+$var wire 1 _ SimpleProcessor|Selector14~1_combout $end
+$var wire 1 ` SimpleProcessor|Selector14~2_combout $end
+$var wire 1 a SimpleProcessor|BusWires[3]~10_combout $end
+$var wire 1 b SimpleProcessor|Selector6~3_combout $end
+$var wire 1 c SimpleProcessor|Selector12~0_combout $end
+$var wire 1 d SimpleProcessor|Selector12~1_combout $end
+$var wire 1 e SimpleProcessor|Selector13~0_combout $end
+$var wire 1 f SimpleProcessor|Selector13~1_combout $end
+$var wire 1 g SimpleProcessor|Selector13~2_combout $end
+$var wire 1 h SimpleProcessor|BusWires[3]~11_combout $end
+$var wire 1 i SimpleProcessor|Selector4~0_combout $end
+$var wire 1 j SimpleProcessor|Mux28~0_combout $end
+$var wire 1 k SimpleProcessor|Add0~0_combout $end
+$var wire 1 l SimpleProcessor|regG|Q[0]~10_cout $end
+$var wire 1 m SimpleProcessor|regG|Q[0]~11_combout $end
+$var wire 1 n SimpleProcessor|BusWires[3]~13_combout $end
+$var wire 1 o SimpleProcessor|BusWires[3]~15_combout $end
+$var wire 1 p SimpleProcessor|BusWires[3]~14_combout $end
+$var wire 1 q SimpleProcessor|BusWires[3]~16_combout $end
+$var wire 1 r SimpleProcessor|Selector1~0_combout $end
+$var wire 1 s SimpleProcessor|BusWires[3]~18_combout $end
+$var wire 1 t SimpleProcessor|BusWires[3]~17_combout $end
+$var wire 1 u SimpleProcessor|BusWires[3]~19_combout $end
+$var wire 1 v SimpleProcessor|BusWires~20_combout $end
+$var wire 1 w SimpleProcessor|BusWires~21_combout $end
+$var wire 1 x SimpleProcessor|Selector3~0_combout $end
+$var wire 1 y SimpleProcessor|Selector11~0_combout $end
+$var wire 1 z SimpleProcessor|Selector11~1_combout $end
+$var wire 1 { SimpleProcessor|BusWires[3]~12_combout $end
+$var wire 1 | SimpleProcessor|BusWires~22_combout $end
+$var wire 1 } SimpleProcessor|BusWires~23_combout $end
+$var wire 1 ~ SimpleProcessor|BusWires~24_combout $end
+$var wire 1 !! SimpleProcessor|BusWires~25_combout $end
+$var wire 1 "! SimpleProcessor|BusWires[3]~3_combout $end
+$var wire 1 #! SimpleProcessor|BusWires[3]~74_combout $end
+$var wire 1 $! SimpleProcessor|reg_0|Q[1]~feeder_combout $end
+$var wire 1 %! SimpleProcessor|Selector8~0_combout $end
+$var wire 1 &! SimpleProcessor|Selector2~0_combout $end
+$var wire 1 '! SimpleProcessor|BusWires~27_combout $end
+$var wire 1 (! SimpleProcessor|BusWires~28_combout $end
+$var wire 1 )! SimpleProcessor|BusWires~26_combout $end
+$var wire 1 *! SimpleProcessor|BusWires~29_combout $end
+$var wire 1 +! SimpleProcessor|BusWires~30_combout $end
+$var wire 1 ,! SimpleProcessor|BusWires~31_combout $end
+$var wire 1 -! SimpleProcessor|Selector5~2_combout $end
+$var wire 1 .! SimpleProcessor|BusWires~32_combout $end
+$var wire 1 /! SimpleProcessor|BusWires~33_combout $end
+$var wire 1 0! SimpleProcessor|BusWires~34_combout $end
+$var wire 1 1! SimpleProcessor|BusWires~35_combout $end
+$var wire 1 2! SimpleProcessor|BusWires~36_combout $end
+$var wire 1 3! SimpleProcessor|BusWires~37_combout $end
+$var wire 1 4! SimpleProcessor|reg_2|Q[3]~feeder_combout $end
+$var wire 1 5! SimpleProcessor|Add0~3_combout $end
+$var wire 1 6! SimpleProcessor|Add0~1_combout $end
+$var wire 1 7! SimpleProcessor|regG|Q[0]~12 $end
+$var wire 1 8! SimpleProcessor|regG|Q[1]~14 $end
+$var wire 1 9! SimpleProcessor|regG|Q[2]~16 $end
+$var wire 1 :! SimpleProcessor|regG|Q[3]~17_combout $end
+$var wire 1 ;! SimpleProcessor|BusWires~39_combout $end
+$var wire 1 <! SimpleProcessor|BusWires~40_combout $end
+$var wire 1 =! SimpleProcessor|reg_4|Q[3]~feeder_combout $end
+$var wire 1 >! SimpleProcessor|BusWires~38_combout $end
+$var wire 1 ?! SimpleProcessor|BusWires~41_combout $end
+$var wire 1 @! SimpleProcessor|BusWires~42_combout $end
+$var wire 1 A! SimpleProcessor|BusWires~43_combout $end
+$var wire 1 B! SimpleProcessor|reg_1|Q[4]~feeder_combout $end
+$var wire 1 C! SimpleProcessor|BusWires~44_combout $end
+$var wire 1 D! SimpleProcessor|Add0~4_combout $end
+$var wire 1 E! SimpleProcessor|regG|Q[3]~18 $end
+$var wire 1 F! SimpleProcessor|regG|Q[4]~19_combout $end
+$var wire 1 G! SimpleProcessor|BusWires~45_combout $end
+$var wire 1 H! SimpleProcessor|BusWires~46_combout $end
+$var wire 1 I! SimpleProcessor|BusWires~47_combout $end
+$var wire 1 J! SimpleProcessor|BusWires~48_combout $end
+$var wire 1 K! SimpleProcessor|BusWires~49_combout $end
+$var wire 1 L! SimpleProcessor|reg_0|Q[5]~feeder_combout $end
+$var wire 1 M! SimpleProcessor|Add0~5_combout $end
+$var wire 1 N! SimpleProcessor|regG|Q[4]~20 $end
+$var wire 1 O! SimpleProcessor|regG|Q[5]~21_combout $end
+$var wire 1 P! SimpleProcessor|BusWires~51_combout $end
+$var wire 1 Q! SimpleProcessor|BusWires~52_combout $end
+$var wire 1 R! SimpleProcessor|BusWires~50_combout $end
+$var wire 1 S! SimpleProcessor|BusWires~53_combout $end
+$var wire 1 T! SimpleProcessor|BusWires~54_combout $end
+$var wire 1 U! SimpleProcessor|BusWires~55_combout $end
+$var wire 1 V! SimpleProcessor|reg_0|Q[6]~feeder_combout $end
+$var wire 1 W! SimpleProcessor|BusWires~56_combout $end
+$var wire 1 X! SimpleProcessor|BusWires~57_combout $end
+$var wire 1 Y! SimpleProcessor|BusWires~58_combout $end
+$var wire 1 Z! SimpleProcessor|BusWires~59_combout $end
+$var wire 1 [! SimpleProcessor|BusWires~60_combout $end
+$var wire 1 \! SimpleProcessor|BusWires~61_combout $end
+$var wire 1 ]! SimpleProcessor|reg_0|Q[7]~feeder_combout $end
+$var wire 1 ^! SimpleProcessor|Add0~7_combout $end
+$var wire 1 _! SimpleProcessor|regG|Q[5]~22 $end
+$var wire 1 `! SimpleProcessor|regG|Q[6]~24 $end
+$var wire 1 a! SimpleProcessor|regG|Q[7]~25_combout $end
+$var wire 1 b! SimpleProcessor|BusWires~63_combout $end
+$var wire 1 c! SimpleProcessor|BusWires~64_combout $end
+$var wire 1 d! SimpleProcessor|BusWires~62_combout $end
+$var wire 1 e! SimpleProcessor|BusWires~65_combout $end
+$var wire 1 f! SimpleProcessor|BusWires~66_combout $end
+$var wire 1 g! SimpleProcessor|BusWires~67_combout $end
+$var wire 1 h! SimpleProcessor|reg_0|Q[8]~feeder_combout $end
+$var wire 1 i! SimpleProcessor|regG|Q[7]~26 $end
+$var wire 1 j! SimpleProcessor|regG|Q[8]~27_combout $end
+$var wire 1 k! SimpleProcessor|BusWires~68_combout $end
+$var wire 1 l! SimpleProcessor|BusWires~69_combout $end
+$var wire 1 m! SimpleProcessor|BusWires~70_combout $end
+$var wire 1 n! SimpleProcessor|BusWires~71_combout $end
+$var wire 1 o! SimpleProcessor|BusWires~72_combout $end
+$var wire 1 p! SimpleProcessor|BusWires~73_combout $end
+$var wire 1 q! SimpleProcessor|reg_1|Q [8] $end
+$var wire 1 r! SimpleProcessor|reg_1|Q [7] $end
+$var wire 1 s! SimpleProcessor|reg_1|Q [6] $end
+$var wire 1 t! SimpleProcessor|reg_1|Q [5] $end
+$var wire 1 u! SimpleProcessor|reg_1|Q [4] $end
+$var wire 1 v! SimpleProcessor|reg_1|Q [3] $end
+$var wire 1 w! SimpleProcessor|reg_1|Q [2] $end
+$var wire 1 x! SimpleProcessor|reg_1|Q [1] $end
+$var wire 1 y! SimpleProcessor|reg_1|Q [0] $end
+$var wire 1 z! SimpleProcessor|reg_2|Q [8] $end
+$var wire 1 {! SimpleProcessor|reg_2|Q [7] $end
+$var wire 1 |! SimpleProcessor|reg_2|Q [6] $end
+$var wire 1 }! SimpleProcessor|reg_2|Q [5] $end
+$var wire 1 ~! SimpleProcessor|reg_2|Q [4] $end
+$var wire 1 !" SimpleProcessor|reg_2|Q [3] $end
+$var wire 1 "" SimpleProcessor|reg_2|Q [2] $end
+$var wire 1 #" SimpleProcessor|reg_2|Q [1] $end
+$var wire 1 $" SimpleProcessor|reg_2|Q [0] $end
+$var wire 1 %" SimpleProcessor|reg_3|Q [8] $end
+$var wire 1 &" SimpleProcessor|reg_3|Q [7] $end
+$var wire 1 '" SimpleProcessor|reg_3|Q [6] $end
+$var wire 1 (" SimpleProcessor|reg_3|Q [5] $end
+$var wire 1 )" SimpleProcessor|reg_3|Q [4] $end
+$var wire 1 *" SimpleProcessor|reg_3|Q [3] $end
+$var wire 1 +" SimpleProcessor|reg_3|Q [2] $end
+$var wire 1 ," SimpleProcessor|reg_3|Q [1] $end
+$var wire 1 -" SimpleProcessor|reg_3|Q [0] $end
+$var wire 1 ." SimpleProcessor|reg_4|Q [8] $end
+$var wire 1 /" SimpleProcessor|reg_4|Q [7] $end
+$var wire 1 0" SimpleProcessor|reg_4|Q [6] $end
+$var wire 1 1" SimpleProcessor|reg_4|Q [5] $end
+$var wire 1 2" SimpleProcessor|reg_4|Q [4] $end
+$var wire 1 3" SimpleProcessor|reg_4|Q [3] $end
+$var wire 1 4" SimpleProcessor|reg_4|Q [2] $end
+$var wire 1 5" SimpleProcessor|reg_4|Q [1] $end
+$var wire 1 6" SimpleProcessor|reg_4|Q [0] $end
+$var wire 1 7" SimpleProcessor|reg_5|Q [8] $end
+$var wire 1 8" SimpleProcessor|reg_5|Q [7] $end
+$var wire 1 9" SimpleProcessor|reg_5|Q [6] $end
+$var wire 1 :" SimpleProcessor|reg_5|Q [5] $end
+$var wire 1 ;" SimpleProcessor|reg_5|Q [4] $end
+$var wire 1 <" SimpleProcessor|reg_5|Q [3] $end
+$var wire 1 =" SimpleProcessor|reg_5|Q [2] $end
+$var wire 1 >" SimpleProcessor|reg_5|Q [1] $end
+$var wire 1 ?" SimpleProcessor|reg_5|Q [0] $end
+$var wire 1 @" SimpleProcessor|reg_6|Q [8] $end
+$var wire 1 A" SimpleProcessor|reg_6|Q [7] $end
+$var wire 1 B" SimpleProcessor|reg_6|Q [6] $end
+$var wire 1 C" SimpleProcessor|reg_6|Q [5] $end
+$var wire 1 D" SimpleProcessor|reg_6|Q [4] $end
+$var wire 1 E" SimpleProcessor|reg_6|Q [3] $end
+$var wire 1 F" SimpleProcessor|reg_6|Q [2] $end
+$var wire 1 G" SimpleProcessor|reg_6|Q [1] $end
+$var wire 1 H" SimpleProcessor|reg_6|Q [0] $end
+$var wire 1 I" SimpleProcessor|reg_7|Q [8] $end
+$var wire 1 J" SimpleProcessor|reg_7|Q [7] $end
+$var wire 1 K" SimpleProcessor|reg_7|Q [6] $end
+$var wire 1 L" SimpleProcessor|reg_7|Q [5] $end
+$var wire 1 M" SimpleProcessor|reg_7|Q [4] $end
+$var wire 1 N" SimpleProcessor|reg_7|Q [3] $end
+$var wire 1 O" SimpleProcessor|reg_7|Q [2] $end
+$var wire 1 P" SimpleProcessor|reg_7|Q [1] $end
+$var wire 1 Q" SimpleProcessor|reg_7|Q [0] $end
+$var wire 1 R" SimpleProcessor|regA|Q [8] $end
+$var wire 1 S" SimpleProcessor|regA|Q [7] $end
+$var wire 1 T" SimpleProcessor|regA|Q [6] $end
+$var wire 1 U" SimpleProcessor|regA|Q [5] $end
+$var wire 1 V" SimpleProcessor|regA|Q [4] $end
+$var wire 1 W" SimpleProcessor|regA|Q [3] $end
+$var wire 1 X" SimpleProcessor|regA|Q [2] $end
+$var wire 1 Y" SimpleProcessor|regA|Q [1] $end
+$var wire 1 Z" SimpleProcessor|regA|Q [0] $end
+$var wire 1 [" SimpleProcessor|regIR|Q [8] $end
+$var wire 1 \" SimpleProcessor|regIR|Q [7] $end
+$var wire 1 ]" SimpleProcessor|regIR|Q [6] $end
+$var wire 1 ^" SimpleProcessor|regIR|Q [5] $end
+$var wire 1 _" SimpleProcessor|regIR|Q [4] $end
+$var wire 1 `" SimpleProcessor|regIR|Q [3] $end
+$var wire 1 a" SimpleProcessor|regIR|Q [2] $end
+$var wire 1 b" SimpleProcessor|regIR|Q [1] $end
+$var wire 1 c" SimpleProcessor|regIR|Q [0] $end
+$var wire 1 d" SimpleProcessor|regG|Q [8] $end
+$var wire 1 e" SimpleProcessor|regG|Q [7] $end
+$var wire 1 f" SimpleProcessor|regG|Q [6] $end
+$var wire 1 g" SimpleProcessor|regG|Q [5] $end
+$var wire 1 h" SimpleProcessor|regG|Q [4] $end
+$var wire 1 i" SimpleProcessor|regG|Q [3] $end
+$var wire 1 j" SimpleProcessor|regG|Q [2] $end
+$var wire 1 k" SimpleProcessor|regG|Q [1] $end
+$var wire 1 l" SimpleProcessor|regG|Q [0] $end
+$var wire 1 m" SimpleProcessor|BusWires [8] $end
+$var wire 1 n" SimpleProcessor|BusWires [7] $end
+$var wire 1 o" SimpleProcessor|BusWires [6] $end
+$var wire 1 p" SimpleProcessor|BusWires [5] $end
+$var wire 1 q" SimpleProcessor|BusWires [4] $end
+$var wire 1 r" SimpleProcessor|BusWires [3] $end
+$var wire 1 s" SimpleProcessor|BusWires [2] $end
+$var wire 1 t" SimpleProcessor|BusWires [1] $end
+$var wire 1 u" SimpleProcessor|BusWires [0] $end
+$var wire 1 v" SimpleProcessor|reg_0|Q [8] $end
+$var wire 1 w" SimpleProcessor|reg_0|Q [7] $end
+$var wire 1 x" SimpleProcessor|reg_0|Q [6] $end
+$var wire 1 y" SimpleProcessor|reg_0|Q [5] $end
+$var wire 1 z" SimpleProcessor|reg_0|Q [4] $end
+$var wire 1 {" SimpleProcessor|reg_0|Q [3] $end
+$var wire 1 |" SimpleProcessor|reg_0|Q [2] $end
+$var wire 1 }" SimpleProcessor|reg_0|Q [1] $end
+$var wire 1 ~" SimpleProcessor|reg_0|Q [0] $end
+$var wire 1 !# SW~combout [9] $end
+$var wire 1 "# SW~combout [8] $end
+$var wire 1 ## SW~combout [7] $end
+$var wire 1 $# SW~combout [6] $end
+$var wire 1 %# SW~combout [5] $end
+$var wire 1 &# SW~combout [4] $end
+$var wire 1 '# SW~combout [3] $end
+$var wire 1 (# SW~combout [2] $end
+$var wire 1 )# SW~combout [1] $end
+$var wire 1 *# SW~combout [0] $end
+$var wire 1 +# KEY~combout [1] $end
+$var wire 1 ,# KEY~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+x-
+0.
+1/
+x0
+11
+12
+13
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+1S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+1^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+1h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+1p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+1"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+1)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+17!
+08!
+19!
+0:!
+0;!
+0<!
+0=!
+1>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+1N!
+0O!
+0P!
+0Q!
+1R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+1`!
+0a!
+0b!
+0c!
+1d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0y!
+0x!
+0w!
+0v!
+0u!
+0t!
+0s!
+0r!
+0q!
+0$"
+0#"
+0""
+0!"
+0~!
+0}!
+0|!
+0{!
+0z!
+0-"
+0,"
+0+"
+0*"
+0)"
+0("
+0'"
+0&"
+0%"
+06"
+05"
+04"
+03"
+02"
+01"
+00"
+0/"
+0."
+0?"
+0>"
+0="
+0<"
+0;"
+0:"
+09"
+08"
+07"
+0H"
+0G"
+0F"
+0E"
+0D"
+0C"
+0B"
+0A"
+0@"
+0Q"
+0P"
+0O"
+0N"
+0M"
+0L"
+0K"
+0J"
+0I"
+0Z"
+0Y"
+0X"
+0W"
+0V"
+0U"
+0T"
+0S"
+0R"
+0c"
+0b"
+0a"
+0`"
+0_"
+0^"
+0]"
+0\"
+0["
+0l"
+0k"
+0j"
+0i"
+0h"
+0g"
+0f"
+0e"
+0d"
+0u"
+0t"
+0s"
+0r"
+0q"
+0p"
+0o"
+0n"
+0m"
+0~"
+0}"
+0|"
+0{"
+0z"
+0y"
+0x"
+0w"
+0v"
+0*#
+0)#
+0(#
+0'#
+0&#
+0%#
+0$#
+0##
+0"#
+0!#
+0,#
+0+#
+$end
+#10000
+b10 !
+1+#
+1I
+0-
+#20000
+b11 !
+b1000000000 "
+b1001000000 "
+b1 !
+1$#
+1!#
+1,#
+0+#
+0I
+1L
+1-
+1X!
+1Q
+1K
+1Y!
+1Z!
+1[!
+1\!
+#30000
+b11 !
+1+#
+1I
+0-
+1]"
+1R
+1M
+0K
+1#!
+0S
+1<
+1r
+0Q
+1#
+#40000
+b1001000100 "
+b1001000101 "
+b1000101 "
+b101 "
+b1 !
+0+#
+1*#
+1(#
+0$#
+0!#
+0I
+1-
+1w
+1/!
+1Z
+0X!
+1|
+10!
+0Y!
+1}
+11!
+0Z!
+1~
+12!
+0[!
+1!!
+13!
+0\!
+#50000
+b11 !
+1+#
+1I
+0-
+1s"
+1u"
+0R
+0M
+1A
+1@
+19
+1k
+1J
+1=
+0#!
+1S
+0<
+1*
+1,
+15
+1m
+0r
+0#
+#60000
+b1101 "
+b1001 "
+b1000 "
+b1000001000 "
+b1 !
+0+#
+0*#
+0(#
+1'#
+1!#
+0I
+1-
+0w
+0/!
+0Z
+1;!
+1Q
+1K
+0|
+00!
+1<!
+0}
+01!
+1?!
+0~
+02!
+1@!
+0!!
+03!
+1A!
+#70000
+b11 !
+1+#
+1I
+0-
+0]"
+1`"
+1R
+1M
+1o
+1X
+0K
+1#!
+0S
+1<
+1q
+1&!
+0Q
+1#
+1b!
+1P!
+0<!
+1'!
+0?!
+0@!
+0A!
+#80000
+b1010001000 "
+b1010000000 "
+b1010000001 "
+b10000001 "
+b1 !
+0+#
+1*#
+0'#
+1##
+0!#
+0I
+1-
+#90000
+b11 !
+1+#
+1I
+0-
+0s"
+0u"
+0R
+0M
+1F"
+1H"
+0A
+0@
+09
+0k
+0J
+0=
+0#!
+0o
+0X
+1S
+0<
+0*
+0,
+05
+0m
+0q
+0&!
+0#
+1c!
+1Q!
+0P!
+1<!
+0;!
+1(!
+0'!
+1w
+1e!
+1S!
+0Q!
+1?!
+0<!
+1*!
+0(!
+1|
+1f!
+1T!
+0S!
+1@!
+0?!
+1+!
+0*!
+1}
+1g!
+1U!
+0T!
+1A!
+0@!
+1,!
+0+!
+1~
+0U!
+0A!
+0,!
+1!!
+#100000
+b1 !
+0+#
+0I
+1-
+#110000
+b11 !
+1+#
+1I
+0-
+1c"
+0`"
+1\"
+#120000
+b1 !
+0+#
+0I
+1-
+#130000
+b11 !
+1+#
+1I
+0-
+#140000
+b1 !
+0+#
+0I
+1-
+#150000
+b11000001 "
+b11000000 "
+b1011000000 "
+b11 !
+1+#
+0*#
+1$#
+1!#
+1I
+0-
+0w
+1X!
+1Q
+1K
+0|
+1Y!
+0}
+1Z!
+0~
+1[!
+0!!
+1\!
+0c"
+1]"
+1j
+#160000
+b1 !
+0+#
+0I
+1-
+#170000
+b1001000000 "
+b1000000000 "
+b0 "
+b11 !
+1+#
+0$#
+0##
+0!#
+1I
+0-
+0X!
+0b!
+0Q
+0K
+0Y!
+0c!
+0Z!
+0e!
+0[!
+0f!
+0\!
+0g!
+0]"
+1R
+0\"
+1M
+1o
+0j
+1X
+1Q
+1#!
+0S
+1<
+1q
+1r
+0Q
+1#
+1b!
+1P!
+1;!
+1'!
+#180000
+b1 !
+0+#
+0I
+1-
+#190000
+b11 !
+1+#
+1I
+0-
+0R
+0M
+0#!
+0o
+0X
+1S
+0<
+0q
+0r
+0#
+1c!
+0b!
+1Q!
+0P!
+1<!
+0;!
+1(!
+0'!
+1e!
+0c!
+1S!
+0Q!
+1?!
+0<!
+1*!
+0(!
+1f!
+0e!
+1T!
+0S!
+1@!
+0?!
+1+!
+0*!
+1g!
+0f!
+1U!
+0T!
+1A!
+0@!
+1,!
+0+!
+0g!
+0U!
+0A!
+0,!
+#200000
+b1 !
+0+#
+0I
+1-
+#210000
+b11 !
+1+#
+1I
+0-
+#220000
+b1 !
+0+#
+0I
+1-
+#230000
+b11 !
+1+#
+1I
+0-
+#240000
+b10 !
+b0 !
+0,#
+0+#
+0I
+0L
+1-
+#250000
+b10 !
+1+#
+1I
+0-
+#260000
+b0 !
+0+#
+0I
+1-
+#270000
+b10 !
+1+#
+1I
+0-
+#280000
+b0 !
+0+#
+0I
+1-
+#290000
+b10 !
+1+#
+1I
+0-
+#300000
+b0 !
+0+#
+0I
+1-
+#310000
+b10 !
+1+#
+1I
+0-
+#320000
+b0 !
+0+#
+0I
+1-
+#330000
+b10 !
+1+#
+1I
+0-
+#340000
+b0 !
+0+#
+0I
+1-
+#350000
+b10 !
+1+#
+1I
+0-
+#360000
+b0 !
+0+#
+0I
+1-
+#370000
+b10 !
+1+#
+1I
+0-
+#380000
+b0 !
+0+#
+0I
+1-
+#390000
+b10 !
+1+#
+1I
+0-
+#400000
+b0 !
+0+#
+0I
+1-
+#410000
+b10 !
+1+#
+1I
+0-
+#420000
+b0 !
+0+#
+0I
+1-
+#430000
+b10 !
+1+#
+1I
+0-
+#440000
+b0 !
+0+#
+0I
+1-
+#450000
+b10 !
+1+#
+1I
+0-
+#460000
+b0 !
+0+#
+0I
+1-
+#470000
+b10 !
+1+#
+1I
+0-
+#480000
+b0 !
+0+#
+0I
+1-
+#490000
+b10 !
+1+#
+1I
+0-
+#500000
+b0 !
+0+#
+0I
+1-
+#510000
+b10 !
+1+#
+1I
+0-
+#520000
+b0 !
+0+#
+0I
+1-
+#530000
+b10 !
+1+#
+1I
+0-
+#540000
+b0 !
+0+#
+0I
+1-
+#550000
+b10 !
+1+#
+1I
+0-
+#560000
+b0 !
+0+#
+0I
+1-
+#570000
+b10 !
+1+#
+1I
+0-
+#580000
+b0 !
+0+#
+0I
+1-
+#590000
+b10 !
+1+#
+1I
+0-
+#600000
+b0 !
+0+#
+0I
+1-
+#610000
+b10 !
+1+#
+1I
+0-
+#620000
+b0 !
+0+#
+0I
+1-
+#630000
+b10 !
+1+#
+1I
+0-
+#640000
+b0 !
+0+#
+0I
+1-
+#650000
+b10 !
+1+#
+1I
+0-
+#660000
+b0 !
+0+#
+0I
+1-
+#670000
+b10 !
+1+#
+1I
+0-
+#680000
+b0 !
+0+#
+0I
+1-
+#690000
+b10 !
+1+#
+1I
+0-
+#700000
+b0 !
+0+#
+0I
+1-
+#710000
+b10 !
+1+#
+1I
+0-
+#720000
+b0 !
+0+#
+0I
+1-
+#730000
+b10 !
+1+#
+1I
+0-
+#740000
+b0 !
+0+#
+0I
+1-
+#750000
+b10 !
+1+#
+1I
+0-
+#760000
+b0 !
+0+#
+0I
+1-
+#770000
+b10 !
+1+#
+1I
+0-
+#780000
+b0 !
+0+#
+0I
+1-
+#790000
+b10 !
+1+#
+1I
+0-
+#800000
+b0 !
+0+#
+0I
+1-
+#810000
+b10 !
+1+#
+1I
+0-
+#820000
+b0 !
+0+#
+0I
+1-
+#830000
+b10 !
+1+#
+1I
+0-
+#840000
+b0 !
+0+#
+0I
+1-
+#850000
+b10 !
+1+#
+1I
+0-
+#860000
+b0 !
+0+#
+0I
+1-
+#870000
+b10 !
+1+#
+1I
+0-
+#880000
+b0 !
+0+#
+0I
+1-
+#890000
+b10 !
+1+#
+1I
+0-
+#900000
+b0 !
+0+#
+0I
+1-
+#910000
+b10 !
+1+#
+1I
+0-
+#920000
+b0 !
+0+#
+0I
+1-
+#930000
+b10 !
+1+#
+1I
+0-
+#940000
+b0 !
+0+#
+0I
+1-
+#950000
+b10 !
+1+#
+1I
+0-
+#960000
+b0 !
+0+#
+0I
+1-
+#970000
+b10 !
+1+#
+1I
+0-
+#980000
+b0 !
+0+#
+0I
+1-
+#990000
+b10 !
+1+#
+1I
+0-
+#1000000

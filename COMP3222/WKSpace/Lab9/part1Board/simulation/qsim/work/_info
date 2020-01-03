@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dW:\UNSWSTUDY\COMPStudy\COMP3222\WKSpace\Lab9\part1Board\simulation\qsim
+vOnBoard
+Z1 !s100 ?96j7P2NmQVFfUI@??@eY2
+Z2 IQ83UPk=Jk@CZZokYZ5Qo10
+Z3 V2TOJon[28[9YT>]b?Vn`;0
+Z4 dW:\UNSWSTUDY\COMPStudy\COMP3222\WKSpace\Lab9\part1Board\simulation\qsim
+Z5 w1572864505
+Z6 8OnBoard.vo
+Z7 FOnBoard.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|OnBoard.vo|
+Z10 o-work work -O0
+Z11 n@on@board
+!i10b 1
+!s85 0
+Z12 !s108 1572864506.414000
+Z13 !s107 OnBoard.vo|
+!s101 -O0
+vOnBoard_vlg_check_tst
+!i10b 1
+Z14 !s100 U=l1?fhi4A6UZ]Tob=i952
+Z15 IQ?7:iSZA:eI9^<5_m5h<@3
+Z16 VlLb`U7zS:[_Ea_Y7zf8mT1
+R4
+R5
+Z17 8OnBoard.vt
+Z18 FOnBoard.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1572864506.488000
+Z20 !s107 OnBoard.vt|
+Z21 !s90 -work|work|OnBoard.vt|
+!s101 -O0
+R10
+Z22 n@on@board_vlg_check_tst
+vOnBoard_vlg_sample_tst
+!i10b 1
+Z23 !s100 jZckQ69RJk;3QR433Oh:F3
+Z24 Ik3FRbVhkQ8@BPTbd=NH]n3
+Z25 VzAS_@iokVPc<MWlQ`NgE^3
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@on@board_vlg_sample_tst
+vOnBoard_vlg_vec_tst
+!i10b 1
+Z27 !s100 LCHE:6:I_FdSR?9GeA]@50
+Z28 ITa>CMMDieK4=@^bhPPXAL1
+Z29 VYcMUI2Cc@E<VEf9>@8neJ1
+R4
+R5
+R17
+R18
+Z30 L0 315
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z31 n@on@board_vlg_vec_tst

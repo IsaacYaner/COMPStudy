@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part1q6
-Mon Oct 28 12:17:24 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 29 12:55:04 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -38,24 +38,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 28 12:17:24 2019            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part1q6                                          ;
-; Top-level Entity Name              ; part1q6                                          ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 12                                               ;
-;     Total combinational functions  ; 12                                               ;
-;     Dedicated logic registers      ; 9                                                ;
-; Total registers                    ; 9                                                ;
-; Total pins                         ; 13                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 29 12:55:04 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part1q6                                         ;
+; Top-level Entity Name              ; part1q6                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 12                                              ;
+;     Total combinational functions  ; 12                                              ;
+;     Dedicated logic registers      ; 9                                               ;
+; Total registers                    ; 9                                               ;
+; Total pins                         ; 13                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -148,57 +148,57 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; part1q6.vhd                      ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/part1q6.vhd         ;         ;
-; FSM4Consequence.vhd              ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/FSM4Consequence.vhd ;         ;
-; DFFWithReset.vhd                 ; yes             ; User VHDL File  ; W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/DFFWithReset.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; part1q6.vhd                      ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/part1q6.vhd         ;         ;
+; FSM4Consequence.vhd              ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/FSM4Consequence.vhd ;         ;
+; DFFWithReset.vhd                 ; yes             ; User VHDL File  ; C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/DFFWithReset.vhd    ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 12     ;
-;                                             ;        ;
-; Total combinational functions               ; 12     ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 2      ;
-;     -- 3 input functions                    ; 5      ;
-;     -- <=2 input functions                  ; 5      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 12     ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 9      ;
-;     -- Dedicated logic registers            ; 9      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 13     ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 9      ;
-; Total fan-out                               ; 70     ;
-; Average fan-out                             ; 2.06   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 12    ;
+;                                             ;       ;
+; Total combinational functions               ; 12    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 7     ;
+;     -- 3 input functions                    ; 4     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 12    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 9     ;
+;     -- Dedicated logic registers            ; 9     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 13    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; SW[0] ;
+; Maximum fan-out                             ; 9     ;
+; Total fan-out                               ; 70    ;
+; Average fan-out                             ; 2.06  ;
++---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,16 +207,16 @@ applicable agreement for further details.
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 ; |part1q6                                            ; 12 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |part1q6                                                                             ; work         ;
-;    |FSM4Consequence:simulateToBoard|                ; 12 (9)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard                                             ; work         ;
-;       |Dflop:\generateNextState:0:RealiseNextState| ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:1:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:2:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:3:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:4:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:5:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:6:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:7:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:8:RealiseNextState| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState ; work         ;
+;    |FSM4Consequence:simulateToBoard|                ; 12 (1)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard                                             ; work         ;
+;       |Dflop:\generateNextState:0:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:1:RealiseNextState| ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:2:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:3:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:4:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:5:RealiseNextState| ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:6:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:7:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:8:RealiseNextState| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState ; work         ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -229,7 +229,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 9     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -250,10 +250,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Oct 28 12:17:23 2019
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 29 12:54:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1q6 -c part1q6
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file part1q6.vhd
     Info (12022): Found design unit 1: part1q6-Behavior
     Info (12023): Found entity 1: part1q6
@@ -273,9 +273,9 @@ Info (21057): Implemented 25 device resources after synthesis - the final resour
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 12 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Mon Oct 28 12:17:24 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 492 megabytes
+    Info: Processing ended: Tue Oct 29 12:55:04 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:01
 
 

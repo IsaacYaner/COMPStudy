@@ -1,6 +1,6 @@
 Fitter report for part1q6
-Mon Oct 28 12:17:27 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Oct 29 12:55:16 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -26,18 +26,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  18. Delay Chain Summary
  19. Pad To Core Delay Chain Fanout
  20. Control Signals
- 21. Global & Other Fast Signals
- 22. Non-Global High Fan-Out Signals
- 23. Other Routing Usage Summary
- 24. LAB Logic Elements
- 25. LAB-wide Signals
- 26. LAB Signals Sourced
- 27. LAB Signals Sourced Out
- 28. LAB Distinct Inputs
- 29. Fitter Device Options
- 30. Operating Settings and Conditions
- 31. Fitter Messages
- 32. Fitter Suppressed Messages
+ 21. Non-Global High Fan-Out Signals
+ 22. Other Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -60,26 +59,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Fitter Summary                                                                        ;
-+------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 28 12:17:27 2019            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part1q6                                          ;
-; Top-level Entity Name              ; part1q6                                          ;
-; Family                             ; Cyclone II                                       ;
-; Device                             ; EP2C20F484C7                                     ;
-; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 12 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 12 / 18,752 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 9 / 18,752 ( < 1 % )                             ;
-; Total registers                    ; 9                                                ;
-; Total pins                         ; 13 / 315 ( 4 % )                                 ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Tue Oct 29 12:55:16 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part1q6                                         ;
+; Top-level Entity Name              ; part1q6                                         ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C20F484C7                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 12 / 18,752 ( < 1 % )                           ;
+;     Total combinational functions  ; 12 / 18,752 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 9 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 9                                               ;
+; Total pins                         ; 13 / 315 ( 4 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -137,15 +136,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ; < 0.1%      ;
+;     Processors 2-4         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -582,8 +581,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 39 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 39 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 38 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 38 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -606,7 +605,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 36      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 35      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -614,7 +613,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.pin.
+The pin-out file can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.pin.
 
 
 +---------------------------------------------------------------------+
@@ -628,9 +627,9 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ;     -- Combinational with a register        ; 9                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 2                     ;
-;     -- 3 input functions                    ; 5                     ;
-;     -- <=2 input functions                  ; 5                     ;
+;     -- 4 input functions                    ; 7                     ;
+;     -- 3 input functions                    ; 4                     ;
+;     -- <=2 input functions                  ; 1                     ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
@@ -646,13 +645,13 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ; I/O pins                                    ; 13 / 315 ( 4 % )      ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
 ;                                             ;                       ;
-; Global signals                              ; 1                     ;
+; Global signals                              ; 0                     ;
 ; M4Ks                                        ; 0 / 52 ( 0 % )        ;
 ; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 1 / 16 ( 6 % )        ;
+; Global clocks                               ; 0 / 16 ( 0 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
@@ -660,8 +659,8 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 9                     ;
 ; Highest non-global fan-out                  ; 9                     ;
-; Total fan-out                               ; 71                    ;
-; Average fan-out                             ; 1.87                  ;
+; Total fan-out                               ; 70                    ;
+; Average fan-out                             ; 1.89                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -680,9 +679,9 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ;     -- Combinational with a register        ; 9                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 2                    ; 0                              ;
-;     -- 3 input functions                    ; 5                    ; 0                              ;
-;     -- <=2 input functions                  ; 5                    ; 0                              ;
+;     -- 4 input functions                    ; 7                    ; 0                              ;
+;     -- 3 input functions                    ; 4                    ; 0                              ;
+;     -- <=2 input functions                  ; 1                    ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
@@ -699,7 +698,6 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 1 / 20 ( 5 % )       ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -708,7 +706,7 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 71                   ; 0                              ;
+;     -- Total Connections                    ; 70                   ; 0                              ;
 ;     -- Registered Connections               ; 30                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -742,7 +740,7 @@ The pin-out file can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/pa
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; KEY[0] ; R22   ; 6        ; 50           ; 10           ; 1           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[0]  ; L22   ; 5        ; 50           ; 14           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[0]  ; L22   ; 5        ; 50           ; 14           ; 0           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[1]  ; L21   ; 5        ; 50           ; 14           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -1317,13 +1315,13 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node                          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                  ; Library Name ;
 +-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------+--------------+
 ; |part1q6                                            ; 12 (0)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 3 (0)        ; 0 (0)             ; 9 (0)            ; |part1q6                                                                             ; work         ;
-;    |FSM4Consequence:simulateToBoard|                ; 12 (1)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 9 (8)            ; |part1q6|FSM4Consequence:simulateToBoard                                             ; work         ;
-;       |Dflop:\generateNextState:0:RealiseNextState| ; 3 (3)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:1:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState ; work         ;
+;    |FSM4Consequence:simulateToBoard|                ; 12 (1)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 9 (0)            ; |part1q6|FSM4Consequence:simulateToBoard                                             ; work         ;
+;       |Dflop:\generateNextState:0:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:1:RealiseNextState| ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:2:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:3:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:4:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState ; work         ;
-;       |Dflop:\generateNextState:5:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState ; work         ;
+;       |Dflop:\generateNextState:5:RealiseNextState| ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:6:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:7:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState ; work         ;
 ;       |Dflop:\generateNextState:8:RealiseNextState| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1q6|FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState ; work         ;
@@ -1346,9 +1344,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[6] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[7] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[8] ; Output   ; --            ; --            ; --                    ; --  ;
+; SW[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; SW[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; KEY[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 +---------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1357,6 +1355,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                                  ; Pad To Core Index ; Setting ;
 +--------------------------------------------------------------------------------------+-------------------+---------+
+; SW[0]                                                                                ;                   ;         ;
 ; SW[1]                                                                                ;                   ;         ;
 ; KEY[0]                                                                               ;                   ;         ;
 ;      - FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q ; 1                 ; 0       ;
@@ -1368,27 +1367,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q ; 1                 ; 0       ;
 ;      - FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q ; 1                 ; 0       ;
 ;      - FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q ; 1                 ; 0       ;
-; SW[0]                                                                                ;                   ;         ;
 +--------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                           ;
-+--------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name   ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; KEY[0] ; PIN_R22  ; 9       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; SW[0]  ; PIN_L22  ; 9       ; Async. clear ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-+--------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                      ;
-+-------+----------+---------+----------------------+------------------+---------------------------+
-; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------+----------+---------+----------------------+------------------+---------------------------+
-; SW[0] ; PIN_L22  ; 9       ; Global Clock         ; GCLK6            ; --                        ;
-+-------+----------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                    ;
++--------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name   ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; KEY[0] ; PIN_R22  ; 9       ; Clock ; no     ; --                   ; --               ; --                        ;
++--------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
@@ -1397,6 +1385,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                            ; Fan-Out ;
 +---------------------------------------------------------------------------------+---------+
 ; KEY[0]                                                                          ; 9       ;
+; SW[0]                                                                           ; 9       ;
 ; SW[1]                                                                           ; 8       ;
 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q   ; 4       ;
 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q   ; 4       ;
@@ -1407,17 +1396,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q   ; 3       ;
 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q   ; 3       ;
 ; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q   ; 3       ;
-; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q~1 ; 2       ;
-; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q~0 ; 2       ;
-; FSM4Consequence:simulateToBoard|nextState[7]                                    ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[6]                                    ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[5]~3                                  ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[3]                                    ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[2]                                    ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[1]~2                                  ; 1       ;
-; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q~2 ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[8]~1                                  ; 1       ;
-; FSM4Consequence:simulateToBoard|nextState[4]~0                                  ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q~0 ; 2       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q~0 ; 2       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:7:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:6:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:5:RealiseNextState|Q~1 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:3:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:2:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:1:RealiseNextState|Q~1 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:0:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:8:RealiseNextState|Q~0 ; 1       ;
+; FSM4Consequence:simulateToBoard|Dflop:\generateNextState:4:RealiseNextState|Q~0 ; 1       ;
 ; FSM4Consequence:simulateToBoard|z                                               ; 1       ;
 +---------------------------------------------------------------------------------+---------+
 
@@ -1427,14 +1416,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 17 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 20 / 54,004 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects            ; 16 / 36,000 ( < 1 % ) ;
-; Direct links                ; 5 / 54,004 ( < 1 % )  ;
-; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 10 / 18,752 ( < 1 % ) ;
+; C4 interconnects            ; 17 / 36,000 ( < 1 % ) ;
+; Direct links                ; 6 / 54,004 ( < 1 % )  ;
+; Global clocks               ; 0 / 16 ( 0 % )        ;
+; Local interconnects         ; 11 / 18,752 ( < 1 % ) ;
 ; R24 interconnects           ; 0 / 1,900 ( 0 % )     ;
-; R4 interconnects            ; 5 / 46,920 ( < 1 % )  ;
+; R4 interconnects            ; 7 / 46,920 ( < 1 % )  ;
 +-----------------------------+-----------------------+
 
 
@@ -1465,9 +1454,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 1) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 1) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 1                           ;
 ; 1 Clock                            ; 1                           ;
 +------------------------------------+-----------------------------+
 
@@ -1565,7 +1553,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP2C20F484C7 for design "part1q6"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1581,8 +1569,6 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'part1q6.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node SW[0] (placed in PIN L22 (CLK4, LVDSCLK2p, Input))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G6
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -2019,7 +2005,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 10 output pins without output pin load capacitance assignment
     Info (306007): Pin "LEDG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2038,17 +2024,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.fit.smsg
+Info (144001): Generated suppressed messages file C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 425 warnings
-    Info: Peak virtual memory: 5538 megabytes
-    Info: Processing ended: Mon Oct 28 12:17:27 2019
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 1061 megabytes
+    Info: Processing ended: Tue Oct 29 12:55:16 2019
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in W:/UNSWSTUDY/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.fit.smsg.
+The suppressed messages can be found in C:/GITT/COMPStudy/COMP3222/WKSpace/Lab5/part1q6/output_files/part1q6.fit.smsg.
 
 
