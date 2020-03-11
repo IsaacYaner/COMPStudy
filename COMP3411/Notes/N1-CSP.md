@@ -10,7 +10,7 @@ Constraint Satisfaction Problems
 
 Figure out NP P NPH NPC Problems
 What does devidable mean?
-Linear Programming?
+Linear Programming? 
 What is successor function?
 What is Minimum Remaining Values
 Legal values
