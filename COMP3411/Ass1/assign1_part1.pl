@@ -77,7 +77,8 @@ paruns([Head|Tail], [[Head | SubRun]|R]):-
 
 % eval(+Expr, -Val) - Success if Val is the value of prefix arithmetic expression Expr.
 % Example:
-% ??????
+% ?-eval(add(mul(1,2),4), Value)
+% Value = 6.
 
 % For a single number, Result is the number given.
 eval(Result, Result) :-
