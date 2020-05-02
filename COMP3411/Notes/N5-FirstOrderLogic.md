@@ -81,6 +81,70 @@
 
 ### Conversion to Conjunctive Normal Form
 
++ Eliminate implications and bi-implications
++ Move negations invard(!A -> E!)
++ Eliminate double negations
++ Rename deplicated names
++ Use equivalences to move quantifiers to the left
+  + ∀xP(x) ∧∃y Q(y) becomes ∀x∃y(P(x) ∧ Q(y))
++ Skolemise
+  + Replace quantified variable by a non quantified new variable
+  + ∃x P(x) becomes P(a0)
+  + ∀x ∃y P(x, y) becomes P(x, f0(x))
++ Deop all remaining universal quantifiers
++ Use distribution laws to get CNF->clausal form
 
+### Unification
+
++ **Unifier** of two atomic formulae
+  + substitution of terms for variables that makes them identical
+  + i.e. change the name of same variables to make two formulae looks identical
++ More general unifier if 
+  + $\sigma_2=\sigma_1\sigma_3$
+  + aka after one substitution, make another substitution can yield third substitution
+  + Then the third one is more general
++ If two atomic formulae are unifiable, they have a ***most general unifier***
++ **MGU**
+
+#### Disagreement set
+
++ ??
+
+### First-Order Resolution
+
++ AVB  !B'VC
++   (AVC)mgu(B,B')
+
+### Applying Resolution Refutation
+
++ Negate query
++ Convert KB and Nquery into CNF
++ Apply resolution until
+  + empty clause (contradiction) 
+  + no more clauses can be derived 
+    + Copy of clause is same clause with different variable names
++ If empty, True
++ Otherwise false
++ Infinite, no answer n
+
+### Soundness and Completeness
+
++ **Sound**: preservers truth
++ **Complete**: Prove all
++ Not **Decidable**: Can not always answer whether
+
+### Undecidability
+
++ Can't determine when this problem will rise
++ If KB is unsatisfiable, empty clause somewhere
+  + But if no empty clause, may go on forever
++ Even for propositional logic, complexity is $O(2^n)$
+
+### Horn Clauses
+
++ Idea: use less expressive language
++ Definite Clause
++ Negative Clause
++ Horna Clause
 
 ## Questions
