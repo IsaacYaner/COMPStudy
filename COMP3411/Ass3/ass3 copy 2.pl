@@ -152,78 +152,118 @@ possessive(her, [number(singular), gender(feminine)]).
 
 process([], Ref1, Ref1).
 
-
-%thing
+% Use actor and object instead of thing because of least knowledge theory
 process(actor(thing(Name, _)), Ref1, Ref1):-
 	thing(Name, Props),
 	assert(history(thing(Name, Props))).
 
+process(object(possessive(_, thing(Name, _))), Ref1, Ref1):-
+	thing(Name, Props),
+	assert(history(thing(Name, Props))).
 
-%pronoun
-process(actor(personal(Pronoun)), Ref1, [Name|Ref1]):-
-% If there exist a legal Pronoun or determiner
-	personal(Pronoun, Props1),
-	member(gender(Gender), Props1),
-	member(number(Number), Props1),
-% And there is already a matching Actor
-	history(thing(Name, Props2)),
-	member(gender(Gender), Props2),
-	member(number(Number), Props2).
-
-
-%set
-process(actor(set(thing(Name1, _), thing(Name2, _))), Ref1, Ref1):-
-write("01"),
-% If there exist a legal Pronoun or determiner
-	thing(Name1, Props1),
-	thing(Name2, Props2),
-	assert(history(thing(Name1, Props1))),
-	assert(history(thing(Name2, Props2))),
-	assert(history(set(thing(Name1, Props1), thing(Name2, Props2)))).
-
-
-%thing
 process(object(thing(Name,_)), Ref1, Ref1):-
 	thing(Name, Props),
 	assert(history(thing(Name, Props))).
 
 
-%determiner
-process(object(possessive(Pronoun, thing(Thing, _))), Ref1, Ref2):-
-	thing(Thing, Props),	
+% John, a pairs.
+process(event(Action, [actor(thing(Actor, _)), object(thing(Thing, _))]), Ref1, Ref3):-	
+% call process for child
+	process(actor(thing(Actor, _)), Ref1, Ref2),
+	process(object(thing(Thing, _)), Ref2, Ref3),
+
+% Add to history
+	assert(history(event(Action, [actor(thing(Actor, _)), object(thing(Thing, _))]))).
+
+
+% He, it pairs.
+process(event(Action, [actor(personal(Actor)), object(personal(Pronoun))]), Ref1, [Name1, Name2|Ref1]):-
 % If there exist a legal Pronoun or determiner
-	possessive(Pronoun, Props1),
+	personal(Actor, Props1),
+	member(gender(Gender1), Props1),
+	member(number(Number1), Props1),
+	
+	personal(Pronoun, Props3),
+	member(gender(Gender2), Props3),
+	member(number(Number2), Props3),
+
+% And there is already a matching Actor
+	history(thing(Name1, Props2)),
+	member(gender(Gender1), Props2),
+	member(number(Number1), Props2),
+
+	history(thing(Name2, Props4)),
+	member(gender(Gender2), Props4),
+	member(number(Number2), Props4),
+
+% Add to history
+	assert(history(event(Action, [actor(personal(Actor)), object(personal(Pronoun))]))).
+
+
+% He, his pairs.
+process(event(Action, [actor(personal(Actor)), object(possessive(Pronoun, Thing))]), Ref1, [Name1, Name2|Ref2]):-
+% call process for child
+	process(object(possessive(Pronoun, Thing)), Ref1, Ref2),
+
+% If there exist a legal Pronoun or determiner
+	personal(Actor, Props1),
 	member(gender(Gender), Props1),
 	member(number(Number), Props1),
+
+	possessive(Pronoun, Props3),
+	member(gender(Gender2), Props3),
+	member(number(Number2), Props3),
+
 % And there is already a matching Actor
-	history(thing(Name, Props2)),
+	history(thing(Name1, Props2)),
 	member(gender(Gender), Props2),
 	member(number(Number), Props2),
-	append(Ref1, [Name], Ref2),
-	assert(history(thing(Thing, Props))).
+
+	history(thing(Name2, Props4)),
+	member(gender(Gender2), Props4),
+	member(number(Number2), Props4),
+
+% Add to history
+	assert(history(event(Action, [actor(personal(Actor)), object(possessive(Pronoun, Thing))]))).
 
 
-%pronoun
-process(object(personal(Pronoun)), Ref1, Ref2):-
+% John, it pairs.
+process(event(Action, [actor(thing(Actor, _)), object(personal(Pronoun))]), Ref1, [Name|Ref2]):-
+% call process for child
+	process(actor(thing(Actor, _)), Ref1, Ref2),
+
 % If there exist a legal Pronoun or determiner
 	personal(Pronoun, Props1),
 	member(gender(Gender), Props1),
 	member(number(Number), Props1),
+
 % And there is already a matching Actor
 	history(thing(Name, Props2)),
 	member(gender(Gender), Props2),
 	member(number(Number), Props2),
-	append(Ref1, [Name], Ref2).
-	
+
+% Add to history
+	assert(history(event(Action, [actor(thing(Actor, _)), object(personal(Pronoun))]))).
+
 
 % John, his pairs.
-process(event(Action, [Actor, Thing]), Ref1, Ref3):-	
+process(event(Action, [actor(thing(Actor, _)), object(possessive(Pronoun, Thing))]), Ref1, [Name|Ref3]):-	
 % call process for child
-	process(Actor, Ref1, Ref2),
-	process(Thing, Ref2, Ref3),
-% Add to history
-	assert(history(event(Action, [Actor, Thing]))).
+	process(actor(thing(Actor, _)), Ref1, Ref2),
+	process(object(possessive(Pronoun, Thing)), Ref2, Ref3),
 
+% If there exist a legal Pronoun or determiner
+	possessive(Pronoun, Props1),
+	member(gender(Gender), Props1),
+	member(number(Number), Props1),
+
+% And there is already a matching Actor
+	history(thing(Name, Props2)),
+	member(gender(Gender), Props2),
+	member(number(Number), Props2),
+
+% Add to history
+	assert(history(event(Action, [actor(thing(Actor, _)), object(possessive(Pronoun, Thing))]))).
 
 run(S, Refs) :-
 	sentence(X, S, []), !,
