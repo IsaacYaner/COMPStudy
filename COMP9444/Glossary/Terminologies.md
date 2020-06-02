@@ -6,3 +6,6 @@
 + synapse
 + excitatory
 + inhibitory
++ descent
++ stochastic
++ 
