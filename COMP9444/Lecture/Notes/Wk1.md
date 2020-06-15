@@ -86,6 +86,7 @@ Function|$w_1$|$w_2$|$w_0$
 
 + Supervised Learning
 + Multilayer
++ $E=\frac{1}{2}\Sigma(z_i-t_i)^2$
 + Adjusting $w$s using partial derivative
   + to get the derivative from a lower level, we need to calculate that of a higher level first, so it looks like reversing feedforward process of getting output.
 + method for calculating gradient then apply gradient descent.

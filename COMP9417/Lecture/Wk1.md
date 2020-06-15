@@ -37,4 +37,21 @@
 + Inductive learning hypothesis
   + Sufficiently large set->represent whole population
 
+#### Univariate
+
 $b=\frac{cov(x,y)}{var(x)}$
+b is the gradient
+
+#### Multivariate
+
++ Regularisation
+  + Shrinkage
+
+
+## Mathematics
+
+$\hat b = \frac{\bar {xy}-\bar x - \bar y}{\bar {x^2} - {\bar x}^2}$
+
+
+！！
+Ehat is theta there
