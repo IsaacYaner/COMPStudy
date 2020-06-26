@@ -57,8 +57,8 @@
 ********************************************************************************
 *** Algorithm            After 10% training	After 100% training
 ********************************************************************************
-*** Nearest Neighbour      -17.92              	47.77      
-*** Decision Tree          8.05              	69.92     
+*** Nearest Neighbour      23.59              	47.77      
+*** Decision Tree          40.35             	69.92     
 ********************************************************************************
 
 --- The rest of this question has two multiple-choice parts, each worth 1 mark.
@@ -68,8 +68,8 @@
 --- algorithms based on your numbers on mean error reduction
 --- relative to default on only 10% of the data you observe that:
 
---- (1) 10% of the data is not enough for learning a good model
- (2) only the Decision Tree learner reduces error with 10% of the data
+ (1) 10% of the data is not enough for learning a good model
+--- (2) only the Decision Tree learner reduces error with 10% of the data
 --- (3) only the Nearest Neighbour learner reduces error with 10% of the data
 --- (4) both algorithms learn models that reduce error by more than 20% with 10% of the data
 
@@ -83,8 +83,8 @@
 
 --- (1) Nearest Neighbour can fit a complex target function well when there is a lot of data and the data representation contains only continuous-valued attributes
 --- (2) Nearest Neighbour can fit a complex target function well when there is not much data and the data representation contains only discrete-valued attributes
---- (3) Nearest Neighbour cannot be an accurate learning method when the data representation contains only continuous-valued attributes
- (4) Decision Trees cannot be an accurate learning method when the data representation contains only continuous-valued attributes
+ (3) Nearest Neighbour cannot be an accurate learning method when the data representation contains only continuous-valued attributes
+--- (4) Decision Trees cannot be an accurate learning method when the data representation contains only continuous-valued attributes
 
 --------------------------------------------------------------
 *** QUESTION 2 [2 marks]
