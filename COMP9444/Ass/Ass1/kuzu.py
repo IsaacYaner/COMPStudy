@@ -24,11 +24,18 @@ class NetLin(nn.Module):
 class NetFull(nn.Module):
     # two fully connected tanh layers followed by log softmax
     def __init__(self):
+        hinddenSize = 100
         super(NetFull, self).__init__()
-        # INSERT CODE HERE
+        self.linear1 = torch.nn.Linear(28*28,hinddenSize)
+        self.Tanh = torch.nn.Tanh()
+        self.linear2 = torch.nn.Linear(hinddenSize,10)
 
     def forward(self, x):
-        return 0 # CHANGE CODE HERE
+        x = x.view(-1, 28*28)
+        out = self.linear1(x)
+        out = self.Tanh(out)
+        out = self.linear2(out)
+        return F.log_softmax(out, dim = 0)
 
 
 class NetConv(nn.Module):
