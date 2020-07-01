@@ -24,7 +24,8 @@ class NetLin(nn.Module):
 class NetFull(nn.Module):
     # two fully connected tanh layers followed by log softmax
     def __init__(self):
-        hinddenSize = 100
+        #Local minima is h=110
+        hinddenSize = 110
         super(NetFull, self).__init__()
         self.linear1 = torch.nn.Linear(28*28,hinddenSize)
         self.Tanh = torch.nn.Tanh()
@@ -43,7 +44,22 @@ class NetConv(nn.Module):
     # all using relu, followed by log_softmax
     def __init__(self):
         super(NetConv, self).__init__()
-        # INSERT CODE HERE
-
+        channel1 = 10
+        channel2 = 50
+        self.conv1 = nn.Conv2d(1, channel1, 5, stride = 1)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(channel1, channel2, 5, stride = 1)
+        self.dropOut = nn.Dropout()
+        self.linear = nn.Linear(3200, 256)
+        self.fcOut = nn.Linear(256,10)
+        self.relu = nn.ReLU()
     def forward(self, x):
-        return 0 # CHANGE CODE HERE
+        out = self.pool(F.relu(self.conv1(x)))
+        out = F.relu(self.conv2(out))
+        out = out.reshape(out.size(0), -1)
+        out = self.dropOut(out)
+        out = self.linear(out)
+        out = self.relu(out)
+        out = self.fcOut(out)
+        out = F.log_softmax(out, dim = 0)
+        return out
