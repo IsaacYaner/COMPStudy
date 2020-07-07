@@ -23,6 +23,7 @@ class PolarNet(torch.nn.Module):
         self.linear2 = torch.nn.Linear(num_hid, 1)  # Why 1 instead of 2?
         self.Tanh = torch.nn.Tanh()
         self.sigmoid = nn.Sigmoid()
+        self.hid1 = 0
 
     def forward(self, input):
         r = cartToPolar(input[:, 0], input[:, 1])
@@ -31,11 +32,13 @@ class PolarNet(torch.nn.Module):
         #print(out)
         out = self.linear1(out)
         out = self.Tanh(out)
+        self.hid1 = out
         out = self.linear2(out)
         #print(self.sigmoid(out))
         return self.sigmoid(out)
 
-class RawNet(torch.nn.Module):
+# python3 spiral_main.py --net raw --init 0.2
+class RawNet(torch.nn.Module): 
     def __init__(self, num_hid):
         super(RawNet, self).__init__()
         self.linear1 = torch.nn.Linear(2, num_hid)
@@ -43,13 +46,17 @@ class RawNet(torch.nn.Module):
         self.linear3 = torch.nn.Linear(num_hid, 1)
         self.Tanh = torch.nn.Tanh()
         self.sigmoid = nn.Sigmoid()
+        self.hid1 = 0
+        self.hid2 = 0
 
     def forward(self, input):
         out = input
         out = self.linear1(out)
         out = self.Tanh(out)
+        self.hid1 = out
         out = self.linear2(out)
         out = self.Tanh(out)
+        self.hid2 = out
         out = self.linear3(out)
         out = self.sigmoid(out)
         return out
@@ -62,17 +69,32 @@ class ShortNet(torch.nn.Module):
         self.linear3 = torch.nn.Linear(num_hid + num_hid + 2, 1)
         self.Tanh = torch.nn.Tanh()
         self.sigmoid = nn.Sigmoid()
+        self.hid1 = 0
+        self.hid2 = 0
 
-    def forward(self, input): ### Merge
+# python3 spiral_main.py --net short --hid 8
+    def forward(self, input):       # --hid 8
         out = input
-        out = self.linear1(out)
-        out = self.Tanh(out)
-        out = self.linear2(out)
-        out = self.Tanh(out)
-        out = self.linear3(out)
-        out = self.sigmoid(out)
-        return out
+        out1 = self.linear1(out)
+        out1 = self.Tanh(out1)
+        self.hid1 = out1
+        out1 = torch.cat([out1, out], 1)
+        out2 = self.linear2(out1)
+        out2 = self.Tanh(out2)
+        self.hid2 = out2
+        out2 = torch.cat([out1, out2], 1)
+        out3 = self.linear3(out2)
+        out3 = self.sigmoid(out3)
+        return out3
 
-def graph_hidden(net, layer, node):
-    plt.clf()
-    # INSERT CODE HERE
+def graph_hidden(net, layer, node): # Module, int, int
+    if layer == 1:
+        hidF = net.hid1
+    else:
+        hidF = net.hid2
+    hid = 0
+    for i in range(len(hidF)):
+        hid += hidF[i][node]
+    hid /= 97
+    hid = hid.detach().numpy()
+    plt.plot(node, hid, 'ro')
