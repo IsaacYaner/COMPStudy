@@ -78,7 +78,9 @@ A = data(A)
 B = data(B)
 C = data(C)
 
-entropy(C)
+print(entropy(C, pri = True))
 
 ans = gain(C, A, pri = True)
 ans = gain(C, B, pri = True)
+
+print(2*log(np.exp(1), 6))

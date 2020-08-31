@@ -12,6 +12,7 @@ class tron:
         while stop == False:
             stop = True
             for i in range(len(y)):
+                print(self.w0, self.w)
                 if pri:
                     print(iteration, end = '\t')
                     iteration += 1
@@ -39,13 +40,14 @@ class tron:
 
 
 
-model = tron(5,[1, 1], 0.4)
+model = tron(0.5,[1, -2], 1.0)
 
-x1 = np.array([[-2, 2, 1, -1, 3]]).reshape(-1,1)
-x2 = np.array([[-1, -1, 1, -1, 2]]).reshape(-1,1)
+c = np.array([[-2,2]]).reshape(-1, 1)
+x1 = np.array([[-2]]).reshape(-1,1)
+x2 = np.array([[2]]).reshape(-1,1)
 
 x = np.concatenate((x1, x2), axis = 1)
-y = np.array([-1,1,1,-1,1])
+y = np.array([1])
 
 model.train(x, y, True)
 model.predict([-5, 3], True)

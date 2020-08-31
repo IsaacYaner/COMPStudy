@@ -122,6 +122,7 @@ class boosted_model:
     def predict(self, x):
         individual_preds = np.array([m.predict(x) for m in self.component_models])
         alphaM = self.alphas * individual_preds.T
+        print(alphaM.shape)
         return np.sign(alphaM.sum(axis=1))
 
 bms = []
