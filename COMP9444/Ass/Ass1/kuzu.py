@@ -26,7 +26,7 @@ class NetFull(nn.Module):
     def __init__(self):
         #Local minima is h=110
         hinddenSize = 110
-        super(NetFull, self).__init__()
+        super().__init__()
         self.linear1 = torch.nn.Linear(28*28,hinddenSize)
         self.Tanh = torch.nn.Tanh()
         self.linear2 = torch.nn.Linear(hinddenSize,10)
@@ -50,7 +50,7 @@ class NetConv(nn.Module):
         self.pool = nn.MaxPool2d(2, 2)
         self.conv2 = nn.Conv2d(channel1, channel2, 5, stride = 1)
         self.dropOut = nn.Dropout()
-        self.linear = nn.Linear(3200, 256)
+        self.linear = nn.Linear(453, 256)
         self.fcOut = nn.Linear(256,10)
         self.relu = nn.ReLU()
     def forward(self, x):
@@ -63,3 +63,5 @@ class NetConv(nn.Module):
         out = self.fcOut(out)
         out = F.log_softmax(out, dim = 0)
         return out
+
+
