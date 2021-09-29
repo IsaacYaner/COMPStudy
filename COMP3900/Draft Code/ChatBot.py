@@ -6,6 +6,10 @@ from random import randint
 class Bot():
     def __init__(self, basemode = None):
         # Change this mode() to other class later
+        '''
+        Use self.mode and self.stack to switch mode
+            between base mode and specific mode
+        '''
         if basemode == None:
             self.mode = Mode(self)
         else:
@@ -31,6 +35,10 @@ class Bot():
 
 class Mode():
     def __init__(self, parent):
+        '''
+        A mode can produce submode and store in derive
+            to implement the context functionality.
+        '''
         self.parent = parent
         self.derive = None
         self.response = []
@@ -87,6 +95,9 @@ class demoMode(Mode):
 
 bot = Bot()
 text = input()
+print("The keywords are add and pop, please try")
+print("add: create a submode")
+print("Stop by typing stop.")
 while text != "stop":
     reply = bot.reply(text)
     print(reply)
