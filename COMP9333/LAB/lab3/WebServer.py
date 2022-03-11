@@ -13,14 +13,25 @@ def simpleServer(port=12000):
         # When a query arrives
         connectionSocket, addr = serverSocket.accept()
 
-        data = connectionSocket.recv(1024).decode()      # Get data from client
-        filename = data.split()[1][1:]
+        data = connectionSocket.recv(1024).decode() # Get data from client
         print(data)
-        status = b"HTTP/1.1 200 OK\r\n\r\n"
-        connectionSocket.send(status)
-        with open(filename, 'rb') as f:
-            connectionSocket.send(f.read())
-        connectionSocket.close()                # Close this connection
+        print(data.split())
+        if data.split() == []:
+            connectionSocket.close()
+            continue
+        filename = data.split()[1][1:]              # Get file name without '/'
+        if filename == 'favicon.ico':
+            status = b"HTTP/1.1 204 No Content\r\n\r\n"
+            connectionSocket.send(status)
+        try:
+            with open(filename, 'rb') as f:
+                status = b"HTTP/1.1 200 OK\r\n\r\n"
+                connectionSocket.send(status + f.read())
+        except:
+            with open('notfound.html', 'rb') as f:
+                status = b"HTTP/1.1 404 Not Found\r\n\r\n"
+                connectionSocket.send(status + f.read())
+        connectionSocket.close()                    # Close this connection
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
