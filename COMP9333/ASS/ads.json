@@ -1,0 +1,42 @@
+{
+    "CRT": {
+        "parameters": 1,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "LST": {
+        "parameters": 0,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "MSG": {
+        "parameters": 2,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "DLT": {
+        "parameters": 2,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "RDT": {
+        "parameters": 1,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "EDT": {
+        "parameters": 3,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "UPD": {
+        "parameters": 2,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "DWN": {
+        "parameters": 2,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "RMV": {
+        "parameters": 2,
+        "Error message": "Incorrect syntax for {}"
+    },
+    "XIT": {
+        "parameters": 0,
+        "Error message": "Incorrect syntax for {}"
+    }
+}
