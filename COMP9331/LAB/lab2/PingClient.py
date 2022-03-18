@@ -30,7 +30,7 @@ class Ping():
 
             # Process received packets
             clientSocket.settimeout(self.maxwait/1000)
-            try:
+            try: 
                 modifiedMessage, _ = clientSocket.recvfrom(2048)
                 Rtt = time.time() - Rtt
                 wait_time = Rtt
@@ -67,8 +67,9 @@ class Ping():
 
 if __name__ == "__main__":
     ping = Ping()
-    if len(sys.argv) == 2:
+    if len(sys.argv) <= 2:
         portnum = 10086
     else:
         portnum = int(sys.argv[2])
-    ping.ping(sys.argv[1], portnum, 15)
+    target = "127.0.0.1" if len(sys.argv) < 2 else sys.argv[1]
+    ping.ping(target, portnum, 15)

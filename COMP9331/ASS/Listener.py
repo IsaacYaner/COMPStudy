@@ -27,10 +27,8 @@ class CommandListener(Listener):
         command = text[0]
 
         # Invalid Format
-        if len(text) != self.commands[command]['length']:
-            return self.commands['Error message'].format(command)
-        
-        
+        if len(text)-1 != self.commands[command]['length']:
+            return self.commands[command]['Error message'].format(command)
 
     def store_format(self, path=None):
         if path is None:
@@ -38,8 +36,4 @@ class CommandListener(Listener):
         with open(path, 'w') as f:
             json.dump(self.commands, f, indent=4)
 
-listener = CommandListener()
-data = listener
-while(True):
-    data.read(input())
  
