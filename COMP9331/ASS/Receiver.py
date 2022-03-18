@@ -37,6 +37,11 @@ class UDPReceiver(Receiver):
         message, _ = self.socket.recvfrom(buff)
         return message
     
+    def reads(self, buffsize=None):
+        buff = self.buffsize if buffsize is None else buffsize
+        message, address = self.socket.recvfrom(buff)
+        return message, address
+    
 
 class BufferReceiver(Receiver):
     def __init__(self, buffer=None):

@@ -2,7 +2,6 @@ from inspect import signature
 from socket import *
 from Sender import *
 from Receiver import *
-import HashMessage
 
 class Communicator():
     def __init__(self):
@@ -36,15 +35,15 @@ class UDPCommunicator(Communicator):
     def read(self, buffsize=None):
         return self.receiver.read(buffsize)
 
+    def reads(self, buffsize=None):
+        return self.receiver.reads(buffsize)
+
     def fetch(self, message):
         # Ensure that one conversation is done
-        feat = HashMessage.feature(message)
-        message = HashMessage.encode(message, feat=feat)
         while True:
             try:
                 self.send(message)
-                reply = self.read()
-                return reply.rstrip(b'\x00').decode("utf-8") 
+                reply= self.read()
+                return reply.rstrip(b'\x00').decode("utf-8")
             except:
                 continue
-    

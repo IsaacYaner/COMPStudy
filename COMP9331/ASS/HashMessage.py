@@ -9,7 +9,8 @@ def bytewise(message, encoding='utf-8'):
 
 def hash(message, encoding='utf-8'):
     message = bytewise(message, encoding)
-    return hex(zlib.crc32(message) & 0xffffffff)
+    value = zlib.crc32(message) & 0xffffffff
+    return f"{value:#0{10}x}"
 
 def feature(message, stamp=None, encoding='utf-8'):
     if stamp is None:

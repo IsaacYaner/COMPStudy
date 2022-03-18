@@ -19,7 +19,7 @@ class messageLineSender(Sender):
         print(message)
 
 class UDPSender(Sender):
-    def __init__(self, dest_ip, dest_port, sock=None):
+    def __init__(self, dest_ip=None, dest_port=None, sock=None):
         self.ip = dest_ip
         self.port = dest_port
         self.socket = sock
