@@ -18,16 +18,21 @@ class CommandLineReceiver(Receiver):
         return input()
 
 class UDPReceiver(Receiver):
-    def __init__(self, buffsize=None, maxwait=MAX_WAIT_TIME, sock=None):
+    def __init__(self, buffsize=None, maxwait=None, sock=None, ip=None, port=None, no_timeout=False):
         self.buffsize = buffsize
         if buffsize is None:
             self.buffsize = 2048
-        self.maxwait = maxwait
+        self.maxwait = maxwait if maxwait is not None else MAX_WAIT_TIME
 
         self.socket = sock
         if sock is None:
             self.socket = socket(AF_INET, SOCK_DGRAM) # IPV4, UDP
-        self.socket.settimeout(self.maxwait/1000)     # Time out criteria
+
+        if not no_timeout:
+            self.socket.settimeout(self.maxwait/1000)     # Time out criteria
+
+        if ip is not None and port is not None:
+            self.socket.bind((ip, port))
         #self.socket.setblocking(0) #Non-blocking
         #create socket
         pass

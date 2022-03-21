@@ -5,7 +5,7 @@ class Listener():
         pass
     
     def read(self, text):
-        self.handle(text)
+        return self.handle(text)
 
     def handle(self): 
         pass
@@ -27,7 +27,8 @@ class CommandListener(Listener):
         command = text[0]
 
         # Invalid Format
-        if len(text)-1 != self.commands[command]['length']:
+        interval = self.commands[command]['length']
+        if len(text)-1 not in range(interval[0], interval[1]+1):
             return self.commands[command]['Error message'].format(command)
 
     def store_format(self, path=None):

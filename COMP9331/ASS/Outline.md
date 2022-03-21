@@ -53,7 +53,7 @@
     + DWN: Download File
       + DWN threadtitle filename
     + RMV: Remove Thread
-      + DWN threadtitle filename
+      + RMV threadtitle
     + XIT: Exit
   + Prompt to select one command
   + Wrong action
