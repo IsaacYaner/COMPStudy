@@ -19,10 +19,13 @@ class Thread():
             post = post.split(': ')
             name = post[0].split()[1]
             message = post[:-1]                     # Omit the '\n'
-            self.posts.append((name, message))
+            self.posts.append([name, message])
     
+    def getAuthor(self, number):
+        return  self.posts[number-1][0]
+
     def addPost(self, name, message):
-        self.posts.append((name, message))
+        self.posts.append([name, message])
         self.savePost()
         pass
 
@@ -41,6 +44,17 @@ class Thread():
             message = self.posts[-1][1]
             post = f'{num} {author}: {message}\n'
             f.write(post)
+
+    def dumps(self, suppress=True):
+        result = ''
+        if not suppress:
+            result += self.username + '\n'
+        for i, post in enumerate(self.posts):
+            num = i + 1
+            author = self.posts[i][0]
+            message = self.posts[i][1]
+            result += f'{num} {author}: {message}\n'
+        return result[:-1]
 
     def dump(self):
         with open(self.title, 'w') as f:

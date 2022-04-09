@@ -38,14 +38,25 @@ class ThreadManager():
         return f'Message {number} deleted'
     
     def edit(self, name, title, number, message):
-        self.check()
-        pass
-
-    def check(self, **kwargs):
         if not self.exist(title):
             raise ExistenceError(f'Thread {title} doesn\'t exist')
         if number <= 0 or number > self.threads[title].length():
             raise ExistenceError(f'Post number {number} doesn\'t exist')
+        if name != self.threads[title].getAuthor(number):
+            raise AccessError(f'This post is not posted by {name}')
+        
+        self.threads[title].editPost(number, message)
+        return f'Message {number} edited'
+    
+    def listTitles(self):
+        if len(self.threads) == 0:
+            return 'There are no active threads'
+        return '\n'.join(self.threads.keys())
+        
+    def readTitle(self, title):
+        if not self.exist(title):
+            raise ExistenceError(f'Thread {title} doesn\'t exist')
+        return self.threads[title].dumps()
 
 
 

@@ -24,6 +24,8 @@ class Server():
 
         seenCommands = {}
         while True:
+            # Decode the message received to command and stamp
+            # The stamp here is similar to sequence number
             originalCommand, address = self.host.reads()
             command, stamp = HashMessage.decode(originalCommand)
             command = str(command, encoding='utf-8')
@@ -70,13 +72,28 @@ class Server():
         
         elif command[1] in self.commands:
             try:
+                response = None
                 name = command[0]
                 if command[1] == 'CRT':
-                    return self.threads.create(name, command[2])
+                    response = self.threads.create(name, command[2])
                 if command[1] == 'MSG':
-                    return self.threads.post(name, command[2], ' '.join(command[3:]))
+                    response = self.threads.post(name, command[2], ' '.join(command[3:]))
                 if command[1] == 'DLT':
-                    return self.threads.delete(name, int(command[2]))
+                    response = self.threads.delete(name, int(command[2]))
+                if command[1] == 'EDT':
+                    response = self.threads.edit(name, command[2],int(command[3]), ' '.join(command[4:]))
+                if command[1] == 'LST':
+                    response = self.threads.listTitles()
+                if command[1] == 'RDT':
+                    response = self.threads.readTitle(command[2])
+                if command[1] == 'UPD':
+                    response = self.threads.
+
+                # Print log
+                print(f'{name} issued {command[1]} command')
+                if command[1] != 'LST':
+                    print(response)
+                return response
             except Exception as e:
                 return str(e)
 
