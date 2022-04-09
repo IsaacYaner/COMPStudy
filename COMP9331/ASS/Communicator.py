@@ -21,7 +21,9 @@ class UDPCommunicator(Communicator):
         self.socket = sock
         if sock is None:
             self.socket = socket(AF_INET, SOCK_DGRAM) # IPV4, UDP
-        
+        # DELETE
+        self.socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
         self.sender = UDPSender(dest_ip, dest_port, self.socket)
         self.receiver = UDPReceiver(buffsize, maxwait, self.socket, src_ip, src_port, no_timeout)
         pass

@@ -9,14 +9,21 @@ import sys
 # client = Client('localhost', 10095)
 # client.run()
 
-from Thread import *
-manager = ThreadManager()
-name = 'Zaxi'
-title = input()
-manager.create(name, title)
-while True:
-    message = input()
-    manager.
+# from Thread import *
+# manager = ThreadManager()
+# name = 'Zaxi'
+# title = input()
+# manager.create(name, title)
+# for i in range(3):
+#     message = input()
+#     manager.post(name, title, message)
+# while True:
+#     message = input()
+#     message = int(message)
+#     manager.delete(name, title, message)
+    
+client = Client(port=10095)
+client.run()
 
 # self.auth = PassManager()
 # def login(self):

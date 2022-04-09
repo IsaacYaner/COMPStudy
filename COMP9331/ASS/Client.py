@@ -12,6 +12,7 @@ class Client():
         self.receiver = CommandLineReceiver()
         self.client = CommandListener()
         self.host = UDPCommunicator(ip, port)
+        self.name = None
 
     def run(self):
         self.login()
@@ -22,7 +23,7 @@ class Client():
             if logging is not None:
                 print(logging)
             else:
-                response = self.communicate(command)
+                response = self.communicate(self.name + ' ' + command)
                 print(response)
             # catch return phrase
             # Prompt commands
@@ -37,20 +38,21 @@ class Client():
             response, featReply = HashMessage.decode(response)
             if featReply == feat:
                 break
-            time.sleep(0.1)     # Avoid overloading
+            time.sleep(0.1)     # Avoid overloading # DELETE
         return response
     
     def login(self):
         while True:
             print('Enter username: ', end='')
             name = self.receiver.read()
-            loginStatus = self.communicate('LOGIN ' + name)
+            self.name = name
+            loginStatus = self.communicate(name+' LOGIN')
             print(loginStatus, end='')
             if 'logged' in loginStatus:
                 continue
 
             password = self.receiver.read()
-            successful = self.communicate('LOGIN '+name+' '+password)
+            successful = self.communicate(name+' LOGIN '+password)
             print(successful, end='')
             if 'Welcome' in successful:
                 break

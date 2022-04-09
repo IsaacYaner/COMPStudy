@@ -8,6 +8,9 @@ class Thread():
         self.posts = []
         self.dump()
     
+    def length(self):
+        return len(self.posts)
+
     def load(self):
         with open(self.title, 'r') as f: 
             content = f.readlines()
@@ -23,12 +26,17 @@ class Thread():
         self.savePost()
         pass
 
-    def deletePost(self):
-        pass
+    def deletePost(self, number):
+        self.posts.pop(number-1)
+        self.dump()
+
+    def editPost(self, number, message):
+        self.posts[number-1][1] = message
+        self.dump()
 
     def savePost(self):
         with open(self.title, 'a') as f:
-            num = len(self.posts) - 1
+            num = len(self.posts)
             author = self.posts[-1][0]
             message = self.posts[-1][1]
             post = f'{num} {author}: {message}\n'

@@ -7,12 +7,15 @@ from Sender import *
 from Communicator import *
 import HashMessage
 from PassManager import PassManager
+from ThreadManager import *
 
 class Server():
     def __init__(self, port):
         self.host = UDPCommunicator(src_ip="127.0.0.1", src_port=port, no_timeout=True)
         self.auth = PassManager()
         self.auth.read()
+        self.threads = ThreadManager()
+        self.commands = ['CRT', 'MSG', 'DLT', 'EDT', 'LST', 'RDT', 'UPD', 'DWN', 'RMV', 'XIT']
 
     def run(self):
         print('Waiting for clients')
@@ -46,8 +49,9 @@ class Server():
 
     def handle(self, command):
         command = command.split()
-        if command[0] == 'LOGIN':
-            name = command[1]
+        if command[1] == 'LOGIN':
+            name = command[0]
+            # If only two parameters
             if len(command) == 2:
                 print('Client authenticating')
                 if not self.auth.exist(name):
@@ -63,6 +67,18 @@ class Server():
 
             print('Incorrect password')
             return 'Invalid password\n'
+        
+        elif command[1] in self.commands:
+            try:
+                name = command[0]
+                if command[1] == 'CRT':
+                    return self.threads.create(name, command[2])
+                if command[1] == 'MSG':
+                    return self.threads.post(name, command[2], ' '.join(command[3:]))
+                if command[1] == 'DLT':
+                    return self.threads.delete(name, int(command[2]))
+            except Exception as e:
+                return str(e)
 
 
 server = Server(10095)

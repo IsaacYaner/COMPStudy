@@ -30,6 +30,7 @@ class CommandListener(Listener):
         interval = self.commands[command]['length']
         if len(text)-1 not in range(interval[0], interval[1]+1):
             return self.commands[command]['Error message'].format(command)
+        return None
 
     def store_format(self, path=None):
         if path is None:

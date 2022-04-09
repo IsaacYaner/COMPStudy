@@ -77,6 +77,8 @@
   + [A-Z,a-z,0-9,.]
   + Text can include white space
   + No need to check
++ Do
+  + Prompt
 
 ### UPD DWN
 
