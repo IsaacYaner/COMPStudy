@@ -1,3 +1,7 @@
+from numpy import mat
+from pexpect import EOF
+
+
 class PassManager():
     def __init__(self, path='credentials.txt'):
         self.path = path
@@ -28,9 +32,6 @@ class PassManager():
     def isOnline(self, username):
         return username in self.online
         
-    def onlineUsers(self):
-        return len(self.online)
-
     def login(self, username, password):
         if not self.exist(username):
             self.add(username, password)
@@ -40,9 +41,6 @@ class PassManager():
             self.online.append(username)
             return True
         return False
-
-    def logout(self, username):
-        self.online.remove(username)
 
     def add(self, username, password):
         self.user[username] = password

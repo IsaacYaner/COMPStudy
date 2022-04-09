@@ -36,20 +36,3 @@ class UDPSender(Sender):
         self.socket.sendto(message,(dest_host, dest_port))
         return
     
-class TCPSender(Sender):
-    
-    def __init__(self, ip=None, port=None, buffsize=None, sock=None):
-        self.socket = sock
-        self.port = port
-        self.ip = ip
-        self.buffsize = buffsize
-        if buffsize is None:
-            self.buffsize = 2048
-    
-    def send(self, message):
-        self.socket = socket(AF_INET, SOCK_STREAM)     # IPv4 and TCP connection
-        self.socket.connect((self.ip, self.port))
-        self.socket.send(message)
-        response = self.socket.recv(self.buffsize)
-        self.socket.close()
-        return response

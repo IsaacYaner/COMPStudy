@@ -30,8 +30,8 @@ class ThreadManager():
             raise ExistenceError(f'Thread {title} doesn\'t exist')
         if number <= 0 or number > self.threads[title].length():
             raise ExistenceError(f'Post number {number} doesn\'t exist')
-        if name != self.threads[title].username:
-            raise AccessError(f'{name} doesn\'t have permission')
+        if name != self.threads[title].getAuthor(number):
+            raise AccessError(f'This post is not posted by {name}')
         
         # Call delepost directly
         self.threads[title].deletePost(number)
@@ -57,12 +57,30 @@ class ThreadManager():
         if not self.exist(title):
             raise ExistenceError(f'Thread {title} doesn\'t exist')
         return self.threads[title].dumps()
-
-
-
-
-
-
+    
+    def upload(self, name, title, filename):
+        if not self.exist(title):
+            raise ExistenceError(f'Thread {title} doesn\'t exist')
+        if filename in self.threads[title].files:
+            raise ExistenceError(f'File {filename} already existed')
+        self.threads[title].upload(name, filename)
+        return f'{filename} uploaded to {title} thread'
         
+    def download(self, title, filename):
+        if not self.exist(title):
+            raise ExistenceError(f'Thread {title} doesn\'t exist')
+        if filename not in self.threads[title].files:
+            raise ExistenceError(f'File does not exist in Thread {title}')
+        return f'{filename} successfully downloaded'
         
+    def remove(self, name, title):
+        if not self.exist(title):
+            raise ExistenceError(f'Thread {title} doesn\'t exist')
+        if name != self.threads[title].username:
+            raise AccessError(f'{name} doesn\'t have permission')
+        self.threads[title].remove()
+        del self.threads[title]
+        return f'Thread {title} removed'
+
+
         

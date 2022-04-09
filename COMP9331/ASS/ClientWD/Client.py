@@ -11,7 +11,6 @@ class Client():
         self.receiver = CommandLineReceiver()
         self.client = CommandListener()
         self.host = UDPCommunicator(ip, port)
-        self.fileSender = TCPSender(ip, port)
         self.name = None
 
     def run(self):
@@ -24,14 +23,12 @@ class Client():
                 print(logging)
             else:
                 response = self.communicate(self.name + ' ' + command)
-                if response != 'None':
-                    print(response)
+                print(response)
             # catch return phrase
             # Prompt commands
     
     def communicate(self, command):
         feat = HashMessage.feature(command)
-        originalCommand = command
         command = HashMessage.encode(command, feat=feat)
         # Set timeout thing? QUESTION
         while True:
@@ -41,19 +38,6 @@ class Client():
             if featReply == feat:
                 break
             time.sleep(0.1)     # Avoid overloading # DELETE
-        # Upload the file TODO
-        if 'uploaded' in response and 'UPD' in originalCommand.split()[1]:
-            filename = originalCommand.split()[3]
-            with open(str(filename), 'rb') as fp:
-                fileContent = fp.read()
-                self.fileSender.send(fileContent)
-
-        if 'successful' in response and 'DWN' in originalCommand.split()[1]:
-            data = self.fileSender.send(b'sth')
-            filename = originalCommand.split()[3]
-            print(originalCommand)
-            with open(filename, 'wb') as f:
-                f.write(bytewise(data))
         return response
     
     def login(self):
@@ -71,8 +55,3 @@ class Client():
             print(successful, end='')
             if 'Welcome' in successful:
                 break
-
-
-import sys
-client = Client(port = int(sys.argv[1]))
-client.run()

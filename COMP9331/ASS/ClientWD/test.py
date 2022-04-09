@@ -1,7 +1,7 @@
 from Client import *
-from PassManager import *
-from ThreadManager import *
-import sys
+# from PassManager import *
+# from ThreadManager import *
+# import sys
 
 # if len(sys.argv) == 1:
     # print('Please run this by single parameter: server_port')
@@ -21,7 +21,8 @@ import sys
 #     message = input()
 #     message = int(message)
 #     manager.delete(name, title, message)
-client = Client(port=10119)
+    
+client = Client(port=10095)
 client.run()
 
 # self.auth = PassManager()
