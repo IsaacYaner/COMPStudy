@@ -1,11 +1,28 @@
 // npm i ganache-time-traveler
 // https://www.npmjs.com/package/ganache-time-traveler
 const Auction = artifacts.require("Auction");
+const Registry = artifacts.require("SophisticatedInvestorCertificateAuthorityRegistry");
 const timeMachine = require('ganache-time-traveler');
 const NeverPayShares = artifacts.require("NeverPayShares");
 const { assertRevert } = require('./helpers/assertRevert');
+const Web3EthAccounts = require('web3-eth-accounts');
+const abi = require('web3-eth-abi');
+const utils = require('web3-utils');
 
+function getSignHash(addr, message, year)
+{
+  const encoded = abi.encodeParameters(['address','string', 'uint256'],[addr, message, year]);
+  const orderHash = utils.soliditySha3(encoded);
+  return orderHash;
+}
 
+function sign(addr, privateKey, account)
+{
+  message = 'The owner of Ethereum address '+addr+' is a sophisticated investor for year 2022.';
+  hashi = getSignHash(addr, message, 2022);
+  data = account.sign(hashi, privateKey);
+  return data['signature']
+}
 
 function getHash(numShares, price, addr, nonce)
 {
@@ -13,19 +30,15 @@ function getHash(numShares, price, addr, nonce)
   const orderHash = web3.utils.soliditySha3(encoded);
   return orderHash;
 }
-const increaseTime = addSeconds => {
-  web3.currentProvider.send({
-      jsonrpc: "2.0", 
-      method: "evm_increaseTime", 
-      params: [addSeconds], id: 0
-  })
-}
 
 const timeRound1 = 1650412800;
 const timeRound2 = 1651017600;
 contract('Auction', (accounts) => {
   let AuctionInstance;
+  let signature
   let Shares;
+  let Acc;
+  let account;
   let basePrice = web3.utils.toBN(String("1000000000000000000"));
   let baseEther = 1;
   beforeEach(async() => {
@@ -36,9 +49,21 @@ contract('Auction', (accounts) => {
     await timeMachine.revertToSnapshot(snapshotId);
   });
   before('Deploy Contracts', async() => {
-    AuctionInstance = await Auction.new({from: accounts[0]});
+    account = await new Web3EthAccounts('ws://localhost:8546');
+    Acc = await account.create();
+    RegistryInstance = await Registry.new({from: accounts[0]});
+    AuctionInstance = await Auction.new(RegistryInstance.address, {from: accounts[0]});
     sharesAddress = await AuctionInstance.shares.call();
     Shares = await NeverPayShares.at(sharesAddress);
+
+    await RegistryInstance.authorise(Acc['address']);    
+    for (i = 0; i < 6; i++)
+    {
+      signature = await sign(accounts[i], Acc.privateKey, account);
+      message = 'The owner of Ethereum address '+accounts[i]+' is a sophisticated investor for year 2022.';
+      await AuctionInstance.verify(Acc['address'], message, signature, {from: accounts[i]});
+    }
+
   });
 
   it('Correct Hash', async () => {
@@ -50,8 +75,11 @@ contract('Auction', (accounts) => {
   it('Round 1 deadline', async () => {
     await timeMachine.advanceBlockAndSetTime(timeRound1-1000000);
     orderHash = getHash(5,5,accounts[1],1);
-    await AuctionInstance.submitCommitment(orderHash, {from: accounts[1]});
+    
 
+    await assertRevert(AuctionInstance.submitCommitment(orderHash, {from: accounts[7]}));
+    await AuctionInstance.submitCommitment(orderHash, {from: accounts[1]});
+    
     await timeMachine.advanceBlockAndSetTime(timeRound1+1000000);
     orderHash = getHash(5,5,accounts[1],1);
     await assertRevert(AuctionInstance.submitCommitment(orderHash, {from: accounts[1]}));
@@ -123,7 +151,7 @@ contract('Auction', (accounts) => {
   });
   it('Round 2 sorted', async () => {
     priceWei = [0,0,0,0,0,0];
-    price = [baseEther, baseEther+1, baseEther+5, baseEther+4,baseEther+3, baseEther+10];
+    price = [baseEther, baseEther+1, baseEther+4, baseEther+4,baseEther+3, baseEther+10];
     amount = [web3.utils.toBN(5),web3.utils.toBN(5),web3.utils.toBN(5),web3.utils.toBN(5),web3.utils.toBN(5),web3.utils.toBN(5)];
     fee = [0,0,0,0,0,0];
     orderHash = [0,0,0,0,0,0];

@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "ganache-time-traveler": "^1.0.16",
-    "web3": "^1.7.1"
+    "web3": "^1.7.1",
+    "web3-eth-abi": "^1.7.1",
+    "web3-eth-accounts": "^1.7.1"
   }
 }

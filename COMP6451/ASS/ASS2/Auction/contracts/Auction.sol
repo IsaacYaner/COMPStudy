@@ -2,6 +2,7 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 import "./NeverPayShares.sol";
+import "./Certificates.sol";
 
 /** 
  * @title Bidding
@@ -27,13 +28,17 @@ contract Auction
     mapping(bytes32 => uint) orders; //TODO remove public
     mapping(bytes32 => bool) opened;
     mapping(address => bool) issued;
+    mapping(bytes32 => address) owner;
+    mapping(address => bool) verified;
     address issuer;
     uint numOrders = 0;
     IERC20 public shares;
-    constructor()
+    SophisticatedInvestorCertificateAuthorityRegistry public registry;
+    constructor(address registryAddr)
     {
         issuer = msg.sender;
         shares = new NeverPayShares(numberShares);
+        registry = SophisticatedInvestorCertificateAuthorityRegistry(registryAddr);
     }
 
     function hash(uint number, uint price, address addr, uint nonce) 
@@ -48,10 +53,29 @@ contract Auction
             block.timestamp < 1650412800,//Timestamp for 20-04-2022-00:00:00-GMT
             "The first round has ended."
         );
+        require(
+            verified[msg.sender] == true,
+            "You haven't been verified as a sophiscated investor."
+        );
         if (orders[newOrder] != 0)
             return;
         numOrders++;
         orders[newOrder] = numOrders;
+        owner[newOrder] = msg.sender;
+    }
+
+    function withdraw(bytes32 newOrder) public {
+        require(
+            block.timestamp < 1650412800,//Timestamp for 20-04-2022-00:00:00-GMT
+            "The first round has ended."
+        );
+        require(
+            msg.sender == owner[newOrder],//Timestamp for 20-04-2022-00:00:00-GMT
+            "Only the owner can withdraw the order."
+        );
+        if (orders[newOrder] == 0)
+            return;
+        orders[newOrder] = 0;
     }
 
     function openCommitment(bytes32 orderHash, uint number, uint price, uint nonce) payable public {
@@ -89,7 +113,7 @@ contract Auction
         );
         // Max uint is about 10^77, and the base price is 1^18 Wei, so
         // Multiplying price by 1^10 is not likely to cause overflow.
-        openOrders.push(Order(msg.sender, number, price, 10000000000*price+orders[orderHash]));
+        openOrders.push(Order(msg.sender, number, price, 10000000000*price-orders[orderHash]));
         opened[orderHash] = true;
         quickSort(openOrders, 0, int(openOrders.length)-1);
     }
@@ -109,6 +133,7 @@ contract Auction
             "Already issued."
         );
         uint remainingShares = numberShares;
+        issued[msg.sender] = true;
         for (uint i = 0; i < openOrders.length; i++)
         {
             if (openOrders[i].number <= remainingShares)
@@ -140,7 +165,6 @@ contract Auction
                 }
             }
         }
-        issued[msg.sender] = true;
     }
 
     function refund(Order storage refundOrder, uint unitIssued) private
@@ -180,5 +204,19 @@ contract Auction
             quickSort(arr, left, j);
         if (i < right)
             quickSort(arr, i, right);
+    }
+
+    function verify(
+        address _signer,
+        string memory _message,
+        bytes memory signature
+    ) public returns (bool) 
+    {
+        if (registry.verify(_signer, msg.sender, 2022, _message, signature) == true)
+        {
+            verified[msg.sender] = true;
+            return true;
+        }
+        return false;
     }
 }
