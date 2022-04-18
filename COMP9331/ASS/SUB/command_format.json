@@ -1,0 +1,54 @@
+{
+    "CRT":
+    {
+        "length": [1, 1],
+        "names": ["thredtitle"],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "LST":
+    {
+        "length": [0, 0],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "MSG":
+    {
+        "length": [2, 65535],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "DLT":
+    {
+        "length": [2, 2],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "RDT":
+    {
+        "length": [1, 1],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "EDT":
+    {
+        "length": [3, 65535],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "UPD":
+    {
+        "length": [2, 2],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "DWN":
+    {
+        "length": [2, 2],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "RMV":
+    {
+        "length": [1, 1],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "XIT":
+    {
+        "length": [0, 0],
+        "Error message": "Incorrect syntax for {}" 
+    },
+    "Invalid": "Invalid command"
+}
