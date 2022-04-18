@@ -19,6 +19,14 @@ class messageLineSender(Sender):
         print(message)
 
 class UDPSender(Sender):
+    '''
+    Description:
+        Communicator using UDP sockets.
+    Init arguments:
+        ip: destination ip for sender
+        dest_port: destination port for sender
+        sock: Ready-to-use socket, default None
+    '''
     def __init__(self, dest_ip=None, dest_port=None, sock=None):
         self.ip = dest_ip
         self.port = dest_port
@@ -28,6 +36,7 @@ class UDPSender(Sender):
         #create socket
         pass
 
+    # Send message to socket
     def send(self, message, ip=None, port=None):
         dest_host = self.ip if ip is None else ip
         dest_port = self.port if port is None else port
@@ -37,7 +46,15 @@ class UDPSender(Sender):
         return
     
 class TCPSender(Sender):
-    
+    '''
+    Description:
+        Communicator using UDP sockets.
+    Init arguments:
+        ip: destination ip for sender
+        port: destination port for sender
+        buffsize: buffsize of recv()
+        sock: Ready-to-use socket, default None
+    '''
     def __init__(self, ip=None, port=None, buffsize=None, sock=None):
         self.socket = sock
         self.port = port
@@ -46,6 +63,7 @@ class TCPSender(Sender):
         if buffsize is None:
             self.buffsize = 2048
     
+    # Send message to socket
     def send(self, message):
         self.socket = socket(AF_INET, SOCK_STREAM)     # IPv4 and TCP connection
         self.socket.connect((self.ip, self.port))

@@ -10,11 +10,13 @@ class Listener():
     def handle(self): 
         pass
 
+# Process command according the rule defined command_format.json
 class CommandListener(Listener):
     def __init__(self, path='command_format.json'):
         self.command_format_path = path
         with open(path) as f:
             self.commands = json.load(f)
+
 
     def handle(self, text):
         # Split the command
@@ -30,6 +32,8 @@ class CommandListener(Listener):
         interval = self.commands[command]['length']
         if len(text)-1 not in range(interval[0], interval[1]+1):
             return self.commands[command]['Error message'].format(command)
+        
+        # Valid command return None
         return None
 
     def store_format(self, path=None):
