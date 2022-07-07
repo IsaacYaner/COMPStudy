@@ -1,0 +1,253 @@
+\documentclass{article} % simplest latex class that gives nice default structures.  Other classes include standalone, book
+
+% Recommended packages:
+\usepackage{listings} % used for listing code
+\usepackage{graphicx, amsmath} % used for importing graphics
+% Suggested packages:
+\usepackage{tikz} % used for drawing figures in LaTeX directly
+\usetikzlibrary{automata,calc,arrows} % some useful default tikz packages
+\usepackage{enumerate} % used for finer control over enumerate lists
+\usepackage{algorithm} % used for specifying algorithms
+\usepackage{algpseudocode} % ditto (you need both)
+\usepackage{fullpage} % reduces a page's margins to 1cm instead of 1in
+\usepackage{mathpazo} % better? fonts
+\usepackage{hyperref} % hyperlinks: compile with pdflatex for best results
+
+\begin{document}
+\title{Assignment 1}
+\author{} % let's keep things anonymous
+\date{} % to suppress the date
+\maketitle % to actually insert the above three items
+
+\section*{Question 1: Associate Rules and its Application in Recommendation} % use section* to suppress numbering
+
+\subsection*{Part (a)} % use subsection* to suppress numbering
+
+According to Bayes rule,
+$Pr(Y|X) = \frac{Pr(X \cap Y)}{Pr(X)}$.\\
+Therefore we can conclude that $conf(X \rightarrow Y)$
+is only relevant to $Pr(X \wedge Y)$ and $Pr(X)$, but not $Pr(Y)$\\
+The main disadvantage of ignoring $Pr(Y)$ is that confidence is lack of comparative power among the whole dataset
+because the underlying effect of two observed rules are not comparable if they have different support even the confidence are the same.\\
+For example, it is the first time that Alice watchs a scary movie, and then she clicks in another comedy in the recommendation list.
+The sample size is too small to conclude that "Alice awalys click on a comedy after watching scary movies."\\
+However, by defenition, Lift and Conviction have already incorporate the effect of support by multiplication.
+
+\subsection*{Part(b)}
+
+
+
+\subsection*{Part(c)}
+
+conf
+Lift
+
+
+\subsection*{Part(c)}
+User \texttt{align} to create the math environment. and \texttt{align} to write the matrix:
+\begin{align}
+\begin{pmatrix}
+	1 & 2 \\
+	3 & 4 \\
+\end{pmatrix}
+\end{align}
+If you would like to ignore the number of the matrix, you can use \texttt{align*} like that:
+\begin{align*}
+\begin{pmatrix}
+	1 & 2 \\
+	3 & 4 \\
+\end{pmatrix}
+\end{align*}
+\section*{Question 2}
+To write inline mathematics like $x \in \mathbb{Z}$ place your expression inside single \$.
+
+To write standalone mathematics like:
+\[ x \in \mathbb{N} \]
+use double \$\$ or \verb|\[ ... \]|.
+
+Other useful commands: 
+\begin{itemize}
+\item For subscript use \verb|_|.  E.g. \verb|S_{a,b}| gives: $S_{a,b}$
+\item For superscript use \verb|^|.  E.g. \verb|S^{a,b}| gives $S^{a,b}$
+\item To write a set use \verb|\{ ... \}| like this: $\{a,b,c\}$
+\item \verb|\emptyset \mathcal{U}|: $\emptyset$, $\mathcal{U}$ 
+\item \verb|\cap \cup|: $A \cap B$, $A \cup B$
+\item \verb|\setminus|: $A \setminus B$ 
+\item \verb|\gcd|: $\gcd$
+\item \verb|\pmod{n}|: $\pmod{n}$
+\item \verb|\%|: $\%$
+\end{itemize}
+
+
+\section*{Question 3}
+The \texttt{enumerate} package lets you do tailored enumerates:
+\begin{enumerate}[I]
+\item First
+\item Second
+\item Third
+\end{enumerate}
+
+This can be useful if you want to do a simple algorithm:
+\begin{enumerate}[Step 1. ]
+\item Make a sandwich
+\item Eat the sandwich
+\end{enumerate}
+
+If you want to break an enumerate with text and then resume, use \verb|\setcounter{enumi}{..}| to start the counter from somewhere specific.  For example
+\begin{enumerate}[Step 1. ]
+\setcounter{enumi}{-1}
+\item Buy sandwich ingredients
+\end{enumerate} 
+
+\section*{Question 4}
+The \texttt{listings} package lets you list code verbatim, with some syntax highlighting:
+\begin{lstlisting}[language=tex]
+\documentclass{article}
+
+\usepackage{listings}
+
+% recursion alert: stack overflow
+\end{lstlisting}
+A list of supported languages can be found \href{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}{here}.
+
+
+\section*{Question 5: Figures}
+You can use \verb|\includegraphics| to import figures from many filetypes: jpg, pdf, eps, png, etc.\texttt{TikZ} is a very useful and powerful package for drawing pictures directly in \LaTeX.  The documentation and library of examples are quite extensive, but the results can be pretty:
+\begin{center}
+\usetikzlibrary{calc,arrows, shadows}
+\begin{tikzpicture}[>=stealth]
+\tikzstyle{imgnode}=[rectangle, rounded corners, drop shadow, draw, anchor=north west, minimum width=20pt, minimum height=20pt, fill=white]
+\tikzstyle{topnode}=[rectangle, minimum width=20pt, minimum height=10pt]
+\tikzstyle{leftchild}= [rectangle, anchor=north west,minimum width=10pt, minimum height=10pt] 
+\tikzstyle{rightchild}= [rectangle, anchor=north east,minimum width=10pt, minimum height=10pt]
+
+  \node (A)[topnode] at (0,0) {};
+  \node (Ax)[imgnode] at (A.north west){};
+  \node (A1)[leftchild] at (A.south west) {};
+  \node (A2)[rightchild]  at (A.south east) {};
+
+  \node (B)[topnode] at (2,-1) {};
+  \node (Bx)[imgnode] at (B.north west){};
+  \node (B1)[leftchild] at (B.south west) {};
+  \node (B2)[rightchild]  at (B.south east) {};
+
+  \node (C)[topnode] at (-2,-1) {};
+  \node (Cx)[imgnode] at (C.north west){};
+  \node (C1)[leftchild] at (C.south west) {};
+  \node (C2)[rightchild]  at (C.south east) {};
+
+  \node (D)[topnode] at (-3,-2) {};
+  \node (Dx)[imgnode] at (D.north west){};
+  \node (D1)[leftchild] at (D.south west) {};
+  \node (D2)[rightchild]  at (D.south east) {};
+
+  \node (E)[topnode] at (-1,-2) {};
+  \node (Ex)[imgnode] at (E.north west){};
+  \node (E1)[leftchild] at (E.south west) {};
+  \node (E2)[rightchild]  at (E.south east) {};
+
+  \node (F)[topnode] at (1,-2) {};
+  \node (Fx)[imgnode] at (F.north west){};
+  \node (F1)[leftchild] at (F.south west) {};
+  \node (F2)[rightchild]  at (F.south east) {};
+
+ \draw[*->] let \p1 = (A2), \p2 = (A2.center) in (\x1-2.5,\y2) -- (B);
+ \draw[*->] let \p1 = (A1), \p2 = (A1.center) in (\x1+2.5,\y2) -- (C);
+ \draw[*->] let \p1 = (C1), \p2 = (C1.center) in (\x1+2.5,\y2) -- (D);
+ \draw[*->] let \p1 = (C2), \p2 = (C2.center) in (\x1-2.5,\y2) -- (E);
+ \draw[*->] let \p1 = (B1), \p2 = (B1.center) in (\x1+2.5,\y2) -- (F);
+ \draw[-] (A1.north west) -- (A2.north east);
+ \draw[-] (A1.north east) -- (A1.south east);
+ \draw[-] (B1.north west) -- (B2.north east);
+ \draw[-] (B1.north east) -- (B1.south east);
+ \draw[-] (C1.north west) -- (C2.north east);
+ \draw[-] (C1.north east) -- (C1.south east);
+ \draw[-] (D1.north west) -- (D2.north east);
+ \draw[-] (D1.north east) -- (D1.south east);
+ \draw[-] (E1.north west) -- (E2.north east);
+ \draw[-] (E1.north east) -- (E1.south east);
+ \draw[-] (F1.north west) -- (F2.north east);
+ \draw[-] (F1.north east) -- (F1.south east);
+\end{tikzpicture}
+\end{center}
+
+Here is an example algorithm:  
+\begin{algorithmic}
+\Procedure{CheckNumbers}{$A$,$B$}
+\Statex \Comment{$A$ and $B$ are two lists of integers}
+\State count = 0
+  \For { $i = 1, \ldots, n$}
+     \For {$j=i\ldots m$}
+        \If {$A[i]\geq B[j]$}
+          \State count = count +1
+          \State break
+        \EndIf
+     \EndFor
+
+\EndFor
+\EndProcedure
+\end{algorithmic}
+It will be inserted exactly where it appears in the document.  This is not recommended because it is better to group the entire algorithm together and ``float'' the group to somewhere where it will all fit: this will make things more readable.  As an example here is a second, much longer, algorithm (see Algorithm~\ref{alg:longer}).
+\begin{algorithm}
+\begin{algorithmic}
+\Procedure{LongerCheckNumbers}{$A$,$B$}
+\Statex \Comment{$A$ and $B$ are two lists of integers}
+\State count = 0
+  \For { $i = 1, \ldots, n$}
+     \For {$j=i\ldots m$}
+        \If {$A[i]\geq B[j]$}
+          \State count = count +1
+          \State break
+        \EndIf
+     \EndFor
+
+\EndFor
+\State count = 0
+  \For { $i = 1, \ldots, n$}
+     \For {$j=i\ldots m$}
+        \If {$A[i]\geq B[j]$}
+          \State count = count +1
+          \State break
+        \EndIf
+     \EndFor
+
+\EndFor
+\State count = 0
+  \For { $i = 1, \ldots, n$}
+     \For {$j=i\ldots m$}
+        \If {$A[i]\geq B[j]$}
+          \State count = count +1
+          \State break
+        \EndIf
+     \EndFor
+
+\EndFor
+\State count = 0
+  \For { $i = 1, \ldots, n$}
+     \For {$j=i\ldots m$}
+        \If {$A[i]\geq B[j]$}
+          \State count = count +1
+          \State break
+        \EndIf
+     \EndFor
+
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\caption{A longer algorithm}\label{alg:longer}
+\end{algorithm}
+
+Observe that the \texttt{algorithm} environment also adds nice visual structures around your algorithm.
+
+\subsection*{Part (a)}
+
+You should use \verb|\ref| and \verb|\label| to refer to your algorithm in the text so that the reader can find it.  Note that if you use \verb|\ref| and \verb|\label| you need to compile your latex document twice: the first time grabs all the labels (and puts them into the .aux file) and the second time it can insert the numbers into the file.  Otherwise your references look like this: \ref{unknown}.
+
+
+You can use \verb|\ref| and \verb|\label| to refer to other parts of your document, including other floating objects (e.g.\ \texttt{figure} for graphics, \texttt{table} for tables). 
+
+
+\section*{Question 6}
+There is almost always a \LaTeX\ package for your typesetting needs.  Most packages are well documented and many of the popular ones have copious amounts of examples of their capabilities.  Google is your friend.
+
+\end{document}

@@ -1,0 +1,42 @@
+never mutex {    /* !([] (((! (((P@csp)) && ((Q@csq)))) && (! (((P@csp)) && ((R@csr))))) && (! (((R@csr)) && ((Q@csq)))))) */
+T0_init:
+	do
+	:: atomic { (! ((((! (((P@csp)) && ((Q@csq)))) && (! (((P@csp)) && ((R@csr))))) && (! (((R@csr)) && ((Q@csq))))))) -> assert(!(! ((((! (((P@csp)) && ((Q@csq)))) && (! (((P@csp)) && ((R@csr))))) && (! (((R@csr)) && ((Q@csq)))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never waitp {    /* !([] ((! ((P@waitp))) || (<> ((P@csp))))) */
+T0_init:
+	do
+	:: (! ((! ((P@waitp)))) && ! (((P@csp)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((P@csp)))) -> goto accept_S4
+	od;
+}
+never waitq {    /* !([] ((! ((Q@waitq))) || (<> ((Q@csq))))) */
+T0_init:
+	do
+	:: (! ((! ((Q@waitq)))) && ! (((Q@csq)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((Q@csq)))) -> goto accept_S4
+	od;
+}
+never waitr {    /* !([] ((! ((R@waitr))) || (<> ((R@csr))))) */
+T0_init:
+	do
+	:: (! ((! ((R@waitr)))) && ! (((R@csr)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((R@csr)))) -> goto accept_S4
+	od;
+}

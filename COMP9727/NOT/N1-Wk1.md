@@ -20,6 +20,7 @@
 
 + Positive only
 + 50-200 ok
++ Can divide by sqrt(P/k)
 
 ### Improvement
 
@@ -31,3 +32,65 @@
 + More static
 
 ## Cold start
+
+## Rating 
+
++ Test with real users
+  + AB test
++ Lab tests
+  + Controlled experiments
++ Offline experiments
+  + fitting
++ Simulator
+
+### Features
+
++ Diversity
++ Coverage
++ Serendipity
+
+
+### Accuracy
+
++ Precision:
+  + exactness: relevant/all got
+  + tp/tp+fp
+  + tp/tp+fn
++ Recall:
+  + completeness: relevant/all potential
+
+#### DCG
+
++ nDCG = DCG/ideal matches
+
+## CF
+
+### Matrix
+
++ Singular value decomposition
++ Matrix Factorisation
+
+#### SVD
+
++ Dimensionality Reduction
++ Workflow
+  + Given A, find U,Vt,Sigma
++ Usage
+  + U = user*category
+  + Sigma = weight of category
+  + Vt = category*movie
++ Can't handle missing values
+
+#### Matrix Factorisation
+
++ min Σ (r-qp)^2 + λ(q^2 + p^2)
++ Learning
+  + Stochastic gradient descent
+    + SGD
+  + Alternating least squares
+    + ALS
+    + Fix one, adjust another, switch, repeat until converge
+
+### Locality Sensitive Hashing
+
++ 
