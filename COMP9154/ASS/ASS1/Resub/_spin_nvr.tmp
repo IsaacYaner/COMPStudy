@@ -1,0 +1,35 @@
+never eventual_reader {    /* !(((([] (<> ((reader1@newround)))) && ([] (<> ((reader2@newround))))) && ([] (<> ((reader3@newround))))) && ([] (<> ((writer@newround))))) */
+T0_init:
+	do
+	:: (! (((writer@newround)))) -> goto accept_S7
+	:: (! (((reader3@newround)))) -> goto accept_S12
+	:: (! (((reader2@newround)))) -> goto accept_S17
+	:: (! (((reader1@newround)))) -> goto accept_S22
+	:: (1) -> goto T0_init
+	od;
+accept_S7:
+	do
+	:: (! (((writer@newround)))) -> goto accept_S7
+	od;
+accept_S12:
+	do
+	:: (! (((reader3@newround)))) -> goto accept_S12
+	od;
+accept_S17:
+	do
+	:: (! (((reader2@newround)))) -> goto accept_S17
+	od;
+accept_S22:
+	do
+	:: (! (((reader1@newround)))) -> goto accept_S22
+	od;
+}
+never correct_value {    /* !((((((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3]))) && ((! (done1)) || (((((! ((Saved1[1]==ReadValue1[1]))) || ((Saved1[0]<=ReadValue1[0]))) && ((! ((Saved1[2]==ReadValue1[2]))) || ((Saved1[1]<=ReadValue1[1])))) && ((! ((Saved1[3]==ReadValue1[3]))) || ((Saved1[2]<=ReadValue1[2])))) && ((Saved1[3]<=ReadValue1[3]))))) && ((((((! ((CounterValue[1]==ReadValue2[1]))) || ((CounterValue[0]>=ReadValue2[0]))) && ((! ((CounterValue[2]==ReadValue2[2]))) || ((CounterValue[1]>=ReadValue2[1])))) && ((! ((CounterValue[3]==ReadValue2[3]))) || ((CounterValue[2]>=ReadValue2[2])))) && ((CounterValue[3]>=ReadValue2[3]))) && ((! (done2)) || (((((! ((Saved2[1]==ReadValue2[1]))) || ((Saved2[0]<=ReadValue2[0]))) && ((! ((Saved2[2]==ReadValue2[2]))) || ((Saved2[1]<=ReadValue2[1])))) && ((! ((Saved2[3]==ReadValue2[3]))) || ((Saved2[2]<=ReadValue2[2])))) && ((Saved2[3]<=ReadValue2[3])))))) && ((((((! ((CounterValue[1]==ReadValue3[1]))) || ((CounterValue[0]>=ReadValue3[0]))) && ((! ((CounterValue[2]==ReadValue3[2]))) || ((CounterValue[1]>=ReadValue3[1])))) && ((! ((CounterValue[3]==ReadValue3[3]))) || ((CounterValue[2]>=ReadValue3[2])))) && ((CounterValue[3]>=ReadValue3[3]))) && ((! (done3)) || (((((! ((Saved3[1]==ReadValue3[1]))) || ((Saved3[0]<=ReadValue3[0]))) && ((! ((Saved3[2]==ReadValue3[2]))) || ((Saved3[1]<=ReadValue3[1])))) && ((! ((Saved3[3]==ReadValue3[3]))) || ((Saved3[2]<=ReadValue3[2])))) && ((Saved3[3]<=ReadValue3[3])))))) */
+accept_init:
+T0_init:
+	do
+	:: atomic { (! (((((((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3]))) && ((! (done1)) || (((((! ((Saved1[1]==ReadValue1[1]))) || ((Saved1[0]<=ReadValue1[0]))) && ((! ((Saved1[2]==ReadValue1[2]))) || ((Saved1[1]<=ReadValue1[1])))) && ((! ((Saved1[3]==ReadValue1[3]))) || ((Saved1[2]<=ReadValue1[2])))) && ((Saved1[3]<=ReadValue1[3]))))) && ((((((! ((CounterValue[1]==ReadValue2[1]))) || ((CounterValue[0]>=ReadValue2[0]))) && ((! ((CounterValue[2]==ReadValue2[2]))) || ((CounterValue[1]>=ReadValue2[1])))) && ((! ((CounterValue[3]==ReadValue2[3]))) || ((CounterValue[2]>=ReadValue2[2])))) && ((CounterValue[3]>=ReadValue2[3]))) && ((! (done2)) || (((((! ((Saved2[1]==ReadValue2[1]))) || ((Saved2[0]<=ReadValue2[0]))) && ((! ((Saved2[2]==ReadValue2[2]))) || ((Saved2[1]<=ReadValue2[1])))) && ((! ((Saved2[3]==ReadValue2[3]))) || ((Saved2[2]<=ReadValue2[2])))) && ((Saved2[3]<=ReadValue2[3])))))) && ((((((! ((CounterValue[1]==ReadValue3[1]))) || ((CounterValue[0]>=ReadValue3[0]))) && ((! ((CounterValue[2]==ReadValue3[2]))) || ((CounterValue[1]>=ReadValue3[1])))) && ((! ((CounterValue[3]==ReadValue3[3]))) || ((CounterValue[2]>=ReadValue3[2])))) && ((CounterValue[3]>=ReadValue3[3]))) && ((! (done3)) || (((((! ((Saved3[1]==ReadValue3[1]))) || ((Saved3[0]<=ReadValue3[0]))) && ((! ((Saved3[2]==ReadValue3[2]))) || ((Saved3[1]<=ReadValue3[1])))) && ((! ((Saved3[3]==ReadValue3[3]))) || ((Saved3[2]<=ReadValue3[2])))) && ((Saved3[3]<=ReadValue3[3])))))))) -> assert(!(! (((((((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3]))) && ((! (done1)) || (((((! ((Saved1[1]==ReadValue1[1]))) || ((Saved1[0]<=ReadValue1[0]))) && ((! ((Saved1[2]==ReadValue1[2]))) || ((Saved1[1]<=ReadValue1[1])))) && ((! ((Saved1[3]==ReadValue1[3]))) || ((Saved1[2]<=ReadValue1[2])))) && ((Saved1[3]<=ReadValue1[3]))))) && ((((((! ((CounterValue[1]==ReadValue2[1]))) || ((CounterValue[0]>=ReadValue2[0]))) && ((! ((CounterValue[2]==ReadValue2[2]))) || ((CounterValue[1]>=ReadValue2[1])))) && ((! ((CounterValue[3]==ReadValue2[3]))) || ((CounterValue[2]>=ReadValue2[2])))) && ((CounterValue[3]>=ReadValue2[3]))) && ((! (done2)) || (((((! ((Saved2[1]==ReadValue2[1]))) || ((Saved2[0]<=ReadValue2[0]))) && ((! ((Saved2[2]==ReadValue2[2]))) || ((Saved2[1]<=ReadValue2[1])))) && ((! ((Saved2[3]==ReadValue2[3]))) || ((Saved2[2]<=ReadValue2[2])))) && ((Saved2[3]<=ReadValue2[3])))))) && ((((((! ((CounterValue[1]==ReadValue3[1]))) || ((CounterValue[0]>=ReadValue3[0]))) && ((! ((CounterValue[2]==ReadValue3[2]))) || ((CounterValue[1]>=ReadValue3[1])))) && ((! ((CounterValue[3]==ReadValue3[3]))) || ((CounterValue[2]>=ReadValue3[2])))) && ((CounterValue[3]>=ReadValue3[3]))) && ((! (done3)) || (((((! ((Saved3[1]==ReadValue3[1]))) || ((Saved3[0]<=ReadValue3[0]))) && ((! ((Saved3[2]==ReadValue3[2]))) || ((Saved3[1]<=ReadValue3[1])))) && ((! ((Saved3[3]==ReadValue3[3]))) || ((Saved3[2]<=ReadValue3[2])))) && ((Saved3[3]<=ReadValue3[3]))))))))) }
+	od;
+accept_all:
+	skip
+}

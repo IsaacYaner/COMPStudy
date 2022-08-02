@@ -1,0 +1,35 @@
+never eventual_reader {    /* !(((([] (<> ((reader1@newround)))) && ([] (<> ((reader2@newround))))) && ([] (<> ((reader3@newround))))) && ([] (<> ((writer@newround))))) */
+T0_init:
+	do
+	:: (! (((writer@newround)))) -> goto accept_S7
+	:: (! (((reader3@newround)))) -> goto accept_S12
+	:: (! (((reader2@newround)))) -> goto accept_S17
+	:: (! (((reader1@newround)))) -> goto accept_S22
+	:: (1) -> goto T0_init
+	od;
+accept_S7:
+	do
+	:: (! (((writer@newround)))) -> goto accept_S7
+	od;
+accept_S12:
+	do
+	:: (! (((reader3@newround)))) -> goto accept_S12
+	od;
+accept_S17:
+	do
+	:: (! (((reader2@newround)))) -> goto accept_S17
+	od;
+accept_S22:
+	do
+	:: (! (((reader1@newround)))) -> goto accept_S22
+	od;
+}
+never correct_value {    /* !(((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3]))) */
+accept_init:
+T0_init:
+	do
+	:: atomic { (! ((((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3]))))) -> assert(!(! ((((((! ((CounterValue[1]==ReadValue1[1]))) || ((CounterValue[0]>=ReadValue1[0]))) && ((! ((CounterValue[2]==ReadValue1[2]))) || ((CounterValue[1]>=ReadValue1[1])))) && ((! ((CounterValue[3]==ReadValue1[3]))) || ((CounterValue[2]>=ReadValue1[2])))) && ((CounterValue[3]>=ReadValue1[3])))))) }
+	od;
+accept_all:
+	skip
+}
