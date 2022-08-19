@@ -1,0 +1,14 @@
+Video Link:
+https://youtu.be/RJN9HhJViyA
+
+Reference List:
+
+[1] J. ̊. Pohjola, “Lecture slide of Commitment and Consensus,” [Online]. Available: http://www.cse.unsw.edu.au/~cs3151/22T2/Week%2009/Wednesday%20Slides.pdf.
+
+[2] S. khan, “Concurrency In Dart,” 25 October 2021. [Online]. Available: https://medium.flutterdevs.com/concurrency-in-dart-b9171278af31.
+
+[3] Indian Statistical Institute, “Phase-King Algorithm,” [Online]. Available: https://www.isical.ac.in/~ansuman/dist_sys/PhaseKing.pdf.
+
+[4] Dart dev team, “Concurrency in Dart,” [Online]. Available: https://dart.dev/guides/language/concurrency.
+
+[5] Dart dev team, “The Event Loop and Dart,” [Online]. Available: https://dart.cn/articles/archive/event-loop.

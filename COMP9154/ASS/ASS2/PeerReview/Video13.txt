@@ -1,0 +1,8 @@
+
+It's interesting to see the history of CSP before moving to the launguage and problem. This helps me to understand them more quickly. It is also interesting to see that go's concurrency structure is based on a modified version of CSP.
+
+I enjoied the way that they derived the final solution from the very basic simple solution that can gives me a sense of fulfillment once I finally understood the algorithm.
+
+The step-by-step approach of introducing the knowledge is more sensible for an audience that wants to learn how to solve a problem using a brand new launguage. The diagrams and pseudocodes are clear and beautiful. It really helped me to sort out my thinking. 
+
+I think it might be better to shrink the information density presented in the video a bit. Although I've learnt a lot from the video, it often need to pause the video to contemplate for a while to think.

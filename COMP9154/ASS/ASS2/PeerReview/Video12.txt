@@ -1,0 +1,8 @@
+
+This video told began with an interesting example of the barber problem, which takes me into the video quickly. It is also interesting to see different possible problems related to Sleeping Barber's problem.
+
+I quite enjoy the way of demonstrating the problem intuitively before moving to the mathematical & programming solution.  Thus we can easily understand the abstraction notion of this problem.
+
+I thinks this video demonstrates the mechanism and pitfalls involved with barber problem clearly, in a strateforward way. The solution is easy to understand and explained aiming at solving the problem demonstrated before. 
+
+It might be better to demonstrate more concurrency programming techniques before hopping in the coding solution. Also, a pseudo code might help us for a better understanding of the solutions.
