@@ -1,0 +1,129 @@
+\documentclass[a4paper,answers]{exam}
+\usepackage{hyperref}
+%\usepackage{eulervm}
+\usepackage{mathpartir}
+%\usepackage{pgffor}
+%\usepackage{ascii}
+\usepackage{xcolor}
+\usepackage{placeins} %for FloatBarrier
+\usepackage{version,a4wide}
+%,pifont}
+%\usepackage{textcomp}
+\usepackage{amsmath,amsthm}
+\usepackage{stmaryrd}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\renewcommand{\ttdefault}{cmtt}
+\pointname{ marks}
+\qformat{\textbf{Question \thequestion} $\ $ (\thepoints)\hfill}
+\newcommand\llangle{\langle\!\langle}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,shapes.geometric,fit,calc}
+
+\tikzset{initial text={},on grid, auto, thin,
+    every state/.style={circle,minimum size=.6cm,
+      %draw=blue!50,
+      draw=black,
+      thin,fill=none,text=black},
+    node distance=1.2cm,on grid,auto,
+    bend angle=35}
+\newcommand\rrangle{\rangle\!\rangle}
+\newcommand{\mapstos}[0]{\stackrel{\star}{\mapsto}}
+\newcommand{\mapstoc}[0]{\stackrel{!}{\mapsto}}
+
+\begin{document}
+\begin{flushright}
+   $\ $\\[5em] %Name: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[1em]
+    %Student Number: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[1em]
+    %Signature: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[3em]
+\end{flushright}
+\begin{center}
+\textsc{\Large The University of New South Wales}\\[3em]
+{\Huge COMP3151/9154\\[0.3em] Foundations of Concurrency}\\[3em]
+{\Large \textbf{Final Exam}}\\[1em]
+{\large \textit{Term 2, 2022}}\\[10em]
+{\large
+\begin{description}
+    \item[Time Allowed:] 24 Hours. Submit by 8AM Sydney time on August 23.
+    \item[Total Marks Available:] 100
+    \item[] $\!\!\!\!\!$ Brief answers are \textbf{strongly} preferred. Extreme verbosity may cost marks.
+    \item[] $\!\!\!\!\!$ Produce a typeset PDF file, via \LaTeX{} or otherwise, with your answers.
+    \item[] $\!\!\!\!\!$ Submit with \texttt{give cs3151 exam exam.pdf} or with the \texttt{give} web interface.
+    \item[] $\!\!\!\!\!$ The exam is open-book. You may read anything you like, and in general use any passive resource.
+    \item[] $\!\!\!\!\!$ You \textbf{may not} use active resources---don't solicit, offer, or accept help of any kind, with one exception: you may ask private questions on Ed. Johannes will monitor Ed regularly, except when he sleeps (around 10PM--6AM).
+    \item[] $\!\!\!\!\!$ Include the following statement in your PDF file:\\
+\emph{I declare that all of the work submitted for this exam is my own work, completed without assistance from anyone else.}
+   \item[] $\!\!\!\!\!$ You must adhere to the UNSW student conduct requirements listed at\\ \url{https://student.unsw.edu.au/conduct}.
+\end{description}
+}
+\end{center}
+\newpage
+
+%\setcounter{latest@ques}{1}
+
+\begin{questions}
+
+\section*{Part I}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\FloatBarrier
+\section*{Part II}
+
+These questions are about the paper \emph{Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms} by Maged M. Michael and Michael L. Scott (PODC 1996: 267-275).
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\question[x]
+\lipsum[1-1]
+
+\begin{solution}
+  You can put your solutions in \verb!solution! environments like this.
+\end{solution}
+
+\end{questions}
+
+\textbf{Dont forget to submit your work and include the statement given on the front page}.\\
+
+\centerline{\bf \large --- END OF EXAM ---}
+
+\end{document}
