@@ -1,0 +1,284 @@
+\documentclass[a4paper,answers]{exam}
+\usepackage{hyperref}
+%\usepackage{eulervm}
+\usepackage{mathpartir}
+%\usepackage{pgffor}
+%\usepackage{ascii}
+\usepackage{xcolor}
+\usepackage{placeins} %for FloatBarrier
+\usepackage{version,a4wide}
+%,pifont}
+%\usepackage{textcomp}
+\usepackage{amsmath,amsthm}
+\usepackage{stmaryrd}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\renewcommand{\ttdefault}{cmtt}
+\pointname{ marks}
+\qformat{\textbf{Question \thequestion} $\ $ (\thepoints)\hfill}
+\newcommand\llangle{\langle\!\langle}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,shapes.geometric,fit,calc}
+
+\tikzset{initial text={},on grid, auto, thin,
+    every state/.style={circle,minimum size=.6cm,
+      %draw=blue!50,
+      draw=black,
+      thin,fill=none,text=black},
+    node distance=1.2cm,on grid,auto,
+    bend angle=35}
+\newcommand\rrangle{\rangle\!\rangle}
+\newcommand{\mapstos}[0]{\stackrel{\star}{\mapsto}}
+\newcommand{\mapstoc}[0]{\stackrel{!}{\mapsto}}
+
+\begin{document}
+\begin{flushright}
+   $\ $\\[5em] %Name: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[1em]
+    %Student Number: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[1em]
+    %Signature: $\underline{\qquad\qquad\qquad\qquad\qquad\qquad}$\\[3em]
+\end{flushright}
+\begin{center}
+\textsc{\Large The University of New South Wales}\\[3em]
+{\Huge COMP3151/9154\\[0.3em] Foundations of Concurrency}\\[3em]
+{\Large \textbf{Final Exam}}\\[1em]
+{\large \textit{Term 2, 2022}}\\[10em]
+{\large
+\begin{description}
+    \item[Time Allowed:] 24 Hours. Submit by 8AM Sydney time on August 23.
+    \item[Total Marks Available:] 100
+    \item[] $\!\!\!\!\!$ Brief answers are \textbf{strongly} preferred. Extreme verbosity may cost marks.
+    \item[] $\!\!\!\!\!$ Produce a typeset PDF file, via \LaTeX{} or otherwise, with your answers.
+    \item[] $\!\!\!\!\!$ Submit with \texttt{give cs3151 exam exam.pdf} or with the \texttt{give} web interface.
+    \item[] $\!\!\!\!\!$ The exam is open-book. You may read anything you like, and in general use any passive resource.
+    \item[] $\!\!\!\!\!$ You \textbf{may not} use active resources---don't solicit, offer, or accept help of any kind, with one exception: you may ask private questions on Ed. Johannes will monitor Ed regularly, except when he sleeps (around 10PM--6AM).
+    \item[] $\!\!\!\!\!$ Include the following statement in your PDF file:\\
+\emph{I declare that all of the work submitted for this exam is my own work, completed without assistance from anyone else.}
+   \item[] $\!\!\!\!\!$ You must adhere to the UNSW student conduct requirements listed at\\ \url{https://student.unsw.edu.au/conduct}.
+\end{description}
+}
+\end{center}
+\newpage
+
+%\setcounter{latest@ques}{1}
+
+\begin{questions}
+
+\section*{Part I}
+
+\question[10]
+Answer the following, briefly and in your own words.
+
+\begin{parts}
+
+\part[2] What is a linear-time property?
+
+\part[2] Why does Owicki-Gries require interference freedom checks?
+
+\part[2] How do distributed consensus algorithms get around the FLP theorem?
+
+\part[2] Why does the King algorithm require one more round than the number of traitors?
+
+\part[2] What is the difference between a permission-based and a token-based distributed mutual exclusion algorithm?
+
+\end{parts}
+
+\question[15]
+
+These questions are about the critical section algorithm in Table~\ref{onebit}.
+The purpose of this algorithm is to get away with the least amount of shared state
+possible, which turns out to be one bit per process.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| c l |  c l |}
+\hline 
+\multicolumn{4}{| c |}{ $\textbf{bool}\ \mathit{x,y} := \mathsf{false}$}\\
+\hline
+\multicolumn{2}{| l |}{\textbf{forever}\ \textbf{do}} & \multicolumn{2}{| l |}{\textbf{forever}\ \textbf{do}} \\ 
+p$_1$ & \textit{non-critical section} & q$_1$ & \textit{non-critical section} \\ 
+p$_2$ & $x := \mathsf{true}$ & q$_2$ & $y := \mathsf{true}$ \\
+p$_3$ & \textbf{await} $\neg y$ & q$_3$ & \textbf{if} $x$ \textbf{then} \\
+p$_4$ & \textbf{\emph{critical section}} & q$_4$ & \quad $y := \mathsf{false}$ \\
+p$_5$ & $\mathit{x} := \mathsf{false}$ & q$_5$ & \quad \textbf{await} $\neg x$ \\
+ &  & q$_6$ & \quad \textbf{goto} q$_2$ \\
+ &  & q$_7$ & \textbf{\emph{critical section}} \\
+ &  & q$_8$ & $y := \mathsf{false}$ \\\hline
+\end{tabular}
+\end{center}
+\caption{A critical section algorithm.\label{onebit}}
+\end{table}
+
+\begin{parts}
+  \part[5] Of the four main critical section desiderata
+  (mutual exclusion, deadlock freedom, eventual entry, and absence of unnecessary delay),
+  which ones are satisfied by this algorithm?
+  For any properties that are not satisfied, describe a behaviour that is in violation.
+  \part[5]
+  Suppose we rewrite process $p$ to be exactly like process $q$, but with the roles
+  of $x$ and $y$ swapped. Would this change your answer to the previous question?
+  \part[5] Why are there no algorithms with only a single bit of shared state?
+  You don't have to produce a formal proof, but try to make a convincing
+  informal argument.
+  
+  For the purposes of this question, we consider an algorithm correct
+  if it satisfies at least mutual exclusion and deadlock freedom (in
+  the sense ``if a process is trying to enter the critical section,
+  then assuming weak fairness, some process will eventually enter the critical section'').
+\end{parts}
+
+\question[15]
+
+
+Assume you have an underlying monitor implementation $I$ with priority ordering $E
+< S < W$.
+Suppose we would like a monitor $M$ to behave as if it had priority ordering 
+$E < W < S$.
+Show how to implement our desired monitor $M$ using our underlying implementation $I$.
+
+Present your solution in the form of pseudocode snippets to be executed upon
+monitor entry, monitor exit, signalling and waiting. That is, assume
+that whenever monitor $M$ would like to execute, e.g., $\mathbf{waitC}(\mathit{cond})$, it
+runs your code snippet instead.
+You may introduce auxiliary variables and condition variables as
+needed.
+Some of the snippets might be empty, in which case they can be left out.
+
+\question[10]
+
+\begin{parts}
+\part[5] Consider the LTL formula $\Diamond\Box\Diamond\varphi$.
+  Give a simpler but logically equivalent formula. Explain why it's equivalent.
+
+\part[5] Let the CCS process $P$ be defined as follows:
+\[P = (x.P){\backslash}x\]
+
+Simplify the following CCS expression step by step:
+\[(x.(P{\backslash}x)){\backslash}x\]
+
+\emph{Hint:} it simplifies a lot!
+A selection of algebraic laws about restriction that you may use can be found in Table~\ref{ccslaws}.
+
+\begin{table}
+\begin{center}
+\begin{mathpar}
+  (a.P){\backslash}x = a.(P{\backslash}x) \quad\mbox{if $x \notin \{a,\overline{a}\}$}
+  \and
+  P{\backslash}x{\backslash}x = P{\backslash}x
+  \and
+  P{\backslash}x{\backslash}y = P{\backslash}y{\backslash}x
+\end{mathpar}
+\end{center}
+\caption{Some algebraic laws of CCS.\label{ccslaws}}
+\end{table}
+
+\end{parts}
+
+\FloatBarrier
+\section*{Part II}
+
+These questions are about the paper \emph{Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms} by Maged M. Michael and Michael L. Scott (PODC 1996: 267-275).
+
+\question[15]
+
+\begin{parts}
+\part[5] Section 1 of the paper includes an extensive summary of the state of the art
+in 1996. How did Michael and Scott's paper improve the state of the art?  
+  
+\part[3] What is the difference between a block-free algorithm and a wait-free algorithm?
+Of the two, which kind of algorithm did the specification of Assignment 1 ask for?
+
+
+\part[2] The performance analysis in Section 4 found no situation where Michael and Scott's
+two-lock algorithm outperforms lock-free algorithms. What's the benefit of the two-lock algorithm?
+
+\part[5]
+The compare-and-swap (CAS) on line E17 of the non-blocking algorithm has the accompanying comment
+``Try to swing Tail to the inserted node''.
+This suggests that, if the CAS fails, an enqueue operation can terminate even
+if its work is unfinished.
+Is this a problem? Explain why or why not.
+
+\end{parts}
+
+\question[25]
+
+The ABA problem is discussed a lot in the paper.
+
+\begin{parts}
+\part[4]
+What is the ABA problem? Explain informally and in your own words.
+
+\part[3]
+How does the authors' use of modification counters help mitigate the
+ABA problem?
+
+\part[5]
+Ominously, the safety analysis in Section 3.1 is predicated upon the
+assumption that the ABA problem will never occur.  Describe a scenario
+where, in the lock-free algorithm, the queue can end up corrupted if
+the ABA problem occurs.
+
+\emph{Hint:} make the modification counters wrap around.
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{| c l |  c l |}
+  \hline 
+  \multicolumn{4}{| c |}{ $\textbf{int}\ \mathit{n} := 0$} \\
+  \hline
+  \multicolumn{2}{| c |}{ $\textbf{int}\ \mathit{i} := 10$} & \multicolumn{2}{| c |}{ $\textbf{int}\ \mathit{j} := 10$}\\
+  \hline
+  \multicolumn{2}{| l |}{\textbf{while}\ $i \neq 0$} & \multicolumn{2}{| l |}{\textbf{while}\ $j \neq 0$} \\ 
+  p$_1$ & \textbf{repeat} & q$_1$ & \textbf{repeat} \\ 
+  p$_2$ & \quad $x := n$ & q$_2$ & \quad $y := n$ \\
+  p$_3$ & \textbf{until}\ $\mathsf{CAS}(n,x,(x + 1) \mathop{\mathsf{mod}} 3)$ & q$_3$ & \textbf{until}\ $\mathsf{CAS}(n,x,(x + 1) \mathop{\mathsf{mod}} 3)$ \\
+  p$_4$ & $i := i - 1$ & q$_4$ & $j:=j-1$ \\ \hline
+  \end{tabular}
+\end{center}
+\caption{A toy counter program.\label{toycounter}}
+\end{table}
+
+\part[3]
+Sometimes, ABA-type situations are innocuous. Consider the program in
+Table~\ref{toycounter}.  Describe how the $\mathsf{CAS}$ at $p_3$ may succeed,
+despite $n$ having changed since the read on line $p_2$.
+
+\part[10]
+The end result of running the program in Table~\ref{toycounter}
+is unaffected by whether ABA situations happen or not. Or to be
+precise, the program will satisfy the following Hoare triple:
+\[
+\{n = 0\}\;P || Q\;\{n = 2\}
+\]
+Where $P$ and $Q$ are the left and right processes, respectively.
+Formulate a single global invariant that suffices to establish
+this Hoare triple.
+
+\end{parts}
+
+\question[10]
+
+The last item in Section 3.1 states ``\emph{Tail} always points to a
+node in the linked list, because it never lags behind \emph{Head}, so
+it can never point to a deleted node''.
+
+\begin{parts}
+\part[5]
+This statement is false for
+the two-lock concurrent queue.  Describe how a state can be reached
+where \emph{Tail} points to a deleted node.
+
+\emph{Hint:} look for a state where one of the locks is held.
+\part[5] Is it possible to reach a state where \emph{Head} points to a deleted node?
+Explain why or why not.
+\end{parts}
+
+\end{questions}
+
+\textbf{Dont forget to submit your work and include the statement given on the front page}.\\
+
+\centerline{\bf \large --- END OF EXAM ---}
+
+\end{document}
+
