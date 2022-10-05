@@ -1,0 +1,11 @@
+vertex(a).
+vertex(b).
+vertex(c).
+vertex(d).
+vertex(e).
+vertex(f).
+edge(a,e).
+edge(b,e).
+edge(e,f).
+edge(f,d).
+edge(f,c).
