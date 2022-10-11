@@ -1,15 +1,21 @@
 import json
 import pprint
+from windoz.windoz import Stopwatch
 word = 'learning'
 
+
 result_list = []
+timer = Stopwatch()
+
 with open('dblp-ref-0.json') as file:
-    for i in range(1000):
+    while True:
         data = file.readline()
+        if data == '':
+            break
         if word in data:
             obj = json.loads(data)
             result = {}
-            print(obj.keys())
+            # print(obj.keys())
             result['id'] = obj['id']
             try:
                 result['ref'] = obj['references']
@@ -17,4 +23,5 @@ with open('dblp-ref-0.json') as file:
                 result['ref'] = []
             result_list.append(result)
 
-pprint.pprint(result_list)
+print(timer.read_and_set())
+pprint.pprint(len(result_list))
