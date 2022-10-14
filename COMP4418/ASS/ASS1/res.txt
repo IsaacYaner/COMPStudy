@@ -1,0 +1,108 @@
+Answer: 1
+centre(z) leg(d,a) leg(x,e) leg(z,y) leg(z,x) leg(z,c) leg(c,d) leg(y,b)
+Answer: 2
+centre(z) leg(d,a) leg(x,e) leg(z,y) leg(z,x) leg(z,c) leg(b,d) leg(y,b)
+Answer: 3
+centre(x) leg(d,c) leg(x,e) leg(x,a) leg(z,y) leg(a,d) leg(c,z) leg(y,b)
+Answer: 4
+centre(x) leg(d,c) leg(x,z) leg(x,e) leg(x,a) leg(z,y) leg(b,d) leg(y,b)
+Answer: 5
+centre(x) leg(d,c) leg(x,z) leg(x,e) leg(x,a) leg(z,y) leg(a,d) leg(y,b)
+Answer: 6
+centre(x) leg(d,c) leg(x,z) leg(x,e) leg(x,a) leg(z,y) leg(e,d) leg(y,b)
+Answer: 7
+centre(x) leg(d,c) leg(x,e) leg(x,a) leg(z,y) leg(c,z) leg(e,d) leg(y,b)
+Answer: 8
+centre(x) leg(d,b) leg(x,e) leg(x,a) leg(z,c) leg(b,y) leg(e,d) leg(y,z)
+Answer: 9
+centre(x) leg(d,b) leg(x,e) leg(x,a) leg(z,c) leg(a,d) leg(b,y) leg(y,z)
+Answer: 10
+centre(x) leg(d,b) leg(x,z) leg(x,e) leg(x,a) leg(z,c) leg(b,y) leg(e,d)
+Answer: 11
+centre(x) leg(d,b) leg(x,z) leg(x,e) leg(x,a) leg(z,c) leg(a,d) leg(b,y)
+Answer: 12
+centre(x) leg(d,b) leg(x,z) leg(x,e) leg(x,a) leg(z,c) leg(b,y) leg(c,d)
+Answer: 13
+centre(z) leg(d,a) leg(x,e) leg(z,y) leg(z,x) leg(z,c) leg(e,d) leg(y,b)
+Answer: 14
+centre(d) leg(d,e) leg(d,b) leg(d,a) leg(x,z) leg(z,c) leg(b,y) leg(e,x)
+Answer: 15
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(x,a) leg(z,x) leg(b,y) leg(y,z)
+Answer: 16
+centre(z) leg(d,e) leg(x,a) leg(z,y) leg(z,c) leg(b,d) leg(e,x) leg(y,b)
+Answer: 17
+centre(d) leg(d,c) leg(d,b) leg(d,a) leg(x,e) leg(z,x) leg(b,y) leg(y,z)
+Answer: 18
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(z,x) leg(b,y) leg(y,z)
+Answer: 19
+centre(d) leg(d,e) leg(d,c) leg(d,a) leg(x,z) leg(z,y) leg(e,x) leg(y,b)
+Answer: 20
+centre(d) leg(d,e) leg(d,b) leg(d,a) leg(x,z) leg(z,c) leg(a,x) leg(b,y)
+Answer: 21
+centre(z) leg(d,a) leg(x,e) leg(z,y) leg(z,c) leg(a,x) leg(b,d) leg(y,b)
+Answer: 22
+centre(z) leg(d,a) leg(x,e) leg(z,y) leg(z,c) leg(a,x) leg(c,d) leg(y,b)
+Answer: 23
+centre(z) leg(d,e) leg(x,a) leg(z,y) leg(z,x) leg(z,c) leg(c,d) leg(y,b)
+Answer: 24
+centre(z) leg(d,e) leg(x,a) leg(z,y) leg(z,c) leg(c,d) leg(e,x) leg(y,b)
+Answer: 25
+centre(z) leg(d,e) leg(x,a) leg(z,y) leg(z,x) leg(z,c) leg(a,d) leg(y,b)
+Answer: 26
+centre(z) leg(d,e) leg(x,a) leg(z,y) leg(z,x) leg(z,c) leg(b,d) leg(y,b)
+Answer: 27
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(x,z) leg(z,y) leg(e,x)
+Answer: 28
+centre(d) leg(d,e) leg(d,b) leg(d,a) leg(z,c) leg(a,x) leg(b,y) leg(y,z)
+Answer: 29
+centre(d) leg(d,b) leg(d,a) leg(x,e) leg(z,c) leg(a,x) leg(b,y) leg(y,z)
+Answer: 30
+centre(d) leg(d,e) leg(d,b) leg(d,a) leg(z,c) leg(b,y) leg(e,x) leg(y,z)
+Answer: 31
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(a,x) leg(b,y) leg(y,z)
+Answer: 32
+centre(d) leg(d,c) leg(d,b) leg(d,a) leg(x,e) leg(a,x) leg(b,y) leg(y,z)
+Answer: 33
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(b,y) leg(e,x) leg(y,z)
+Answer: 34
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(z,x) leg(b,y) leg(c,z)
+Answer: 35
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(a,x) leg(b,y) leg(c,z)
+Answer: 36
+centre(d) leg(d,c) leg(d,b) leg(d,a) leg(x,e) leg(a,x) leg(b,y) leg(c,z)
+Answer: 37
+centre(d) leg(d,c) leg(d,b) leg(d,a) leg(x,e) leg(z,x) leg(b,y) leg(c,z)
+Answer: 38
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(x,z) leg(a,x) leg(b,y)
+Answer: 39
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(b,y) leg(c,z) leg(e,x)
+Answer: 40
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(x,z) leg(b,y) leg(e,x)
+Answer: 41
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(z,y) leg(a,x) leg(c,z)
+Answer: 42
+centre(d) leg(d,c) leg(d,b) leg(d,a) leg(x,e) leg(z,y) leg(a,x) leg(c,z)
+Answer: 43
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(x,z) leg(z,y) leg(a,x)
+Answer: 44
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(d,a) leg(z,y) leg(c,z) leg(e,x)
+Answer: 45
+centre(d) leg(d,e) leg(d,c) leg(d,a) leg(z,y) leg(a,x) leg(c,z) leg(y,b)
+Answer: 46
+centre(d) leg(d,c) leg(d,a) leg(x,e) leg(z,y) leg(a,x) leg(c,z) leg(y,b)
+Answer: 47
+centre(d) leg(d,e) leg(d,c) leg(d,a) leg(x,z) leg(z,y) leg(a,x) leg(y,b)
+Answer: 48
+centre(d) leg(d,e) leg(d,c) leg(d,a) leg(z,y) leg(c,z) leg(e,x) leg(y,b)
+Answer: 49
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(x,a) leg(z,x) leg(b,y) leg(c,z)
+Answer: 50
+centre(d) leg(d,e) leg(d,b) leg(x,a) leg(z,c) leg(b,y) leg(e,x) leg(y,z)
+Answer: 51
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(x,a) leg(z,y) leg(c,z) leg(e,x)
+Answer: 52
+centre(d) leg(d,e) leg(d,c) leg(x,a) leg(z,y) leg(c,z) leg(e,x) leg(y,b)
+Answer: 53
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(x,a) leg(b,y) leg(e,x) leg(y,z)
+Answer: 54
+centre(d) leg(d,e) leg(d,c) leg(d,b) leg(x,a) leg(b,y) leg(c,z) leg(e,x)

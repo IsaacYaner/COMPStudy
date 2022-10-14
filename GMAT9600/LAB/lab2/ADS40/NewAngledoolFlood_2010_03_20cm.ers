@@ -1,0 +1,48 @@
+DatasetHeader Begin
+	Version		= "7.1"
+	Name		= "NewAngledoolFlood_2010_03_20cm.ers"
+	LastUpdated	= Mon Mar 22 03:34:56 GMT 2010
+	DataFile	= "NewAngledoolFlood_2010_03_20cm.ecw"
+	DataSetType	= Translated
+	DataType	= Raster
+	ByteOrder	= LSBFirst
+	CoordinateSpace Begin
+		Datum		= "GDA94"
+		Projection	= "MGA55"
+		CoordinateType	= EN
+		Rotation	= 0:0:0.0
+	CoordinateSpace End
+	RasterInfo Begin
+		CellType	= Unsigned8BitInteger
+		CellInfo Begin
+			Xdimension	= 0.20000000000000001
+			Ydimension	= 0.20000000000000001
+		CellInfo End
+		NrOfLines	= 41202
+		NrOfCellsPerLine	= 51950
+		RegistrationCoord Begin
+			Eastings	= 583216.05066530174
+			Northings	= 6781661.1120777875
+		RegistrationCoord End
+		NrOfBands	= 3
+		BandId Begin
+			Value		= "Red"
+		BandId End
+		BandId Begin
+			Value		= "Green"
+		BandId End
+		BandId Begin
+			Value		= "Blue"
+		BandId End
+		RegionInfo Begin
+			Type		= Polygon
+			RegionName	= "All"
+			SubRegion	= {
+				0	0
+				0	41202
+				51950	41202
+				51950	0
+			}
+		RegionInfo End
+	RasterInfo End
+DatasetHeader End

@@ -4,6 +4,7 @@
 % Generating leg/2
 % Make edge undirected.
 edge(Y,X) :- edge(X,Y).
+degree(X, D) :- vertex(X), D = #count {I: edge(I, X)}.
 % At most one outdegree.
  {leg(X,Y) : edge(X,Y)}1 :- vertex(X), not centre(X).
 % Exactly one indegree
@@ -22,4 +23,5 @@ path(X,Z) :- path(X,Y), path(Y,Z).
 #show.
 #show centre/1.
 #show leg/2.
+% #show degree/2.
 % #show reachable/1.
