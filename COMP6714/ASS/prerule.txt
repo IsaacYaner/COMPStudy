@@ -1,0 +1,22 @@
+search in simplyboolean is case insensitive :
+hello , szi
+
+full stop for abbreviation are ignored .
+u.s . u usa u.s .
+
+singular/plural is ignored :
+cat , cat , cat 's , cat '
+
+tense is ignored :
+breach , breach , breached , breaching .
+
+a sentence can only end with a full stop , a question mark , or an exclammation mark .
+hi ! hi ? hi . hi !
+
+except the above , all other punctuation should be treated a token divider .
+mister , yi-qwe'aaah
+
+all numeric token such a year , decimal , integer are ignored :
+
+asd asd2 sadj2 231 .
+

@@ -1,0 +1,22 @@
+Search in SimplyBoolean is case insensitive:
+HelLo, SzI
+
+Full stops for abbreviations are ignored.
+U.s. US USA U.S.
+
+Singular/Plural is ignored:
+cat, cats, cat's, cats'
+
+Tense is ignored:
+breaches, breach, breached, breaching.
+
+A sentence can only end with a full stop, a question mark, or an exclammation mark.
+Hi! Hi? Hi. Hi!
+
+Except the above, all other punctuation should be treated as token dividers.
+mister, Yi-qwe'aaah
+
+All numeric tokens such as years, decimals, integers are ignored:
+
+asd asd2 sadj2 231.
+

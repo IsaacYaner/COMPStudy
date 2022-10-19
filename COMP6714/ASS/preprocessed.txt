@@ -1,0 +1,12 @@
+search simplyboolean case insensitive .
+full stop abbreviation ignored:
+. e.g. , u.s. , u .
+singular/plural ignoredL
+e.g. , cat , cat , cat 's , cat ' .
+tense ignored:
+e.g. , breach , breach , breached , breaching .
+a sentence end full stop , question mark , exclammation mark .
+except , punctuation treated token divider .
+all numeric token year , decimal , integer ignored . you index token hence consider proximity query +n .
+
+
