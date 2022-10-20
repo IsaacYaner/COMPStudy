@@ -55,11 +55,15 @@ def remove_punctuations(text):
     return clean_text(ignore_list, text, flags)
 
 def sb_pre(text, link=False):
-    text = remove_punctuations(text)
-    text = regex.sub(r'[^\w!?. ]', ' ',text)
+    text = remove_punctuations(text)                # Remove unwanted punctuations
+    text = regex.sub(r'[^\w!?. \n]', ' ',text)      # Clean all invalid characters
+    text = regex.sub(r"(?<![A-Za-z]+[^A-Za-z \n]*)[0-9]*([^A-Za-z \n]+[0-9]+)?(?![^A-Za-z\n ]*[A-Za-z])\b", '', text)
+                                                    # Remove pure numbers
+    text = regex.sub(r'[!?.]', '.',text)            # Place sentence separator
     text = word_tokenize(text)
     text = normalise(text)
     text = stem(text)
+    text = [t for t in text if regex.match("^[0-9]*$", t) is None]
     if link:
         return " ".join(text)
     return text
