@@ -63,7 +63,7 @@ def sb_pre(text, link=False):
     text = word_tokenize(text)
     text = normalise(text)
     text = stem(text)
-    text = [t for t in text if regex.match("^[0-9]*$", t) is None]
+    text = [t if regex.match("^[0-9]*$", t) is None else t+'s' for t in text]
     if link:
         return " ".join(text)
     return text
