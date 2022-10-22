@@ -5,10 +5,6 @@ import re
 import regex
 stopwords = stopwords.words('english')
 
-'''
-input:  list
-output: list
-'''
 def remove_stop_words(tokens):
     return [w for w in tokens if w not in stopwords]
 

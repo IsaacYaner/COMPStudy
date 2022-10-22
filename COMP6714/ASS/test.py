@@ -1,24 +1,23 @@
-from prefunctions import sb_pre
+import sys
+import json
+import regex
+from sys import stdin
 
-# tokenizer = RegexpTokenizer(r'\w+', gaps=True)
-# data = tokenizer.tokenize('EEighty-seven miles to go, yet.  Onward!')
-# print(" ".join(data))
-my_string =  "A study group said the United States\
-  should increase its strategic petroleum reserve to one mln\
-  barrels as one way to deal with the present and future impact\
-  of low oil prices on the domestic oil industry.\
-      U.S. policy now is to raise the strategic reserve to 750\
-  mln barrels, from its present 500 mln, to help protect the\
-  economy from an overseas embargo or a sharp price rise.\
-      The Aspen Institute for Humanistic Studies, a private\
-  group, also called for new research for oil exploration and\
-  development techniques.\
-      It predicted prices would remain at about 15-18 dlrs a\
-  barrel for several years and then rise to the mid 20s, with\
-  imports at about 30 pct of U.S. consumption.\
-      It said instead that such moves as increasing oil reserves\
-  and more exploration and development research would help to\
-  guard against or mitigate the risks of increased imports."
+def is_operator(token):
+    if token in '+-*/':
+        return True
+    return False
 
-data = sb_pre(my_string, link=False)
-print(data)
+def get_value(token):
+    return token
+
+for line in stdin:
+    query = line[:-1]
+    subset = [x.group() for x in regex.finditer(r'"(\w+ )*(\w+ ?)?"', query)]
+    post = [regex.sub(r'(?<=\w+) +(?=\w+)', '+1', x) for x in subset]
+    for i in range(len(subset)):
+        query = regex.sub(subset[0], "("+post[0][1:-1]+")", query, count=1)
+    print(subset)
+    print(query)
+
+
