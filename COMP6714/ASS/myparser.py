@@ -71,16 +71,21 @@ class TokenParser:
             return None
 
 class SimpleBooleanParser(TokenParser):
-    def __init__(self, terms, operations):
+    def __init__(self, terms, operations, value=None):
         self.terms = terms
         self.term_names = list(self.terms.keys())
+        # TODO use eval as basic expression
         self.operations = operations
+        if value is not None:
+            self.value = value
+        else:
+            self.value = lambda a : a
 
     def next_term(self, term):
         return self.term_names[self.term_names.index(term)+1]
     def next(self):
         self.pos += 1
-        return self.tokens[self.pos]
+        return self.value(self.tokens[self.pos])
     # TODO add arguments
     def dive(self, term):
         if len(self.terms[term]) > 0 and callable(self.terms[term][0]):

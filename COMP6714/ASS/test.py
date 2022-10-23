@@ -1,21 +1,36 @@
+from lib2to3.pgen2.literals import simple_escapes
 import sys
 import json
+import nltk
 import regex
 from sys import stdin
 from myparser import SimpleBooleanParser
 
-def is_operator(token):
-    if token in '+-*/':
-        return True
-    return False
 
-def get_value(token):
-    return token
+def normalise(tokens):
+    tokens = [tk.lower() for tk in tokens]
+    return tokens
 
+def stem(tokens):
+    porter = nltk.PorterStemmer()
+    return [porter.stem(tk) for tk in tokens]
+    
 # Write each operator below
 # () > | > +n > /n > +s > /s > &
 def echo_expression(dest, src, op):
     return '(' + dest + op + '' + src + ')'
+
+def search_or():
+    pass
+
+path_index = sys.argv[1]
+index = None
+with open(path_index) as f:
+    index = f.read()
+    index = json.loads(index)
+
+print(index['shower'])
+
 terms = {
 'expression':       ['&'],
 'in_sentence':      ['/s'],
@@ -34,9 +49,14 @@ operations = {
 'after_n':          echo_expression,
 'term':             echo_expression,
 } 
-parser = SimpleBooleanParser(terms, operations)
-
-
+def value(text):
+    try: 
+        text = normalise([text])
+        text = stem(text)
+        return index[text[0]]
+    except:
+        return {}
+parser = SimpleBooleanParser(terms, operations, value)
 
 for line in stdin:
     # Get rid of end of line
