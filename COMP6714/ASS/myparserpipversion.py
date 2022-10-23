@@ -22,7 +22,11 @@ class TokenParser:
 
     def assert_end(self):
         if self.pos < self.len:
-            raise ParseError(self.pos + 1, 'Expected end of string but got %s', self.tokens[self.pos + 1])
+            raise ParseError(
+                self.pos + 1,
+                'Expected end of string but got %s',
+                self.tokens[self.pos + 1]
+            )
 
     def keyword(self, *keywords):
         if self.pos >= self.len:
@@ -36,7 +40,12 @@ class TokenParser:
             if regex.match(keyword, self.tokens[self.pos+1]) is not None:
                 return self.next()
 
-        raise ParseError(self.pos + 1, 'Expected %s but got %s', ','.join(keywords), self.tokens[self.pos + 1],)
+        raise ParseError(
+            self.pos + 1,
+            'Expected %s but got %s',
+            ','.join(keywords),
+            self.tokens[self.pos + 1],
+        )
 
     def match(self, *rules):
         last_error_pos = -1
@@ -71,10 +80,9 @@ class TokenParser:
             return None
 
 class SimpleBooleanParser(TokenParser):
-    def __init__(self, terms, operations):
+    def __init__(self, terms):
         self.terms = terms
         self.term_names = list(self.terms.keys())
-        self.operations = operations
 
     def next_term(self, term):
         return self.term_names[self.term_names.index(term)+1]
@@ -121,11 +129,24 @@ class SimpleBooleanParser(TokenParser):
             rv = self.operate(rv, term, op)
         return rv
 
+
     def operate(self, dest, src, op):
-        for i in self.term_names:
-            for ops in self.terms[i]:
-                if regex.match(ops, op):
-                    return self.operations[i](dest, src, op)
+        result = '(' + dest + op + '' + src + ')'
+        if op == '|':
+            dest = result
+        if regex.match(r'\+[0-9]+', op):
+            dest = result
+        if regex.match(r'/[0-9]+', op):
+            dest = result
+        if regex.match(r'\+s', op):
+            dest = result
+        if regex.match(r'/s', op):
+            dest = result
+        if regex.match(r'/d', op):
+            dest = result
+        if regex.match(r'&', op):
+            dest = result
+        return dest
 
 from sys import stdin
 if __name__ == '__main__':

@@ -176,9 +176,7 @@ class CalcParser(Parser):
                 rv += term
             else:
                 rv -= term
-
         return rv
-
     def term(self):
         rv = self.match('factor')
         while True:

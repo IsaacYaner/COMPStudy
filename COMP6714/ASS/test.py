@@ -12,7 +12,32 @@ def is_operator(token):
 def get_value(token):
     return token
 
-parser = SimpleBooleanParser()
+# Write each operator below
+# () > | > +n > /n > +s > /s > &
+def echo_expression(dest, src, op):
+    return '(' + dest + op + '' + src + ')'
+terms = {
+'expression':       ['&'],
+'in_sentence':      ['/s'],
+'after_sentence':   [r'\+s'],
+'in_n':             [r'/[0-9]+'],
+'after_n':          [r'\+[0-9]+'],
+'term':             [r'\|'],
+'factor':           [],
+'word':             [],
+} 
+operations = {
+'expression':       echo_expression,
+'in_sentence':      echo_expression,
+'after_sentence':   echo_expression,
+'in_n':             echo_expression,
+'after_n':          echo_expression,
+'term':             echo_expression,
+} 
+parser = SimpleBooleanParser(terms, operations)
+
+
+
 for line in stdin:
     # Get rid of end of line
     query = line[:-1]           
@@ -22,9 +47,9 @@ for line in stdin:
     for i in range(len(subset)):
         query = regex.sub(subset[i], "("+post[i][1:-1]+")", query, count=1)
     query = regex.sub(r'([()])', r" \1 ", query)
-    # print(query)
+
     query = regex.sub(r'(?<=(\n| |^)[^+/&( ]\w*) +(?=(\( *)* *\w+)', ' | ', query)
     query = query.split()
-    # print(query)
+
     print(parser.parse(query))
 
