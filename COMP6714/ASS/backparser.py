@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 class ParseError(Exception):
     def __init__(self, pos, msg, *args):
         self.pos = pos
@@ -8,7 +6,7 @@ class ParseError(Exception):
 
     def __str__(self):
         return '%s at position %s' % (self.msg % self.args, self.pos)
-
+    
 class Parser:
     def __init__(self):
         self.cache = {}
@@ -234,67 +232,3 @@ class CalcParser(Parser):
 
         rv = float(''.join(chars))
         return rv
-
-
-class SimpleBooleanParser(Parser):
-    def start(self):
-        return self.expression()
-
-    def expression(self):
-        rv = self.match('factor1')
-        while True:
-            op = self.maybe_keyword('+', '-')
-            if op is None:
-                break
-
-            term = self.match('factor1')
-            if op == '+':
-                rv += term
-            else:
-                rv -= term
-
-        return rv
-
-    def factor1(self):
-        rv = self.match('factor2')
-        while True:
-            op = self.maybe_keyword('*', '/')
-            if op is None:
-                break
-
-            term = self.match('factor2')
-            if op == '*':
-                rv *= term
-            else:
-                rv /= term
-
-        return rv
-
-    def factor2(self):
-        if self.maybe_keyword('('):
-            rv = self.match('expression')
-            self.keyword(')')
-
-            return rv
-
-        return self.match('term')
-
-    def term(self):
-        chars = []
-        pattern = 'a-zA-Z0-9'
-        chars.append(self.char(pattern))
-        while True:
-            char = self.maybe_char(pattern)
-            if char is None:
-                break
-
-            chars.append(char)
-
-        rv = ''.join(chars)
-        return rv
-
-if __name__ == '__main__':
-    parser = SimpleBooleanParser()
-    from sys import stdin
-    for line in stdin:
-        print(parser.parse(line))

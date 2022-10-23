@@ -1,8 +1,3 @@
-122
+abc asd +5 share /44 investor +s U.K. /s US & "Hi hi" sss
 
-213
-
-213
-13
-
-2
+((a & b c d ( ( e & f) ("I want to fly" & g)) "hi hi hi hi"))
