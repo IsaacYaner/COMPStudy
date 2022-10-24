@@ -1,3 +1,4 @@
+from cgitb import handler
 from lib2to3.pgen2.literals import simple_escapes
 from operator import or_
 import sys
@@ -29,6 +30,10 @@ def all_docs(index):
     result = []
 
 import copy
+# Or queries takes all information together
+# token: takes all
+# doc: takes all
+# location: takes all
 def or_query(dest, src, op):
     result = copy.deepcopy(dest)
     for token in src:
@@ -101,7 +106,7 @@ def and_query(dest, src, op):
         else:
             result[token] = {}
             for doc in src[token]:
-                if doc in selected_docs:
+                if doc in dest[token]:
                     left = dest[token][doc]
                     right = src[token][doc]
                     common_position = intersection(left, right)
@@ -116,7 +121,9 @@ def and_query(dest, src, op):
                 result[token] = temp_doc
     return result
 
-path_index = sys.argv[1]
+# TODO change back later
+# path_index = sys.argv[1]
+path_index = './index/index'
 index = None
 with open(path_index) as f:
     index = f.read()
@@ -151,9 +158,7 @@ def value(text):
         return {}
 parser = SimpleBooleanParser(terms, operations, value)
 
-for line in stdin:
-    # Get rid of end of line
-    query = line[:-1]           
+def handle_query(query):   
     # Decouple "" into (+1)
     subset = [x.group() for x in regex.finditer(r'"(\w+ )*(\w+ ?)?"', query)]
     post = [regex.sub(r'(?<=\w+) +(?=\w+)', ' +1 ', x) for x in subset]
@@ -170,7 +175,15 @@ for line in stdin:
         for doc in answer[a]:
             result.add(int(doc))
     result = sorted(result)
-    # for r in result:
-    #     print(r)
-    print(len(result))
+    return result
+
+
+if __name__ == '__main__':
+    for line in stdin:
+        # Get rid of end of line
+        query = line[:-1]    
+        result = handle_query(query)
+        for r in result:
+            print(r)
+        # print(len(result))
 
