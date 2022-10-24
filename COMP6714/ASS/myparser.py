@@ -34,7 +34,7 @@ class TokenParser:
 
         for keyword in keywords:
             if regex.match(keyword, self.tokens[self.pos+1]) is not None:
-                return self.next()
+                return self.next(False)
 
         raise ParseError(self.pos + 1, 'Expected %s but got %s', ','.join(keywords), self.tokens[self.pos + 1],)
 
@@ -83,9 +83,11 @@ class SimpleBooleanParser(TokenParser):
 
     def next_term(self, term):
         return self.term_names[self.term_names.index(term)+1]
-    def next(self):
+    def next(self, to_value=True):
         self.pos += 1
-        return self.value(self.tokens[self.pos])
+        if to_value:
+            return self.value(self.tokens[self.pos])
+        return self.tokens[self.pos]
     # TODO add arguments
     def dive(self, term):
         if len(self.terms[term]) > 0 and callable(self.terms[term][0]):

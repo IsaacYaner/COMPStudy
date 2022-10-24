@@ -67,9 +67,6 @@ def sb_pre(text, link=False):
     return text
 
 
-
-
-
 num_tokens = 0
 def add_to_index(index, doc, tokens):
     global num_tokens
