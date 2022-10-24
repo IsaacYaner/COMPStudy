@@ -6,7 +6,7 @@ def test_and_or_rand():
     # vocabulary = ['plugin', 'company',  'revenue', 's', 'monster']
     with open('vocabularies') as f:
         vocabulary = json.load(f)
-    for i in range(1000):
+    for _ in range(1000):
         v1 = random.randrange(len(vocabulary))
         v2 = random.randrange(len(vocabulary))
         v3 = random.randrange(len(vocabulary))

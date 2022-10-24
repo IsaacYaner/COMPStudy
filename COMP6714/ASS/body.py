@@ -39,6 +39,8 @@ def or_query(dest, src, op):
     for token in src:
         if token in dest:
             for doc in src[token]:
+                if doc=='frequency':
+                    continue
                 if doc in dest[token]:
                     temp_list = []
                     i,j = 0,0
@@ -90,6 +92,8 @@ def intersection_doc(lst1, lst2):
 def filter_docs(doc_list, selected_docs):
     result = {}
     for doc in doc_list:
+        if doc=='frequency':
+            continue
         if doc in selected_docs:
             result[doc] = doc_list[doc]
     return result
@@ -173,6 +177,8 @@ def handle_query(query):
     result = set()
     for a in answer:
         for doc in answer[a]:
+            if doc=='frequency':
+                continue
             result.add(int(doc))
     result = sorted(result)
     return result

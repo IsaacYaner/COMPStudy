@@ -53,6 +53,8 @@ def remove_punctuations(text):
     return clean_text(ignore_list, text, flags)
 
 def sb_pre(text, link=False):
+    text = regex.sub(r'\.\.+[^\w]*(?=[A-Z])', '. ',text)            # Place sentence separator
+    text = regex.sub(r'\.\.+(?!\.* *[A-Z])', ' ',text)            # Place sentence separator
     text = remove_punctuations(text)                # Remove unwanted punctuations
     text = regex.sub(r'[^\w!?. \n]', ' ',text)      # Clean all invalid characters
     text = regex.sub(r"(?<![A-Za-z]+[^A-Za-z \n]*)[0-9]*([^A-Za-z \n]+[0-9]+)?(?![^A-Za-z\n ]*[A-Za-z])\b", '', text)
@@ -61,6 +63,7 @@ def sb_pre(text, link=False):
     text = word_tokenize(text)
     text = normalise(text)
     text = stem(text)
+    text = [t if regex.match("^.*\..*$", t) is None else t.replace('.', '') for t in text]
     text = [t if regex.match("^[0-9]*$", t) is None else t+'s' for t in text]
     if link:
         return " ".join(text)
@@ -73,12 +76,13 @@ def add_to_index(index, doc, tokens):
     for token, pos in zip(tokens, range(len(tokens))):
         num_tokens += 1
         if token in list(index.keys()):
+            index[token]['frequency'] += 1
             if doc in list(index[token].keys()):
                 index[token][doc].append(pos)
             else:
                 index[token][doc] = [pos]
         else:
-            index[token] = {doc:[pos]}
+            index[token] = {'frequency':1, doc:[pos]}
 
 path_documents = sys.argv[1]
 path_index = sys.argv[2]

@@ -17,7 +17,7 @@ def inspect(text):
                 result.append(data)
     return result
 
-data = inspect(r'......................\.\.\.......................')
+data = inspect(r'...nj...')
 data = [x for sublist in data for x in sublist]
 data = '\n'.join(map(str, data))
 print(data)
