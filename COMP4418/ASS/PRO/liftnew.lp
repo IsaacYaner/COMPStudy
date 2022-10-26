@@ -1,23 +1,23 @@
 % 数据部分
-#const maxtime = 20.
-#const capacity = 1.
-floor(1..10).
-time(0..maxtime).
+% #const maxtime = 20.
+% #const capacity = 1.
+% floor(1..10).
+% time(0..maxtime).
 
 % 电梯的初始状态只有pos
-lift(a).
-pos(0, a, 2).
-lift(b).
-pos(0, b, 2).
+% lift(a).
+% pos(0, a, 1).
+% lift(b).
+% pos(0, b, 10).
 
 % 人的初始状态只有ini和dest
-person(alice).
-ini(alice, 7).
-dest(alice, 4).
+% person(alice).
+% ini(alice, 7).
+% dest(alice, 4).
 
-person(bob).
-ini(bob, 7).
-dest(bob, 4).
+% person(bob).
+% ini(bob, 7).
+% dest(bob, 4).
 
 % 电梯和灯光部分的代码
 
@@ -26,8 +26,7 @@ dest(bob, 4).
 % 按键亮的指令
 % 电梯到这个楼层就会关掉按钮
 turnoff(T, F) :- pos(T, L, F).
-pressed(T+1, F) :- pressed(T, F), not turnoff(T, F), T<maxtime.
-% down(T+1, F) :- down(T, F), not turnoff(T, F), T<maxtime.
+% pressed(T+1, F) :- pressed(T, F), not turnoff(T, F), T<maxtime.
 % 电梯只能有一个方向，如果能上下则不停。
 canup(T, L) :- pressed(T, F'),  pos(T, L, F), F'>F.
 canup(T, L) :- goto(T, L, F'), pos(T, L, F), F'>F.
@@ -42,8 +41,6 @@ canmove(T, L) :- goto(T, L, F), lift(L).
 1{direction(T, L, D): -1<=D<=1}1 :- lift(L), 0<=T<maxtime, canmove(T, L), floor(F).
 % 电梯移动
 pos(T+1, L, F+D) :- pos(T, L, F), direction(T, L, D).
-
-
 
 
 % 下面是人上下电梯部分的代码
@@ -62,14 +59,16 @@ onlift(T, Person) :- pick(T, Lift, Person), person(Person), time(T), lift(Lift).
 % 人只有在电梯到达的时候才会在下一刻上电梯
 % 第0时刻不会上电梯
 :- onlift(0, Person), person(Person).
-:- onlift(T+1, Person), not onlift(T, Person), pos(T+1, Lift, Floor), ini(Person, FW), Floor!=FW , person(Person) , lift(Lift), time(T).
+:- onlift(T+1, Person), not onlift(T, Person), not turnoff(T, Floor), ini(Person, Floor), person(Person) , lift(Lift), time(T).
 
 % 每个人同时被最多一个电梯pick
 {pick(T, Lift, Person) : lift(Lift)}1 :- person(Person), time(T).
 
 % 人被pick以后就再也不可能waiting了
-pick(T+1, Lift, Person) :- pick(T, Lift, Person), not arrive(T, Person), person(Person), time(T), pick(Lift).
+pick(T+1, Lift, Person) :- pick(T, Lift, Person), not arrive(T, Person), person(Person), time(T), lift(Lift).
 :- pick(T, Lift, Person), waiting(T', Person, Floor), T'>T, person(Person), time(T), floor(Floor), lift(Lift).
+:- pick(T+1, Lift, Person), not pick(T, Lift, Person), not pos(T, Lift, Floor), ini(Person, Floor), person(Person) , lift(Lift), time(T).
+:- pick(T+1, Lift, Person), arrive(T, Person), person(Person).
 
 % goto代表电梯要去几层，也就是按了按钮
 goto(T, Lift, Floor) :- pick(T, Lift, Person), waiting(T, Person, FloorW), turnoff(T, FloorW), dest(Person, Floor), time(T), lift(Lift).
@@ -79,7 +78,6 @@ goto(T+1, Lift, Floor) :- goto(T, Lift, Floor), not turnoff(T, Floor), time(T), 
 % 人在到达之后永远都是arrive的状态了。
 arrive(T+1, Person) :- arrive(T, Person), person(Person), time(T).
 arrive(T, Person) :- pick(T, Lift, Person), pos(T, Lift, Floor), dest(Person, Floor), person(Person), time(T).
-
 
 
 % 结束的部分
@@ -98,15 +96,16 @@ load(T, Lift, Load) :- Load = #count {Person : pick(T, Lift, Person)}, time(T), 
 
 
 % 最后优化部分
+end(maxtime).
 earlist(Early) :- Early = #min {T : end(T)}.
 #minimize {E:earlist(E)}.
 
 % 显示运行轨迹
-#show pos/3.
+% #show pos/3.
 
 % #show direction/3.
 % #show pressed/2.
-% #show pos/3.
+#show pos/3.
 % #show up/2.
 % #show canup/2.
 % #show waiting/3.

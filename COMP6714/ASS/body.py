@@ -1,13 +1,11 @@
-from cgitb import handler
-from lib2to3.pgen2.literals import simple_escapes
-from operator import or_
-import sys
 import json
+from re import S
 import nltk
 import regex
 from sys import stdin
 from myparser import SimpleBooleanParser
 
+index = None
 
 def normalise(tokens):
     tokens = [tk.lower() for tk in tokens]
@@ -26,9 +24,6 @@ def intersection(lst1, lst2):
     lst3 = [value for value in lst1 if value in lst2]
     return lst3
 
-def all_docs(index):
-    result = []
-
 import copy
 # Or queries takes all information together
 # token: takes all
@@ -39,8 +34,8 @@ def or_query(dest, src, op):
     for token in src:
         if token in dest:
             for doc in src[token]:
-                if doc=='frequency':
-                    continue
+                # if doc=='frequency':
+                #     continue
                 if doc in dest[token]:
                     temp_list = []
                     i,j = 0,0
@@ -92,15 +87,17 @@ def intersection_doc(lst1, lst2):
 def filter_docs(doc_list, selected_docs):
     result = {}
     for doc in doc_list:
-        if doc=='frequency':
-            continue
+        # if doc=='frequency':
+        #     continue
         if doc in selected_docs:
             result[doc] = doc_list[doc]
     return result
+def is_and(op):
+    if regex.match('&', op) is not None:
+        return True
+    return False
 def and_query(dest, src, op):
     selected_docs = intersection_doc(all_docs(dest), all_docs(src))
-    # print(all_docs(dest), all_docs(src))
-    # print(selected_docs)
     result = {}
     for token in src:
         if token not in dest:
@@ -110,25 +107,93 @@ def and_query(dest, src, op):
         else:
             result[token] = {}
             for doc in src[token]:
+                # if doc == 'frequency':
+                #     continue
                 if doc in dest[token]:
                     left = dest[token][doc]
                     right = src[token][doc]
-                    common_position = intersection(left, right)
+                    if is_and(op):
+                        common_position = intersection(left, right)
                     if common_position != []:
                         result[token][doc] = common_position
             if result[token] == {}:
                 del result[token]
-    for token in dest:
-        if token not in src:
-            temp_doc = filter_docs(dest[token], selected_docs)
-            if temp_doc != {}:
-                result[token] = temp_doc
     return result
+
+# def proximity
+def satisfy(left, right, op, doc):
+    if regex.match(r'\+[0-9]+', op):# after
+        distance = int(op[1:])
+        if right > left and right - left <= distance:
+            return True
+    if regex.match(r'/[0-9]+', op): # within
+        distance = int(op[1:])
+        if abs(right - left) <= distance:
+            return True
+    # Sentences!
+    left_sentence = 0
+    if doc in index['.']:
+        while left_sentence < len(index['.'][doc]):
+            if index['.'][doc][left_sentence] > left:
+                break
+            left_sentence += 1
+    if left_sentence == 0:      # There is no sentence
+        return True
+    right_sentence = 0
+    if doc in index['.']:
+        while right_sentence < len(index['.'][doc]):
+            if index['.'][doc][right_sentence] > right:
+                break
+            right_sentence += 1
+
+    if left_sentence == right_sentence:
+        if regex.match('/s', op):       # in sentence
+            return True
+        if regex.match(r'\+s', op): # after sentence
+            if right > left:
+                return True
+    return False
+
+def addto_index(index, token, doc, position):
+    if token not in index:
+        index[token] = {}
+    if doc not in index[token]:
+        index[token][doc] = set()
+    index[token][doc].add(position)
+
+def common_doc(left, right):
+    result = set()
+    for l_token in left:
+        for r_token in right:
+            for doc in left[l_token]:
+                if doc in right[r_token]:
+                    result.add(doc)
+    return list(result)
+def proximity(before, after, op):
+    result = {}
+    common_docs = common_doc(before, after)
+    for l_token in before:                          # For each token in before
+        for doc in common_docs:                 # For each doc in before.token
+            if doc not in before[l_token]:      # Don't waste time in the following loops!
+                continue
+            for r_token in after:               # Consider each token in after
+                if doc not in after[r_token]:   # Escape unecessary positions
+                    continue
+                for l_pos in before[l_token][doc]:        # For each occurrence in before
+                    for r_pos in after[r_token][doc]:    # occurrence in after
+                        if satisfy(l_pos, r_pos, op, doc):
+                            addto_index(result, l_token, doc, l_pos)
+                            addto_index(result, r_token, doc, r_pos)
+
+    return result
+
+
+
+
 
 # TODO change back later
 # path_index = sys.argv[1]
 path_index = './index/index'
-index = None
 with open(path_index) as f:
     index = f.read()
     index = json.loads(index)
@@ -147,10 +212,10 @@ terms = {
 } 
 operations = {
 'expression':       and_query,
-'in_sentence':      echo_expression,
-'after_sentence':   echo_expression,
-'in_n':             echo_expression,
-'after_n':          echo_expression,
+'in_sentence':      proximity,
+'after_sentence':   proximity,
+'in_n':             proximity,
+'after_n':          proximity,
 'term':             or_query,
 } 
 def value(text):
@@ -177,8 +242,8 @@ def handle_query(query):
     result = set()
     for a in answer:
         for doc in answer[a]:
-            if doc=='frequency':
-                continue
+            # if doc=='frequency':
+            #     continue
             result.add(int(doc))
     result = sorted(result)
     return result

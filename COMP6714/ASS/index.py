@@ -63,8 +63,8 @@ def sb_pre(text, link=False):
     text = word_tokenize(text)
     text = normalise(text)
     text = stem(text)
-    text = [t if regex.match("^.*\..*$", t) is None else t.replace('.', '') for t in text]
-    text = [t if regex.match("^[0-9]*$", t) is None else t+'s' for t in text]
+    text = [t if (regex.match("^.*\..*$", t) is None or t=='.') else t.replace('.', '') for t in text]
+    text = [t if regex.match("^[0-9]*$", t) is None else t+'s' for t in text]       # Add s to the end of numbers
     if link:
         return " ".join(text)
     return text
@@ -76,28 +76,30 @@ def add_to_index(index, doc, tokens):
     for token, pos in zip(tokens, range(len(tokens))):
         num_tokens += 1
         if token in list(index.keys()):
-            index[token]['frequency'] += 1
+            # index[token]['frequency'] += 1
             if doc in list(index[token].keys()):
                 index[token][doc].append(pos)
             else:
                 index[token][doc] = [pos]
         else:
-            index[token] = {'frequency':1, doc:[pos]}
+            index[token] = {doc:[pos]}
+            # index[token] = {'frequency':1, doc:[pos]}
+            
+if __name__ == '__main__':
+    path_documents = sys.argv[1]
+    path_index = sys.argv[2]
 
-path_documents = sys.argv[1]
-path_index = sys.argv[2]
+    documents = os.listdir(path_documents)
 
-documents = os.listdir(path_documents)
-
-index = {}
-for filename in documents:
-    with open(os.path.join(path_documents,filename), 'r') as fp:
-        data = fp.read()
-        data = sb_pre(data)#, True)
-        add_to_index(index, filename, data)
-with open(os.path.join(path_index, 'index'), 'w') as wrt: # TODO remove later
-    wrt.write(json.dumps(index))
-print('Total number of documents: ', len(documents))
-print('Total number of tokens: ', num_tokens)
-print('Total number of terms: ', len(list(index.keys())))
-#    with open(os.path.join(os.getcwd(), filename), 'r') as f:
+    index = {}
+    for filename in documents:
+        with open(os.path.join(path_documents,filename), 'r') as fp:
+            data = fp.read()
+            data = sb_pre(data)#, True)
+            add_to_index(index, filename, data)
+    with open(os.path.join(path_index, 'index'), 'w') as wrt: # TODO remove later
+        wrt.write(json.dumps(index))
+    print('Total number of documents: ', len(documents))
+    print('Total number of tokens: ', num_tokens)
+    print('Total number of terms: ', len(list(index.keys())))
+    #    with open(os.path.join(os.getcwd(), filename), 'r') as f:

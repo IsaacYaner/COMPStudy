@@ -116,6 +116,7 @@ class SimpleBooleanParser(TokenParser):
         for rule in rules:
             rv = self.dive(rule)
             return rv        
+
     def perform(self, term):
         next_level = self.next_term(term)
         operator = self.terms[term]
@@ -148,5 +149,3 @@ if __name__ == '__main__':
         query = regex.sub(r'([()])', r" \1 ", query)
         query = regex.sub(r'(?<=(\n| |^)[^+/]\w+) +(?=\w+)', ' | ', query)
         query = query.split()
-        print(query)
-        print(parser.parse(query))
