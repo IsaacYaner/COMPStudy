@@ -1,5 +1,6 @@
 import json
-from re import S
+import os
+import sys
 import nltk
 import regex
 from sys import stdin
@@ -82,8 +83,12 @@ def intersection(dest, src):
             i += 1 
             j += 1
     return temp_list
+
+# Given two document lists, find the common ones.
 def intersection_doc(lst1, lst2):
     return [value for value in lst1 if value in lst2]
+
+# Return only selected docs
 def filter_docs(doc_list, selected_docs):
     result = {}
     for doc in doc_list:
@@ -92,10 +97,7 @@ def filter_docs(doc_list, selected_docs):
         if doc in selected_docs:
             result[doc] = doc_list[doc]
     return result
-def is_and(op):
-    if regex.match('&', op) is not None:
-        return True
-    return False
+
 def and_query(dest, src, op):
     selected_docs = intersection_doc(all_docs(dest), all_docs(src))
     result = {}
@@ -112,24 +114,24 @@ def and_query(dest, src, op):
                 if doc in dest[token]:
                     left = dest[token][doc]
                     right = src[token][doc]
-                    if is_and(op):
-                        common_position = intersection(left, right)
+                    common_position = intersection(left, right)
                     if common_position != []:
                         result[token][doc] = common_position
             if result[token] == {}:
                 del result[token]
     return result
 
-# def proximity
 def satisfy(left, right, op, doc):
-    if regex.match(r'\+[0-9]+', op):# after
+    if regex.match(r'\+[0-9]+', op):    # after
         distance = int(op[1:])
         if right > left and right - left <= distance:
             return True
-    if regex.match(r'/[0-9]+', op): # within
+
+    if regex.match(r'/[0-9]+', op):     # within
         distance = int(op[1:])
         if abs(right - left) <= distance:
             return True
+
     # Sentences!
     left_sentence = 0
     if doc in index['.']:
@@ -137,7 +139,7 @@ def satisfy(left, right, op, doc):
             if index['.'][doc][left_sentence] > left:
                 break
             left_sentence += 1
-    if left_sentence == 0:      # There is no sentence
+    if left_sentence == 0:              # There is no sentence
         return True
     right_sentence = 0
     if doc in index['.']:
@@ -149,7 +151,7 @@ def satisfy(left, right, op, doc):
     if left_sentence == right_sentence:
         if regex.match('/s', op):       # in sentence
             return True
-        if regex.match(r'\+s', op): # after sentence
+        if regex.match(r'\+s', op):     # after sentence
             if right > left:
                 return True
     return False
@@ -161,6 +163,7 @@ def addto_index(index, token, doc, position):
         index[token][doc] = set()
     index[token][doc].add(position)
 
+# common doc for two indexes
 def common_doc(left, right):
     result = set()
     for l_token in left:
@@ -169,6 +172,9 @@ def common_doc(left, right):
                 if doc in right[r_token]:
                     result.add(doc)
     return list(result)
+
+
+# def proximity
 def proximity(before, after, op):
     result = {}
     common_docs = common_doc(before, after)
@@ -184,49 +190,32 @@ def proximity(before, after, op):
                         if satisfy(l_pos, r_pos, op, doc):
                             addto_index(result, l_token, doc, l_pos)
                             addto_index(result, r_token, doc, r_pos)
-
+    for token in result:
+        for doc in result[token]:
+            result[token][doc] = sorted(list(result[token][doc]))
     return result
 
 
 
-
-
-# TODO change back later
-# path_index = sys.argv[1]
-path_index = './index/index'
-with open(path_index) as f:
-    index = f.read()
-    index = json.loads(index)
-
-# print(index['shower'])
 terms = {
-'expression':       ['\+', '-'],
-'in_sentence':      [r'\*', '/'],
+'expression':       ['&'],
+'in_sentence':      ['/s'],
+'after_sentence':   [r'\+s'],
+'in_n':             [r'/[0-9]+'],
+'after_n':          [r'\+[0-9]+'],
+'term':             [r'\|'],
 'factor':           [],
 'word':             [],
 } 
-# terms = {
-# 'expression':       ['&'],
-# 'in_sentence':      ['/s'],
-# 'after_sentence':   [r'\+s'],
-# 'in_n':             [r'/[0-9]+'],
-# 'after_n':          [r'\+[0-9]+'],
-# 'term':             [r'\|'],
-# 'factor':           [],
-# 'word':             [],
-# } 
-def add(a,b,op):
-    return a+b
 operations = {
-'expression':       add,
-'in_sentence':      echo_expression,
-# 'after_sentence':   echo_expression,
-# 'in_n':             echo_expression,
-# 'after_n':          echo_expression,
-# 'term':             echo_expression
+'expression':       and_query,
+'in_sentence':      proximity,
+'after_sentence':   proximity,
+'in_n':             proximity,
+'after_n':          proximity,
+'term':             or_query,
 } 
 def value(text):
-    return int(text)
     try: 
         text = normalise([text])
         text = stem(text)
@@ -237,34 +226,33 @@ parser = SimpleBooleanParser(terms, operations, value)
 
 def handle_query(query):   
     # Decouple "" into (+1)
-    # subset = [x.group() for x in regex.finditer(r'"(\w+ )*(\w+ ?)?"', query)]
-    # post = [regex.sub(r'(?<=\w+) +(?=\w+)', ' +1 ', x) for x in subset]
-    # for i in range(len(subset)):
-    #     query = regex.sub(subset[i], "("+post[i][1:-1]+")", query, count=1)
-    # query = regex.sub(r'([()])', r" \1 ", query)
+    subset = [x.group() for x in regex.finditer(r'"(\w+ )*(\w+ ?)?"', query)]
+    post = [regex.sub(r'(?<=\w+) +(?=\w+)', ' +1 ', x) for x in subset]
+    for i in range(len(subset)):
+        query = regex.sub(subset[i], "("+post[i][1:-1]+")", query, count=1)
+    query = regex.sub(r'([()])', r" \1 ", query)
 
-    # query = regex.sub(r'(?<=(\n| |^)[^+/&( ]\w*) +(?=(\( *)* *\w+)', ' | ', query)
+    query = regex.sub(r'(?<=(\n| |^)[^+/&( ]\w*) +(?=(\( *)* *\w+)', ' | ', query)
     query = query.split()
-    # print(query)
     answer = parser.parse(query)
-    return answer
-    # result = set()
-    # for a in answer:
-    #     for doc in answer[a]:
-    #         # if doc=='frequency':
-    #         #     continue
-    #         result.add(int(doc))
+    result = set()
+    for a in answer:
+        for doc in answer[a]:
+            result.add(int(doc))
     result = sorted(result)
     return result
 
 
 if __name__ == '__main__':
+    path_index = sys.argv[1]
+    path_index = os.path.join(path_index, 'index')
+    with open(path_index) as f:
+        index = f.read()
+        index = json.loads(index)
     for line in stdin:
         # Get rid of end of line
         query = line[:-1]    
         result = handle_query(query)
-        print(result)
-        # for r in result:
-        #     print(r)
-        # print(len(result))
+        for r in result:
+            print(r)
 
