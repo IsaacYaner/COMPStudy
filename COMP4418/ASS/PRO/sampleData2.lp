@@ -1,5 +1,5 @@
 % 数据部分
-#const maxtime = 50.
+#const maxtime = 20.
 #const capacity = 2.
 floor(1..10).
 time(0..maxtime).

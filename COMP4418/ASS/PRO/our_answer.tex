@@ -1,0 +1,245 @@
+\documentclass{article}
+
+%\usepackage[printhint=false,printanswer=false,printmarkingguide=false,printdraftpaper=false]{abdaexercises}
+\usepackage[printqrbox=false]{abdaexercises}
+
+\usetikzlibrary{patterns}
+\usepackage{wrapfig}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{booktabs,multicol,multirow}
+\usepackage{wasysym}
+
+\usepackage{xspace}
+
+
+\newcommand{\sem}{22T3}
+\newcommand{\semester}{Trimester 3, 2022}
+\SubjectNo{COMP4418}
+\ActivityType{Project B}
+\Institution{UNSW}
+
+\begin{document}
+
+Due at the end of Week 7: Friday, October 28, 11:55 pm.
+
+The whole group submits 4 files on Moodle: ProjectB.pdf, SampleData1.lp, SampleData2.lp and Solve.lp.
+
+This deliverable is graded out of 20 and contributes 20\% to the course grade.
+%Questions 1--3 are worth 4 marks which are attributed for the group: every member will receive the same group mark.
+%Question 4 is worth 1 mark and is attributed individually: every member will receive their own mark.
+
+%In this deliverable, all answers are expected to be written in standard English (as opposed to pseudo-code, some programming language, some math formula, etc.).
+%Spelling and grammar mistakes are not penalized as long as the marker can understand what you mean.
+%For each question, I indicate an estimated length of a typical answer.
+%This is not a strict requirement but a recommended guideline.
+
+
+\begin{Question}
+Indicate the title of your project and give a small paragraph description of the project,
+\begin{answer}
+\item \textbf{Multiple lifts scheduling algorithms}  
+\item When we live or work in a building with many floors, even if there are multiple lifts, we often encounter situations where we have to wait for the lift for more than 10 or even 20 minutes because there are many people on different floors who need the lift at the same time and the lift has a capacity limit. In this project, our goal was to write an ASP program that would give us a schedule of multiple lifts that could take all the people waiting for the lift to their destination in the shortest possible time.
+\end{answer}
+\begin{markingguide}
+\countmarks{0} There are no marks, this is just to help the course staff connect the dots.
+\end{markingguide}
+\end{Question}
+
+
+\begin{Question}[Overview]
+\begin{Subquestion}
+\label{q:list-predicate}
+List the predicates and what they mean
+%domain vocab for inputs: taken into account
+%search variables
+%auxiliary predicates
+\begin{answer}
+\item \textbf{person}: This predicate indicates persons that are waiting for the lift in this building. 
+\item \textbf{ini}: This predicate indicates which floor that the person is waiting for a lift on. 
+\item \textbf{dest}: This predicate indicates which floor that the person wants to go to.
+\item \textbf{lift}: This predicate indicates lifts in the building. 
+\item \textbf{liftini}: This predicate indicates on which floor a certain lift is initially located.
+\item \textbf{floor}: This predicate indicates floors in the building. 
+\item \textbf{time}: This predicate indicates time-steps in the schedule. 
+\item \textbf{pos}: This predicate indicates which floor that a certain lift is on in each time-step.
+\item \textbf{turnoff}: This predicate indicates if there is a lift on this floor in a certain time-step. 
+\item \textbf{canup}: This predicate indicates if there is a signal that tells a certain lift to go to higher floors. 
+\item \textbf{candown}: This predicate indicates if there is a signal that tells a certain lift to go to lower floors. 
+\item \textbf{canmove}: This predicate indicates if there is a signal that tells a certain lift to move. 
+\item \textbf{direction}: This predicate indicates the direction of a certain lift in a certain time-step. 
+\item \textbf{waiting}: This predicate indicates if a certain person is waiting on a certain floor in a certain time-step. 
+\item \textbf{pressed}: This predicate indicates if the button on a certain floor is pressed in a certain time-step. (A button pressed on that floor means that there is at least one person waiting for the lift on that floor.)
+\item \textbf{onlift}: This predicate indicates if a certain person is in a lift in a certain time-step. 
+\item \textbf{pick}: This predicate indicates if a certain person is in a certain lift in a certain time-step. 
+\item \textbf{goto}: This predicate indicates which floor that the person entering a certain lift in a certain time-step wants to go to. This simulates the action of pressing the floor button in the lift after entering the lift. 
+\item \textbf{numperson}: This predicate indicates the number of persons in this problem. 
+\item \textbf{load}: This predicate indicates the number of persons in a certain lift in a certain time-step. 
+\item \textbf{arrive}: This predicate indicates if a certain person has arrived to his/her destination in a certain time-step. 
+\item \textbf{end}: This predicate indicates time-steps that all persons in this problem have been sent to their destinations. 
+\item \textbf{earliest}: This predicate indicates the first time-step hat all persons in this problem have been sent to their destinations. 
+
+\end{answer}
+\begin{markingguide}
+\countmarks{3}
+\end{markingguide}
+\end{Subquestion}
+\begin{Subquestion}
+For each predicate listed in Question~\ref{q:list-predicate}, indicate in a table the following information:
+\begin{description}
+\item[Arity] How many arguments does the predicate take?
+\item[Function] What is the function of the predicate: is it an input predicate, an internal predicate, or an output predicate?
+\item[Nature] Is it a domain predicate or a search predicate?
+\end{description}
+\begin{answer}
+\centering
+\begin{tabular}{lccc}
+\toprule
+Name & Arity & Function & Nature \\
+\midrule
+person & 1 & Input & Domain \\
+ini & 2 & Input & Domain \\
+dest & 2 & Input & Domain \\
+lift & 1 & Input & Domain \\ 
+liftini & 2 & Input & Domain \\
+floor & 1 & Input & Domain \\ 
+time & 1 & Input & Domain \\ 
+pos & 3 & Output & Search \\ 
+turnoff & 2 & Internal & Search \\ 
+canup & 2 & Internal & Search \\ 
+candown & 2 & Internal & Search \\ 
+canmove & 2 & Internal & Search \\ 
+direction & 3 & Internal & Search \\ 
+waiting & 3 & Internal & Search \\ 
+pressed & 2 & Internal & Search \\ 
+onlift & 2 & Internal & Search \\ 
+pick & 3 & Internal & Search \\ 
+goto & 3 & Internal & Search \\ 
+arrive & 3 & Internal & Search \\ 
+numperson & 1 & Internal & Search \\ 
+load & 3 & Internal & Search \\ 
+end & 1 & Internal & Search \\ 
+earliest & 1 & Internal & Search \\ 
+\bottomrule
+\end{tabular}
+\end{answer}
+\begin{markingguide}
+\countmarks{2}
+\end{markingguide}
+\end{Subquestion}
+\end{Question}
+
+
+\begin{Question}[Constraints and Optimization]
+\begin{Subquestion}
+\label{q:list-constraints}
+List the constraints / optimization criteria that you have identified for the problem, even if you haven't implemented them.
+Describe each of them in English.
+If any of your constraints or criteria cannot be effectively captured with Answer-Set Programming, state so and justify why not briefly.
+\begin{answer}
+\begin{description}
+\item[Exactly One Direction] The lift can move up (direction = 1), move down (direction = 1) or stay on the current floor (direction = 0). A solution needs to provide an exact direction for each lift at each time step.
+\item[Capacity Limit] The lift capacity (in terms of number of people) for each problem is defined in each sampleDatax.lp file. A solution needs to ensure that the number of people in each lift cannot exceed the capacity at each time step. 
+\item[Finish Signal: All Arrived] A solution needs to ensure that all persons in this problem are sent to their destinations, i.e. that no person is still waiting for the lift. 
+\item[No Illegal Direction] A solution needs to ensure that the lift does not have an upward direction when it is not $canup$ or have a downward direction when it is not $candown$, where predicates $canup/2$ and $candown/2$ are defined in 2.1.
+\item[No Rest before Finish] A solution needs to ensure that when the lift is $canup$ or $candown$, it cannot have a direction of 0, where predicates $canup/2$ and $candown/2$ are defined in 2.1.
+\item[No Illegal Picking Up] A solution needs to ensure that persons can only be picked up by the lift if they are on the same floor as the lift. 
+\item[Pick by One Lift] A solution needs to ensure that a person can only be picked by one lift.
+\item[No More Travelling] A solution needs to ensure that once a person reaches his/her destination, he/she is not picked by any lift. 
+\item[No More Waiting] A solution needs to ensure that once a person is picked by a the lift, he/she does not wait for the lift again. 
+\item[Optimisation] The optimum solution should be the one with the earliest possible end time.  
+\end{description}
+\end{answer}
+\begin{markingguide}
+\countmarks{6}
+\begin{enumerate}
+\item 1 mark: The description of the constraints and criteria makes sense: they really are constraints / criteria.
+\item 2 marks: The constraints / criteria provided are meaningful/desirable in terms of the specific problem being addressed good solutions will not be eliminated or deprioritized (symmetries notwithstanding)
+\item 2 marks: The list is comprehensive, there isn't anything obvious missing. Bad solution candidates will be effectively ruled out.
+\item 1 mark: For any listed constraint / criterion, if the answer states that in principle it cannot be implemented in ASP (with no more than a polynomial blow-up), this is the case indeed; and if the answer does not state it, then there is a natural way to implement it in ASP.
+%Any listed constraint or criterion claimed not to group indicated  identified can 
+\end{enumerate}
+\end{markingguide}
+\end{Subquestion}
+\begin{Subquestion}
+For each constraint or optimization criterion listed in Question~\ref{q:list-constraints}, indicate in a table the following information:
+\begin{description}
+\item[Coded] Has the constraint/criterion been implemented?
+\item[Lines] If so, what are the relevant lines in \texttt{Solve.lp}? If not, write N.A.
+\item[Works] To the best of your knowledge, is this constraints/criterion working as intended? If not implemented, write N.A.
+\item[MVP] Is a correct implementation of this constraint/criterion required for a minimal viable version of your project?
+\end{description}
+
+\begin{answer}
+\centering
+\begin{tabular}{llcccc}
+\toprule
+Name & Type & Coded & Lines & Works & MVP \\
+\midrule
+Example1 & Constraint & \cmark & 1--3 & \cmark & \cmark \\
+Example2 & Criterion  & \cmark & 5--7 & \xmark & \xmark \\
+Example3 & Constraint & \xmark & N.A. & N.A.   & \xmark \\
+\bottomrule
+\end{tabular}
+\end{answer}
+\begin{markingguide}
+\countmarks{2}
+The table is accurate.
+\end{markingguide}
+\end{Subquestion}
+\end{Question}
+
+
+
+\begin{Question}
+In practice / completion / implementation
+
+does solve.lp work on the sampledata.lp?
+
+\begin{Subquestion}[Self Evaluation]
+Self-evaluate from the following list
+\begin{itemize}
+\item[0] The syntax isn't even correct or the file is as good as empty or completely commented out
+\item[1a] The syntax is correct and it runs but nothing really works, the output doesn't seem to connect to the input in any clear way, it doesn't do what we'd expect at all.
+\item[1b] It always hangs or take forever (indicate in the justification if it's the grounding or the solving that hangs; how long you've tried waiting for (no need to go beyond 10min, but waiting more than 5sec might worthwhile); if you've identified the specific lines that make it hang, explain it in the justification)
+\item[2a] Some aspects work with no bugs but some required feature is missing ///
+\item[2b] Enough aspects to meet the MVP criteria are implemented and it works when you get lucky (sample data 1) and but there are still issues and sometimes it doesn't quite work (exemplified in sample data 2)
+\item[3] We've got an MVP and there no bugs left (or maybe super rare ones that we haven't found)
+\item[4] We've got an MVP and some fancy extensions
+\end{itemize}
+\begin{answer}
+Write an element from the list [0, 1a, 1b, 2a, 2b, 3, 4].
+\end{answer}
+\begin{markingguide}
+\countmarks{4}
+The number indicates the number of marks to be received. (e.g., 2b is worth 2)
+\end{markingguide}
+\end{Subquestion}
+
+\begin{Subquestion}
+Explains or justifies your self evaluation.
+\begin{answer}
+Provide a 5--10 line paragraph.
+\end{answer}
+\begin{markingguide}
+\countmarks{3}
+\begin{itemize}
+\item 3 marks from marker for accurate self-evaluation
+\item off by one $\rightarrow$ 1 mark
+\item off by two or more $\rightarrow$ 0 marks
+\end{itemize}
+
+2b instead of 2a counts as off by one.
+
+Examples:
+\begin{itemize}
+\item you didn't do anything and you admit it, you get 3/7: 0 from your self-evaluation and 3 from marker for accurate evaluation.
+\item you've got an MVP that seems to work to the best of your knowledge, unfortunately the marker easily finds a not-so-subtle bug or issue, you get 4/7: 3 from self-evaluation and 1 from marker for ``off by one''.
+\end{itemize}
+\end{markingguide}
+\end{Subquestion}
+\end{Question}
+
+
+\end{document}

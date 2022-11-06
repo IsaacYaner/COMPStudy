@@ -1,0 +1,14 @@
+digraph {
+	graph [layout=neato]
+	edge [len=1.5]
+	A [label=A]
+	B [label=B]
+	C [label=C]
+	D [label=D]
+	D -> C
+	D -> B
+	D -> A
+	C -> B
+	C -> A
+	B -> A
+}
