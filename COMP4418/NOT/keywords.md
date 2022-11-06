@@ -21,6 +21,7 @@
 ## R12
 
 + *Strategyproof*
++ Deferred acceptance
 + Serial dictatorship
   + Non-bossiness
   + Neutral
@@ -31,7 +32,12 @@
 ## R13
 
 + Social choice 
-+ Codorcet 
++ condorcet 
+  + Borda
+  + Plurality
+  + Antiplurality
+  + k approval
 + Top cycle
 + Uncovered set
-+ Banks
++ *Banks*
++ Axiomatic method

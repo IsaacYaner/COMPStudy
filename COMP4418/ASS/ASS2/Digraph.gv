@@ -1,14 +1,8 @@
 digraph {
 	graph [layout=neato]
-	edge [len=1.5]
-	A [label=A]
-	B [label=B]
+	edge [len=1]
 	C [label=C]
-	D [label=D]
-	D -> C
-	D -> B
-	D -> A
-	C -> B
-	C -> A
-	B -> A
+	3 [label=3]
+	C -> 3
+	3 -> C
 }
