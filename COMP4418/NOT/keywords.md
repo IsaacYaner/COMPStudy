@@ -41,3 +41,21 @@
 + Uncovered set
 + *Banks*
 + Axiomatic method
+
+# R14
+
++ Positional Scoring Rules 
+  + Borda
+  + Social welfare function
+  + Social choice function
++ Domain restriction
+  + Single peaked
+    + Condorcet winner median voter rule
++ Randomisation
+  + Dictatorship
+  + Borda proportional
+  + Kemeny ranking
++ *Approval voting*
+  + Proportional approval voting
+
+
